@@ -8,7 +8,7 @@ An essential part of a student’s life is the habit of regular workout. The str
 
 The application is not designed to work with smart devices, so it requires the personal involvement of the user. That makes the user to be more involved with their schedule and hopefully helps them to be more dedicated with their workout as well. In order to allow the user to make the best use of the application; it saves the exercises to a database and it can display the data of the exercises and even to give a written analysis of how the user is doing with their fitness. To respect the user’s privacy, we offer a state-of-the-art security with a considered unbreakable encryption and sane and solid login procedure.
 
-![](D:\Kristianstad University\Project_Course_2\Untitled Diagram (1).jpg)
+![](https://mega.nz/#!zP5DiQ5I)
 
 
 
