@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Project_Course_2" company="HKR" webLink="http://" view-date="2019-04-04" view-index="0" gantt-divider-location="317" resource-divider-location="300" version="2.8.10" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="Project_Course_2" company="HKR" webLink="http://" view-date="2019-04-04" view-index="0" gantt-divider-location="413" resource-divider-location="300" version="2.8.10" locale="en_GB">
     <description><![CDATA[Project management and chart for Project Course 2 at Kristianstad University, April-June 2019.]]></description>
     <view zooming-state="default:1" id="gantt-chart">
-        <field id="tpd3" name="Name" width="186" order="0"/>
-        <field id="tpd4" name="Begin date" width="59" order="1"/>
-        <field id="tpd5" name="End date" width="52" order="2"/>
-        <option id="color.recent"><![CDATA[#000099 #0000cc #00cc33 #00cc66 #009933 #cccc00 #cc0000 #3300cc #ffff00 #990099]]></option>
+        <field id="tpd3" name="Name" width="214" order="0"/>
+        <field id="tpd4" name="Begin date" width="90" order="1"/>
+        <field id="tpd5" name="End date" width="89" order="2"/>
+        <option id="color.recent"><![CDATA[#000000 #ff0000 #00ffff #660066 #006666 #cccc00 #000099 #0000cc #00cc33 #00cc66]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Name" width="210" order="0"/>
-        <field id="1" name="Default role" width="87" order="1"/>
+        <field id="0" name="Name" width="211" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -35,7 +35,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Project_Course_2" color="#000000" meeting="false" start="2019-04-04" duration="37" complete="1" thirdDate="2019-04-04" thirdDate-constraint="0" priority="2" expand="true">
+        <task id="0" name="Project_Course_2" color="#000000" meeting="false" start="2019-04-04" duration="36" complete="1" thirdDate="2019-04-04" thirdDate-constraint="0" priority="2" expand="true">
             <task id="4" name="Group formation" color="#8cb6ce" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
                 <depend id="5" type="2" difference="0" hardness="Strong"/>
             </task>
@@ -53,37 +53,105 @@
             </task>
             <task id="89" name="Analyse and Design" color="#ffff00" meeting="false" start="2019-04-15" duration="10" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
                 <task id="90" name="UML Diagram" color="#cccc00" meeting="false" start="2019-04-15" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="91" name="DB-Design" color="#cccc00" meeting="false" start="2019-04-16" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="91" name="DB-Design" color="#cccc00" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
                 <task id="92" name="Software Design" color="#cccc00" meeting="false" start="2019-04-17" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
                 <task id="93" name="Prepare for Meeting" color="#cccc00" meeting="false" start="2019-04-18" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
                 <task id="94" name="Meeting ¨2" color="#cccc00" meeting="false" start="2019-04-25" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
                 <task id="95" name="Design GUI" color="#cccc00" meeting="false" start="2019-04-26" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="30" name="Implimentation" color="#00cc33" meeting="false" start="2019-04-04" duration="8" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
-                <task id="31" name="Implimenting DB-Module" color="#00cc66" meeting="false" start="2019-04-15" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="32" name="Prepare for meeting" color="#00cc33" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="33" name="Meeting 2" color="#00cc33" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="34" name="Implimenting GUI" color="#00cc33" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="35" name="Implimenting 2" color="#00cc66" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="36" name="Prepare for meeting" color="#00cc33" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="37" name="Meeting 3" color="#00cc33" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="38" name="Integrading module" color="#00cc33" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+            <task id="30" name="Implimentation" color="#00cc33" meeting="false" start="2019-04-15" duration="18" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
+                <task id="31" name="Initiation of the Logic Class" color="#00cc66" meeting="false" start="2019-04-15" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
+                    <depend id="34" type="2" difference="0" hardness="Strong"/>
+                    <depend id="35" type="2" difference="0" hardness="Strong"/>
+                    <depend id="36" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="32" name="Update README.md" color="#00cc33" meeting="false" start="2019-04-15" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
+                    <depend id="34" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="33" name="Initiation of GUI" color="#00cc33" meeting="false" start="2019-04-15" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
+                    <depend id="34" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="34" name="Initiation of Repository" color="#00cc33" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="35" name="Preparing for JDBC" color="#006666" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="36" name="Prepare for a server" color="#006666" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="37" name="Class structure" color="#006666" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="38" name="Implementation of the Controllers" color="#006666" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
+                    <depend id="125" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="124" name="Implementation of Logic" color="#006666" meeting="false" start="2019-04-22" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
+                    <depend id="125" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="125" name="Connectivity between Server &amp; Application" color="#660066" meeting="false" start="2019-04-29" duration="3" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
+                    <depend id="131" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="127" name="Troubleshooting" color="#660066" meeting="false" start="2019-04-29" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="129" name="Enchanted Display" color="#660066" meeting="false" start="2019-04-29" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="131" name="Utilization of the Database from the application" color="#660066" meeting="false" start="2019-05-02" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="39" name="Test" color="#3300cc" meeting="false" start="2019-05-13" duration="10" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
-                <task id="40" name="Test GUI" color="#000099" meeting="false" start="2019-05-13" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="41" name="Test DB" color="#8cb6ce" meeting="false" start="2019-05-14" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="42" name="Test Backend" color="#0000cc" meeting="false" start="2019-05-15" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="43" name="Prepare for meeting" color="#0000cc" meeting="false" start="2019-05-16" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
-                <task id="44" name="Meeting 4" color="#000099" meeting="false" start="2019-05-24" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+            <task id="133" name="Testing" meeting="false" start="2019-05-06" duration="5" complete="0" expand="true">
+                <task id="134" name="Mail System" color="#00ffff" meeting="false" start="2019-05-06" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="135" name="Troubleshooting &amp; Debugging" color="#00ffff" meeting="false" start="2019-05-06" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="141" name="Improvements" color="#00ffff" meeting="false" start="2019-05-06" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="142" name="Optimization &amp; Debugging of the Database" color="#00ffff" meeting="false" start="2019-05-06" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="45" name="Presentation" color="#cc0000" meeting="false" start="2019-04-04" duration="1" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
-                <task id="46" name="Prepare for presentation" meeting="false" start="2019-04-04" duration="1" complete="0" expand="true"/>
-                <task id="47" name="Presenting finish date" meeting="false" start="2019-04-04" duration="1" complete="0" expand="true"/>
+            <task id="146" name="Preparing for submission" color="#ff0000" meeting="false" start="2019-05-13" duration="9" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true">
+                <task id="148" name="Testing" color="#ff0000" meeting="false" start="2019-05-13" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="149" name="Debugging" color="#ff0000" meeting="false" start="2019-05-13" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="150" name="Commenting" color="#ff0000" meeting="false" start="2019-05-13" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" priority="2" expand="true"/>
+                <task id="151" name="Improvements" color="#ff0000" meeting="false" start="2019-05-13" duration="5" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                <task id="147" name="Prepration for meeting 4" color="#000000" meeting="false" start="2019-05-20" duration="4" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
             </task>
         </task>
     </tasks>
-    <resources/>
-    <allocations/>
+    <resources>
+        <resource id="0" name="Sumit Dubey" function="Default:1" contacts="sumit.dubey0005@stud.hkr.se" phone="0708507673"/>
+        <resource id="1" name="Robert Alm" function="SoftwareDevelopment:2" contacts="robert.alm0018@stud.hkr.se" phone="076 088 23 82"/>
+        <resource id="2" name="Lavdim Imeri" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="3" name="Raghudeep Bathula" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="32" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="35" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="36" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="125" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="142" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="146" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="148" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="149" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="150" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="151" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="147" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="91" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="34" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="124" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="131" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="134" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="146" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="148" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="149" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="150" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="151" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="91" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="33" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="38" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="129" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="141" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="146" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="148" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="149" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="150" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="151" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="147" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="31" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="37" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="127" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="146" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="148" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="149" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="150" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="151" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="147" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+    </allocations>
     <vacations/>
     <previous/>
     <roles roleset-name="Default"/>
