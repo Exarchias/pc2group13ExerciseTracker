@@ -2,16 +2,30 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class Controller1 {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class Controller1 implements Initializable {
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
-    public void btnPressed(ActionEvent event){
+    }
+
+    @FXML
+    public void btnAdminPressed(ActionEvent event){
 
 
     }
+    @FXML
+    public void btnUserPressed(ActionEvent event){
+
+    }
+
+
 }
