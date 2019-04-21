@@ -18,10 +18,7 @@ public class Controller2 implements Initializable {
 
     }
 
-    @FXML
-    public void buttonGoToAdminPagePressed(ActionEvent event){
 
-    }
 
 
 
