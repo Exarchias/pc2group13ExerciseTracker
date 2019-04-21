@@ -16,6 +16,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     }
     @FXML
     public void buttonLogOutPressed(ActionEvent event){
+        System.exit(0);
 
     }
 
