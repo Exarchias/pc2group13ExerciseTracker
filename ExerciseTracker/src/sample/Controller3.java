@@ -15,12 +15,24 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     }
     @FXML
-    public void buttonLogOutPressed(ActionEvent event){
+    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+        System.exit(0);
+
 
     }
     @FXML
-    public void buttonGoToTheAdminPagePressed(ActionEvent event){
+    public void buttonGoToTheAdminPagePressed(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene2);
 
+    }
+    @FXML
+    public void buttonGoToLogPagePressed(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene5);
+
+    }
+    @FXML
+    public void buttonGoToTheSettingPage(ActionEvent event) throws Exception{
+        Main.getInstance().setScene(Main.Scene4);
     }
 
 

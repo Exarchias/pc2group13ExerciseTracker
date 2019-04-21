@@ -18,12 +18,14 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     }
 
     @FXML
-    public void btnAdminPressed(ActionEvent event){
+    public void btnAdminPressed(ActionEvent event) throws Exception{
+        Main.getInstance().setScene(Main.Scene2);
 
 
     }
     @FXML
-    public void btnUserPressed(ActionEvent event){
+    public void btnUserPressed(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene3);
 
     }
 

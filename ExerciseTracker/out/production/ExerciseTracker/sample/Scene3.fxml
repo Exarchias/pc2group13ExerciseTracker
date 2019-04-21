@@ -3,9 +3,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
    <children>
       <Button fx:id="btnLogOut" layoutX="87.0" layoutY="133.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
+      <Button fx:id="btnGoToTheAdminPage" layoutX="308.0" layoutY="133.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" text="Go to The Admin Page" />
+      <Button fx:id="btnGoToTheLogPage" layoutX="335.0" layoutY="228.0" mnemonicParsing="false" onAction="#buttonGoToLogPagePressed" text="Go To The Log Page" />
+      <Button fx:id="btnGoToTheSettingPage" layoutX="371.0" layoutY="299.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" text="Go to the Settings Page" />
    </children>
 </AnchorPane>
