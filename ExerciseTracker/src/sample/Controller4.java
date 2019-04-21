@@ -1,8 +1,21 @@
 package sample;
 
-public class Controller4 {
+import javafx.fxml.Initializable;
 
-    public void buttonPressed(){
+import java.awt.event.ActionEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Controller4 implements Initializable {
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
     }
+
+    public void buttonLogOutPressed(ActionEvent event){
+
+    }
+
+
 }
