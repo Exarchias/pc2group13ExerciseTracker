@@ -19,6 +19,10 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         System.exit(0);
 
     }
+    @FXML
+    public void buttonGoToTheUserPage(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene3);
+    }
 
 
 
