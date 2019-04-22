@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller1 implements Initializable {
+public class Controller1 implements Initializable { //LOGIN PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -18,12 +18,14 @@ public class Controller1 implements Initializable {
     }
 
     @FXML
-    public void btnAdminPressed(ActionEvent event){
+    public void btnAdminPressed(ActionEvent event) throws Exception{
+        Main.getInstance().setScene(Main.Scene2);
 
 
     }
     @FXML
-    public void btnUserPressed(ActionEvent event){
+    public void btnUserPressed(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene3);
 
     }
 

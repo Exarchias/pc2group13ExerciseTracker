@@ -1,13 +1,14 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-import java.awt.event.ActionEvent;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller2 implements Initializable {
+public class Controller2 implements Initializable { // ADMIN PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -15,13 +16,15 @@ public class Controller2 implements Initializable {
     }
     @FXML
     public void buttonLogOutPressed(ActionEvent event){
+        System.exit(0);
 
     }
-
     @FXML
-    public void buttonGoToAdminPagePressed(ActionEvent event){
-
+    public void buttonGoToTheUserPage(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene3);
     }
+
+
 
 
 
