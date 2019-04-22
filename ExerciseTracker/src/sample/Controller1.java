@@ -12,6 +12,12 @@ import java.util.ResourceBundle;
 
 public class Controller1 implements Initializable { //LOGIN PAGE
 
+    @FXML
+    private TextField txtUserName;
+
+    @FXML
+    private TextField txtPassword;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
