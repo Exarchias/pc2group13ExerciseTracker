@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 
 public class Controller1 implements Initializable { //LOGIN PAGE
 
+
     @FXML
     private TextField txtUserName;
 
@@ -31,6 +32,12 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     }
     @FXML
     public void btnUserPressed(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene3);
+
+    }
+
+    @FXML
+    public void btnLogin(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene3);
 
     }
