@@ -11,6 +11,13 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if(!DataHolder.isLogin()){
+            try {
+                Methods.logOut();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 

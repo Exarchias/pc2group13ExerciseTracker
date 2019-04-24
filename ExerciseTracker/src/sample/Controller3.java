@@ -12,6 +12,13 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if(!DataHolder.isLogin()){
+            try {
+                Methods.logOut();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
     }
     @FXML

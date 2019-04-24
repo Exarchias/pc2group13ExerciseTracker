@@ -12,6 +12,13 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if(!DataHolder.isLogin()){
+            try {
+                Methods.logOut();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
     }
     @FXML
@@ -25,6 +32,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     public void buttonGoToTheUserPage(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene3);
     }
+
 
 
 
