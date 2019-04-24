@@ -16,10 +16,11 @@ public class Controller3 implements Initializable {  //USER PAGE
     }
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
-        System.exit(0);
-
-
+        DataHolder.setLogin(false);
+        Main.getInstance().setScene(Main.sample);
+        System.out.println("You are logged out");
     }
+
     @FXML
     public void buttonGoToTheAdminPagePressed(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene2);

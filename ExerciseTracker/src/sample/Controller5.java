@@ -15,15 +15,17 @@ public class Controller5 implements Initializable { //LOG PAGE
 
     }
     @FXML
-    public void buttonLogOutPressed(ActionEvent event) throws Exception{
-        System.exit(0);
-
+    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+        DataHolder.setLogin(false);
+        Main.getInstance().setScene(Main.sample);
+        System.out.println("You are logged out");
     }
+
     @FXML
     public void buttonGoToTheAdminPage(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene2);
-
     }
+
     @FXML
     public void buttonGoToTheExercisePagePressed(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene6);
