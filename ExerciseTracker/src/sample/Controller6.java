@@ -65,13 +65,15 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     @FXML
     public void addExercise(ActionEvent event)throws Exception{
         System.out.println("The title of the exercise is: " + titleTextField.getText());
-        System.out.println("The title of the exercise is: " + descriptionTextArea.getText());
+        System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
         if(addToSelectedRecipeCheckBox.isSelected()){
             selectedRecipe = Integer.parseInt(recipeSelector.getText());
             System.out.println("The exercise is added to the recipe: " + selectedRecipe);
+            System.out.println("The exercise is considered added");
+        } else {
+            System.out.println("The exercise is considered added");
+            Main.getInstance().setScene(Main.Scene2);
         }
-        System.out.println("The exercise is considered added");
-        Main.getInstance().setScene(Main.Scene2);
 
     }
 
