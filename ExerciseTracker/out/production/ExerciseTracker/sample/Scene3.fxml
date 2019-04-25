@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
    <children>
@@ -18,5 +19,10 @@
       <TextArea fx:id="exerciseListTextArea" layoutX="43.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" text="You have nothing... you are lazy." />
       <TextField fx:id="exerciseSelector" layoutX="358.0" layoutY="213.0" prefHeight="25.0" prefWidth="56.0" text="0" />
       <Label layoutX="262.0" layoutY="217.0" text="Selcted Exercise:" />
+      <Label layoutX="169.0" layoutY="33.0" text="User Page">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
