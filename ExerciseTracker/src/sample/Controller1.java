@@ -49,7 +49,6 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     public void btnLoginIsFalse(ActionEvent event)throws Exception{
         DataHolder.setLogin(false);
         System.out.println("Now your credentials are invalid");
-
     }
 
     @FXML
@@ -64,8 +63,9 @@ public class Controller1 implements Initializable { //LOGIN PAGE
             System.out.println("Access denied!");
         }
 
-
     }
+
+
 
 
 }
