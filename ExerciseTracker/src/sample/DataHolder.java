@@ -1,8 +1,13 @@
 package sample;
 
+import java.util.ArrayList;
+
 public class DataHolder {
     private static boolean admin = false;
     private static boolean login = false;
+    public static User activeUser;
+    public static User supervisedUser; //when an Admin inspects a User's profile.
+    public static ArrayList<User> userList = new ArrayList<>();
 
     public static boolean isAdmin() {
         return admin;
