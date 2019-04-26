@@ -38,6 +38,13 @@ public class Controller7 implements Initializable { //LOG PAGE
                 e.printStackTrace();
             }
         }
+        userNameTextField.setText(DataHolder.supervisedUser.getUserName());
+        passWordTextField.setText(DataHolder.supervisedUser.getPassWord());
+        emailTextField.setText(DataHolder.supervisedUser.getEmail());
+        if(DataHolder.supervisedUser.isAnAdmin()){
+            isAdminCheckBox.setSelected(true);
+        }
+
 
     }
     @FXML
@@ -63,10 +70,11 @@ public class Controller7 implements Initializable { //LOG PAGE
         System.out.println("The password is: " + password);
         System.out.println("The email is: " + email);
         if(userIsAdmin){
-            System.out.println("The user is an Admin");
+            System.out.println("The user becomes an Admin");
+            DataHolder.supervisedUser.setAnAdmin(true);
         }
-        User userObj = new User(username, password, email, userIsAdmin);
-        DataHolder.userList.add(userObj);
+//        User userObj = new User(username, password, email, userIsAdmin);
+//        DataHolder.userList.add(userObj);
         System.out.println("The User is considered created");
         Main.getInstance().setScene(Main.Scene2);
     }
