@@ -38,6 +38,10 @@ public class Main extends Application {
 
     }
     public static void main(String[] args) {
+        User firstUser = new User("admin", "12345",
+                "admin@exercise.trackom", true);
+        DataHolder.userList.add(0,firstUser);
+        System.out.println("Verification: The very first User is " + DataHolder.userList.get(0).getUserName());
         launch(args);
     }
 }
