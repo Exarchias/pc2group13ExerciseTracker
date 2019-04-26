@@ -60,7 +60,7 @@ public class Controller7 implements Initializable { //LOG PAGE
     }
 
     @FXML
-    public void createUser(ActionEvent event)throws Exception{
+    public void editUser(ActionEvent event)throws Exception{
         System.out.println("Creating User...");
         username = userNameTextField.getText();
         password = passWordTextField.getText();
@@ -70,12 +70,16 @@ public class Controller7 implements Initializable { //LOG PAGE
         System.out.println("The password is: " + password);
         System.out.println("The email is: " + email);
         if(userIsAdmin){
-            System.out.println("The user becomes an Admin");
+            System.out.println("The user is an Admin");
             DataHolder.supervisedUser.setAnAdmin(true);
+        } else {
+            System.out.println("The user is NOT an Admin");
+            DataHolder.supervisedUser.setAnAdmin(false);
         }
-//        User userObj = new User(username, password, email, userIsAdmin);
-//        DataHolder.userList.add(userObj);
-        System.out.println("The User is considered created");
+        DataHolder.supervisedUser.setUserName(username);
+        DataHolder.supervisedUser.setPassWord(password);
+        DataHolder.supervisedUser.setEmail(email);
+        System.out.println("The User is considered edited");
         Main.getInstance().setScene(Main.Scene2);
     }
 
