@@ -21,6 +21,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        DataHolder.setAdmin(false);
 
     }
 

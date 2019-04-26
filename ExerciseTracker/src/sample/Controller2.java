@@ -69,12 +69,12 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     }
 
     @FXML
-    public void editUser(ActionEvent event){
+    public void editUser(ActionEvent event)throws Exception{
         selectedUser = Integer.parseInt(userSelector.getText());
         System.out.println("Editing the user " +
                 DataHolder.userList.get(selectedUser).getUserName() + "from the system");
         DataHolder.supervisedUser = DataHolder.userList.get(selectedUser);
-        //Main.getInstance().setScene(Main.Scene7);
+        Main.getInstance().setScene(Main.Scene7);
     }
 
     public void updateDisplay(){
