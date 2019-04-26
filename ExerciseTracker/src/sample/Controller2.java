@@ -31,6 +31,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
             }
         }
         userSelector.setText(String.valueOf(selectedUser));
+        updateDisplay();
 
     }
     @FXML
@@ -61,17 +62,24 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     @FXML
     public void deleteUser(ActionEvent event){
         selectedUser = Integer.parseInt(userSelector.getText());
-        System.out.println("Removing the user " + selectedUser + "from the system");
+        System.out.println("Removing the user " + DataHolder.userList.get(selectedUser).getUserName()
+                + "from the system");
+        DataHolder.userList.remove(selectedUser);
+        updateDisplay();
     }
 
     @FXML
     public void editUser(ActionEvent event){
         selectedUser = Integer.parseInt(userSelector.getText());
-        System.out.println("Editing the user " + selectedUser + "from the system");
+        System.out.println("Editing the user " +
+                DataHolder.userList.get(selectedUser).getUserName() + "from the system");
+        DataHolder.supervisedUser = DataHolder.userList.get(selectedUser);
+        //Main.getInstance().setScene(Main.Scene7);
     }
 
     public void updateDisplay(){
         int count = 0;
+        userListDisplay = "";
         for (User x : DataHolder.userList){
             userListDisplay += count + ") " + x.getUserName() + "\n";
             count++;
