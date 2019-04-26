@@ -60,6 +60,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
                     (txtPassword.getText().equalsIgnoreCase(x.getPassWord()))){
                 DataHolder.setLogin(true);
                 DataHolder.activeUser = x;
+                DataHolder.setActiveName(DataHolder.activeUser.getUserName());
                 if(DataHolder.activeUser.isAnAdmin()){
                     DataHolder.setAdmin(true);
                 }
