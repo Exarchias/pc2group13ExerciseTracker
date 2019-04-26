@@ -48,6 +48,8 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     @FXML
     public void buttonGoToTheSettingPage(ActionEvent event) throws Exception{
+        DataHolder.supervisedUser = DataHolder.activeUser;
+        System.out.println("Supervised user is: " + DataHolder.supervisedUser.getUserName());
         Main.getInstance().setScene(Main.Scene4);
     }
 
