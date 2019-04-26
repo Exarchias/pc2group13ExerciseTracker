@@ -65,6 +65,8 @@ public class Controller5 implements Initializable { //LOG PAGE
         if(userIsAdmin){
             System.out.println("The user is an Admin");
         }
+        User userObj = new User(username, password, email, userIsAdmin);
+        DataHolder.userList.add(userObj);
         System.out.println("The User is considered created");
         Main.getInstance().setScene(Main.Scene2);
     }
