@@ -79,14 +79,6 @@ public class Controller7 implements Initializable { //LOG PAGE
         Main.getInstance().setScene(Main.Scene2);
     }
 
-    @FXML
-    public void cleanTheFields(ActionEvent event)throws Exception{
-        System.out.println("Cleaning the fields...");
-        userNameTextField.setText("");
-        passWordTextField.setText("");
-        emailTextField.setText("");
-        isAdminCheckBox.setSelected(false);
-    }
 
 
 
