@@ -41,7 +41,11 @@ public class Main extends Application {
         User firstUser = new User("admin", "12345",
                 "admin@exercise.trackom", true);
         DataHolder.userList.add(0,firstUser);
+        User secondUser = new User("average", "12345",
+                "LowBob@exercise.trackom", false);
+        DataHolder.userList.add(1,secondUser);
         System.out.println("Verification: The very first User is " + DataHolder.userList.get(0).getUserName());
+        System.out.println("Verification: The very second User is " + DataHolder.userList.get(1).getUserName());
         launch(args);
     }
 }

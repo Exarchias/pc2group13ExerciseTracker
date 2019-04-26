@@ -27,6 +27,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     @FXML
     public void btnAdminPressed(ActionEvent event) throws Exception{
         DataHolder.setAdmin(true);
+        DataHolder.activeUser = DataHolder.userList.get(0);
         System.out.println("Now you are Credible for Admin");
 
 
@@ -34,6 +35,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     @FXML
     public void btnUserPressed(ActionEvent event)throws Exception{
         DataHolder.setAdmin(false);
+        DataHolder.activeUser = DataHolder.userList.get(1);
         System.out.println("Now you are NOT Credible for Admin");
 
     }
@@ -53,7 +55,20 @@ public class Controller1 implements Initializable { //LOGIN PAGE
 
     @FXML
     public void btnLogin(ActionEvent event)throws Exception{
+        for (User x: DataHolder.userList){
+            if((txtUserName.getText().equalsIgnoreCase(x.getUserName())) &&
+                    (txtPassword.getText().equalsIgnoreCase(x.getPassWord()))){
+                DataHolder.setLogin(true);
+                DataHolder.activeUser = x;
+                if(DataHolder.activeUser.isAnAdmin()){
+                    DataHolder.setAdmin(true);
+                }
+            }
+        }
+
+
         if(DataHolder.isLogin()){
+            System.out.println("You are logged as " + DataHolder.activeUser.getUserName());
             if(DataHolder.isAdmin()){
                 Main.getInstance().setScene(Main.Scene2);
             } else {
