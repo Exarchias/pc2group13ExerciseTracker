@@ -7,6 +7,12 @@ public class Exercise {
     private String description;
     private int owner;
 
+    public Exercise(String title, String description, int owner){
+        this.title = title;
+        this.description = description;
+        this.owner = owner;
+    }
+
     public String getTitle() {
         return title;
     }
