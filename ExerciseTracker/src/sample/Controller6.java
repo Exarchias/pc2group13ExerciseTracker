@@ -11,14 +11,23 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if(!DataHolder.isLogin()){
+            try {
+                Methods.logOut();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
-        System.exit(0);
-
+        DataHolder.setLogin(false);
+        Main.getInstance().setScene(Main.sample);
+        System.out.println("You are logged out");
     }
+
     @FXML
     public void buttonGoToAdminPagePressed(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene2);
