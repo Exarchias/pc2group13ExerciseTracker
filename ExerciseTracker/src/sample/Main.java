@@ -14,6 +14,11 @@ public class Main extends Application {
     public static final String Scene4 = "Scene4";
     public static final String Scene5 = "Scene5";
     public static final String Scene6 = "Scene6";
+    public static final String Scene7 = "Scene7";
+    public static final String Scene8 = "Scene8";
+    public static final String Scene9 = "Scene9";
+    public static final String Scene10 = "Scene10";
+    public static final String Scene11 = "Scene11";
 
     private Stage primaryStage;
     private static Main instance = null;
@@ -38,6 +43,14 @@ public class Main extends Application {
 
     }
     public static void main(String[] args) {
+        User firstUser = new User("admin", "12345",
+                "admin@exercise.trackom", true);
+        DataHolder.userList.add(0,firstUser);
+        User secondUser = new User("average", "12345",
+                "LowBob@exercise.trackom", false);
+        DataHolder.userList.add(1,secondUser);
+        System.out.println("Verification: The very first User is " + DataHolder.userList.get(0).getUserName());
+        System.out.println("Verification: The very second User is " + DataHolder.userList.get(1).getUserName());
         launch(args);
     }
 }

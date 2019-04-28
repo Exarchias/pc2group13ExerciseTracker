@@ -21,12 +21,14 @@ public class Controller1 implements Initializable { //LOGIN PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        DataHolder.setAdmin(false);
 
     }
 
     @FXML
     public void btnAdminPressed(ActionEvent event) throws Exception{
         DataHolder.setAdmin(true);
+        DataHolder.activeUser = DataHolder.userList.get(0);
         System.out.println("Now you are Credible for Admin");
 
 
@@ -34,6 +36,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     @FXML
     public void btnUserPressed(ActionEvent event)throws Exception{
         DataHolder.setAdmin(false);
+        DataHolder.activeUser = DataHolder.userList.get(1);
         System.out.println("Now you are NOT Credible for Admin");
 
     }
@@ -49,12 +52,25 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     public void btnLoginIsFalse(ActionEvent event)throws Exception{
         DataHolder.setLogin(false);
         System.out.println("Now your credentials are invalid");
-
     }
 
     @FXML
     public void btnLogin(ActionEvent event)throws Exception{
+        for (User x: DataHolder.userList){
+            if((txtUserName.getText().equalsIgnoreCase(x.getUserName())) &&
+                    (txtPassword.getText().equalsIgnoreCase(x.getPassWord()))){
+                DataHolder.setLogin(true);
+                DataHolder.activeUser = x;
+                DataHolder.setActiveName(DataHolder.activeUser.getUserName());
+                if(DataHolder.activeUser.isAnAdmin()){
+                    DataHolder.setAdmin(true);
+                }
+            }
+        }
+
+
         if(DataHolder.isLogin()){
+            System.out.println("You are logged as " + DataHolder.activeUser.getUserName());
             if(DataHolder.isAdmin()){
                 Main.getInstance().setScene(Main.Scene2);
             } else {
@@ -64,8 +80,9 @@ public class Controller1 implements Initializable { //LOGIN PAGE
             System.out.println("Access denied!");
         }
 
-
     }
+
+
 
 
 }

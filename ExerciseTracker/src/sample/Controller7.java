@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller4 implements Initializable { //LOG PAGE
+public class Controller7 implements Initializable { //LOG PAGE
 
     private String username;
     private String password;
@@ -43,8 +43,6 @@ public class Controller4 implements Initializable { //LOG PAGE
         emailTextField.setText(DataHolder.supervisedUser.getEmail());
         if(DataHolder.supervisedUser.isAnAdmin()){
             isAdminCheckBox.setSelected(true);
-        } else {
-            isAdminCheckBox.setVisible(false);
         }
 
 

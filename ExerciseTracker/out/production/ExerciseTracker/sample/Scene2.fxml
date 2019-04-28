@@ -15,7 +15,7 @@
       <Button layoutX="169.0" layoutY="280.0" mnemonicParsing="false" onAction="#addNewUser" text="Add New User" />
       <Button layoutX="284.0" layoutY="280.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete User" />
       <Button layoutX="382.0" layoutY="280.0" mnemonicParsing="false" onAction="#editUser" text="Edit User" />
-      <TextArea layoutX="88.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" text="Sup!" />
+      <TextArea fx:id="userListTextArea" layoutX="88.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" text="Sup!" />
       <TextField fx:id="userSelector" layoutX="404.0" layoutY="188.0" prefHeight="25.0" prefWidth="45.0" text="0" />
       <Label layoutX="309.0" layoutY="192.0" text="Selected User:" />
       <Label layoutX="261.0" layoutY="14.0" text="Admin Page">
