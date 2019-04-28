@@ -25,6 +25,7 @@ public class Controller3 implements Initializable {  //USER PAGE
             }
         }
         exerciseSelector.setText(String.valueOf(selectedExercise));
+        //DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
         updateDisplay();
 
     }
@@ -88,7 +89,9 @@ public class Controller3 implements Initializable {  //USER PAGE
         selectedExercise = Integer.parseInt(exerciseSelector.getText());
         System.out.println("editing the exercise" +
                 DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
-        //Main.getInstance().setScene(Main.Scene12);
+        DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
+        DataHolder.supervisedExercisePostion = selectedExercise;
+        Main.getInstance().setScene(Main.Scene11);
     }
 
     public void updateDisplay(){
