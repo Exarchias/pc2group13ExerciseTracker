@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller6 implements Initializable { //EXERCISE PAGE
+public class Controller11 implements Initializable { //EXERCISE PAGE
 
     private int selectedRecipe = 0;
 
@@ -25,6 +25,9 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         }
         recipeSelector.setText(String.valueOf(selectedRecipe));
         addToSelectedRecipeCheckBox.setSelected(false);
+        titleTextField.setText(DataHolder.supervisedExercise.getTitle());
+        descriptionTextArea.setText(DataHolder.supervisedExercise.getDescription());
+
 
     }
 
@@ -63,7 +66,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void addExercise(ActionEvent event)throws Exception{
+    public void editExercise(ActionEvent event)throws Exception{
         System.out.println("The title of the exercise is: " + titleTextField.getText());
         System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
         if(addToSelectedRecipeCheckBox.isSelected()){
@@ -71,26 +74,23 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
             System.out.println("The exercise is added to the recipe: " + selectedRecipe);
             //the code below is purposely not displaced by the addTheExercise() method.
             //it will be necessary to be so, in order to be added to the recipe.
-//            Exercise exer = new Exercise(titleTextField.getText(),
-//                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-//            DataHolder.activeUser.exerciseList.add(exer);
             System.out.println("The exercise is considered added to a recipe");
         } else {
-            addTheExercise(); //I made it that way for simplicity.
+            editTheExercise(); //I made it that way for simplicity.
             System.out.println("The exercise is considered added and checked as completed");
             Main.getInstance().setScene(Main.Scene3);
         }
 
     }
 
-    @FXML
-    public void cleanFields(ActionEvent event){
-        titleTextField.setText("");
-        descriptionTextArea.setText("");
-        addToSelectedRecipeCheckBox.setSelected(false);
-        System.out.println("Cleaning the fields");
-
-    }
+//    @FXML
+//    public void cleanFields(ActionEvent event){
+//        titleTextField.setText("");
+//        descriptionTextArea.setText("");
+//        addToSelectedRecipeCheckBox.setSelected(false);
+//        System.out.println("Cleaning the fields");
+//
+//    }
 
     @FXML
     public void testViewSelectedRecipes(ActionEvent event){
@@ -120,10 +120,12 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     }
 
-    public void addTheExercise(){
-        Exercise exer = new Exercise(titleTextField.getText(),
-                descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-        DataHolder.activeUser.exerciseList.add(exer);
+    public void editTheExercise(){
+//        Exercise exer = new Exercise(titleTextField.getText(),
+//                descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
+        DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setTitle(titleTextField.getText());
+        DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setDescription(descriptionTextArea.getText());
+        //DataHolder.activeUser.exerciseList.add(exer);
     }
 
 

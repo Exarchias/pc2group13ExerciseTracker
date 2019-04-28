@@ -1,10 +1,13 @@
 package sample;
 
+import java.util.ArrayList;
+
 public class User {
     private String userName;
     private String passWord;
     private String email;
     private boolean isAnAdmin;
+    public ArrayList<Exercise> exerciseList = new ArrayList<>();
 
     public User(String userName, String passWord, String email, Boolean isAdmin){
         this.userName = userName;
@@ -12,6 +15,7 @@ public class User {
         this.email = email;
         this.isAnAdmin = isAdmin;
     }
+
 
     public String getUserName() {
         return userName;

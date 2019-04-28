@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 public class Controller3 implements Initializable {  //USER PAGE
 
     private int selectedExercise = 0;
+    private String exerciseDisplay;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -24,6 +25,8 @@ public class Controller3 implements Initializable {  //USER PAGE
             }
         }
         exerciseSelector.setText(String.valueOf(selectedExercise));
+        //DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
+        updateDisplay();
 
     }
 
@@ -56,26 +59,50 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     public void testViewExercises(ActionEvent event){
         System.out.println("Presenting the exercises...");
+        updateDisplay();
+        System.out.println(exerciseDisplay);
     }
 
     @FXML
     public void addExercise(ActionEvent event) throws Exception{
         System.out.println("adding an exercise to the list");
+//        Exercise exer = new Exercise("TestExercise " + DataHolder.testCount,
+//                "Test Exercise description", DataHolder.userList.indexOf(DataHolder.activeUser));
+//        DataHolder.testCount ++;
+//        DataHolder.activeUser.exerciseList.add(exer);
+//        updateDisplay();
         Main.getInstance().setScene(Main.Scene6);
     }
 
     @FXML
     public void deleteExercise(ActionEvent event){
         selectedExercise = Integer.parseInt(exerciseSelector.getText());
-        System.out.println("Deleting the exercise " + selectedExercise + " from the list");
+        System.out.println("Deleting the exercise " +
+                DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
+        DataHolder.activeUser.exerciseList.remove(selectedExercise);
+        updateDisplay();
 
     }
 
     @FXML
     public void editExercise(ActionEvent event) throws Exception{
         selectedExercise = Integer.parseInt(exerciseSelector.getText());
-        System.out.println("editing the exercise" + selectedExercise + " from the list");
-        Main.getInstance().setScene(Main.Scene4);
+        System.out.println("editing the exercise" +
+                DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
+        DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
+        DataHolder.supervisedExercisePostion = selectedExercise;
+        Main.getInstance().setScene(Main.Scene11);
+    }
+
+    public void updateDisplay(){
+        int count = 0;
+        exerciseDisplay = "";
+        for (Exercise x : DataHolder.activeUser.exerciseList){
+            exerciseDisplay += count + ") " + x.getTitle() + "\n";
+            count++;
+        }
+        exerciseListTextArea.setText(exerciseDisplay);
+
     }
 
 

@@ -15,6 +15,10 @@ public class Main extends Application {
     public static final String Scene5 = "Scene5";
     public static final String Scene6 = "Scene6";
     public static final String Scene7 = "Scene7";
+    public static final String Scene8 = "Scene8";
+    public static final String Scene9 = "Scene9";
+    public static final String Scene10 = "Scene10";
+    public static final String Scene11 = "Scene11";
 
     private Stage primaryStage;
     private static Main instance = null;
