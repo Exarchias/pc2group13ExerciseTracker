@@ -65,12 +65,12 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     public void addExercise(ActionEvent event) throws Exception{
         System.out.println("adding an exercise to the list");
-        Exercise exer = new Exercise("TestExercise " + DataHolder.testCount,
-                "Test Exercise description", DataHolder.userList.indexOf(DataHolder.activeUser));
-        DataHolder.testCount ++;
-        DataHolder.activeUser.exerciseList.add(exer);
-        updateDisplay();
-        //Main.getInstance().setScene(Main.Scene6);
+//        Exercise exer = new Exercise("TestExercise " + DataHolder.testCount,
+//                "Test Exercise description", DataHolder.userList.indexOf(DataHolder.activeUser));
+//        DataHolder.testCount ++;
+//        DataHolder.activeUser.exerciseList.add(exer);
+//        updateDisplay();
+        Main.getInstance().setScene(Main.Scene6);
     }
 
     @FXML

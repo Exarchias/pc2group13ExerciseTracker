@@ -69,10 +69,16 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         if(addToSelectedRecipeCheckBox.isSelected()){
             selectedRecipe = Integer.parseInt(recipeSelector.getText());
             System.out.println("The exercise is added to the recipe: " + selectedRecipe);
-            System.out.println("The exercise is considered added");
+            //the code below is purposely not displaced by the addTheExercise() method.
+            //it will be necessary to be so, in order to be added to the recipe.
+//            Exercise exer = new Exercise(titleTextField.getText(),
+//                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
+//            DataHolder.activeUser.exerciseList.add(exer);
+            System.out.println("The exercise is considered added to a recipe");
         } else {
-            System.out.println("The exercise is considered added");
-            Main.getInstance().setScene(Main.Scene2);
+            addTheExercise(); //I made it that way for simplicity.
+            System.out.println("The exercise is considered added and checked as completed");
+            Main.getInstance().setScene(Main.Scene3);
         }
 
     }
@@ -112,6 +118,12 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         System.out.println("Adding a new recipe");
         //Main.getInstance().setScene(Main.Scene10);
 
+    }
+
+    public void addTheExercise(){
+        Exercise exer = new Exercise(titleTextField.getText(),
+                descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
+        DataHolder.activeUser.exerciseList.add(exer);
     }
 
 
