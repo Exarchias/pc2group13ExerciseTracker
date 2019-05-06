@@ -1,17 +1,8 @@
+package sample;
 
-package  sample;
-
-
-public class Exercise {
+public class Recipe {
     private String title;
     private String description;
-    private int owner;
-
-    public Exercise(String title, String description, int owner){
-        this.title = title;
-        this.description = description;
-        this.owner = owner;
-    }
 
     public String getTitle() {
         return title;
@@ -27,13 +18,5 @@ public class Exercise {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getOwner() {
-        return owner;
-    }
-
-    public void setOwner(int owner) {
-        this.owner = owner;
     }
 }
