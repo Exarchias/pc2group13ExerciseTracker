@@ -13,6 +13,7 @@
 
 ![Exercise Tracker Application Diagram](https://raw.githubusercontent.com/Exarchias/pc2group13ExerciseTracker/master/exercise_tracker_figure01.jpg?token=AKZDN3MH73POQD427LDZTAK43E5RQ)
 
+
 ### Development Team
 
 This application is conducted as a course project namely Project Course 2 at the Kristianstad University, Sweden for the TBSEH: Bachelor in Software Development program 2018. Following are the team members in the group. 

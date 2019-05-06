@@ -57,9 +57,9 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     public void btnLogin(ActionEvent event)throws Exception{
         if(DataHolder.isLogin()){
             if(DataHolder.isAdmin()){
-                Main.getInstance().setScene(Main.Scene3);
-            } else {
                 Main.getInstance().setScene(Main.Scene2);
+            } else {
+                Main.getInstance().setScene(Main.Scene3);
             }
         } else {
             System.out.println("Access denied!");

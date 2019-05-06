@@ -3,12 +3,16 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller3 implements Initializable {  //USER PAGE
+
+    private int selectedExercise = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -19,8 +23,16 @@ public class Controller3 implements Initializable {  //USER PAGE
                 e.printStackTrace();
             }
         }
+        exerciseSelector.setText(String.valueOf(selectedExercise));
 
     }
+
+    @FXML
+    TextField exerciseSelector;
+
+    @FXML
+    TextArea exerciseListTextArea;
+
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
         DataHolder.setLogin(false);
@@ -33,13 +45,34 @@ public class Controller3 implements Initializable {  //USER PAGE
         Main.getInstance().setScene(Main.Scene2);
 
     }
-    @FXML
-    public void buttonGoToLogPagePressed(ActionEvent event)throws Exception{
-        Main.getInstance().setScene(Main.Scene5);
 
-    }
     @FXML
     public void buttonGoToTheSettingPage(ActionEvent event) throws Exception{
+        Main.getInstance().setScene(Main.Scene4);
+    }
+
+    @FXML
+    public void testViewExercises(ActionEvent event){
+        System.out.println("Presenting the exercises...");
+    }
+
+    @FXML
+    public void addExercise(ActionEvent event) throws Exception{
+        System.out.println("adding an exercise to the list");
+        Main.getInstance().setScene(Main.Scene6);
+    }
+
+    @FXML
+    public void deleteExercise(ActionEvent event){
+        selectedExercise = Integer.parseInt(exerciseSelector.getText());
+        System.out.println("Deleting the exercise " + selectedExercise + " from the list");
+
+    }
+
+    @FXML
+    public void editExercise(ActionEvent event) throws Exception{
+        selectedExercise = Integer.parseInt(exerciseSelector.getText());
+        System.out.println("editing the exercise" + selectedExercise + " from the list");
         Main.getInstance().setScene(Main.Scene4);
     }
 
