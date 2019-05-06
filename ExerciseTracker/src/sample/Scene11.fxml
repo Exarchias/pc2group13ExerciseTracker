@@ -31,7 +31,7 @@
         <Button layoutX="319.0" layoutY="269.0" mnemonicParsing="false" onAction="#editTheRecipe" text="Edit the Selected Recipe" />
       <ImageView fitHeight="85.0" fitWidth="86.0" layoutX="508.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
     </children>

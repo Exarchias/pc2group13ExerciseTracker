@@ -4,13 +4,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="testMonitor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+<AnchorPane fx:id="testMonitor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
    <children>
-      <Button fx:id="btnLogOut" layoutX="504.0" layoutY="40.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
-      <Button fx:id="btnGoToTheUserPage" layoutX="449.0" layoutY="80.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Go To The User Page" />
+      <Button fx:id="btnLogOut" layoutX="493.0" layoutY="99.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
+      <Button fx:id="btnGoToTheUserPage" layoutX="457.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Go To The User Page" />
       <Button layoutX="35.0" layoutY="280.0" mnemonicParsing="false" onAction="#testViewUsers" text="(Test )View Users" />
       <Button layoutX="169.0" layoutY="280.0" mnemonicParsing="false" onAction="#addNewUser" text="Add New User" />
       <Button layoutX="284.0" layoutY="280.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete User" />
@@ -23,5 +25,10 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <ImageView fitHeight="91.0" fitWidth="106.0" layoutX="503.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
