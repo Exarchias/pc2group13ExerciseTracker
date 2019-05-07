@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
@@ -27,6 +28,8 @@ public class Controller5 implements Initializable { //LOG PAGE
 
     @FXML
     CheckBox isAdminCheckBox;
+    @FXML
+    Button btnGoToAdminPage;
 
 
     @Override
@@ -38,6 +41,9 @@ public class Controller5 implements Initializable { //LOG PAGE
                 e.printStackTrace();
             }
         }
+        if (DataHolder.isAdmin())
+            btnGoToAdminPage.setVisible(true);
+        else btnGoToAdminPage.setVisible(false);
 
     }
     @FXML
