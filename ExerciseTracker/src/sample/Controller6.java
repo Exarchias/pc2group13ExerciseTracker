@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -23,10 +24,16 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
                 e.printStackTrace();
             }
         }
+        if (DataHolder.isAdmin())
+            btnGoToAdminPage.setVisible(true);
+        else btnGoToAdminPage.setVisible(false);
+
         recipeSelector.setText(String.valueOf(selectedRecipe));
         addToSelectedRecipeCheckBox.setSelected(false);
 
     }
+    @FXML
+    Button btnGoToAdminPage;
 
     @FXML
     TextField titleTextField;
