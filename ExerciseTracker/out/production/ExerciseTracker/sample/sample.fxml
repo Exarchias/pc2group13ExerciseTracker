@@ -22,7 +22,7 @@
       <Label layoutX="347.0" layoutY="42.0" text="Set as:" />
       <ImageView fitHeight="91.0" fitWidth="96.0" layoutX="503.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
    </children>

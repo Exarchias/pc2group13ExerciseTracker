@@ -29,7 +29,7 @@
       </Label>
       <ImageView fitHeight="114.0" fitWidth="95.0" layoutX="498.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
    </children>
