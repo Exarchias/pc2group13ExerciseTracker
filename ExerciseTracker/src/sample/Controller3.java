@@ -26,20 +26,21 @@ public class Controller3 implements Initializable {  //USER PAGE
                 e.printStackTrace();
             }
         }
+        lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         exerciseSelector.setText(String.valueOf(selectedExercise));
-        //DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
+
         updateDisplay();
 
         if (DataHolder.isAdmin())
             btnGoToTheAdminPage.setVisible(true);
         else btnGoToTheAdminPage.setVisible(false);
-       
+
 
     }
 
 
     @FXML
-    Label lbl1;
+    Label lblActiveName;
     @FXML
     TextField exerciseSelector;
 
