@@ -35,5 +35,6 @@
             <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblActiveName" layoutX="11.0" layoutY="13.0" text="ActiveName:" />
    </children>
 </AnchorPane>

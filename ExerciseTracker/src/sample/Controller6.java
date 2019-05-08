@@ -3,10 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -30,6 +27,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
         recipeSelector.setText(String.valueOf(selectedRecipe));
         addToSelectedRecipeCheckBox.setSelected(false);
+        lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
     }
     @FXML
@@ -40,6 +38,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     @FXML
     TextArea descriptionTextArea;
+    @FXML
+    Label lblActiveName;
 
     @FXML
     TextArea recipesTextArea;

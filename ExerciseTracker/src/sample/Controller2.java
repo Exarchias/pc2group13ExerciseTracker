@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -15,6 +16,10 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     private int selectedUser = 0;
     private String userListDisplay = "";
 
+
+    @FXML
+    Label lblActiveName;
+
     @FXML
     TextField userSelector;
 
@@ -23,13 +28,17 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!DataHolder.isLogin()){
+        if(!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
         }
+
+       lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
+
         userSelector.setText(String.valueOf(selectedUser));
         updateDisplay();
 
