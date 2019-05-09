@@ -3,6 +3,8 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -17,24 +19,36 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!DataHolder.isLogin()){
+        if (!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+        lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         exerciseSelector.setText(String.valueOf(selectedExercise));
-        //DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
+
         updateDisplay();
+
+        if (DataHolder.isAdmin())
+            btnGoToTheAdminPage.setVisible(true);
+        else btnGoToTheAdminPage.setVisible(false);
+
 
     }
 
+
+    @FXML
+    Label lblActiveName;
     @FXML
     TextField exerciseSelector;
 
     @FXML
     TextArea exerciseListTextArea;
+
+    @FXML
+    Button btnGoToTheAdminPage;
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{

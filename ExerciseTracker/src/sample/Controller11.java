@@ -3,9 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -28,8 +26,17 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
         titleTextField.setText(DataHolder.supervisedExercise.getTitle());
         descriptionTextArea.setText(DataHolder.supervisedExercise.getDescription());
 
+        if (DataHolder.isAdmin())
+            btnGoToAdminPage.setVisible(true);
+        else btnGoToAdminPage.setVisible(false);
+        lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
+
 
     }
+    @FXML
+    Label lblActiveName;
+    @FXML
+    Button btnGoToAdminPage;
 
     @FXML
     TextField titleTextField;

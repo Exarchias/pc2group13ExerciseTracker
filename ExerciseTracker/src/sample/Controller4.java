@@ -3,7 +3,9 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -15,7 +17,8 @@ public class Controller4 implements Initializable { //LOG PAGE
     private String password;
     private String email;
     private boolean userIsAdmin;
-
+    @FXML
+    Label lblActiveName;
     @FXML
     TextField userNameTextField;
 
@@ -27,6 +30,8 @@ public class Controller4 implements Initializable { //LOG PAGE
 
     @FXML
     CheckBox isAdminCheckBox;
+    @FXML
+    Button btnGoToAdminPage;
 
 
     @Override
@@ -46,8 +51,11 @@ public class Controller4 implements Initializable { //LOG PAGE
         } else {
             isAdminCheckBox.setVisible(false);
         }
+        if (DataHolder.isAdmin())
+            btnGoToAdminPage.setVisible(true);
+        else btnGoToAdminPage.setVisible(false);
 
-
+        lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
     }
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{

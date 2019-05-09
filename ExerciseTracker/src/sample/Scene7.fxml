@@ -29,8 +29,9 @@
         </Label>
       <ImageView fitHeight="112.0" fitWidth="95.0" layoutX="500.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblActiveName" layoutX="14.0" layoutY="23.0" text="ActiveName:" />
     </children>
 </AnchorPane>

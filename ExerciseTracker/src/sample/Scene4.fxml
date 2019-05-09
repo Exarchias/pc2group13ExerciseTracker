@@ -12,7 +12,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller4">
    <children>
       <Button layoutX="459.0" layoutY="158.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
-      <Button layoutX="429.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Go To Admin Page" />
+      <Button fx:id="btnGoToAdminPage" layoutX="429.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Go To Admin Page" />
       <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#editUser" text="Edit User" />
       <CheckBox fx:id="isAdminCheckBox" layoutX="174.0" layoutY="209.0" mnemonicParsing="false" text="is Admin" />
       <TextField fx:id="userNameTextField" layoutX="174.0" layoutY="84.0" />
@@ -29,8 +29,9 @@
       </Label>
       <ImageView fitHeight="114.0" fitWidth="95.0" layoutX="498.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblActiveName" layoutX="14.0" layoutY="15.0" text="ActiveName:" />
    </children>
 </AnchorPane>
