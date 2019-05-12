@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 
 import java.net.URL;
@@ -43,22 +44,15 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         }
 
 
-
-
-
-
-
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
         userSelector.setText(String.valueOf(selectedUser));
       updateDisplay(); //TEXTAREAMETHOD
         listViewDisplay();//LISTVIEWMETHOD
 
-
-
-
-
     }
+
+
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
         DataHolder.setLogin(false);
@@ -103,6 +97,13 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         DataHolder.supervisedUser = DataHolder.userList.get(selectedUser);
         Main.getInstance().setScene(Main.Scene7);
     }
+
+    @FXML
+    public void somethingIsSelectedOnListView(MouseEvent event)throws Exception{
+        selectedUser = listView.getSelectionModel().getSelectedIndex();
+        userSelector.setText(String.valueOf(selectedUser));
+    }
+
 
     public void updateDisplay() {
         int count = 0;
