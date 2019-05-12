@@ -1,21 +1,24 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller2 implements Initializable { // ADMIN PAGE
-
     private int selectedUser = 0;
     private String userListDisplay = "";
 
+
+   @FXML
+    public ListView<String> listView;
 
     @FXML
     Label lblActiveName;
@@ -25,6 +28,8 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
     @FXML
     TextArea userListTextArea;
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -37,10 +42,21 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
         }
 
-       lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
+
+
+
+
+
+
+        lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
         userSelector.setText(String.valueOf(selectedUser));
-        updateDisplay();
+      updateDisplay(); //TEXTAREAMETHOD
+        listViewDisplay();//LISTVIEWMETHOD
+
+
+
+
 
     }
     @FXML
@@ -53,6 +69,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     @FXML
     public void buttonGoToTheUserPage(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene3);
+
     }
 
     @FXML
@@ -70,6 +87,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
     @FXML
     public void deleteUser(ActionEvent event){
+
         selectedUser = Integer.parseInt(userSelector.getText());
         System.out.println("Removing the user " + DataHolder.userList.get(selectedUser).getUserName()
                 + "from the system");
@@ -86,16 +104,30 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         Main.getInstance().setScene(Main.Scene7);
     }
 
-    public void updateDisplay(){
+    public void updateDisplay() {
         int count = 0;
         userListDisplay = "";
-        for (User x : DataHolder.userList){
+        for (User x : DataHolder.userList) {
             userListDisplay += count + ") " + x.getUserName() + "\n";
             count++;
         }
         userListTextArea.setText(userListDisplay);
 
+
     }
+        public void listViewDisplay(){
+        for (User x : DataHolder.userList){
+           listView.getItems().add(x.getUserName());
+        }
+
+      listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+
+
+
+    }
+
+
+
 
 
 
