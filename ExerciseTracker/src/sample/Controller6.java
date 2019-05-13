@@ -110,7 +110,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     @FXML
     public void manageRecipes(ActionEvent event)throws Exception{
         System.out.println("going to manage the Recipes on the recipe page");
-        //Main.getInstance().setScene(Main.Scene8);
+        Main.getInstance().setScene(Main.Scene8);
 
     }
 
