@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 public class Controller6 implements Initializable { //EXERCISE PAGE
 
     private int selectedRecipe = 0;
+    private String recipeDisplay;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -28,6 +29,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         recipeSelector.setText(String.valueOf(selectedRecipe));
         addToSelectedRecipeCheckBox.setSelected(false);
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
+        updateDisplay();
 
     }
     @FXML
@@ -133,7 +135,16 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         DataHolder.activeUser.exerciseList.add(exer);
     }
 
+    public void updateDisplay() {
+        int count = 0;
+        recipeDisplay = "";
+        for (Recipe x : DataHolder.activeUser.recipeList) {
+            recipeDisplay += count + ") " + x.getTitle() + "\n";
+            count++;
+        }
+        recipesTextArea.setText(recipeDisplay);
 
+    }
 
 
 
