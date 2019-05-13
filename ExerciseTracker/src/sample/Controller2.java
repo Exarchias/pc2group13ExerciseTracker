@@ -47,7 +47,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
         userSelector.setText(String.valueOf(selectedUser));
-      updateDisplay(); //TEXTAREAMETHOD
+        updateDisplay(); //TEXTAREAMETHOD
         listViewDisplay();//LISTVIEWMETHOD
 
     }
@@ -70,6 +70,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     public void testViewUsers(ActionEvent event){
         System.out.println("I am firing ma lazer");
         updateDisplay();
+        listViewDisplay();//LISTVIEWMETHOD
         System.out.println(userListDisplay);
     }
 
@@ -87,6 +88,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
                 + "from the system");
         DataHolder.userList.remove(selectedUser);
         updateDisplay();
+        listViewDisplay();//LISTVIEWMETHOD
     }
 
     @FXML
@@ -117,6 +119,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
     }
         public void listViewDisplay(){
+        listView.getItems().clear();
         for (User x : DataHolder.userList){
            listView.getItems().add(x.getUserName());
         }
