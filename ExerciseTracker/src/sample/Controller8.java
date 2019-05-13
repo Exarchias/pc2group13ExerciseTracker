@@ -99,8 +99,8 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
         System.out.println("editing the exercise" +
                 DataHolder.activeUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
         DataHolder.supervisedRecipe = DataHolder.activeUser.recipeList.get(selectedRecipe);
-        //DataHolder.supervisedExercisePostion = selectedRecipe;
-        //Main.getInstance().setScene(Main.Scene9);
+        DataHolder.setSupervisedExercisePostion(selectedRecipe);
+        Main.getInstance().setScene(Main.Scene9);
     }
 
     public void recipeDisplay() {
