@@ -8,6 +8,7 @@ public class User {
     private String email;
     private boolean isAnAdmin;
     public ArrayList<Exercise> exerciseList = new ArrayList<>();
+    public  ArrayList<Recipe> recipeList = new ArrayList<>();
 
     public User(String userName, String passWord, String email, Boolean isAdmin){
         this.userName = userName;

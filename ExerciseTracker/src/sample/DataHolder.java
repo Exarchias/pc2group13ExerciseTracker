@@ -10,7 +10,9 @@ public class DataHolder {
     public static User supervisedUser; //when an Admin inspects a User's profile.
     public static ArrayList<User> userList = new ArrayList<>();
     public static Exercise supervisedExercise;
+    public static Recipe supervisedRecipe;
     public static int supervisedExercisePostion;
+    public static int supervisedRecipePostion;
     public static int testCount = 0;
 
     public static boolean isAdmin() {
@@ -37,5 +39,59 @@ public class DataHolder {
         DataHolder.login = login;
     }
 
+    public static User getActiveUser() {
+        return activeUser;
+    }
 
+    public static void setActiveUser(User activeUser) {
+        DataHolder.activeUser = activeUser;
+    }
+
+    public static User getSupervisedUser() {
+        return supervisedUser;
+    }
+
+    public static void setSupervisedUser(User supervisedUser) {
+        DataHolder.supervisedUser = supervisedUser;
+    }
+
+    public static Exercise getSupervisedExercise() {
+        return supervisedExercise;
+    }
+
+    public static void setSupervisedExercise(Exercise supervisedExercise) {
+        DataHolder.supervisedExercise = supervisedExercise;
+    }
+
+    public static Recipe getSupervisedRecipe() {
+        return supervisedRecipe;
+    }
+
+    public static void setSupervisedRecipe(Recipe supervisedRecipe) {
+        DataHolder.supervisedRecipe = supervisedRecipe;
+    }
+
+    public static int getSupervisedExercisePostion() {
+        return supervisedExercisePostion;
+    }
+
+    public static void setSupervisedExercisePostion(int supervisedExercisePostion) {
+        DataHolder.supervisedExercisePostion = supervisedExercisePostion;
+    }
+
+    public static int getSupervisedRecipePostion() {
+        return supervisedRecipePostion;
+    }
+
+    public static void setSupervisedRecipePostion(int supervisedRecipePostion) {
+        DataHolder.supervisedRecipePostion = supervisedRecipePostion;
+    }
+
+    public static int getTestCount() {
+        return testCount;
+    }
+
+    public static void setTestCount(int testCount) {
+        DataHolder.testCount = testCount;
+    }
 }

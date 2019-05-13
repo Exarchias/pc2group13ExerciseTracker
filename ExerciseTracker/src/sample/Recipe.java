@@ -3,6 +3,13 @@ package sample;
 public class Recipe {
     private String title;
     private String description;
+    private int owner;
+
+    public Recipe(String title, String description, int owner){
+        this.title = title;
+        this.description = description;
+        this.owner = owner;
+    }
 
     public String getTitle() {
         return title;
