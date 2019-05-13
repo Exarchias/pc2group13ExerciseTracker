@@ -3,10 +3,8 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 
 import java.net.URL;
@@ -29,6 +27,7 @@ public class Controller3 implements Initializable {  //USER PAGE
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         exerciseSelector.setText(String.valueOf(selectedExercise));
 
+        listViewDisplay();
         updateDisplay();
 
         if (DataHolder.isAdmin())
@@ -38,7 +37,8 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     }
 
-
+    @FXML
+   public ListView<String> listView;
     @FXML
     Label lblActiveName;
     @FXML
@@ -107,6 +107,11 @@ public class Controller3 implements Initializable {  //USER PAGE
         DataHolder.supervisedExercisePostion = selectedExercise;
         Main.getInstance().setScene(Main.Scene11);
     }
+    @FXML
+    public void somethingIsSelectedOnListView(MouseEvent event){
+        selectedExercise = listView.getSelectionModel().getSelectedIndex();
+        exerciseSelector.setText(String.valueOf(selectedExercise));
+    }
 
     public void updateDisplay(){
         int count = 0;
@@ -117,6 +122,14 @@ public class Controller3 implements Initializable {  //USER PAGE
         }
         exerciseListTextArea.setText(exerciseDisplay);
 
+    }
+
+    public void listViewDisplay(){
+        listView.getItems().clear();
+        for (Exercise x : DataHolder.activeUser.exerciseList){
+            listView.getItems().add(x.getTitle());
+        }
+        listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
 
