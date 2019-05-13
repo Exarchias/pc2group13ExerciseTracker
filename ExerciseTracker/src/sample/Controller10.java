@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller6 implements Initializable { //EXERCISE PAGE
+public class Controller10 implements Initializable { //EXERCISE PAGE
 
     private int selectedRecipe = 0;
 
@@ -25,8 +25,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
             btnGoToAdminPage.setVisible(true);
         else btnGoToAdminPage.setVisible(false);
 
-        recipeSelector.setText(String.valueOf(selectedRecipe));
-        addToSelectedRecipeCheckBox.setSelected(false);
+        //recipeSelector.setText(String.valueOf(selectedRecipe));
+        //addToSelectedRecipeCheckBox.setSelected(false);
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
     }
@@ -70,23 +70,13 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void addExercise(ActionEvent event)throws Exception{
+    public void addRecipe(ActionEvent event)throws Exception{
         System.out.println("The title of the exercise is: " + titleTextField.getText());
         System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
-        if(addToSelectedRecipeCheckBox.isSelected()){
-            selectedRecipe = Integer.parseInt(recipeSelector.getText());
-            System.out.println("The exercise is added to the recipe: " + selectedRecipe);
-            //the code below is purposely not displaced by the addTheExercise() method.
-            //it will be necessary to be so, in order to be added to the recipe.
-//            Exercise exer = new Exercise(titleTextField.getText(),
-//                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-//            DataHolder.activeUser.exerciseList.add(exer);
-            System.out.println("The exercise is considered added to a recipe");
-        } else {
-            addTheExercise(); //I made it that way for simplicity.
-            System.out.println("The exercise is considered added and checked as completed");
-            Main.getInstance().setScene(Main.Scene3);
-        }
+        addTheRecipe(); //I made it that way for simplicity.
+        System.out.println("The exercise is considered added and checked as completed");
+        Main.getInstance().setScene(Main.Scene3);
+
 
     }
 
@@ -105,32 +95,11 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     }
 
-    @FXML
-    public void manageRecipes(ActionEvent event)throws Exception{
-        System.out.println("going to manage the Recipes on the recipe page");
-        //Main.getInstance().setScene(Main.Scene8);
 
-    }
-
-    @FXML
-    public void editTheRecipe(ActionEvent event)throws Exception{
-        selectedRecipe = Integer.parseInt(recipeSelector.getText());
-        System.out.println("going to edit the recipe:" + selectedRecipe);
-        //Main.getInstance().setScene(Main.Scene9);
-
-    }
-
-    @FXML
-    public void addaNewRecipe(ActionEvent event)throws Exception{
-        System.out.println("Adding a new recipe");
-        Main.getInstance().setScene(Main.Scene10);
-
-    }
-
-    public void addTheExercise(){
-        Exercise exer = new Exercise(titleTextField.getText(),
+    public void addTheRecipe(){
+        Recipe recip = new Recipe(titleTextField.getText(),
                 descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-        DataHolder.activeUser.exerciseList.add(exer);
+        DataHolder.activeUser.recipeList.add(recip);
     }
 
 
