@@ -78,12 +78,11 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         if(addToSelectedRecipeCheckBox.isSelected()){
             selectedRecipe = Integer.parseInt(recipeSelector.getText());
             System.out.println("The exercise is added to the recipe: " + selectedRecipe);
-            //the code below is purposely not displaced by the addTheExercise() method.
-            //it will be necessary to be so, in order to be added to the recipe.
-//            Exercise exer = new Exercise(titleTextField.getText(),
-//                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-//            DataHolder.activeUser.exerciseList.add(exer);
+            Exercise exer = new Exercise(titleTextField.getText(),
+                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
+            DataHolder.activeUser.recipeList.get(selectedRecipe).exerciseList.add(exer);
             System.out.println("The exercise is considered added to a recipe");
+            recipeDisplay();
         } else {
             addTheExercise(); //I made it that way for simplicity.
             System.out.println("The exercise is considered added and checked as completed");
@@ -104,6 +103,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     @FXML
     public void testViewSelectedRecipes(ActionEvent event){
         System.out.println("Viewing the recipes...");
+        recipeDisplay();
 
     }
 
@@ -143,7 +143,17 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
             count++;
         }
         recipesTextArea.setText(recipeDisplay);
+    }
 
+    public void recipeDisplay() {
+        int count = 0;
+        String inRecipeDisplay = "";
+        System.out.println(DataHolder.activeUser.recipeList.get(selectedRecipe).getTitle());
+        for (Exercise x : DataHolder.activeUser.recipeList.get(selectedRecipe).exerciseList) {
+            inRecipeDisplay += count + ") " + x.getTitle() + "\n";
+            count++;
+        }
+        System.out.println(inRecipeDisplay);
     }
 
 

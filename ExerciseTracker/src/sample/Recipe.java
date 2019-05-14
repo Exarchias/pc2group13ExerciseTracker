@@ -1,9 +1,12 @@
 package sample;
 
+import java.util.ArrayList;
+
 public class Recipe {
     private String title;
     private String description;
     private int owner;
+    ArrayList<Exercise> exerciseList = new ArrayList<>();
 
     public Recipe(String title, String description, int owner){
         this.title = title;
