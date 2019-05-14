@@ -95,6 +95,7 @@ public class Controller3 implements Initializable {  //USER PAGE
                 DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
         DataHolder.activeUser.exerciseList.remove(selectedExercise);
         updateDisplay();
+        listViewDisplay();
 
     }
 
