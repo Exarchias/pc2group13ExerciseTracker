@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -30,6 +31,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         addToSelectedRecipeCheckBox.setSelected(false);
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         updateDisplay();
+        listViewDisplay();
 
     }
     @FXML
@@ -51,6 +53,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     @FXML
     CheckBox addToSelectedRecipeCheckBox;
+    @FXML
+    public ListView<String> listView;
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
@@ -134,6 +138,11 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
                 descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
         DataHolder.activeUser.exerciseList.add(exer);
     }
+    @FXML
+    public void somethingIsSelectedOnListView(MouseEvent event){
+        selectedRecipe = listView.getSelectionModel().getSelectedIndex();
+        recipeSelector.setText(String.valueOf(selectedRecipe));
+    }
 
     public void updateDisplay() {
         int count = 0;
@@ -145,6 +154,14 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         recipesTextArea.setText(recipeDisplay);
 
     }
+    public void listViewDisplay(){
+        listView.getItems().clear();
+        for (Recipe x : DataHolder.activeUser.recipeList){
+            listView.getItems().add(x.getTitle());
+        }
+        listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
+
 
 
 
