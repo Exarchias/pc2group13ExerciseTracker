@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e1bfca0-1195-4b90-bf55-b76be269f08d" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExerciseTracker/src/sample/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseTracker/src/sample/DriverManager.java" afterDir="false" />
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +25,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -32,6 +39,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+=======
+        <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/DriverManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
             </state>
           </provider>
         </entry>
@@ -66,11 +82,19 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="797" />
     <option name="y" value="533" />
     <option name="width" value="1767" />
     <option name="height" value="873" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="x" value="745" />
+    <option name="y" value="648" />
+    <option name="width" value="1764" />
+    <option name="height" value="794" />
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -81,6 +105,10 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,7 +138,10 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -140,6 +171,23 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="RunManager">
+    <configuration name="MysqlCon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MysqlCon" />
+      <module name="pc2group13ExerciseTracker" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MysqlCon" />
+      </list>
+    </recent_temporary>
+  </component>
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -152,27 +200,42 @@
       <updated>1556100341476</updated>
       <workItem from="1556100342606" duration="5677000" />
       <workItem from="1556173761165" duration="3630000" />
+<<<<<<< HEAD
       <workItem from="1556179965427" duration="1661000" />
       <workItem from="1556207973251" duration="851000" />
       <workItem from="1556208857039" duration="13000" />
       <workItem from="1556268159730" duration="599000" />
       <workItem from="1556700655314" duration="1690000" />
       <workItem from="1557340035023" duration="5000" />
+=======
+      <workItem from="1556179965427" duration="84000" />
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="14157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="797" y="533" width="1767" height="873" extended-state="1" />
+=======
+    <option name="totallyTimeSpent" value="9391000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="745" y="648" width="1764" height="794" extended-state="0" />
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
     <layout>
       <window_info id="Learn" order="0" sideWeight="0.49858356" weight="0.32942554" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49716714" visible="true" weight="0.19390744" />
+=======
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49716714" visible="true" weight="0.18075117" />
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
       <window_info id="Structure" order="6" sideWeight="0.5028329" side_tool="true" weight="0.17754263" />
       <window_info id="Favorites" order="7" sideWeight="0.5028329" side_tool="true" weight="0.17754263" />
       <window_info anchor="bottom" id="Version Control" order="0" />
@@ -187,7 +250,11 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32829046" />
+=======
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32980332" />
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -222,6 +289,16 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/new.class" />
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/Controller1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -230,6 +307,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/Controller4.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -249,6 +327,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+=======
+    <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/DriverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
         </state>
       </provider>
     </entry>

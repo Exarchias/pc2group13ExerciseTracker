@@ -1,12 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
    <children>
-      <Button fx:id="btnLogOut" layoutX="112.0" layoutY="130.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
-      <Button fx:id="btnGoToAdminPage" layoutX="274.0" layoutY="130.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
+      <Button fx:id="btnLogOut" layoutX="530.0" layoutY="114.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
+      <Button fx:id="btnGoToAdminPage" layoutX="494.0" layoutY="196.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
+      <Button layoutX="19.0" layoutY="299.0" mnemonicParsing="false" onAction="#addExercise" text="Add Exercise" />
+      <Button layoutX="122.0" layoutY="299.0" mnemonicParsing="false" onAction="#cleanFields" text="Clean Fields" />
+      <Button layoutX="228.0" layoutY="299.0" mnemonicParsing="false" onAction="#goToUserPage" text="Cancel" />
+      <TextField fx:id="titleTextField" layoutX="61.0" layoutY="68.0" />
+      <TextArea fx:id="descriptionTextArea" layoutX="61.0" layoutY="126.0" prefHeight="135.0" prefWidth="149.0" />
+      <TextArea fx:id="recipesTextArea" layoutX="254.0" layoutY="44.0" prefHeight="148.0" prefWidth="129.0" />
+      <Label layoutX="61.0" layoutY="38.0" text="Title:" />
+      <Label layoutX="61.0" layoutY="101.0" text="Description" />
+      <TextField fx:id="recipeSelector" layoutX="383.0" layoutY="204.0" prefHeight="25.0" prefWidth="56.0" text="0" />
+      <Label layoutX="289.0" layoutY="208.0" text="Selected Recipe:" />
+      <Label layoutX="289.0" layoutY="13.0" text="Recipes:" />
+      <CheckBox fx:id="addToSelectedRecipeCheckBox" layoutX="61.0" layoutY="273.0" mnemonicParsing="false" text="Add to the Selected Recipe" />
+      <Button layoutX="318.0" layoutY="311.0" mnemonicParsing="false" onAction="#testViewSelectedRecipes" text="(TEST) View Selected Recipe" />
+      <Button layoutX="411.0" layoutY="237.0" mnemonicParsing="false" onAction="#manageRecipes" text="Manage Recipes" />
+      <Button layoutX="507.0" layoutY="150.0" mnemonicParsing="false" onAction="#goToUserPage" text="Go to User Page" />
+      <Button layoutX="289.0" layoutY="237.0" mnemonicParsing="false" onAction="#addaNewRecipe" text="Add a new Recipe" />
+      <Button layoutX="319.0" layoutY="269.0" mnemonicParsing="false" onAction="#editTheRecipe" text="Edit the Selected Recipe" />
+      <ImageView fitHeight="97.0" fitWidth="95.0" layoutX="518.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblActiveName" layoutX="11.0" layoutY="13.0" text="ActiveName:" />
+      <ListView fx:id="listView" layoutX="22.0" layoutY="348.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
