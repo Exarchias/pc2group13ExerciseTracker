@@ -3,12 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9e1bfca0-1195-4b90-bf55-b76be269f08d" name="Default Changelist" comment="">
 <<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/ExerciseTracker/src/sample/ApplicationView.css" afterDir="false" />
+=======
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExerciseTracker/src/sample/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseTracker/src/sample/DriverManager.java" afterDir="false" />
 >>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +23,24 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="11547873">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="pc2group13ExerciseTracker" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
 <<<<<<< HEAD
@@ -53,6 +71,7 @@
         </entry>
       </file>
     </leaf>
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -83,6 +102,13 @@
     </option>
   </component>
 <<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+=======
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="797" />
     <option name="y" value="533" />
@@ -95,6 +121,7 @@
     <option name="width" value="1764" />
     <option name="height" value="794" />
 >>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -104,11 +131,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
       <pane id="PackagesPane" />
 <<<<<<< HEAD
 =======
       <pane id="Scope" />
 >>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,36 +149,33 @@
             <path>
               <item name="pc2group13ExerciseTracker" type="b2602c69:ProjectViewProjectNode" />
               <item name="pc2group13ExerciseTracker" type="462c0819:PsiDirectoryNode" />
-              <item name="ExerciseTracker" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pc2group13ExerciseTracker" type="b2602c69:ProjectViewProjectNode" />
               <item name="pc2group13ExerciseTracker" type="462c0819:PsiDirectoryNode" />
               <item name="ExerciseTracker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pc2group13ExerciseTracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pc2group13ExerciseTracker" type="462c0819:PsiDirectoryNode" />
-              <item name="ExerciseTracker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
 <<<<<<< HEAD
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+=======
+<<<<<<< HEAD
       <pane id="Scope" />
 =======
 >>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Software Setups/mysql-connector-java-8.0.15/mysql-connector-java-8.0.15.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -223,8 +250,12 @@
     <option name="totallyTimeSpent" value="9391000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+=======
     <frame x="745" y="648" width="1764" height="794" extended-state="0" />
 >>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
     <layout>
       <window_info id="Learn" order="0" sideWeight="0.49858356" weight="0.32942554" />
       <window_info id="Image Layers" order="1" />
@@ -232,10 +263,14 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
 <<<<<<< HEAD
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49716714" visible="true" weight="0.18081991" />
+=======
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49716714" visible="true" weight="0.19390744" />
 =======
       <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49716714" visible="true" weight="0.18075117" />
 >>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
       <window_info id="Structure" order="6" sideWeight="0.5028329" side_tool="true" weight="0.17754263" />
       <window_info id="Favorites" order="7" sideWeight="0.5028329" side_tool="true" weight="0.17754263" />
       <window_info anchor="bottom" id="Version Control" order="0" />
@@ -251,10 +286,15 @@
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
 <<<<<<< HEAD
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32980332" />
+      <window_info anchor="right" id="Maven Projects" />
+=======
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32829046" />
 =======
       <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32980332" />
 >>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -269,6 +309,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -277,16 +320,16 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/Scene2.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/Scene3.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/new.class" />
 <<<<<<< HEAD
@@ -298,6 +341,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/README.md" />
+=======
 >>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -328,6 +374,7 @@
         <state relative-caret-position="136">
           <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
 =======
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
     <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -335,6 +382,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/DriverManager.java" />
+=======
     <entry file="file://$PROJECT_DIR$/ExerciseTracker/src/sample/DriverManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -346,6 +396,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> e2d7be8dd6809a4f4a62d0f2b709b4a51f8274b4
   </component>
   <component name="masterDetails">
     <states>
