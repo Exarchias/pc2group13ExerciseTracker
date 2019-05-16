@@ -51,6 +51,9 @@ public class Controller3 implements Initializable {  //USER PAGE
     Button btnGoToTheAdminPage;
 
     @FXML
+    Button useSelectedExerciseBtn;
+
+    @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
@@ -108,6 +111,23 @@ public class Controller3 implements Initializable {  //USER PAGE
         DataHolder.supervisedExercisePostion = selectedExercise;
         Main.getInstance().setScene(Main.Scene11);
     }
+
+    @FXML
+    public void useSelectedExercise(ActionEvent event){
+        if(DataHolder.activeUser.exerciseList != null){
+            selectedExercise = Integer.parseInt(exerciseSelector.getText());
+            System.out.println("Deleting the exercise " +
+                    DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
+            Exercise exer = DataHolder.activeUser.exerciseList.get(selectedExercise);
+            DataHolder.activeUser.exerciseList.add(exer);
+            updateDisplay();
+            listViewDisplay();
+        } else {
+            System.out.println("the list is empty...");
+        }
+
+    }
+
     @FXML
     public void somethingIsSelectedOnListView(MouseEvent event){
         selectedExercise = listView.getSelectionModel().getSelectedIndex();
