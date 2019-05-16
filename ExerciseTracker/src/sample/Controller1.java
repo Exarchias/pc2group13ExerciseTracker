@@ -13,7 +13,8 @@ import java.util.ResourceBundle;
 
 public class Controller1 implements Initializable { //LOGIN PAGE
 
-
+     @FXML
+     Button btnLogin;
     @FXML
     private TextField txtUserName;
 
@@ -24,6 +25,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     public void initialize(URL location, ResourceBundle resources) {
         DataHolder.setAdmin(false);
         DataHolder.activeUser = null;
+        btnLogin.getStyleClass().add("button-logout");
 
     }
 
@@ -52,6 +54,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
 
     @FXML
     public void btnLoginIsFalse(ActionEvent event)throws Exception{
+
         DataHolder.setLogin(false);
         System.out.println("Now your credentials are invalid");
     }
@@ -68,6 +71,9 @@ public class Controller1 implements Initializable { //LOGIN PAGE
                     DataHolder.setAdmin(true);
                 }
             }
+
+
+
         }
 
 

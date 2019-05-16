@@ -30,6 +30,10 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     @FXML
     TextArea userListTextArea;
 
+    @FXML
+    Button btnLogOut;
+
+
 
 
     @Override
@@ -42,6 +46,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
             }
 
         }
+        btnLogOut.getStyleClass().add("button-logout");
 
 
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
