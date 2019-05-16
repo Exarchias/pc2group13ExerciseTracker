@@ -3,10 +3,8 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 
 import java.net.URL;
@@ -30,6 +28,7 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
         recipeSelector.setText(String.valueOf(selectedRecipe));
 
         recipeDisplay();
+        listViewRecipeDisplay();
 
         if (DataHolder.isAdmin())
             btnGoToTheAdminPage.setVisible(true);
@@ -49,6 +48,8 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
     @FXML
     Button btnGoToTheAdminPage;
+    @FXML
+    ListView<String> listView;
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
@@ -102,6 +103,10 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
         DataHolder.setSupervisedExercisePostion(selectedRecipe);
         Main.getInstance().setScene(Main.Scene9);
     }
+    public void somethingIsSelectedOnListView(MouseEvent event){
+        selectedRecipe = listView.getSelectionModel().getSelectedIndex();
+        recipeSelector.setText(String.valueOf(selectedRecipe));
+    }
 
     public void recipeDisplay() {
         int count = 0;
@@ -112,6 +117,13 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
         }
         recipesTextArea.setText(recipeDisplay);
 
+    }
+    public void listViewRecipeDisplay(){
+     listView.getItems().clear();
+     for (Recipe x : DataHolder.activeUser.recipeList){
+         listView.getItems().add(x.getTitle());
+     }
+     listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
 
