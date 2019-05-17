@@ -32,7 +32,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         instance = this;
         this.primaryStage = primaryStage;
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Exercise Tracker Application");
         setScene(sample);
         primaryStage.show();
     }

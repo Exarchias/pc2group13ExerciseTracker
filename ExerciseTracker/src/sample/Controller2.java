@@ -5,8 +5,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 
 import java.net.URL;
@@ -17,6 +19,9 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     private int selectedUser = 0;
     private String userListDisplay = "";
 
+
+    @FXML
+    private AnchorPane testMonitor;
 
    @FXML
     public ListView<String> listView;
@@ -33,6 +38,19 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     @FXML
     Button btnLogOut;
 
+    @FXML
+    private Button btnViewUser;
+
+    @FXML
+    private Button btnAddNewUser;
+
+    @FXML
+    private Button btnDeleteUser;
+
+    @FXML
+    private Button btnEditUser;
+
+
 
 
 
@@ -45,8 +63,14 @@ public class Controller2 implements Initializable { // ADMIN PAGE
                 e.printStackTrace();
             }
 
+
         }
+      testMonitor.getStylesheets().add("anchorpane-loginscene");
         btnLogOut.getStyleClass().add("button-logout");
+        btnAddNewUser.getStyleClass().add("button-crud");
+        btnDeleteUser.getStyleClass().add("button-crud");
+        btnEditUser.getStyleClass().add("button-crud");
+        btnViewUser.getStyleClass().add("button-crud");
 
 
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());

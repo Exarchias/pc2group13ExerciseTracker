@@ -25,7 +25,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     public void initialize(URL location, ResourceBundle resources) {
         DataHolder.setAdmin(false);
         DataHolder.activeUser = null;
-        btnLogin.getStyleClass().add("button-logout");
+        btnLogin.getStyleClass().add("button-login");
 
     }
 
