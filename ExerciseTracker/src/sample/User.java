@@ -7,6 +7,8 @@ public class User {
     private String passWord;
     private String email;
     private boolean isAnAdmin;
+    private int weight;
+    private int userID;
     public ArrayList<Exercise> exerciseList = new ArrayList<>();
     public  ArrayList<Recipe> recipeList = new ArrayList<>();
 
@@ -17,6 +19,14 @@ public class User {
         this.isAnAdmin = isAdmin;
     }
 
+    public User(String userName, String passWord, String email, boolean isAnAdmin, int weight, int userID) {
+        this.userName = userName;
+        this.passWord = passWord;
+        this.email = email;
+        this.isAnAdmin = isAnAdmin;
+        this.weight = weight;
+        this.userID = userID;
+    }
 
     public String getUserName() {
         return userName;
@@ -46,7 +56,25 @@ public class User {
         return isAnAdmin;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
     public void setAnAdmin(boolean anAdmin) {
         isAnAdmin = anAdmin;
     }
+
+
 }
