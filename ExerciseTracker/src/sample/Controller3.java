@@ -124,10 +124,19 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     public void editExercise(ActionEvent event) throws Exception{
         selectedExercise = Integer.parseInt(exerciseSelector.getText());
-        System.out.println("editing the exercise" +
-                DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
-        DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
-        DataHolder.supervisedExercisePostion = selectedExercise;
+        if(selectedRecipe <= 0){
+            System.out.println("editing the exercise" +
+                    DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
+            DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
+            DataHolder.supervisedExercisePostion = selectedExercise;
+        } else {
+            System.out.println("editing the exercise" +
+                    DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.
+                            get(selectedExercise).getTitle() + " from the list");
+            DataHolder.supervisedExercise = DataHolder.activeUser.recipeList.
+                    get(selectedRecipe -1).exerciseList.get(selectedExercise);
+            DataHolder.supervisedExercisePostion = selectedExercise;
+        }
         Main.getInstance().setScene(Main.Scene11);
     }
 
@@ -151,21 +160,37 @@ public class Controller3 implements Initializable {  //USER PAGE
     public void somethingIsSelectedOnListView(MouseEvent event){
         selectedExercise = listView.getSelectionModel().getSelectedIndex();
         exerciseSelector.setText(String.valueOf(selectedExercise));
+        updateDisplay();
     }
 
     @FXML
     public void somethingIsSelectedOnListViewRight(MouseEvent event){
         selectedRecipe = listView2.getSelectionModel().getSelectedIndex();
         listViewDisplay();
+        updateDisplay();
         //recipeSelector.setText(String.valueOf(selectedRecipe));
     }
 
     public void updateDisplay(){
         exerciseDisplay = "";
-        if(!DataHolder.activeUser.exerciseList.isEmpty()){
-            exerciseDisplay += DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + "\n";
-            exerciseDisplay += DataHolder.activeUser.exerciseList.get(selectedExercise).getDescription() + "\n";
+        if(selectedRecipe <= 0){
+            if(DataHolder.activeUser.exerciseList.isEmpty()){
+                exerciseDisplay += "No exercises detected. \n";
+            } else {
+                exerciseDisplay += DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + "\n";
+                exerciseDisplay += DataHolder.activeUser.exerciseList.get(selectedExercise).getDescription() + "\n";
+            }
+        } else {
+            if(DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.isEmpty()){
+                exerciseDisplay += "No exercises detected. \n";
+            } else {
+                exerciseDisplay += DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.
+                        get(selectedExercise).getTitle() + "\n";
+                exerciseDisplay += DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.
+                        get(selectedExercise).getDescription() + "\n";
+            }
         }
+
         exerciseDisplay += "You can add this exercise to your history by clicking use selected exercise.\n";
         exerciseListTextArea.setText(exerciseDisplay);
 
