@@ -83,4 +83,12 @@ public class Exercise {
     public void setCaloriesPerRepetition(int caloriesPerRepetition) {
         this.caloriesPerRepetition = caloriesPerRepetition;
     }
+
+    //helping method that gives fair calories per repetition according the the weight
+    public int calculateCaloriesPerWeight(Double weight){
+        weight = weight/200;
+        //ratio according the the weight
+        int calories = (int) (caloriesPerRepetition * (1 + weight));
+        return calories;
+    }
 }
