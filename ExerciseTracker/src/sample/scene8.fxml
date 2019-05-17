@@ -11,10 +11,12 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="699.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller8">
+
+
     <children>
-        <Button fx:id="btnLogOut" layoutX="386.0" layoutY="48.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
-        <Button fx:id="btnGoToTheAdminPage" layoutX="356.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" text="Go to The Admin Page" />
-        <Button fx:id="btnGoToTheSettingPage" layoutX="343.0" layoutY="83.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" text="Go to the Settings Page" />
+        <Button fx:id="btnLogOut" layoutX="519.0" layoutY="108.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
+        <Button fx:id="btnGoToTheAdminPage" layoutX="337.0" layoutY="34.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" text="Go to The Admin Page" />
+        <Button fx:id="btnGoToTheSettingPage" layoutX="191.0" layoutY="70.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" text="Go to the Settings Page" />
         <Button layoutX="43.0" layoutY="301.0" mnemonicParsing="false" onAction="#testViewRecipes" text="(Test) view Exercises" />
         <Button layoutX="183.0" layoutY="301.0" mnemonicParsing="false" onAction="#addRecipe" text="Add Recipe" />
         <Button layoutX="274.0" layoutY="301.0" mnemonicParsing="false" onAction="#deleteRecipe" text="Delete Recipe" />
@@ -22,7 +24,7 @@
         <TextArea fx:id="recipesTextArea" layoutX="43.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" text="You have nothing... you are lazy." />
         <TextField fx:id="recipeSelector" layoutX="358.0" layoutY="213.0" prefHeight="25.0" prefWidth="56.0" text="0" />
         <Label layoutX="262.0" layoutY="217.0" text="Selcted Recipe" />
-        <Label layoutX="169.0" layoutY="33.0" text="Recipes Page">
+        <Label layoutX="169.0" layoutY="18.0" text="Recipes Page">
             <font>
                 <Font size="18.0" />
             </font>
@@ -34,5 +36,6 @@
         </ImageView>
         <Label fx:id="lblActiveName" layoutX="8.0" layoutY="14.0" text="Active Name:" />
       <ListView fx:id="listView" layoutX="28.0" layoutY="338.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="353.0" layoutY="70.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPagePressed" text="Go to the User Page" />
     </children>
 </AnchorPane>

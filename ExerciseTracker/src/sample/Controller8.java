@@ -65,6 +65,12 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     }
 
     @FXML
+    public void buttonGoToTheUserPagePressed(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene3);
+
+    }
+
+    @FXML
     public void buttonGoToTheSettingPage(ActionEvent event) throws Exception{
         DataHolder.supervisedUser = DataHolder.activeUser;
         System.out.println("Supervised user is: " + DataHolder.supervisedUser.getUserName());
