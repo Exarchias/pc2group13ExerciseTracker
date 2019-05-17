@@ -14,6 +14,7 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     private int selectedExercise = 0;
     private String exerciseDisplay;
+    private int selectedRecipe = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -29,6 +30,10 @@ public class Controller3 implements Initializable {  //USER PAGE
 
         listViewDisplay();
         updateDisplay();
+        listViewDisplay2();
+//        if(DataHolder.activeUser.exerciseList.get(0) != null){
+//            updateDisplay();
+//        }
 
         if (DataHolder.isAdmin())
             btnGoToTheAdminPage.setVisible(true);
@@ -52,6 +57,12 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     @FXML
     Button useSelectedExerciseBtn;
+
+    @FXML
+    TextField recipeSelector;
+
+    @FXML
+    public ListView<String> listView2;
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
@@ -134,13 +145,19 @@ public class Controller3 implements Initializable {  //USER PAGE
         exerciseSelector.setText(String.valueOf(selectedExercise));
     }
 
+    @FXML
+    public void somethingIsSelectedOnListViewRight(MouseEvent event){
+        selectedRecipe = listView2.getSelectionModel().getSelectedIndex();
+        //recipeSelector.setText(String.valueOf(selectedRecipe));
+    }
+
     public void updateDisplay(){
-        int count = 0;
         exerciseDisplay = "";
-        for (Exercise x : DataHolder.activeUser.exerciseList){
-            exerciseDisplay += count + ") " + x.getTitle() + "\n";
-            count++;
+        if(!DataHolder.activeUser.exerciseList.isEmpty()){
+            exerciseDisplay += DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + "\n";
+            exerciseDisplay += DataHolder.activeUser.exerciseList.get(selectedExercise).getDescription() + "\n";
         }
+        exerciseDisplay += "You can add this exercise to your history by clicking use selected exercise.\n";
         exerciseListTextArea.setText(exerciseDisplay);
 
     }
@@ -151,6 +168,14 @@ public class Controller3 implements Initializable {  //USER PAGE
             listView.getItems().add(x.getTitle());
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
+
+    public void listViewDisplay2(){
+        listView2.getItems().clear();
+        for (Recipe x : DataHolder.activeUser.recipeList){
+            listView2.getItems().add(x.getTitle());
+        }
+        listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
 
