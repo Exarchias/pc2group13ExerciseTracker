@@ -105,10 +105,17 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     @FXML
     public void deleteExercise(ActionEvent event){
-        selectedExercise = Integer.parseInt(exerciseSelector.getText());
-        System.out.println("Deleting the exercise " +
-                DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
-        DataHolder.activeUser.exerciseList.remove(selectedExercise);
+        if(selectedRecipe <= 0){
+            selectedExercise = Integer.parseInt(exerciseSelector.getText());
+            System.out.println("Deleting the exercise " +
+                    DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
+            DataHolder.activeUser.exerciseList.remove(selectedExercise);
+        } else {
+            selectedExercise = Integer.parseInt(exerciseSelector.getText());
+            System.out.println("Deleting the exercise " +
+                    DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise).getTitle() + " from the list");
+            DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.remove(selectedExercise);
+        }
         updateDisplay();
         listViewDisplay();
 
