@@ -15,6 +15,7 @@ public class Controller3 implements Initializable {  //USER PAGE
     private int selectedExercise = 0;
     private String exerciseDisplay;
     private int selectedRecipe = 0;
+    private Recipe recipeInFocus;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -148,6 +149,7 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     public void somethingIsSelectedOnListViewRight(MouseEvent event){
         selectedRecipe = listView2.getSelectionModel().getSelectedIndex();
+        listViewDisplay();
         //recipeSelector.setText(String.valueOf(selectedRecipe));
     }
 
@@ -164,14 +166,21 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     public void listViewDisplay(){
         listView.getItems().clear();
-        for (Exercise x : DataHolder.activeUser.exerciseList){
-            listView.getItems().add(x.getTitle());
+        if(selectedRecipe <= 0) {
+            for (Exercise x : DataHolder.activeUser.exerciseList) {
+                listView.getItems().add(x.getTitle());
+            }
+        } else {
+            for (Exercise x : DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList) {
+                listView.getItems().add(x.getTitle());
+            }
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
     public void listViewDisplay2(){
         listView2.getItems().clear();
+        listView2.getItems().add(DataHolder.activeUser.getUserName() + " history.");
         for (Recipe x : DataHolder.activeUser.recipeList){
             listView2.getItems().add(x.getTitle());
         }
