@@ -17,8 +17,10 @@ public class Main extends Application {
     public static final String Scene7 = "Scene7";
     public static final String Scene8 = "Scene8";
     public static final String Scene9 = "Scene9";
-    public static final String Scene10 = "Scene10";
+    public static final String Scene10 = "scene10";
     public static final String Scene11 = "Scene11";
+
+    private static boolean connectedToDB = false;
 
     private Stage primaryStage;
     private static Main instance = null;
@@ -30,7 +32,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         instance = this;
         this.primaryStage = primaryStage;
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Exercise Tracker Application");
         setScene(sample);
         primaryStage.show();
     }
@@ -38,19 +40,19 @@ public class Main extends Application {
     public void setScene(String nameOfScene) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource(nameOfScene+".fxml"));
         root.getStylesheets().add(getClass().getResource(nameOfScene+".fxml").toExternalForm());
+
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
+        String css = this.getClass().getResource("ApplicationView.css").toExternalForm();
+        scene.getStylesheets().add(css);
 
     }
     public static void main(String[] args) {
-        User firstUser = new User("admin", "12345",
-                "admin@exercise.trackom", true);
-        DataHolder.userList.add(0,firstUser);
-        User secondUser = new User("average", "12345",
-                "LowBob@exercise.trackom", false);
-        DataHolder.userList.add(1,secondUser);
-        System.out.println("Verification: The very first User is " + DataHolder.userList.get(0).getUserName());
-        System.out.println("Verification: The very second User is " + DataHolder.userList.get(1).getUserName());
+        if(!connectedToDB){
+            Methods.testOfflineScript();
+        }
+
         launch(args);
+
     }
 }

@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,6 +12,7 @@ import java.util.ResourceBundle;
 public class Controller6 implements Initializable { //EXERCISE PAGE
 
     private int selectedRecipe = 0;
+    private String recipeDisplay;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -28,6 +30,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         recipeSelector.setText(String.valueOf(selectedRecipe));
         addToSelectedRecipeCheckBox.setSelected(false);
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
+        updateDisplay();
+        listViewDisplay();
 
     }
     @FXML
@@ -49,6 +53,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     @FXML
     CheckBox addToSelectedRecipeCheckBox;
+    @FXML
+    public ListView<String> listView;
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
@@ -76,12 +82,11 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         if(addToSelectedRecipeCheckBox.isSelected()){
             selectedRecipe = Integer.parseInt(recipeSelector.getText());
             System.out.println("The exercise is added to the recipe: " + selectedRecipe);
-            //the code below is purposely not displaced by the addTheExercise() method.
-            //it will be necessary to be so, in order to be added to the recipe.
-//            Exercise exer = new Exercise(titleTextField.getText(),
-//                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-//            DataHolder.activeUser.exerciseList.add(exer);
+            Exercise exer = new Exercise(titleTextField.getText(),
+                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
+            DataHolder.activeUser.recipeList.get(selectedRecipe).exerciseList.add(exer);
             System.out.println("The exercise is considered added to a recipe");
+            recipeDisplay();
         } else {
             addTheExercise(); //I made it that way for simplicity.
             System.out.println("The exercise is considered added and checked as completed");
@@ -102,13 +107,14 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     @FXML
     public void testViewSelectedRecipes(ActionEvent event){
         System.out.println("Viewing the recipes...");
+        recipeDisplay();
 
     }
 
     @FXML
     public void manageRecipes(ActionEvent event)throws Exception{
         System.out.println("going to manage the Recipes on the recipe page");
-        //Main.getInstance().setScene(Main.Scene8);
+        Main.getInstance().setScene(Main.Scene8);
 
     }
 
@@ -123,7 +129,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     @FXML
     public void addaNewRecipe(ActionEvent event)throws Exception{
         System.out.println("Adding a new recipe");
-        //Main.getInstance().setScene(Main.Scene10);
+        Main.getInstance().setScene(Main.Scene10);
 
     }
 
@@ -132,7 +138,39 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
                 descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
         DataHolder.activeUser.exerciseList.add(exer);
     }
+    @FXML
+    public void somethingIsSelectedOnListView(MouseEvent event){
+        selectedRecipe = listView.getSelectionModel().getSelectedIndex();
+        recipeSelector.setText(String.valueOf(selectedRecipe));
+    }
 
+    public void updateDisplay() {
+        int count = 0;
+        recipeDisplay = "";
+        for (Recipe x : DataHolder.activeUser.recipeList) {
+            recipeDisplay += count + ") " + x.getTitle() + "\n";
+            count++;
+        }
+        recipesTextArea.setText(recipeDisplay);
+    }
+
+    public void recipeDisplay() {
+        int count = 0;
+        String inRecipeDisplay = "";
+        System.out.println(DataHolder.activeUser.recipeList.get(selectedRecipe).getTitle());
+        for (Exercise x : DataHolder.activeUser.recipeList.get(selectedRecipe).exerciseList) {
+            inRecipeDisplay += count + ") " + x.getTitle() + "\n";
+            count++;
+        }
+        System.out.println(inRecipeDisplay);
+    }
+    public void listViewDisplay(){
+        listView.getItems().clear();
+        for (Recipe x : DataHolder.activeUser.recipeList){
+            listView.getItems().add(x.getTitle());
+        }
+        listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
 
 
 

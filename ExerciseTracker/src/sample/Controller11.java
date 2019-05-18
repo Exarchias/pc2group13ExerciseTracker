@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,6 +12,9 @@ import java.util.ResourceBundle;
 public class Controller11 implements Initializable { //EXERCISE PAGE
 
     private int selectedRecipe = 0;
+    private int selectedRecipeIN;
+    private int selectedRecipeOUT;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -21,10 +25,14 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                 e.printStackTrace();
             }
         }
-        recipeSelector.setText(String.valueOf(selectedRecipe));
+        selectedRecipe = DataHolder.supervisedRecipePostion;
+        selectedRecipeIN = selectedRecipe;
+        System.out.println("The value of the selectedRecipe is" + selectedRecipe);
+        recipeSelector.setText(String.valueOf(selectedRecipe + 1));
         addToSelectedRecipeCheckBox.setSelected(false);
         titleTextField.setText(DataHolder.supervisedExercise.getTitle());
         descriptionTextArea.setText(DataHolder.supervisedExercise.getDescription());
+        listViewDisplay();
 
         if (DataHolder.isAdmin())
             btnGoToAdminPage.setVisible(true);
@@ -52,6 +60,9 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
 
     @FXML
     CheckBox addToSelectedRecipeCheckBox;
+
+    @FXML
+    public ListView<String> listView;
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
@@ -130,9 +141,43 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     public void editTheExercise(){
 //        Exercise exer = new Exercise(titleTextField.getText(),
 //                descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-        DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setTitle(titleTextField.getText());
-        DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setDescription(descriptionTextArea.getText());
+        selectedRecipeOUT = selectedRecipe;
+        if(selectedRecipe == 0){
+            DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setTitle(titleTextField.getText());
+            DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setDescription(descriptionTextArea.getText());
+        } else {
+            if(selectedRecipeIN == 0){
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
+                        setTitle(titleTextField.getText());
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT  - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
+                        setDescription(descriptionTextArea.getText());
+            } else {
+                DataHolder.activeUser.recipeList.get(selectedRecipeIN  - 1).exerciseList.add(DataHolder.supervisedExercisePostion,
+                        DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion));
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
+                        setTitle(titleTextField.getText());
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
+                        setDescription(descriptionTextArea.getText());
+            }
+        }
+
+        DataHolder.supervisedRecipePostion = 0;
         //DataHolder.activeUser.exerciseList.add(exer);
+    }
+
+    public void listViewDisplay(){
+        listView.getItems().clear();
+        listView.getItems().add(DataHolder.activeUser.getUserName() + " history.");
+        for (Recipe x : DataHolder.activeUser.recipeList){
+            listView.getItems().add(x.getTitle());
+        }
+        listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
+
+    @FXML
+    public void somethingIsSelectedOnListViewRight(MouseEvent event){
+        selectedRecipe = listView.getSelectionModel().getSelectedIndex();
+        recipeSelector.setText(String.valueOf(selectedRecipe));
     }
 
 
