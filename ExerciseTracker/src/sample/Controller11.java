@@ -155,8 +155,11 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                 DataHolder.activeUser.recipeList.get(selectedRecipeOUT  - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
                         setDescription(descriptionTextArea.getText());
             } else {
-                DataHolder.activeUser.recipeList.get(selectedRecipeIN  - 1).exerciseList.add(DataHolder.supervisedExercisePostion,
-                        DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion));
+//                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.add(
+//                        DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion));
+                DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.remove(DataHolder.supervisedExercisePostion);
+//                DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.add(
+//                        DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.supervisedExercisePostion));
                 DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
                         setTitle(titleTextField.getText());
                 DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).

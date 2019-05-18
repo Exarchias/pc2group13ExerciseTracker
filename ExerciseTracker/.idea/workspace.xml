@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b610685-3a92-498b-a637-3bf8f104f74b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExerciseTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ExerciseTracker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/Scene11.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/Scene2.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/Scene3.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/Scene4.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/Scene5.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/Scene6.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/Scene7.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/MysqlCon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/MysqlCon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene11.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene11.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/scene8.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/scene8.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MysqlCon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MysqlCon.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="357">
               <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -58,22 +38,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller11.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="102" column="49" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="49" />
+            <state relative-caret-position="324">
+              <caret line="160" column="90" lean-forward="true" selection-start-line="160" selection-start-column="90" selection-end-line="160" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Scene2.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
           <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Scene11.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
           <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -120,6 +100,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,13 +123,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558197369670" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558215391582" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -201,16 +181,17 @@
       <workItem from="1558196024092" duration="774000" />
       <workItem from="1558196822039" duration="793000" />
       <workItem from="1558197701587" duration="33000" />
+      <workItem from="1558213098750" duration="2254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2253000" />
+    <option name="totallyTimeSpent" value="4507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18759455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -264,7 +245,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="357">
           <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -280,12 +261,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Scene2.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Scene11.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ApplicationView.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -303,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller11.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="102" column="49" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="49" />
+        <state relative-caret-position="324">
+          <caret line="160" column="90" lean-forward="true" selection-start-line="160" selection-start-column="90" selection-end-line="160" selection-end-column="90" />
         </state>
       </provider>
     </entry>
