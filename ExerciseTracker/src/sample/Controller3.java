@@ -129,6 +129,7 @@ public class Controller3 implements Initializable {  //USER PAGE
                     DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
             DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
             DataHolder.supervisedExercisePostion = selectedExercise;
+            DataHolder.supervisedRecipePostion = 0;
         } else {
             System.out.println("editing the exercise" +
                     DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.
@@ -136,6 +137,7 @@ public class Controller3 implements Initializable {  //USER PAGE
             DataHolder.supervisedExercise = DataHolder.activeUser.recipeList.
                     get(selectedRecipe -1).exerciseList.get(selectedExercise);
             DataHolder.supervisedExercisePostion = selectedExercise;
+            DataHolder.supervisedRecipePostion = selectedRecipe - 1;
         }
         Main.getInstance().setScene(Main.Scene11);
     }
