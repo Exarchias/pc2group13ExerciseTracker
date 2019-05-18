@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="testMonitor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+   <children>
+      <Button fx:id="btnLogOut" layoutX="493.0" layoutY="99.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
+      <Button fx:id="btnGoToTheUserPage" layoutX="457.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Go To The User Page" />
+      <Button layoutX="35.0" layoutY="280.0" mnemonicParsing="false" onAction="#testViewUsers" text="(Test )View Users" />
+      <Button layoutX="169.0" layoutY="280.0" mnemonicParsing="false" onAction="#addNewUser" text="Add New User" />
+      <Button layoutX="284.0" layoutY="280.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete User" />
+      <Button layoutX="382.0" layoutY="280.0" mnemonicParsing="false" onAction="#editUser" text="Edit User" />
+      <TextArea fx:id="userListTextArea" layoutX="88.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" text="Sup!" />
+      <TextField fx:id="userSelector" layoutX="404.0" layoutY="188.0" prefHeight="25.0" prefWidth="45.0" text="0" />
+      <Label layoutX="309.0" layoutY="192.0" text="Selected User:" />
+      <Label layoutX="261.0" layoutY="14.0" text="Admin Page">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="91.0" fitWidth="106.0" layoutX="503.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblActiveName" layoutX="8.0" layoutY="19.0" text="Active Name:" />
+   </children>
+</AnchorPane>
