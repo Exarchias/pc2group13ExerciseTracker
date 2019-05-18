@@ -29,7 +29,7 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
         selectedRecipeIN = selectedRecipe;
         System.out.println("The value of the selectedRecipe is" + selectedRecipe);
         recipeSelector.setText(String.valueOf(selectedRecipe + 1));
-        addToSelectedRecipeCheckBox.setSelected(false);
+        //addToSelectedRecipeCheckBox.setSelected(false);
         titleTextField.setText(DataHolder.supervisedExercise.getTitle());
         descriptionTextArea.setText(DataHolder.supervisedExercise.getDescription());
         listViewDisplay();
@@ -87,17 +87,20 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     public void editExercise(ActionEvent event)throws Exception{
         System.out.println("The title of the exercise is: " + titleTextField.getText());
         System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
-        if(addToSelectedRecipeCheckBox.isSelected()){
-            selectedRecipe = Integer.parseInt(recipeSelector.getText());
-            System.out.println("The exercise is added to the recipe: " + selectedRecipe);
-            //the code below is purposely not displaced by the addTheExercise() method.
-            //it will be necessary to be so, in order to be added to the recipe.
-            System.out.println("The exercise is considered added to a recipe");
-        } else {
-            editTheExercise(); //I made it that way for simplicity.
-            System.out.println("The exercise is considered added and checked as completed");
-            Main.getInstance().setScene(Main.Scene3);
-        }
+//        if(addToSelectedRecipeCheckBox.isSelected()){
+//            selectedRecipe = Integer.parseInt(recipeSelector.getText());
+//            System.out.println("The exercise is added to the recipe: " + selectedRecipe);
+//            //the code below is purposely not displaced by the addTheExercise() method.
+//            //it will be necessary to be so, in order to be added to the recipe.
+//            System.out.println("The exercise is considered added to a recipe");
+//        } else {
+//            editTheExercise(); //I made it that way for simplicity.
+//            System.out.println("The exercise is considered added and checked as completed");
+//            Main.getInstance().setScene(Main.Scene3);
+//        }
+        editTheExercise(); //I made it that way for simplicity.
+        System.out.println("The exercise is considered added and checked as completed");
+        Main.getInstance().setScene(Main.Scene3);
 
     }
 
