@@ -12,6 +12,9 @@ import java.util.ResourceBundle;
 public class Controller11 implements Initializable { //EXERCISE PAGE
 
     private int selectedRecipe = 0;
+    private int selectedRecipeIN;
+    private int selectedRecipeOUT;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -23,6 +26,7 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
             }
         }
         selectedRecipe = DataHolder.supervisedRecipePostion;
+        selectedRecipeIN = selectedRecipe;
         System.out.println("The value of the selectedRecipe is" + selectedRecipe);
         recipeSelector.setText(String.valueOf(selectedRecipe + 1));
         addToSelectedRecipeCheckBox.setSelected(false);
@@ -137,14 +141,24 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     public void editTheExercise(){
 //        Exercise exer = new Exercise(titleTextField.getText(),
 //                descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
+        selectedRecipeOUT = selectedRecipe;
         if(selectedRecipe == 0){
             DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setTitle(titleTextField.getText());
             DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setDescription(descriptionTextArea.getText());
         } else {
-            DataHolder.activeUser.recipeList.get(selectedRecipe).exerciseList.get(DataHolder.supervisedExercisePostion).
-                    setTitle(titleTextField.getText());
-            DataHolder.activeUser.recipeList.get(selectedRecipe).exerciseList.get(DataHolder.supervisedExercisePostion).
-                    setDescription(descriptionTextArea.getText());
+            if(selectedRecipeIN == 0){
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
+                        setTitle(titleTextField.getText());
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT  - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
+                        setDescription(descriptionTextArea.getText());
+            } else {
+                DataHolder.activeUser.recipeList.get(selectedRecipeIN  - 1).exerciseList.add(DataHolder.supervisedExercisePostion,
+                        DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion));
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
+                        setTitle(titleTextField.getText());
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
+                        setDescription(descriptionTextArea.getText());
+            }
         }
 
         DataHolder.supervisedRecipePostion = 0;
