@@ -142,28 +142,23 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     }
 
     public void editTheExercise(){
-//        Exercise exer = new Exercise(titleTextField.getText(),
-//                descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
         selectedRecipeOUT = selectedRecipe;
         if(selectedRecipe == 0){
-            DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setTitle(titleTextField.getText());
-            DataHolder.activeUser.exerciseList.get(DataHolder.supervisedExercisePostion).setDescription(descriptionTextArea.getText());
+            Exercise exex = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
+            DataHolder.activeUser.exerciseList.add(exex);
         } else {
             if(selectedRecipeIN == 0){
-                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
-                        setTitle(titleTextField.getText());
-                DataHolder.activeUser.recipeList.get(selectedRecipeOUT  - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
-                        setDescription(descriptionTextArea.getText());
+                Exercise exex = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.add(exex);
             } else {
-//                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.add(
-//                        DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion));
+                Exercise exOld = new Exercise(DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.
+                        supervisedExercisePostion).getTitle(), DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.
+                        supervisedExercisePostion).getDescription(), DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.
+                        supervisedExercisePostion).getOwner());
                 DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.remove(DataHolder.supervisedExercisePostion);
-//                DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.add(
-//                        DataHolder.activeUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.supervisedExercisePostion));
-                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
-                        setTitle(titleTextField.getText());
-                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).
-                        setDescription(descriptionTextArea.getText());
+                Exercise exnew = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.activeUser.recipeList.
+                        get(selectedRecipeOUT - 1).exerciseList.get(DataHolder.supervisedExercisePostion).getOwner());
+                DataHolder.activeUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.add(exnew);
             }
         }
 

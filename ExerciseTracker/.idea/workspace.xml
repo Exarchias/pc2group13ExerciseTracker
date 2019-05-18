@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b610685-3a92-498b-a637-3bf8f104f74b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller11.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller11.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller11.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="160" column="90" lean-forward="true" selection-start-line="160" selection-start-column="90" selection-end-line="160" selection-end-column="90" />
+            <state relative-caret-position="307">
+              <caret line="159" column="118" selection-start-line="159" selection-start-column="118" selection-end-line="159" selection-end-column="118" />
             </state>
           </provider>
         </entry>
@@ -128,7 +127,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558215391582" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558218686953" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -181,12 +180,12 @@
       <workItem from="1558196024092" duration="774000" />
       <workItem from="1558196822039" duration="793000" />
       <workItem from="1558197701587" duration="33000" />
-      <workItem from="1558213098750" duration="2254000" />
+      <workItem from="1558213098750" duration="5707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4507000" />
+    <option name="totallyTimeSpent" value="7960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -284,8 +283,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller11.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="160" column="90" lean-forward="true" selection-start-line="160" selection-start-column="90" selection-end-line="160" selection-end-column="90" />
+        <state relative-caret-position="307">
+          <caret line="159" column="118" selection-start-line="159" selection-start-column="118" selection-end-line="159" selection-end-column="118" />
         </state>
       </provider>
     </entry>
