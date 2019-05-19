@@ -99,9 +99,9 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
 
 
     public void editTheRecipe(){
-        DataHolder.activeUser.recipeList.get(DataHolder.
+        DataHolder.supervisedUser.recipeList.get(DataHolder.
                 supervisedRecipePostion).setTitle(titleTextField.getText());
-        DataHolder.activeUser.recipeList.get(DataHolder.
+        DataHolder.supervisedUser.recipeList.get(DataHolder.
                 supervisedRecipePostion).setDescription(descriptionTextArea.getText());
     }
 

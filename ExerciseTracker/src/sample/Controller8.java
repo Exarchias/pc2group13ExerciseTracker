@@ -72,8 +72,8 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
     @FXML
     public void buttonGoToTheSettingPage(ActionEvent event) throws Exception{
-        DataHolder.supervisedUser = DataHolder.activeUser;
-        System.out.println("Supervised user is: " + DataHolder.supervisedUser.getUserName());
+//        DataHolder.supervisedUser = DataHolder.activeUser;
+//        System.out.println("Supervised user is: " + DataHolder.supervisedUser.getUserName());
         Main.getInstance().setScene(Main.Scene4);
     }
 
@@ -94,8 +94,8 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     public void deleteRecipe(ActionEvent event){
         selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("Deleting the exercise " +
-                DataHolder.activeUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
-        DataHolder.activeUser.recipeList.remove(selectedRecipe);
+                DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
+        DataHolder.supervisedUser.recipeList.remove(selectedRecipe);
         recipeDisplay();
 
     }
@@ -104,8 +104,8 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     public void editRecipe(ActionEvent event) throws Exception{
         selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("editing the exercise" +
-                DataHolder.activeUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
-        DataHolder.supervisedRecipe = DataHolder.activeUser.recipeList.get(selectedRecipe);
+                DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
+        DataHolder.supervisedRecipe = DataHolder.supervisedUser.recipeList.get(selectedRecipe);
         DataHolder.setSupervisedExercisePostion(selectedRecipe);
         Main.getInstance().setScene(Main.Scene9);
     }
@@ -117,7 +117,7 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     public void recipeDisplay() {
         int count = 0;
         recipeDisplay = "";
-        for (Recipe x : DataHolder.activeUser.recipeList) {
+        for (Recipe x : DataHolder.supervisedUser.recipeList) {
             recipeDisplay += count + ") " + x.getTitle() + "\n";
             count++;
         }
@@ -126,7 +126,7 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     }
     public void listViewRecipeDisplay(){
      listView.getItems().clear();
-     for (Recipe x : DataHolder.activeUser.recipeList){
+     for (Recipe x : DataHolder.supervisedUser.recipeList){
          listView.getItems().add(x.getTitle());
      }
      listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
