@@ -5,7 +5,7 @@
   -fx-background-color: #383838;
 }
 .anchorpane-loginscene{
-   -fx-background-color: linear-gradient(#4b0082,#8a2be2);
+   -fx-background-color: linear-gradient(#4b0082,#00ff00);
 
 }
 
@@ -13,8 +13,11 @@
     -fx-background-color: #AB4642;
 }
 .button-login{
-  -fx-background-color: linear-gradient(#ab4642,#ffa500);
+    -fx-background-color:linear-gradient(#ab4642,#ffa500);
 }
+
+
+
 .button-logout{
    -fx-background-color: linear-gradient(#dc9656,#ab4642);
 }

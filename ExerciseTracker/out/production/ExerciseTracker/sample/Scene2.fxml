@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="testMonitor" prefHeight="699.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+<AnchorPane fx:id="testMonitor" prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
    <children>
       <Button fx:id="btnLogOut" layoutX="493.0" layoutY="99.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
       <Button fx:id="btnGoToTheUserPage" layoutX="457.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Go To The User Page" />
@@ -26,12 +26,12 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="91.0" fitWidth="106.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblActiveName" layoutX="8.0" layoutY="19.0" text="Active Name:" />
+      <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="Active Name:" />
       <ListView fx:id="listView" layoutX="41.0" layoutY="319.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

@@ -8,11 +8,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller9">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller9">
     <children>
-        <Button fx:id="btnLogOut" layoutX="530.0" layoutY="114.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
+        <Button fx:id="btnLogOut" layoutX="530.0" layoutY="114.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />
         <Button fx:id="btnGoToAdminPage" layoutX="494.0" layoutY="196.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
-        <Button layoutX="44.0" layoutY="323.0" mnemonicParsing="false" onAction="#editRecipe" text="Edit Recipe" />
+        <Button layoutX="44.0" layoutY="323.0" mnemonicParsing="false" onAction="#editRecipe" styleClass="button-crud" text="Edit Recipe" />
         <Button layoutX="150.0" layoutY="323.0" mnemonicParsing="false" onAction="#cleanFields" text="Clean Fields" />
         <Button layoutX="248.0" layoutY="323.0" mnemonicParsing="false" onAction="#goToUserPage" text="Cancel" />
         <TextField fx:id="titleTextField" layoutX="61.0" layoutY="68.0" />
@@ -20,11 +20,11 @@
         <Label layoutX="61.0" layoutY="38.0" text="Title:" />
         <Label layoutX="61.0" layoutY="101.0" text="Description" />
         <Button layoutX="507.0" layoutY="150.0" mnemonicParsing="false" onAction="#goToUserPage" text="Go to User Page" />
-        <ImageView fitHeight="97.0" fitWidth="95.0" layoutX="518.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
             </image>
         </ImageView>
-        <Label fx:id="lblActiveName" layoutX="11.0" layoutY="13.0" text="ActiveName:" />
+        <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="ActiveName:" />
     </children>
 </AnchorPane>

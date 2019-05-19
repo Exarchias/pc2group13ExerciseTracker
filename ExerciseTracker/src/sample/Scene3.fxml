@@ -10,15 +10,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
    <children>
-      <Button fx:id="btnLogOut" layoutX="519.0" layoutY="106.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" text="LogOut" />
+      <Button fx:id="btnLogOut" layoutX="519.0" layoutY="106.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" stylesheets="@ApplicationView.css" text="LogOut" />
       <Button fx:id="btnGoToTheAdminPage" layoutX="318.0" layoutY="19.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" text="Go to The Admin Page" />
       <Button fx:id="btnGoToTheSettingPage" layoutX="315.0" layoutY="48.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" text="Go to the Settings Page" />
       <Button layoutX="93.0" layoutY="345.0" mnemonicParsing="false" onAction="#testViewExercises" text="(Test) view Exercises" />
-      <Button layoutX="166.0" layoutY="309.0" mnemonicParsing="false" onAction="#addExercise" text="Add new Exercise" />
-      <Button layoutX="279.0" layoutY="272.0" mnemonicParsing="false" onAction="#deleteExercise" text="Delete Exercise" />
-      <Button layoutX="388.0" layoutY="272.0" mnemonicParsing="false" onAction="#editExercise" text="Edit Exercise" />
+      <Button layoutX="166.0" layoutY="309.0" mnemonicParsing="false" onAction="#addExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Add new Exercise" />
+      <Button layoutX="279.0" layoutY="272.0" mnemonicParsing="false" onAction="#deleteExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Delete Exercise" />
+      <Button layoutX="388.0" layoutY="272.0" mnemonicParsing="false" onAction="#editExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Edit Exercise" />
       <TextArea fx:id="exerciseListTextArea" layoutX="315.0" layoutY="301.0" prefHeight="67.0" prefWidth="200.0" text="You have nothing... you are lazy." />
       <TextField fx:id="exerciseSelector" layoutX="154.0" layoutY="272.0" prefHeight="25.0" prefWidth="56.0" text="0" />
       <Label layoutX="58.0" layoutY="276.0" text="Selcted Exercise:" />
@@ -27,14 +27,14 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="103.0" fitWidth="106.0" layoutX="495.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblActiveName" layoutX="8.0" layoutY="14.0" text="Active Name:" />
+      <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="Active Name:" />
       <ListView fx:id="listView" layoutX="34.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="169.0" prefWidth="200.0" />
-      <Button fx:id="useSelectedExerciseBtn" layoutX="26.0" layoutY="309.0" mnemonicParsing="false" onAction="#useSelectedExercise" text="Use selected Exercise" />
+      <Button fx:id="useSelectedExerciseBtn" layoutX="26.0" layoutY="309.0" mnemonicParsing="false" onAction="#useSelectedExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Use selected Exercise" />
       <ListView fx:id="listView2" layoutX="268.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListViewRight" prefHeight="169.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
