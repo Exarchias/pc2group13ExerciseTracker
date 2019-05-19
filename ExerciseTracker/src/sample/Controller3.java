@@ -80,7 +80,7 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     @FXML
     public void buttonGoToTheSettingPage(ActionEvent event) throws Exception{
-        DataHolder.supervisedUser = DataHolder.activeUser;
+        //DataHolder.supervisedUser = DataHolder.activeUser;
         System.out.println("Supervised user is: " + DataHolder.supervisedUser.getUserName());
         Main.getInstance().setScene(Main.Scene4);
     }
@@ -108,13 +108,14 @@ public class Controller3 implements Initializable {  //USER PAGE
         if(selectedRecipe <= 0){
             selectedExercise = Integer.parseInt(exerciseSelector.getText());
             System.out.println("Deleting the exercise " +
-                    DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
-            DataHolder.activeUser.exerciseList.remove(selectedExercise);
+                    DataHolder.supervisedUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
+            DataHolder.supervisedUser.exerciseList.remove(selectedExercise);
         } else {
             selectedExercise = Integer.parseInt(exerciseSelector.getText());
             System.out.println("Deleting the exercise " +
-                    DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise).getTitle() + " from the list");
-            DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.remove(selectedExercise);
+                    DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise).getTitle()
+                    + " from the list");
+            DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.remove(selectedExercise);
         }
         updateDisplay();
         listViewDisplay();
@@ -126,15 +127,15 @@ public class Controller3 implements Initializable {  //USER PAGE
         selectedExercise = Integer.parseInt(exerciseSelector.getText());
         if(selectedRecipe <= 0){
             System.out.println("editing the exercise" +
-                    DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
-            DataHolder.supervisedExercise = DataHolder.activeUser.exerciseList.get(selectedExercise);
+                    DataHolder.supervisedUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
+            DataHolder.supervisedExercise = DataHolder.supervisedUser.exerciseList.get(selectedExercise);
             DataHolder.supervisedExercisePostion = selectedExercise;
             DataHolder.supervisedRecipePostion = 0;
         } else {
             System.out.println("editing the exercise" +
-                    DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.
+                    DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.
                             get(selectedExercise).getTitle() + " from the list");
-            DataHolder.supervisedExercise = DataHolder.activeUser.recipeList.
+            DataHolder.supervisedExercise = DataHolder.supervisedUser.recipeList.
                     get(selectedRecipe -1).exerciseList.get(selectedExercise);
             DataHolder.supervisedExercisePostion = selectedExercise;
             DataHolder.supervisedRecipePostion = selectedRecipe - 1;
@@ -146,12 +147,12 @@ public class Controller3 implements Initializable {  //USER PAGE
     public void useSelectedExercise(ActionEvent event){
         if(selectedRecipe <= 0){
             selectedExercise = Integer.parseInt(exerciseSelector.getText());
-            Exercise exer = DataHolder.activeUser.exerciseList.get(selectedExercise);
-            DataHolder.activeUser.exerciseList.add(exer);
+            Exercise exer = DataHolder.supervisedUser.exerciseList.get(selectedExercise);
+            DataHolder.supervisedUser.exerciseList.add(exer);
         } else {
             selectedExercise = Integer.parseInt(exerciseSelector.getText());
-            Exercise exer = DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise);
-            DataHolder.activeUser.exerciseList.add(exer);
+            Exercise exer = DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise);
+            DataHolder.supervisedUser.exerciseList.add(exer);
         }
         updateDisplay();
         listViewDisplay();
@@ -176,19 +177,19 @@ public class Controller3 implements Initializable {  //USER PAGE
     public void updateDisplay(){
         exerciseDisplay = "";
         if(selectedRecipe <= 0){
-            if(DataHolder.activeUser.exerciseList.isEmpty()){
+            if(DataHolder.supervisedUser.exerciseList.isEmpty()){
                 exerciseDisplay += "No exercises detected. \n";
             } else {
-                exerciseDisplay += DataHolder.activeUser.exerciseList.get(selectedExercise).getTitle() + "\n";
-                exerciseDisplay += DataHolder.activeUser.exerciseList.get(selectedExercise).getDescription() + "\n";
+                exerciseDisplay += DataHolder.supervisedUser.exerciseList.get(selectedExercise).getTitle() + "\n";
+                exerciseDisplay += DataHolder.supervisedUser.exerciseList.get(selectedExercise).getDescription() + "\n";
             }
         } else {
-            if(DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.isEmpty()){
+            if(DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.isEmpty()){
                 exerciseDisplay += "No exercises detected. \n";
             } else {
-                exerciseDisplay += DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.
+                exerciseDisplay += DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.
                         get(selectedExercise).getTitle() + "\n";
-                exerciseDisplay += DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList.
+                exerciseDisplay += DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.
                         get(selectedExercise).getDescription() + "\n";
             }
         }
@@ -201,11 +202,11 @@ public class Controller3 implements Initializable {  //USER PAGE
     public void listViewDisplay(){
         listView.getItems().clear();
         if(selectedRecipe <= 0) {
-            for (Exercise x : DataHolder.activeUser.exerciseList) {
+            for (Exercise x : DataHolder.supervisedUser.exerciseList) {
                 listView.getItems().add(x.getTitle());
             }
         } else {
-            for (Exercise x : DataHolder.activeUser.recipeList.get(selectedRecipe -1).exerciseList) {
+            for (Exercise x : DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList) {
                 listView.getItems().add(x.getTitle());
             }
         }
@@ -214,8 +215,8 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     public void listViewDisplay2(){
         listView2.getItems().clear();
-        listView2.getItems().add(DataHolder.activeUser.getUserName() + " history.");
-        for (Recipe x : DataHolder.activeUser.recipeList){
+        listView2.getItems().add(DataHolder.supervisedUser.getUserName() + " history.");
+        for (Recipe x : DataHolder.supervisedUser.recipeList){
             listView2.getItems().add(x.getTitle());
         }
         listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
