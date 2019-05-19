@@ -70,6 +70,11 @@ public class Controller4 implements Initializable { //LOG PAGE
     }
 
     @FXML
+    public void buttonGoToTheUserPage(ActionEvent event)throws Exception{
+        Main.getInstance().setScene(Main.Scene3);
+    }
+
+    @FXML
     public void editUser(ActionEvent event)throws Exception{
         System.out.println("Creating User...");
         username = userNameTextField.getText();

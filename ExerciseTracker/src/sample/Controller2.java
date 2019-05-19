@@ -66,6 +66,14 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
         }
         DataHolder.supervisedUser = DataHolder.activeUser;
+        if(DataHolder.isAdmin()){
+            try {
+                Main.getInstance().setScene(Main.Scene3);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
       testMonitor.getStylesheets().add("anchorpane-loginscene");
         btnLogOut.getStyleClass().add("button-logout");
         btnAddNewUser.getStyleClass().add("button-crud");
@@ -156,8 +164,8 @@ public class Controller2 implements Initializable { // ADMIN PAGE
       listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 
 
-
     }
+
 
 
 
