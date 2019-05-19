@@ -65,6 +65,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
 
         }
+        DataHolder.supervisedUser = DataHolder.activeUser;
       testMonitor.getStylesheets().add("anchorpane-loginscene");
         btnLogOut.getStyleClass().add("button-logout");
         btnAddNewUser.getStyleClass().add("button-crud");
