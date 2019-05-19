@@ -99,7 +99,7 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
     public void addTheRecipe(){
         Recipe recip = new Recipe(titleTextField.getText(),
                 descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-        DataHolder.activeUser.recipeList.add(recip);
+        DataHolder.supervisedUser.recipeList.add(recip);
     }
 
 

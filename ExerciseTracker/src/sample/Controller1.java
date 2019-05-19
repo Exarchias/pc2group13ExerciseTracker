@@ -25,6 +25,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     public void initialize(URL location, ResourceBundle resources) {
         DataHolder.setAdmin(false);
         DataHolder.activeUser = null;
+        DataHolder.supervisedUser = null;
         btnLogin.getStyleClass().add("button-login");
 
     }
@@ -41,6 +42,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     public void btnUserPressed(ActionEvent event)throws Exception{
         DataHolder.setAdmin(false);
         DataHolder.activeUser = DataHolder.userList.get(1);
+        DataHolder.supervisedUser = DataHolder.activeUser;
         System.out.println("Now you are NOT Credible for Admin");
 
     }
@@ -66,6 +68,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
                     (txtPassword.getText().equalsIgnoreCase(x.getPassWord()))){
                 DataHolder.setLogin(true);
                 DataHolder.activeUser = x;
+                DataHolder.supervisedUser = x;
                 DataHolder.setActiveName(DataHolder.activeUser.getUserName());
                 if(DataHolder.activeUser.isAnAdmin()){
                     DataHolder.setAdmin(true);

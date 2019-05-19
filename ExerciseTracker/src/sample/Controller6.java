@@ -83,8 +83,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
             selectedRecipe = Integer.parseInt(recipeSelector.getText());
             System.out.println("The exercise is added to the recipe: " + selectedRecipe);
             Exercise exer = new Exercise(titleTextField.getText(),
-                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-            DataHolder.activeUser.recipeList.get(selectedRecipe).exerciseList.add(exer);
+                    descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.supervisedUser));
+            DataHolder.supervisedUser.recipeList.get(selectedRecipe).exerciseList.add(exer);
             System.out.println("The exercise is considered added to a recipe");
             recipeDisplay();
         } else {
@@ -135,8 +135,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     public void addTheExercise(){
         Exercise exer = new Exercise(titleTextField.getText(),
-                descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-        DataHolder.activeUser.exerciseList.add(exer);
+                descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.supervisedUser));
+        DataHolder.supervisedUser.exerciseList.add(exer);
     }
     @FXML
     public void somethingIsSelectedOnListView(MouseEvent event){
@@ -147,7 +147,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     public void updateDisplay() {
         int count = 0;
         recipeDisplay = "";
-        for (Recipe x : DataHolder.activeUser.recipeList) {
+        for (Recipe x : DataHolder.supervisedUser.recipeList) {
             recipeDisplay += count + ") " + x.getTitle() + "\n";
             count++;
         }
@@ -157,8 +157,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     public void recipeDisplay() {
         int count = 0;
         String inRecipeDisplay = "";
-        System.out.println(DataHolder.activeUser.recipeList.get(selectedRecipe).getTitle());
-        for (Exercise x : DataHolder.activeUser.recipeList.get(selectedRecipe).exerciseList) {
+        System.out.println(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle());
+        for (Exercise x : DataHolder.supervisedUser.recipeList.get(selectedRecipe).exerciseList) {
             inRecipeDisplay += count + ") " + x.getTitle() + "\n";
             count++;
         }
@@ -166,7 +166,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     }
     public void listViewDisplay(){
         listView.getItems().clear();
-        for (Recipe x : DataHolder.activeUser.recipeList){
+        for (Recipe x : DataHolder.supervisedUser.recipeList){
             listView.getItems().add(x.getTitle());
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);

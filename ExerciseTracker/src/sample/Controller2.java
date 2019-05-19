@@ -65,6 +65,15 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
 
         }
+        DataHolder.supervisedUser = DataHolder.activeUser;
+        if(DataHolder.isAdmin()){
+            try {
+                Main.getInstance().setScene(Main.Scene3);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
       testMonitor.getStylesheets().add("anchorpane-loginscene");
         btnLogOut.getStyleClass().add("button-logout");
         btnAddNewUser.getStyleClass().add("button-crud");
@@ -96,11 +105,10 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     }
 
     @FXML
-    public void testViewUsers(ActionEvent event){
-        System.out.println("I am firing ma lazer");
-        updateDisplay();
-        listViewDisplay();//LISTVIEWMETHOD
-        System.out.println(userListDisplay);
+    public void superviseUser(ActionEvent event) throws Exception{
+        DataHolder.supervisedUser = DataHolder.userList.get(selectedUser);
+        System.out.println("The supervised use now is: " + DataHolder.supervisedUser.getUserName());
+        Main.getInstance().setScene(Main.Scene3);
     }
 
     @FXML
@@ -156,8 +164,8 @@ public class Controller2 implements Initializable { // ADMIN PAGE
       listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 
 
-
     }
+
 
 
 
