@@ -9,6 +9,7 @@ public class DataHolder {
     public static User activeUser;
     public static User supervisedUser; //when an Admin inspects a User's profile.
     public static ArrayList<User> userList = new ArrayList<>();
+    public static ArrayList<Recipe> publicRecipes = new ArrayList<>();
     public static Exercise supervisedExercise;
     public static Recipe supervisedRecipe;
     public static int supervisedExercisePostion;
