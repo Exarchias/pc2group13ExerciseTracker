@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 
 public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
-    private int selectedRecipe = 0;
+    private int selectedRecipe;
     private String recipeDisplay;
 
     @Override

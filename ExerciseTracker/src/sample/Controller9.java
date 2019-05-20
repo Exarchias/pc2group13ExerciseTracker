@@ -30,6 +30,7 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         titleTextField.setText(DataHolder.supervisedRecipe.getTitle());
         descriptionTextArea.setText(DataHolder.supervisedRecipe.getDescription());
+        recipeIsPublic.setSelected(DataHolder.supervisedRecipe.isPublic());
 
     }
     @FXML
@@ -50,7 +51,7 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
     TextField recipeSelector;
 
     @FXML
-    CheckBox addToSelectedRecipeCheckBox;
+    CheckBox recipeIsPublic;
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
@@ -86,7 +87,7 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
     public void cleanFields(ActionEvent event){
         titleTextField.setText("");
         descriptionTextArea.setText("");
-        addToSelectedRecipeCheckBox.setSelected(false);
+        recipeIsPublic.setSelected(false);
         System.out.println("Cleaning the fields");
 
     }
@@ -99,10 +100,14 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
 
 
     public void editTheRecipe(){
-        DataHolder.supervisedUser.recipeList.get(DataHolder.
-                supervisedRecipePostion).setTitle(titleTextField.getText());
-        DataHolder.supervisedUser.recipeList.get(DataHolder.
-                supervisedRecipePostion).setDescription(descriptionTextArea.getText());
+        DataHolder.supervisedRecipe.setTitle(titleTextField.getText());
+        DataHolder.supervisedRecipe.setDescription(descriptionTextArea.getText());
+        DataHolder.supervisedRecipe.setPublic(recipeIsPublic.isSelected());
+        if(recipeIsPublic.isSelected()){
+            DataHolder.publicRecipes.add(DataHolder.supervisedRecipe);
+        } else {
+            DataHolder.unpublishRecipes();
+        }
     }
 
 
