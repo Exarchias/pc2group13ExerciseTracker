@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 
 public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
-    private int selectedRecipe = 0;
+    private int selectedRecipe;
     private String recipeDisplay;
 
     @Override
@@ -27,12 +27,12 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         recipeSelector.setText(String.valueOf(selectedRecipe));
 
-        recipeDisplay();
-        listViewRecipeDisplay();
+        updateDisplay();
 
         if (DataHolder.isAdmin())
             btnGoToTheAdminPage.setVisible(true);
         else btnGoToTheAdminPage.setVisible(false);
+
 
 
     }
@@ -48,6 +48,10 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
     @FXML
     Button btnGoToTheAdminPage;
+
+    @FXML
+    Button publishBtn;
+
     @FXML
     ListView<String> listView;
 
@@ -72,8 +76,8 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
     @FXML
     public void buttonGoToTheSettingPage(ActionEvent event) throws Exception{
-        DataHolder.supervisedUser = DataHolder.activeUser;
-        System.out.println("Supervised user is: " + DataHolder.supervisedUser.getUserName());
+//        DataHolder.supervisedUser = DataHolder.activeUser;
+//        System.out.println("Supervised user is: " + DataHolder.supervisedUser.getUserName());
         Main.getInstance().setScene(Main.Scene4);
     }
 
@@ -82,6 +86,7 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
         System.out.println("Presenting the recipes...");
         recipeDisplay();
         System.out.println(recipeDisplay);
+        updateDisplay();
     }
 
     @FXML
@@ -94,9 +99,9 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     public void deleteRecipe(ActionEvent event){
         selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("Deleting the exercise " +
-                DataHolder.activeUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
-        DataHolder.activeUser.recipeList.remove(selectedRecipe);
-        recipeDisplay();
+                DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
+        DataHolder.supervisedUser.recipeList.remove(selectedRecipe);
+        updateDisplay();
 
     }
 
@@ -104,20 +109,21 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     public void editRecipe(ActionEvent event) throws Exception{
         selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("editing the exercise" +
-                DataHolder.activeUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
-        DataHolder.supervisedRecipe = DataHolder.activeUser.recipeList.get(selectedRecipe);
+                DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
+        DataHolder.supervisedRecipe = DataHolder.supervisedUser.recipeList.get(selectedRecipe);
         DataHolder.setSupervisedExercisePostion(selectedRecipe);
         Main.getInstance().setScene(Main.Scene9);
     }
     public void somethingIsSelectedOnListView(MouseEvent event){
         selectedRecipe = listView.getSelectionModel().getSelectedIndex();
         recipeSelector.setText(String.valueOf(selectedRecipe));
+        updateDisplay();
     }
 
     public void recipeDisplay() {
         int count = 0;
         recipeDisplay = "";
-        for (Recipe x : DataHolder.activeUser.recipeList) {
+        for (Recipe x : DataHolder.supervisedUser.recipeList) {
             recipeDisplay += count + ") " + x.getTitle() + "\n";
             count++;
         }
@@ -126,10 +132,37 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     }
     public void listViewRecipeDisplay(){
      listView.getItems().clear();
-     for (Recipe x : DataHolder.activeUser.recipeList){
+     for (Recipe x : DataHolder.supervisedUser.recipeList){
          listView.getItems().add(x.getTitle());
      }
      listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
+
+    public void updateDisplay(){
+        if(DataHolder.supervisedUser.recipeList.get(selectedRecipe).isPublic()){
+            publishBtn.setText("Unpublish Recipe");
+        } else {
+            publishBtn.setText("Publish Recipe");
+        }
+        recipeDisplay();
+        listViewRecipeDisplay();
+        for(Recipe x : DataHolder.publicRecipes){
+            System.out.println(x.getTitle());
+        }
+        System.out.println("End of the updatedisplay statements");
+    }
+
+    @FXML
+    public void publishRecipe(ActionEvent event) throws Exception{
+        if(DataHolder.supervisedUser.recipeList.get(selectedRecipe).isPublic()){
+            DataHolder.supervisedUser.recipeList.get(selectedRecipe).setPublic(false);
+            DataHolder.unpublishRecipes();
+            publishBtn.setText("Publish Recipe");
+        } else {
+            DataHolder.supervisedUser.recipeList.get(selectedRecipe).setPublic(true);
+            DataHolder.publicRecipes.add(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
+            publishBtn.setText("Unublish Recipe");
+        }
     }
 
 

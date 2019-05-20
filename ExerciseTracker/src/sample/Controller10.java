@@ -48,7 +48,8 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
     TextField recipeSelector;
 
     @FXML
-    CheckBox addToSelectedRecipeCheckBox;
+    CheckBox recipeIsPublic;
+
 
     @FXML
     public void buttonLogOutPressed(ActionEvent event)throws Exception{
@@ -84,7 +85,7 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
     public void cleanFields(ActionEvent event){
         titleTextField.setText("");
         descriptionTextArea.setText("");
-        addToSelectedRecipeCheckBox.setSelected(false);
+        recipeIsPublic.setSelected(false);
         System.out.println("Cleaning the fields");
 
     }
@@ -99,7 +100,11 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
     public void addTheRecipe(){
         Recipe recip = new Recipe(titleTextField.getText(),
                 descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
-        DataHolder.activeUser.recipeList.add(recip);
+        recip.setPublic(recipeIsPublic.isSelected());
+        DataHolder.supervisedUser.recipeList.add(recip);
+        if(recip.isPublic()){
+            DataHolder.publicRecipes.add(recip);
+        }
     }
 
 

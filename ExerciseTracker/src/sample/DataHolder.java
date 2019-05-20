@@ -9,6 +9,7 @@ public class DataHolder {
     public static User activeUser;
     public static User supervisedUser; //when an Admin inspects a User's profile.
     public static ArrayList<User> userList = new ArrayList<>();
+    public static ArrayList<Recipe> publicRecipes = new ArrayList<>();
     public static Exercise supervisedExercise;
     public static Recipe supervisedRecipe;
     public static int supervisedExercisePostion;
@@ -93,5 +94,14 @@ public class DataHolder {
 
     public static void setTestCount(int testCount) {
         DataHolder.testCount = testCount;
+    }
+
+    //removes the unpublished recipes from the publicRecipes list
+    public static void unpublishRecipes(){
+        for (Recipe x : publicRecipes){
+            if(!x.isPublic()){
+                publicRecipes.remove(publicRecipes.indexOf(x));
+            }
+        }
     }
 }

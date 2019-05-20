@@ -9,7 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller4">
+
    <children>
       <Button layoutX="459.0" layoutY="158.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />
       <Button fx:id="btnGoToAdminPage" layoutX="429.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Go To Admin Page" />
@@ -21,7 +23,7 @@
       <Label layoutX="97.0" layoutY="88.0" text="Username:" />
       <Label layoutX="97.0" layoutY="128.0" text="Password:" />
       <Label layoutX="97.0" layoutY="170.0" text="Email:" />
-      <Button layoutX="239.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Cancel" />
+      <Button layoutX="239.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Cancel" />
       <Label layoutX="239.0" layoutY="23.0" text="Edit User">
          <font>
             <Font size="24.0" />

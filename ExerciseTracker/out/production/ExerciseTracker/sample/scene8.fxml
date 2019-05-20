@@ -11,12 +11,12 @@
 <?import javafx.scene.text.Font?>
 
 
+
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller8">
     <children>
         <Button fx:id="btnLogOut" layoutX="386.0" layoutY="48.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />
         <Button fx:id="btnGoToTheAdminPage" layoutX="356.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" text="Go to The Admin Page" />
         <Button fx:id="btnGoToTheSettingPage" layoutX="343.0" layoutY="83.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" text="Go to the Settings Page" />
-
 
 
 
@@ -40,5 +40,6 @@
         <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="Active Name:" />
       <ListView fx:id="listView" layoutX="28.0" layoutY="338.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
       <Button layoutX="353.0" layoutY="70.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPagePressed" text="Go to the User Page" />
+      <Button fx:id="publishBtn" layoutX="493.0" layoutY="301.0" mnemonicParsing="false" onAction="#publishRecipe" text="publish/unpublish" />
     </children>
 </AnchorPane>
