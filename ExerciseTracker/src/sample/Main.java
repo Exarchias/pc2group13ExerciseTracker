@@ -19,6 +19,7 @@ public class Main extends Application {
     public static final String Scene9 = "Scene9";
     public static final String Scene10 = "scene10";
     public static final String Scene11 = "Scene11";
+    public static final String Scene12 = "Scene12";
 
     private static boolean connectedToDB = false;
 

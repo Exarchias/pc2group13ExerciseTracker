@@ -19,7 +19,6 @@
 
 
 
-
         <Button layoutX="43.0" layoutY="301.0" mnemonicParsing="false" onAction="#testViewRecipes" text="(Test) view Exercises" />
         <Button layoutX="183.0" layoutY="301.0" mnemonicParsing="false" onAction="#addRecipe" styleClass="button-crud" text="Add Recipe" />
         <Button layoutX="274.0" layoutY="301.0" mnemonicParsing="false" onAction="#deleteRecipe" styleClass="button-crud" text="Delete Recipe" />

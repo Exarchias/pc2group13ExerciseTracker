@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller12">
+   <children>
+      <Button layoutX="494.0" layoutY="53.0" mnemonicParsing="false" onAction="#logOutButtonPressed" text="LogOut" />
+      <Button layoutX="496.0" layoutY="119.0" mnemonicParsing="false" onAction="#goToTheAdminPageButtonPressed" text="GoToAdminPage" />
+      <Button layoutX="496.0" layoutY="182.0" mnemonicParsing="false" onAction="#goToTheUserPage" text="GoToUserPage" />
+      <ListView fx:id="exerciseListView" layoutX="25.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="recipesListView" layoutX="253.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
