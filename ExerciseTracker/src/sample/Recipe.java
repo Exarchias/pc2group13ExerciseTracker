@@ -7,7 +7,17 @@ public class Recipe {
     private String description;
     private int owner;
     private int recipeID;
+    private boolean isPublic = false;
     ArrayList<Exercise> exerciseList = new ArrayList<>();
+
+    //This one includes the public recipes functionality.
+    public Recipe(String title, String description, int owner, int recipeID, boolean isPublic) {
+        this.title = title;
+        this.description = description;
+        this.owner = owner;
+        this.recipeID = recipeID;
+        this.isPublic = isPublic;
+    }
 
     //this constructor is according to the EER.
     public Recipe(String title, String description, int owner, int recipeID) {
@@ -53,5 +63,13 @@ public class Recipe {
 
     public void setRecipeID(int recipeID) {
         this.recipeID = recipeID;
+    }
+
+    public boolean isPublic() {
+        return isPublic;
+    }
+
+    public void setPublic(boolean aPublic) {
+        isPublic = aPublic;
     }
 }
