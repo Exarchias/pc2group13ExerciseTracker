@@ -95,4 +95,13 @@ public class DataHolder {
     public static void setTestCount(int testCount) {
         DataHolder.testCount = testCount;
     }
+
+    //removes the unpublished recipes from the publicRecipes list
+    public static void unpublishRecipes(){
+        for (Recipe x : publicRecipes){
+            if(!x.isPublic()){
+                publicRecipes.remove(publicRecipes.indexOf(x));
+            }
+        }
+    }
 }
