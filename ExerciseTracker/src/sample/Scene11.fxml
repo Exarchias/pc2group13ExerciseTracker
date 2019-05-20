@@ -9,11 +9,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<<<<<<< HEAD
+
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller11">
-=======
-<AnchorPane prefHeight="699.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller11">
->>>>>>> 8dd2032d5c9670cf9b38ed8e2dfa4998cdbb26af
+
     <children>
         <Button fx:id="btnLogOut" layoutX="391.0" layoutY="43.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />
         <Button fx:id="btnGoToAdminPage" layoutX="369.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
@@ -37,11 +35,11 @@
             <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
-<<<<<<< HEAD
+
       <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="ActiveName:" />
-=======
-      <Label fx:id="lblActiveName" layoutX="11.0" layoutY="13.0" text="ActiveName:" />
+
+
       <ListView fx:id="listView" layoutX="498.0" layoutY="80.0" onMouseClicked="#somethingIsSelectedOnListViewRight" prefHeight="148.0" prefWidth="144.0" />
->>>>>>> 8dd2032d5c9670cf9b38ed8e2dfa4998cdbb26af
+
     </children>
 </AnchorPane>
