@@ -3,11 +3,12 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-<<<<<<< HEAD
+
   <component name="ProjectRootManager" version="2" project-jdk-name="10" project-jdk-type="JavaSDK">
-=======
+
   <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="false" project-jdk-name="10" project-jdk-type="JavaSDK">
->>>>>>> bd371dba27aa2d13d3d4c87bd59730c9f35ece69
+
     <output url="file://out" />
+
   </component>
 </project>
