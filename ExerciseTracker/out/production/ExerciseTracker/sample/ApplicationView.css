@@ -2,7 +2,9 @@
     -fx-background-color: #383838;
 }
 .anchorpane{
-  -fx-background-color: #383838;
+}
+.background{
+   -fx-background-color: linear-gradient(#4b0082,#00ff00);
 }
 .anchorpane-loginscene{
    -fx-background-color: linear-gradient(#4b0082,#00ff00);

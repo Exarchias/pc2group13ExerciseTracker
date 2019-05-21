@@ -9,8 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller10">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller10">
 
     <children>
         <Button fx:id="btnLogOut" layoutX="530.0" layoutY="114.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />

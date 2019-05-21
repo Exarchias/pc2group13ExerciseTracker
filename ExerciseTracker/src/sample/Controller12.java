@@ -4,20 +4,22 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller12 implements Initializable {
     @FXML
-    public ListView<?> exerciseListView;
+    public ListView<String> ListView1;
 
     @FXML
-    public ListView<?> recipesListView;
+    public ListView<String> ListView2;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+      
 
     }
 
@@ -47,4 +49,6 @@ public class Controller12 implements Initializable {
     public void manageRecipesButtonPressed(ActionEvent event) throws Exception{
 
     }
+
+
 }

@@ -94,6 +94,11 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         }
 
     }
+    @FXML
+    public void browseRecipesButtonPressed(ActionEvent event) throws Exception {
+        Main.getInstance().setScene(Main.Scene12);
+
+    }
 
     @FXML
     public void cleanFields(ActionEvent event){
