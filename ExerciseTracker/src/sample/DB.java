@@ -38,6 +38,10 @@ public class DB {
         try {
             statement.executeQuery("USE xtracker");
             ResultSet rs = statement.executeQuery("SELECT * FROM user");
+            User firstUser = new User("superuser", "12345",
+                    "admin@exercise.trackom", true);
+            DataHolder.userList.add(0,firstUser);
+            System.out.println("Verification: The very first User is " + DataHolder.userList.get(0).getUserName());
 
             while(rs.next())
             {
@@ -59,7 +63,46 @@ public class DB {
         }
         catch (SQLException ex)
         {
-            System.out.println("error on executing the handshake");
+            System.out.println("error on loading the users");
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void loadRecipes() {
+        try {
+            statement.executeQuery("USE xtracker");
+            ResultSet rs = statement.executeQuery("SELECT * FROM xtracker.recipe");
+
+            while(rs.next())
+            {
+                //String title, String description, int owner, int recipeID, boolean isPublic
+                String title = rs.getString(3);
+                String description = rs.getString(4);
+                int userID = rs.getInt(2);
+                int recipeID = rs.getInt(1);
+                boolean isPublic = rs.getBoolean(5);
+
+                Recipe recipe1 = new Recipe(title, description, userID, recipeID, isPublic);
+
+                for (User x : DataHolder.userList){
+                    if(x.getUserID() == userID){
+                        x.recipeList.add(recipe1);
+                        System.out.println(recipe1.getTitle() + " added to the user: " + x.getUserName());
+                    }
+                }
+                if(isPublic){
+                    DataHolder.publicRecipes.add(recipe1);
+                    System.out.println(recipe1.getTitle() + " is public.");
+                }
+
+            }
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on loading the recipes");
+            DataHolder.isConnected = false;
         }
     }
 }

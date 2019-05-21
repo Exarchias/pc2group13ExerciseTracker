@@ -52,6 +52,7 @@ public class Main extends Application {
         DB db = new DB();
         //db.doAHandshake();
         db.loadUsers();
+        db.loadRecipes();
         //JDBC ends
         if(!DataHolder.isConnected){
             Methods.testOfflineScript();
