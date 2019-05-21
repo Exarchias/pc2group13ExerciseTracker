@@ -48,13 +48,14 @@ public class Main extends Application {
 
     }
     public static void main(String[] args) {
-        if(!connectedToDB){
-            Methods.testOfflineScript();
-        }
         //JDBC starts
         DB db = new DB();
-        db.doAHandshake();
+        //db.doAHandshake();
+        db.loadUsers();
         //JDBC ends
+        if(!DataHolder.isConnected){
+            Methods.testOfflineScript();
+        }
 
         launch(args);
 

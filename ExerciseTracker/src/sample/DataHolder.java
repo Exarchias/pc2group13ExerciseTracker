@@ -15,6 +15,7 @@ public class DataHolder {
     public static int supervisedExercisePostion;
     public static int supervisedRecipePostion;
     public static int testCount = 0;
+    public static boolean isConnected = false;
 
     public static boolean isAdmin() {
         return admin;
