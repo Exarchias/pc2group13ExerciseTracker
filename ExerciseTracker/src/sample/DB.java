@@ -13,7 +13,7 @@ public class DB {
             Connection c = (Connection) DriverManager.getConnection(url);
             statement = c.createStatement();
         } catch (SQLException ex) {
-            System.out.println("the connection fails");
+            System.out.println("the connection fails ");
         }
     }
 
