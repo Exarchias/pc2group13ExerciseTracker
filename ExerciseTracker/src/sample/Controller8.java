@@ -164,6 +164,11 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
             publishBtn.setText("Unublish Recipe");
         }
     }
+    @FXML
+    public void browseRecipesButtonPressed(ActionEvent event) throws Exception {
+        Main.getInstance().setScene(Main.Scene12);
+
+    }
 
 
 

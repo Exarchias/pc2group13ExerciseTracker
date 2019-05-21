@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
    <children>
       <Button fx:id="btnLogOut" layoutX="519.0" layoutY="106.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" stylesheets="@ApplicationView.css" text="LogOut" />
       <Button fx:id="btnGoToTheAdminPage" layoutX="318.0" layoutY="19.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" text="Go to The Admin Page" />
@@ -36,5 +36,6 @@
       <ListView fx:id="listView" layoutX="34.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="169.0" prefWidth="200.0" />
       <Button fx:id="useSelectedExerciseBtn" layoutX="26.0" layoutY="309.0" mnemonicParsing="false" onAction="#useSelectedExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Use selected Exercise" />
       <ListView fx:id="listView2" layoutX="268.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListViewRight" prefHeight="169.0" prefWidth="200.0" />
+      <Button layoutX="521.0" layoutY="173.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" text="Browse Public Recipes" />
    </children>
 </AnchorPane>

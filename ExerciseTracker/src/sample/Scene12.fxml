@@ -7,14 +7,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller12">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller12">
     <children>
         <Button fx:id="btnLogOut" layoutX="494.0" layoutY="53.0" mnemonicParsing="false" onAction="#logOutButtonPressed" styleClass="button-logout" text="LogOut" />
         <Button fx:id="btnGoToTheAdminPage" layoutX="496.0" layoutY="119.0" mnemonicParsing="false" onAction="#goToTheAdminPageButtonPressed" text="GoToAdminPage" />
         <Button fx:id="btnGoToTheUserPage" layoutX="496.0" layoutY="182.0" mnemonicParsing="false" onAction="#goToTheUserPageButtonPressed" text="GoToUserPage" />
-        <ListView fx:id="exerciseListView" layoutX="25.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" />
-        <ListView fx:id="recipesListView" layoutX="253.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="listView" layoutX="25.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" />
+        <ListView fx:id="listView2" layoutX="253.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView2" prefHeight="200.0" prefWidth="200.0" />
         <Button fx:id="btnUseExercise" layoutX="42.0" layoutY="300.0" mnemonicParsing="false" onAction="#useExerciseButtonPressed" styleClass="button-crud" text="Use Exercise" />
         <Button fx:id="btnUseRecipe" layoutX="166.0" layoutY="300.0" mnemonicParsing="false" onAction="#useRecipeButtonPressed" styleClass="button-crud" text="Use Recipe" />
         <Button fx:id="btnCancel" layoutX="264.0" layoutY="300.0" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel" />

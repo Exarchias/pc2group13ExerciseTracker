@@ -10,7 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
    <children>
       <Button fx:id="btnLogOut" layoutX="530.0" layoutY="114.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />
       <Button fx:id="btnGoToAdminPage" layoutX="494.0" layoutY="196.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
@@ -38,5 +38,6 @@
       </ImageView>
       <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="ActiveName:" />
       <ListView fx:id="listView" layoutX="22.0" layoutY="348.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="533.0" layoutY="311.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" text="Browse Public Recipes" />
    </children>
 </AnchorPane>

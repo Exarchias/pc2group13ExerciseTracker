@@ -159,6 +159,9 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     }
 
+
+
+
     @FXML
     public void somethingIsSelectedOnListView(MouseEvent event){
         selectedExercise = listView.getSelectionModel().getSelectedIndex();
@@ -222,5 +225,9 @@ public class Controller3 implements Initializable {  //USER PAGE
         listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
+    @FXML
+    public void browseRecipesButtonPressed(ActionEvent event) throws Exception {
+        Main.getInstance().setScene(Main.Scene12);
 
+    }
 }
