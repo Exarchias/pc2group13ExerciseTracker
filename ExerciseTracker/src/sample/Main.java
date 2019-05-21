@@ -48,12 +48,14 @@ public class Main extends Application {
 
     }
     public static void main(String[] args) {
-        //JDBC starts
-        //DB db = new DB();
-        //db.doAHandshake();
-        //db.loadUsers();
-        //db.loadRecipes();
-        //JDBC ends
+        if(DataHolder.dbActivated){ //CHECKS IF THE DATA BASE IS ACTIVATED
+            //JDBC starts
+            DB db = new DB();
+            db.loadUsers();
+            db.loadRecipes();
+            //JDBC ends
+        }
+
         if(!DataHolder.isConnected){
             Methods.testOfflineScript();
         }
