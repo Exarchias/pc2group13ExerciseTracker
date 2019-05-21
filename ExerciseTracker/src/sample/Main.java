@@ -51,6 +51,10 @@ public class Main extends Application {
         if(!connectedToDB){
             Methods.testOfflineScript();
         }
+        //JDBC starts
+        DB db = new DB();
+        db.doAHandshake();
+        //JDBC ends
 
         launch(args);
 

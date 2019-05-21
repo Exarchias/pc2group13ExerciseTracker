@@ -1,7 +1,6 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+package sample;
+
+import java.sql.*;
 
 public class DB {
 
@@ -9,29 +8,29 @@ public class DB {
 
     Statement statement;
 
-//    public DB() {
-//        try {
-//            Connection c = (Connection) DriverManager.getConnection(url);
-//            statement = c.createStatement();
-//        } catch (SQLException ex) {
-//            System.out.println("the connection fails");
-//        }
-//    }
-//
-//
-//    public void doAHandshake() {
-//        try {
-//            ResultSet rs = statement.executeQuery("SHOW databases");
-//
-//            while(rs.next())
-//            {
-//                System.out.println(" This database ==> " + rs.getString(1));
-//            }
-//
-//        }
-//        catch (SQLException ex)
-//        {
-//            System.out.println("error on executing the handshake");
-//        }
-//    }
+    public DB() {
+        try {
+            Connection c = (Connection) DriverManager.getConnection(url);
+            statement = c.createStatement();
+        } catch (SQLException ex) {
+            System.out.println("the connection fails");
+        }
+    }
+
+
+    public void doAHandshake() {
+        try {
+            ResultSet rs = statement.executeQuery("SHOW databases");
+
+            while(rs.next())
+            {
+                System.out.println(" This database ==> " + rs.getString(1));
+            }
+
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on executing the handshake");
+        }
+    }
 }
