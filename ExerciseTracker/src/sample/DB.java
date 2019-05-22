@@ -27,10 +27,12 @@ public class DB {
                 System.out.println(" This database ==> " + rs.getString(1));
             }
 
+            DataHolder.isConnected = true;
         }
         catch (SQLException ex)
         {
             System.out.println("error on executing the handshake");
+            DataHolder.isConnected = false;
         }
     }
 
@@ -98,6 +100,51 @@ public class DB {
             }
 
             DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on loading the recipes");
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void loadExercises() {
+        try {
+            statement.executeQuery("USE xtracker");
+            ResultSet rs = statement.executeQuery("SELECT * FROM xtracker.exercise");
+
+            while(rs.next())
+            {
+                //String title, String description, int exerciseID,
+                //                    int owner, int recipeID, int repetitions, int caloriesPerRepetition
+                String title = rs.getString(5);
+                String description = rs.getString(6);
+                int exerciseID = rs.getInt(1);
+                int userID = rs.getInt(2);
+                int recipeID = rs.getInt(7);
+                int repetitions = rs.getInt(3);
+                int caloriesPerRepetition = rs.getInt(4);
+                Exercise exer1 = new Exercise(title, description, exerciseID, userID, recipeID, repetitions,caloriesPerRepetition);
+
+                for (User x : DataHolder.userList){
+                    if(x.getUserID() == userID){
+                        x.exerciseList.add(exer1);
+                        System.out.println(exer1.getTitle() + " added to the user: " + x.getUserName());
+                        for (Recipe j : x.recipeList){
+                            if(recipeID == j.getRecipeID()){
+                                j.exerciseList.add(exer1);
+                                System.out.println(exer1.getTitle() + " added to the recipe: " + j.getTitle());
+                            }
+                        }
+                        break;
+                    }
+                }
+
+            }
+
+            DataHolder.isConnected = true;
+
+
         }
         catch (SQLException ex)
         {

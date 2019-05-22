@@ -21,7 +21,6 @@ public class Main extends Application {
     public static final String Scene11 = "Scene11";
     public static final String Scene12 = "Scene12";
 
-    private static boolean connectedToDB = false;
 
     private Stage primaryStage;
     private static Main instance = null;
@@ -54,6 +53,7 @@ public class Main extends Application {
             DB db = new DB();
             db.loadUsers();
             db.loadRecipes();
+            db.loadExercises();
             //JDBC ends
         }
 
