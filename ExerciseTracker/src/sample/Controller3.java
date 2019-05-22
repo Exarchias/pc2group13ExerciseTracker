@@ -27,6 +27,7 @@ public class Controller3 implements Initializable {  //USER PAGE
             }
         }
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
+        superviseLabel.setText("You are supervising: " + DataHolder.supervisedUser.getUserName());
         exerciseSelector.setText(String.valueOf(selectedExercise));
 
         listViewDisplay();
@@ -35,10 +36,17 @@ public class Controller3 implements Initializable {  //USER PAGE
 //        if(DataHolder.activeUser.exerciseList.get(0) != null){
 //            updateDisplay();
 //        }
-
-        if (DataHolder.isAdmin())
+        if (DataHolder.isAdmin()){
             btnGoToTheAdminPage.setVisible(true);
-        else btnGoToTheAdminPage.setVisible(false);
+        } else {
+            btnGoToTheAdminPage.setVisible(false);
+        }
+
+        if (DataHolder.isConnected){
+            saveBtn.setVisible(true);
+        } else {
+            saveBtn.setVisible(false);
+        }
 
 
     }
@@ -47,6 +55,10 @@ public class Controller3 implements Initializable {  //USER PAGE
    public ListView<String> listView;
     @FXML
     Label lblActiveName;
+
+    @FXML
+    Label superviseLabel;
+
     @FXML
     TextField exerciseSelector;
 
@@ -58,6 +70,9 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     @FXML
     Button useSelectedExerciseBtn;
+
+    @FXML
+    Button saveBtn;
 
     @FXML
     TextField recipeSelector;
@@ -90,6 +105,11 @@ public class Controller3 implements Initializable {  //USER PAGE
         System.out.println("Presenting the exercises...");
         updateDisplay();
         System.out.println(exerciseDisplay);
+    }
+
+    @FXML
+    public void saveTheData(ActionEvent event){
+        System.out.println("Save the data");
     }
 
     @FXML
