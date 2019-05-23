@@ -78,7 +78,7 @@ public class Methods {
         System.out.println("Offline procedure just got complete");
     }
     
-//this method displays the user that are admins
+    //this method displays the user that are admins
     public String displayAdmins(){
         int count = 0;
         String adminListDisplay = "";
@@ -98,5 +98,18 @@ public class Methods {
         exContent += "Description: " + exercise.getDescription() + "\n";
         exContent += "Exercise ID: " + exercise.getExerciseID() + "\n";
         return exContent;
+    }
+    
+    //this method displays the recipes of the user.
+    public static String displayUsersRecipes(User user){
+        String userRecipes = "";
+        int count = 0;
+        userRecipes += " Recipes \n";
+        userRecipes += " ======= \n";
+        for (Recipe x : user.recipeList){
+            count++;
+            userRecipes += count + ") Title: " + x.getTitle() + "\n";
+        }
+        return userRecipes;
     }
 }
