@@ -185,7 +185,6 @@ public class DB {
             }
             statement.executeUpdate("USE xtracker");
             //username, password, email, isAdmin
-            //UPDATE user SET username='username', password='password', email=' email ', isAdmin='isAdmin' WHEN userid='userID'
             statement.executeUpdate("UPDATE user SET username='" + username +"', password='" +
                     password +"', email='" + email +"', isAdmin='" + isAdmin + "' WHERE userid='"+ userID +"'");
             System.out.println("Not a failure on editing the user. check the database");
@@ -195,6 +194,24 @@ public class DB {
         catch (SQLException ex)
         {
             System.out.println("error on editing the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void deleteOneUser(int userID) {
+        try {
+            int isAdmin;
+
+            statement.executeUpdate("USE xtracker");
+            //username, password, email, isAdmin
+            statement.executeUpdate("DELETE FROM user WHERE userid='"+ userID +"'");
+            System.out.println("Not a failure on deleting the user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on deleting the user:" + ex);
             DataHolder.isConnected = false;
         }
     }
