@@ -78,6 +78,10 @@ public class Controller5 implements Initializable { //LOG PAGE
         DataHolder.userList.add(userObj);
         System.out.println("The User is considered created");
         Main.getInstance().setScene(Main.Scene2);
+        //TESTING ADDING A USER ON THE DATA BASE(START)
+        DB db = new DB();
+        db.addOneUser(username, password, email, userIsAdmin);
+        //TESTING ADDING A USER ON THE DATA BASE(END)
     }
 
     @FXML
