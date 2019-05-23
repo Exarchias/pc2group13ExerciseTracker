@@ -214,6 +214,26 @@ public class DB {
         }
     }
 
+    public void editOneExercise(String title, String description,int owner, int exerciseID) {
+        try {
+            System.out.println("title: " + title);
+            System.out.println("title: " + title);
+            System.out.println("title: " + title);
+            System.out.println("title: " + title);
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE exercise SET user_userID='" + owner +"' ,title='" +
+                    title +"', description='" + description +"' WHERE exerciseID='"+ exerciseID +"'");
+            System.out.println("Not a failure on editing the Exercise. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on editing the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
     public void deleteOneUser(int userID) {
         try {
             int isAdmin;

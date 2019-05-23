@@ -148,14 +148,29 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                 Exercise exex1 = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.exerciseList.remove(DataHolder.supervisedExercisePostion);
                 DataHolder.supervisedUser.exerciseList.add(DataHolder.supervisedExercisePostion, exex1);
+
+                //TESTING ADDING A USER ON THE DATA BASE(START)
+                DB db = new DB();
+                db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
+                //TESTING ADDING A USER ON THE DATA BASE(END)
             } else {
                 Exercise exex2 = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.exerciseList.add(exex2);
+
+                //TESTING ADDING A USER ON THE DATA BASE(START)
+                DB db = new DB();
+                db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
+                //TESTING ADDING A USER ON THE DATA BASE(END)
             }
         } else {
             if(selectedRecipeIN == 0){
                 Exercise exex = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.add(exex);
+
+                //TESTING ADDING A USER ON THE DATA BASE(START)
+                DB db = new DB();
+                db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
+                //TESTING ADDING A USER ON THE DATA BASE(END)
             } else {
                 Exercise exOld = new Exercise(DataHolder.supervisedUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.
                         supervisedExercisePostion).getTitle(), DataHolder.supervisedUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.
@@ -164,6 +179,11 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                 DataHolder.supervisedUser.recipeList.get(selectedRecipeIN).exerciseList.remove(DataHolder.supervisedExercisePostion);
                 Exercise exnew = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.add(exnew);
+
+                //TESTING ADDING A USER ON THE DATA BASE(START)
+                DB db = new DB();
+                db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
+                //TESTING ADDING A USER ON THE DATA BASE(END)
             }
         }
 
