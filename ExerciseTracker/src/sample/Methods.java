@@ -77,6 +77,7 @@ public class Methods {
         DataHolder.userList.get(1).recipeList.get(1).exerciseList.add(tri3);
         System.out.println("Offline procedure just got complete");
     }
+    
 //this method displays the user that are admins
     public String displayAdmins(){
         int count = 0;
@@ -88,5 +89,14 @@ public class Methods {
             }
         }
         return adminListDisplay;
+    }
+    
+    //this method displays the contents of an exercise:
+    public String displayTheExercise(Exercise exercise){
+        String exContent = "";
+        exContent += "Title: " + exercise.getTitle() + "\n";
+        exContent += "Description: " + exercise.getDescription() + "\n";
+        exContent += "Exercise ID: " + exercise.getExerciseID() + "\n";
+        return exContent;
     }
 }
