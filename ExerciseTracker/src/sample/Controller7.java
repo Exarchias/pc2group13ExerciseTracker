@@ -89,6 +89,10 @@ public class Controller7 implements Initializable { //LOG PAGE
         DataHolder.supervisedUser.setUserName(username);
         DataHolder.supervisedUser.setPassWord(password);
         DataHolder.supervisedUser.setEmail(email);
+        //TESTING ADDING A USER ON THE DATA BASE(START)
+        DB db = new DB();
+        db.editOneUser(username, password, email, userIsAdmin, DataHolder.supervisedUser.getUserID());
+        //TESTING ADDING A USER ON THE DATA BASE(END)
         System.out.println("The User is considered edited");
         Main.getInstance().setScene(Main.Scene2);
     }

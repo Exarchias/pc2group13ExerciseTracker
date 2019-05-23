@@ -175,6 +175,30 @@ public class DB {
         }
     }
 
+    public void editOneUser(String username, String password, String email, boolean admin, int userID) {
+        try {
+            int isAdmin;
+            if(admin){
+                isAdmin = 1;
+            } else {
+                isAdmin = 0;
+            }
+            statement.executeUpdate("USE xtracker");
+            //username, password, email, isAdmin
+            //UPDATE user SET username='username', password='password', email=' email ', isAdmin='isAdmin' WHEN userid='userID'
+            statement.executeUpdate("UPDATE user SET username='" + username +"', password='" +
+                    password +"', email='" + email +"', isAdmin='" + isAdmin + "' WHERE userid='"+ userID +"'");
+            System.out.println("Not a failure on editing the user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on editing the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
     public int loadLastUserId() {
         try {
             statement.executeQuery("USE xtracker");
