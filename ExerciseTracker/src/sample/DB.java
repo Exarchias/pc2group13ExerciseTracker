@@ -152,4 +152,28 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+
+    public void addOneUser(String username, String password, String email, boolean admin) {
+        try {
+            int isAdmin;
+            if(admin){
+                isAdmin = 1;
+            } else {
+                isAdmin = 0;
+            }
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("INSERT INTO user(username, password, email, isAdmin) VALUES ('" + username +"', '" +
+                    password +" ', '" + email +"', '" + isAdmin + "')");
+            System.out.println("Not a failure. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on adding a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+
 }
