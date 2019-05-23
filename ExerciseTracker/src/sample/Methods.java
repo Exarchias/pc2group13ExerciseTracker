@@ -113,6 +113,7 @@ public class Methods {
         return userRecipes;
     }
     
+    //this method displays a recipe's content
     public static String displayContentsofTherecipe(Recipe recipe) {
         String RecipeContent = "";
         int count = 0;
@@ -125,6 +126,7 @@ public class Methods {
         return RecipeContent;
     }
     
+    //this method displays a user's exercises
     public static String displayExercisesofTheUser(User user){
         String userContent = "";
         int count = 0;
