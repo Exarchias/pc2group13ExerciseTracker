@@ -90,7 +90,6 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
             //TESTING ADDING A USER ON THE DATA BASE(START)
             DB db = new DB();
             db.addOneExercise(exer.getTitle(), exer.getDescription(), exer.getOwner());
-            System.out.println("The last users ID should be " + db.loadLastUserId());
             //TESTING ADDING A USER ON THE DATA BASE(END)
             recipeDisplay();
         } else {
