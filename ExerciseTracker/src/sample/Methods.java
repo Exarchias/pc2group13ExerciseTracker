@@ -124,5 +124,19 @@ public class Methods {
         }
         return RecipeContent;
     }
+    
+    public static String displayExercisesofTheUser(User user){
+        String userContent = "";
+        int count = 0;
+        userContent += " Exercises of the User \n";
+        userContent += " ===================== \n";
+        for (Exercise x : user.exerciseList ){
+            count++;
+            userContent += count + ") Title: " + x.getTitle() + "\n";
+        }
+        return userContent;
+    }
 }
+
+
 
