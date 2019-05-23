@@ -112,4 +112,17 @@ public class Methods {
         }
         return userRecipes;
     }
+    
+    public static String displayContentsofTherecipe(Recipe recipe) {
+        String RecipeContent = "";
+        int count = 0;
+        RecipeContent += " Exercises \n";
+        RecipeContent += " ======= \n";
+        for (Exercise x : recipe.exerciseList) {
+            count++;
+            RecipeContent += count + ") Title: " + x.getTitle() + "\n";
+        }
+        return RecipeContent;
+    }
 }
+
