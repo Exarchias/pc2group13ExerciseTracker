@@ -75,13 +75,16 @@ public class Controller5 implements Initializable { //LOG PAGE
             System.out.println("The user is an Admin");
         }
         User userObj = new User(username, password, email, userIsAdmin);
-        DataHolder.userList.add(userObj);
-        System.out.println("The User is considered created");
         Main.getInstance().setScene(Main.Scene2);
         //TESTING ADDING A USER ON THE DATA BASE(START)
         DB db = new DB();
         db.addOneUser(username, password, email, userIsAdmin);
+        System.out.println("The last users ID should be " + db.loadLastUserId());
         //TESTING ADDING A USER ON THE DATA BASE(END)
+        userObj.setUserID(db.loadLastUserId());
+        DataHolder.userList.add(userObj);
+        System.out.println("The User " + userObj.getUserName() + " is considered created " +
+                "and he has a userID:" + userObj.getUserID());
     }
 
     @FXML

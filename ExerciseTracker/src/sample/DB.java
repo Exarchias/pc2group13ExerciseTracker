@@ -175,5 +175,68 @@ public class DB {
         }
     }
 
+    public int loadLastUserId() {
+        try {
+            statement.executeQuery("USE xtracker");
+            ResultSet rs = statement.executeQuery("SELECT COUNT(*) FROM user");
+            int lastID = 5000;
+            while(rs.next()){
+                lastID = rs.getInt(1);
+            }
+
+            DataHolder.isConnected = true;
+            return lastID;
+
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on loading the last userID: " + ex);
+            DataHolder.isConnected = false;
+            return 5000;
+        }
+    }
+
+    public int loadLastExerciseId() {
+        try {
+            statement.executeQuery("USE xtracker");
+            ResultSet rs = statement.executeQuery("SELECT COUNT(*) FROM exercise");
+            int lastID = 5000;
+            while(rs.next()){
+                lastID = rs.getInt(1);
+            }
+
+            DataHolder.isConnected = true;
+            return lastID;
+
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on loading the last Exercise ID: " + ex);
+            DataHolder.isConnected = false;
+            return 5000;
+        }
+    }
+
+    public int loadLastRecipeId() {
+        try {
+            statement.executeQuery("USE xtracker");
+            ResultSet rs = statement.executeQuery("SELECT COUNT(*) FROM recipe");
+            int lastID = 5000;
+            while(rs.next()){
+                lastID = rs.getInt(1);
+            }
+
+            DataHolder.isConnected = true;
+            return lastID;
+
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on loading the last Exercise ID: " + ex);
+            DataHolder.isConnected = false;
+            return 5000;
+        }
+    }
+
 
 }

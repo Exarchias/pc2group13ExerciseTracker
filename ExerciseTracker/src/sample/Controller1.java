@@ -56,7 +56,6 @@ public class Controller1 implements Initializable { //LOGIN PAGE
 
     @FXML
     public void btnLoginIsFalse(ActionEvent event)throws Exception{
-
         DataHolder.setLogin(false);
         System.out.println("Now your credentials are invalid");
     }
@@ -69,6 +68,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
                 DataHolder.setLogin(true);
                 DataHolder.activeUser = x;
                 DataHolder.supervisedUser = x;
+                System.out.println(Methods.displayTheUser(DataHolder.supervisedUser));
                 DataHolder.setActiveName(DataHolder.activeUser.getUserName());
                 if(DataHolder.activeUser.isAnAdmin()){
                     DataHolder.setAdmin(true);

@@ -54,6 +54,7 @@ public class Main extends Application {
             db.loadUsers();
             db.loadRecipes();
             db.loadExercises();
+            System.out.println("The last users ID should be " + db.loadLastUserId());
             //JDBC ends
         }
 

@@ -144,7 +144,7 @@ public class Methods {
         String userContent = "";
         userContent += "Nickname: " + user.getUserName() + "\n";
         userContent += "user Id: " + user.getUserID() + "\n";
-        userContent += "weight: " + user.getUserName() + "\n";
+        userContent += "weight: " + user.getWeight() + "\n";
         userContent += displayUsersRecipes(user) + "\n";
         userContent += displayExercisesofTheUser(user);
         return userContent;
