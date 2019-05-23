@@ -138,6 +138,17 @@ public class Methods {
         }
         return userContent;
     }
+
+    //this method displays the contents of a User Profile:
+    public static String displayTheUser(User user){
+        String userContent = "";
+        userContent += "Nickname: " + user.getUserName() + "\n";
+        userContent += "user Id: " + user.getUserID() + "\n";
+        userContent += "weight: " + user.getUserName() + "\n";
+        userContent += displayUsersRecipes(user) + "\n";
+        userContent += displayExercisesofTheUser(user);
+        return userContent;
+    }
 }
 
 
