@@ -87,14 +87,14 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
             DataHolder.supervisedUser.recipeList.get(selectedRecipe).exerciseList.add(exer);
             System.out.println("The exercise is considered added to a recipe");
             exer.setOwner(DataHolder.supervisedUser.getUserID());
-            //TESTING ADDING A USER ON THE DATA BASE(START)
+            //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
             DB db = new DB();
             db.addOneExercise(exer.getTitle(), exer.getDescription(), exer.getOwner());
             int exeID = db.loadLastExerciseId();
             System.out.println("Last Exercise ID is: " + exeID);
             System.out.println("Selected Recipe ID is: " + DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
             db.exerciseToRecipe(exeID, DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
-            //TESTING ADDING A USER ON THE DATA BASE(END)
+            //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
             recipeDisplay();
         } else {
             addTheExercise(); //I made it that way for simplicity.

@@ -157,9 +157,11 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                 Exercise exex2 = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.exerciseList.add(exex2);
 
+
                 //TESTING ADDING A USER ON THE DATA BASE(START)
                 DB db = new DB();
                 db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
+                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(),0);
                 //TESTING ADDING A USER ON THE DATA BASE(END)
             }
         } else {
@@ -170,6 +172,7 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                 //TESTING ADDING A USER ON THE DATA BASE(START)
                 DB db = new DB();
                 db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
+                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(),DataHolder.supervisedUser.recipeList.get(selectedRecipeOUT - 1).getRecipeID());
                 //TESTING ADDING A USER ON THE DATA BASE(END)
             } else {
                 Exercise exOld = new Exercise(DataHolder.supervisedUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.
@@ -183,6 +186,7 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                 //TESTING ADDING A USER ON THE DATA BASE(START)
                 DB db = new DB();
                 db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
+                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(),DataHolder.supervisedUser.recipeList.get(selectedRecipeOUT - 1).getRecipeID());
                 //TESTING ADDING A USER ON THE DATA BASE(END)
             }
         }
