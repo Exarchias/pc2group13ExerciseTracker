@@ -175,6 +175,158 @@ public class DB {
         }
     }
 
+    public void addOneExercise(String title, String description, int owner) {
+        try {
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("INSERT INTO exercise(user_userID, title, description) VALUES ('" + owner +"', '" +
+                    title +"', '" + description + "')");
+            System.out.println("Not a failure. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on adding an exercise:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void addOneRecipe(String title, String description, int owner, boolean publish) {
+        try {
+            int isPublic;
+            if(publish){
+                isPublic = 1;
+            } else {
+                isPublic = 0;
+            }
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("INSERT INTO recipe(user_userID, title, description, isPublic) VALUES ('" + owner +"', '" +
+                    title +"', '" + description + "', '" + isPublic + "')");
+            System.out.println("Not a failure. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on adding an exercise:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void editOneUser(String username, String password, String email, boolean admin, int userID) {
+        try {
+            int isAdmin;
+            if(admin){
+                isAdmin = 1;
+            } else {
+                isAdmin = 0;
+            }
+            statement.executeUpdate("USE xtracker");
+            //username, password, email, isAdmin
+            statement.executeUpdate("UPDATE user SET username='" + username +"', password='" +
+                    password +"', email='" + email +"', isAdmin='" + isAdmin + "' WHERE userid='"+ userID +"'");
+            System.out.println("Not a failure on editing the user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on editing the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void editOneExercise(String title, String description,int owner, int exerciseID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE exercise SET user_userID='" + owner +"' ,title='" +
+                    title +"', description='" + description +"' WHERE exerciseID='"+ exerciseID +"'");
+            System.out.println("Not a failure on editing the Exercise. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on editing the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void editOneRecipe(String title, String description, int owner, boolean publish, int recipeID) {
+        try {
+            int isPublic;
+            if(publish){
+                isPublic = 1;
+            } else {
+                isPublic = 0;
+            }
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET user_userID='" + owner +"' ,title='" +
+                    title +"', description='" + description + "', isPublic='" + isPublic + "' WHERE recipeId='"+ recipeID +"'");
+            System.out.println("Not a failure on editing the recipe. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on editing the recipe:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void deleteOneUser(int userID) {
+        try {
+            int isAdmin;
+
+            statement.executeUpdate("USE xtracker");
+            //username, password, email, isAdmin
+            statement.executeUpdate("DELETE FROM user WHERE userid='"+ userID +"'");
+            System.out.println("Not a failure on deleting the user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on deleting the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void deleteOneExercise(int exerciseID) {
+        try {
+            int isAdmin;
+
+            statement.executeUpdate("USE xtracker");
+            //username, password, email, isAdmin
+            statement.executeUpdate("DELETE FROM exercise WHERE exerciseID='"+ exerciseID +"'");
+            System.out.println("Not a failure on deleting the exercise. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on deleting the exercise:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void deleteOneRecipe(int recipeID) {
+        try {
+            statement.executeUpdate("USE xtracker");
+            //username, password, email, isAdmin
+            statement.executeUpdate("DELETE FROM recipe WHERE recipeId='"+ recipeID +"'");
+            System.out.println("Not a failure on deleting the recipe. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on deleting the recipe:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
     public int loadLastUserId() {
         try {
             statement.executeQuery("USE xtracker");

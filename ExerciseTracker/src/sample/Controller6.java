@@ -86,6 +86,11 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
                     descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.supervisedUser));
             DataHolder.supervisedUser.recipeList.get(selectedRecipe).exerciseList.add(exer);
             System.out.println("The exercise is considered added to a recipe");
+            exer.setOwner(DataHolder.supervisedUser.getUserID());
+            //TESTING ADDING A USER ON THE DATA BASE(START)
+            DB db = new DB();
+            db.addOneExercise(exer.getTitle(), exer.getDescription(), exer.getOwner());
+            //TESTING ADDING A USER ON THE DATA BASE(END)
             recipeDisplay();
         } else {
             addTheExercise(); //I made it that way for simplicity.
@@ -141,7 +146,13 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     public void addTheExercise(){
         Exercise exer = new Exercise(titleTextField.getText(),
                 descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.supervisedUser));
+        exer.setOwner(DataHolder.supervisedUser.getUserID());
         DataHolder.supervisedUser.exerciseList.add(exer);
+        //TESTING ADDING A USER ON THE DATA BASE(START)
+        DB db = new DB();
+        db.addOneExercise(exer.getTitle(), exer.getDescription(), exer.getOwner());
+        System.out.println("The last users ID should be " + db.loadLastUserId());
+        //TESTING ADDING A USER ON THE DATA BASE(END)
     }
     @FXML
     public void somethingIsSelectedOnListView(MouseEvent event){

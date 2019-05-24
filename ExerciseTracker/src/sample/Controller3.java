@@ -129,12 +129,20 @@ public class Controller3 implements Initializable {  //USER PAGE
             selectedExercise = Integer.parseInt(exerciseSelector.getText());
             System.out.println("Deleting the exercise " +
                     DataHolder.supervisedUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
+            //TESTING DELETING AN EXERCISE ON THE DATA BASE(START)
+            DB db = new DB();
+            db.deleteOneExercise(DataHolder.supervisedUser.exerciseList.get(selectedExercise).getExerciseID());
+            //TESTING DELETING AN EXERCISE ON THE DATA BASE(END)
             DataHolder.supervisedUser.exerciseList.remove(selectedExercise);
         } else {
             selectedExercise = Integer.parseInt(exerciseSelector.getText());
             System.out.println("Deleting the exercise " +
                     DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise).getTitle()
                     + " from the list");
+            //TESTING DELETING AN EXERCISE ON THE DATA BASE(START)
+            DB db = new DB();
+            db.deleteOneExercise(DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise).getExerciseID());
+            //TESTING DELETING AN EXERCISE ON THE DATA BASE(END)
             DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.remove(selectedExercise);
         }
         updateDisplay();

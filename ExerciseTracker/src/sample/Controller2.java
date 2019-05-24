@@ -123,6 +123,11 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         selectedUser = Integer.parseInt(userSelector.getText());
         System.out.println("Removing the user " + DataHolder.userList.get(selectedUser).getUserName()
                 + "from the system");
+        int theIDtoDelete = DataHolder.userList.get(selectedUser).getUserID();
+        //TESTING DELETING A USER ON THE DATA BASE(START)
+        DB db = new DB();
+        db.deleteOneUser(theIDtoDelete);
+        //TESTING DELETING A USER ON THE DATA BASE(END)
         DataHolder.userList.remove(selectedUser);
         updateDisplay();
         listViewDisplay();//LISTVIEWMETHOD

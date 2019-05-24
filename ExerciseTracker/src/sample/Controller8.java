@@ -100,6 +100,10 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
         selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("Deleting the exercise " +
                 DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
+        //TESTING EDITING A RECIPE ON THE DATA BASE(START)
+        DB db = new DB();
+        db.deleteOneRecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
+        //TESTING EDITING A RECIPE ON THE DATA BASE(END)
         DataHolder.supervisedUser.recipeList.remove(selectedRecipe);
         updateDisplay();
 
