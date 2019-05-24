@@ -105,6 +105,11 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
         if(recip.isPublic()){
             DataHolder.publicRecipes.add(recip);
         }
+        //TESTING ADDING A RECIPE ON THE DATA BASE(START)
+        DB db = new DB();
+        db.addOneRecipe(titleTextField.getText(),
+                descriptionTextArea.getText(), DataHolder.supervisedUser.getUserID(), recip.isPublic());
+        //TESTING ADDING A RECIPE ON THE DATA BASE(END)
     }
 
 

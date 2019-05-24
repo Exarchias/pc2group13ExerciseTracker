@@ -191,6 +191,28 @@ public class DB {
         }
     }
 
+    public void addOneRecipe(String title, String description, int owner, boolean publish) {
+        try {
+            int isPublic;
+            if(publish){
+                isPublic = 1;
+            } else {
+                isPublic = 0;
+            }
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("INSERT INTO recipe(user_userID, title, description, isPublic) VALUES ('" + owner +"', '" +
+                    title +"', '" + description + "', '" + isPublic + "')");
+            System.out.println("Not a failure. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on adding an exercise:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
     public void editOneUser(String username, String password, String email, boolean admin, int userID) {
         try {
             int isAdmin;
