@@ -253,6 +253,22 @@ public class DB {
         }
     }
 
+    public void exerciseToRecipe(int exerciseID, int recipeID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE exercise SET recipe_recipeId='" + recipeID +"'  WHERE exerciseID='"+ exerciseID +"'");
+            System.out.println("Not a failure on editing the Exercise. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on editing the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
     public void editOneRecipe(String title, String description, int owner, boolean publish, int recipeID) {
         try {
             int isPublic;
@@ -351,7 +367,7 @@ public class DB {
     public int loadLastExerciseId() {
         try {
             statement.executeQuery("USE xtracker");
-            ResultSet rs = statement.executeQuery("SELECT COUNT(*) FROM exercise");
+            ResultSet rs = statement.executeQuery("SELECT exerciseID FROM exercise ORDER BY exerciseID DESC LIMIT 1;");
             int lastID = 5000;
             while(rs.next()){
                 lastID = rs.getInt(1);
