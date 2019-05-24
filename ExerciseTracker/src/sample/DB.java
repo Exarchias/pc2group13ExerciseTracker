@@ -311,6 +311,22 @@ public class DB {
         }
     }
 
+    public void deleteOneRecipe(int recipeID) {
+        try {
+            statement.executeUpdate("USE xtracker");
+            //username, password, email, isAdmin
+            statement.executeUpdate("DELETE FROM recipe WHERE recipeId='"+ recipeID +"'");
+            System.out.println("Not a failure on deleting the recipe. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on deleting the recipe:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
     public int loadLastUserId() {
         try {
             statement.executeQuery("USE xtracker");
