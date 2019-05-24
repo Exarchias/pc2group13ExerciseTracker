@@ -346,7 +346,7 @@ public class DB {
     public int loadLastUserId() {
         try {
             statement.executeQuery("USE xtracker");
-            ResultSet rs = statement.executeQuery("SELECT COUNT(*) FROM user");
+            ResultSet rs = statement.executeQuery("SELECT userID FROM user ORDER BY userID DESC LIMIT 1");
             int lastID = 5000;
             while(rs.next()){
                 lastID = rs.getInt(1);
@@ -367,7 +367,7 @@ public class DB {
     public int loadLastExerciseId() {
         try {
             statement.executeQuery("USE xtracker");
-            ResultSet rs = statement.executeQuery("SELECT exerciseID FROM exercise ORDER BY exerciseID DESC LIMIT 1;");
+            ResultSet rs = statement.executeQuery("SELECT exerciseID FROM exercise ORDER BY exerciseID DESC LIMIT 1");
             int lastID = 5000;
             while(rs.next()){
                 lastID = rs.getInt(1);
@@ -388,7 +388,7 @@ public class DB {
     public int loadLastRecipeId() {
         try {
             statement.executeQuery("USE xtracker");
-            ResultSet rs = statement.executeQuery("SELECT COUNT(*) FROM recipe");
+            ResultSet rs = statement.executeQuery("SELECT recipeId FROM recipe ORDER BY recipeId DESC LIMIT 1");
             int lastID = 5000;
             while(rs.next()){
                 lastID = rs.getInt(1);
