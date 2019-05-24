@@ -238,10 +238,7 @@ public class DB {
 
     public void editOneExercise(String title, String description,int owner, int exerciseID) {
         try {
-            System.out.println("title: " + title);
-            System.out.println("title: " + title);
-            System.out.println("title: " + title);
-            System.out.println("title: " + title);
+
             statement.executeUpdate("USE xtracker");
             statement.executeUpdate("UPDATE exercise SET user_userID='" + owner +"' ,title='" +
                     title +"', description='" + description +"' WHERE exerciseID='"+ exerciseID +"'");
@@ -252,6 +249,28 @@ public class DB {
         catch (SQLException ex)
         {
             System.out.println("error on editing the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    public void editOneRecipe(String title, String description, int owner, boolean publish, int recipeID) {
+        try {
+            int isPublic;
+            if(publish){
+                isPublic = 1;
+            } else {
+                isPublic = 0;
+            }
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET user_userID='" + owner +"' ,title='" +
+                    title +"', description='" + description + "', isPublic='" + isPublic + "' WHERE recipeId='"+ recipeID +"'");
+            System.out.println("Not a failure on editing the recipe. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on editing the recipe:" + ex);
             DataHolder.isConnected = false;
         }
     }
