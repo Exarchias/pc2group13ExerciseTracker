@@ -63,11 +63,11 @@ To be admitted in this course and to be able to develop a sophisticated applicat
 
 *This information is taken from the project Gantt Chart*
 
-Project start and end dates: 4th April - 1st June 2019
+Project start and end dates: 4th April - 4th June 2019
 
-Completion: 69% (as of 22-05-2019)
+Completion: 75% (as of 24-05-2019)
 
-Total Major Tasks: 52
+Total Tasks: 52
 
 Resources: 4 
 
