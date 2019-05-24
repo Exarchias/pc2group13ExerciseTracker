@@ -71,6 +71,9 @@ Total Major Tasks: 52
 
 Resources: 4 
 
+### Results
+The final results of this project will be updated soon before 5th of July. 
+
 ------
 
 
