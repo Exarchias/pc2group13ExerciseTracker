@@ -30,6 +30,12 @@ of the password should be done by following the standard procedure that the most
 Management Systems are following (using Email system). Furthermore, the application is expected to
 send emails and print a PDF report of the desired data.
 
+### Login Page
+
+![Login Page Diagram](https://raw.githubusercontent.com/Exarchias/pc2group13ExerciseTracker/master/login_page.jpg?token=AKZDN3KGREC2ZJ36UUNVE4246EFJU)
+
+### Use Case Diagram
+
 ![Exercise Tracker Application Diagram](https://raw.githubusercontent.com/Exarchias/pc2group13ExerciseTracker/master/exercise_tracker_figure01.jpg?token=AKZDN3OLPRWZTKVFVKLXLL24562UU)
 
 
