@@ -74,6 +74,9 @@ Resources: 4
 ### Results
 The final results of this project will be updated soon before 5th of July. 
 
+### Summary and Conclusion
+The final summary and conclusion will also be added as soon as we finish the two extra tasks, namingly Mail system and PDF printing. To this point, the project has been under development as we estimated beforehand. However, there have been a few inconsistencies mostly with the time estimates and workflow. All the significant points will be reconsidered in the second debugging session and testing to be finally presented on the presentaiton day. 
+
 ------
 
 
