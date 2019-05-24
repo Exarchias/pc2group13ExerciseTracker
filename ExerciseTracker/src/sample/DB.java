@@ -8,16 +8,18 @@ public class DB {
 
     Statement statement;
 
+    //this method establishes a connection between the application and MySQL db
     public DB() {
         try {
             Connection c = (Connection) DriverManager.getConnection(url);
             statement = c.createStatement();
         } catch (SQLException ex) {
-            System.out.println("the connection fails ");
+            System.out.println("the connection fails");
         }
     }
 
 
+    //this method makes the handshake possible between the application and database system to pull req info
     public void doAHandshake() {
         try {
             ResultSet rs = statement.executeQuery("SHOW databases");
@@ -36,6 +38,7 @@ public class DB {
         }
     }
 
+    //here we enable java to actually execute MySQL statements
     public void loadUsers() {
         try {
             statement.executeQuery("USE xtracker");
@@ -108,6 +111,7 @@ public class DB {
         }
     }
 
+    //this method pulls exercises form the db, also exercises can be added to user's recipes
     public void loadExercises() {
         try {
             statement.executeQuery("USE xtracker");
@@ -152,7 +156,8 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
-
+ 
+    //adding a new user
     public void addOneUser(String username, String password, String email, boolean admin) {
         try {
             int isAdmin;
@@ -175,6 +180,7 @@ public class DB {
         }
     }
 
+    //adding new exercise
     public void addOneExercise(String title, String description, int owner) {
         try {
             statement.executeUpdate("USE xtracker");
@@ -191,6 +197,7 @@ public class DB {
         }
     }
 
+    //adding new recipe
     public void addOneRecipe(String title, String description, int owner, boolean publish) {
         try {
             int isPublic;
@@ -213,6 +220,7 @@ public class DB {
         }
     }
 
+    //editing user data
     public void editOneUser(String username, String password, String email, boolean admin, int userID) {
         try {
             int isAdmin;
@@ -236,6 +244,7 @@ public class DB {
         }
     }
 
+    //editing exercise details
     public void editOneExercise(String title, String description,int owner, int exerciseID) {
         try {
 
@@ -253,6 +262,7 @@ public class DB {
         }
     }
 
+    //updating exercise to a receipe
     public void exerciseToRecipe(int exerciseID, int recipeID) {
         try {
 
@@ -269,6 +279,7 @@ public class DB {
         }
     }
 
+    //editing recipe
     public void editOneRecipe(String title, String description, int owner, boolean publish, int recipeID) {
         try {
             int isPublic;
@@ -291,6 +302,7 @@ public class DB {
         }
     }
 
+    //removing user
     public void deleteOneUser(int userID) {
         try {
             int isAdmin;
@@ -309,6 +321,7 @@ public class DB {
         }
     }
 
+    //removing exercise
     public void deleteOneExercise(int exerciseID) {
         try {
             int isAdmin;
@@ -327,6 +340,7 @@ public class DB {
         }
     }
 
+    //deleting recipe
     public void deleteOneRecipe(int recipeID) {
         try {
             statement.executeUpdate("USE xtracker");
@@ -343,6 +357,7 @@ public class DB {
         }
     }
 
+    //sorting/loading last user
     public int loadLastUserId() {
         try {
             statement.executeQuery("USE xtracker");
@@ -364,6 +379,7 @@ public class DB {
         }
     }
 
+    //sorting exercises
     public int loadLastExerciseId() {
         try {
             statement.executeQuery("USE xtracker");
@@ -385,6 +401,7 @@ public class DB {
         }
     }
 
+    //sorting recipes
     public int loadLastRecipeId() {
         try {
             statement.executeQuery("USE xtracker");
