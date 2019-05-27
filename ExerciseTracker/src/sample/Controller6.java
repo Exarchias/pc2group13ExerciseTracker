@@ -184,6 +184,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         }
         System.out.println(inRecipeDisplay);
     }
+
     public void listViewDisplay(){
         listView.getItems().clear();
         for (Recipe x : DataHolder.supervisedUser.recipeList){
