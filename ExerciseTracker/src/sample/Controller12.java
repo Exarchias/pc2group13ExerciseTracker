@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 
 public class Controller12 implements Initializable {
     private int selectedRecipe;
+    private int selectedExercise;
 
     @FXML
     private Label lblActiveName;
@@ -54,7 +55,10 @@ public class Controller12 implements Initializable {
     public void someThingIsSelecteOnListView2(MouseEvent event) throws Exception{
       selectedRecipe = listView2.getSelectionModel().getSelectedIndex();
       listViewDisplay();
-      //listView.getItems().add(String.valueOf(selectedRecipe));
+    }
+
+    public void someThingIsSelecteOnListView(MouseEvent event) throws Exception{
+        selectedExercise = listView.getSelectionModel().getSelectedIndex();
     }
 
     public void goToTheAdminPageButtonPressed(ActionEvent event)throws Exception{
@@ -66,9 +70,20 @@ public class Controller12 implements Initializable {
     }
 
     public void useExerciseButtonPressed(ActionEvent event) throws Exception{
-
+        Exercise exer = DataHolder.publicRecipes.get(selectedRecipe).exerciseList.get(selectedExercise);
+        //String title, String description, int owner
+        Exercise exer2 = new Exercise(exer.getTitle(), exer.getDescription(), DataHolder.supervisedUser.getUserID());
+        DataHolder.supervisedUser.exerciseList.add(exer2);
     }
+
     public void useRecipeButtonPressed(ActionEvent event)throws Exception{
+        Recipe recip = DataHolder.publicRecipes.get(selectedRecipe);
+        //String title, String description, int owner
+        Recipe recip2 = new Recipe(recip.getTitle(), recip.getDescription(), DataHolder.supervisedUser.getUserID());
+        for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList){
+            recip2.exerciseList.add(x);
+        }
+        DataHolder.supervisedUser.recipeList.add(recip2);
 
     }
     public void cancelButtonPressed(ActionEvent event)throws Exception{
