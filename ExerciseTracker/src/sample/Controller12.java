@@ -73,6 +73,13 @@ public class Controller12 implements Initializable {
         Exercise exer = DataHolder.publicRecipes.get(selectedRecipe).exerciseList.get(selectedExercise);
         //String title, String description, int owner
         Exercise exer2 = new Exercise(exer.getTitle(), exer.getDescription(), DataHolder.supervisedUser.getUserID());
+        //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
+        DB db = new DB();
+        db.addOneExercise(exer2.getTitle(), exer2.getDescription(), DataHolder.supervisedUser.getUserID());
+        int exeID = db.loadLastExerciseId();
+        System.out.println("Last Exercise ID is: " + exeID);
+        exer2.setExerciseID(exeID);
+        //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
         DataHolder.supervisedUser.exerciseList.add(exer2);
     }
 
@@ -83,8 +90,25 @@ public class Controller12 implements Initializable {
         for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList){
             recip2.exerciseList.add(x);
         }
-        DataHolder.supervisedUser.recipeList.add(recip2);
+        //TESTING ADDING A RECIPE ON THE DATA BASE(START)
+        DB db = new DB();
+        db.addOneRecipe(recip2.getTitle(), recip2.getDescription(), DataHolder.supervisedUser.getUserID(), false);
+        int recID = db.loadLastRecipeId();
+        //TESTING ADDING A RECIPE ON THE DATA BASE(END)
+        recip2.setRecipeID(recID);
 
+        for (Exercise x : recip2.exerciseList){
+            x.setRecipeID(recID);
+            //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
+            db.addOneExercise(x.getTitle(), x.getDescription(), DataHolder.supervisedUser.getUserID());
+            int exeID = db.loadLastExerciseId();
+            System.out.println("Last Exercise ID is: " + x.getExerciseID());
+            System.out.println("Last Recipe ID is: " + x.getRecipeID());
+            x.setExerciseID(exeID);
+            db.exerciseToRecipe(x.getExerciseID(), x.getRecipeID());
+            //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
+        }
+        DataHolder.supervisedUser.recipeList.add(recip2);
     }
     public void cancelButtonPressed(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene3);
