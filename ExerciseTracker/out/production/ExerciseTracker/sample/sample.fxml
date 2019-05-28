@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699" prefWidth="1410" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller1">
    <children>
-      <Button fx:id="btnAdmin" layoutX="426.0" layoutY="67.0" mnemonicParsing="false" onAction="#btnAdminPressed" text="Admin" />
+      <Button fx:id="btnAdmin" layoutX="426.0" layoutY="67.0" mnemonicParsing="false" onAction="#btnAdminPressed" prefHeight="17.0" prefWidth="51.0" styleClass="circle" stylesheets="@ApplicationView.css" text="Admin" />
       <Button fx:id="btnUser" layoutX="431.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnUserPressed" text="User" />
       <Label layoutX="426.0" layoutY="42.0" text="Access:" />
       <Label layoutX="21.0" layoutY="29.0" text="Username:" />

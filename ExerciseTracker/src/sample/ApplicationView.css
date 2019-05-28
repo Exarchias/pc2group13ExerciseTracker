@@ -13,11 +13,15 @@
 
 .button{
     -fx-background-color: #AB4642;
+
+
 }
 .loginbuttonimage{
  -fx-background-image: url("Assets/imageLogin.png");
+ -fx-shape:
 
 }
+
 .adminbuttonimage{
 -fx-background-image: url("Assets/adminimage.png");
 }
@@ -25,12 +29,35 @@
 
 
 
+
+
 .button-logout{
-   -fx-background-color: linear-gradient(#dc9656,#ab4642);
+
+  -fx-background-color: linear-gradient(#dc9656,#ab4642);
+
+
+
 }
 .button-crud{
    -fx-background-color: #ffff00;
+    -fx-background-radius: 16.4, 15;
+
+       -fx-background-insets: -1.4, 0;
+
+       -fx-border-radius: 15;
+
+       -fx-border-width: 2;
+
+       -fx-border-color: dimgrey;
+
+       -fx-padding: 0;
+
+       -fx-font-size: 0;
+
+
+
 }
 .label{
     -fx-text-fill: #e8e8e8;
+
 }
