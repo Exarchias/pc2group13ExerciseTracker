@@ -258,4 +258,10 @@ public class Controller3 implements Initializable {  //USER PAGE
         Main.getInstance().setScene(Main.Scene12);
 
     }
+    @FXML
+    public void manageRecipes(ActionEvent event)throws Exception{
+        System.out.println("going to manage the Recipes on the recipe page");
+        Main.getInstance().setScene(Main.Scene8);
+
+    }
 }

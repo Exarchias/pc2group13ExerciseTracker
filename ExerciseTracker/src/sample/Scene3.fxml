@@ -43,5 +43,6 @@
          </font>
       </Button>
       <Label fx:id="superviseLabel" layoutX="44.0" layoutY="59.0" text="Label" />
+      <Button layoutX="555.0" layoutY="322.0" mnemonicParsing="false" onAction="#manageRecipes" text="Manage Recipes" />
    </children>
 </AnchorPane>

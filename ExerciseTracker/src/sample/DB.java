@@ -132,12 +132,14 @@ public class DB {
 
                 for (User x : DataHolder.userList){
                     if(x.getUserID() == userID){
-                        x.exerciseList.add(exer1);
-                        System.out.println(exer1.getTitle() + " added to the user: " + x.getUserName());
                         for (Recipe j : x.recipeList){
                             if(recipeID == j.getRecipeID()){
                                 j.exerciseList.add(exer1);
-                                System.out.println(exer1.getTitle() + " added to the recipe: " + j.getTitle());
+                                System.out.println(exer1.getTitle() + " added to the recipe: "
+                                        + j.getTitle() + "of the user: " + x.getUserName());
+                            } else {
+                                x.exerciseList.add(exer1);
+                                System.out.println(exer1.getTitle() + " added to the user: " + x.getUserName());
                             }
                         }
                         break;
