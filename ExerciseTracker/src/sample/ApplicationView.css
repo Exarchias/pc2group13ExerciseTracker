@@ -14,9 +14,14 @@
 .button{
     -fx-background-color: #AB4642;
 }
-.button-login{
-    -fx-background-color:linear-gradient(#ab4642,#ffa500);
+.loginbuttonimage{
+ -fx-background-image: url("Assets/imageLogin.png");
+
 }
+.adminbuttonimage{
+-fx-background-image: url("Assets/adminimage.png");
+}
+
 
 
 

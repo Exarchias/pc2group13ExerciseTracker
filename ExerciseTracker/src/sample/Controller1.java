@@ -6,27 +6,35 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller1 implements Initializable { //LOGIN PAGE
+    @FXML
+    Button test;
 
      @FXML
      Button btnLogin;
+
     @FXML
     private TextField txtUserName;
 
     @FXML
     private TextField txtPassword;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         DataHolder.setAdmin(false);
         DataHolder.activeUser = null;
         DataHolder.supervisedUser = null;
-        btnLogin.getStyleClass().add("button-login");
+
+
+
 
     }
 
