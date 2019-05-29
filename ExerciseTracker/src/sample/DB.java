@@ -440,6 +440,22 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+    //sorting: change the exerciseID of an exercise
+    public void exerciseChangeID(int oldExerciseID, int newExerciseID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE exercise SET exerciseID='" + newExerciseID +"'  WHERE exerciseID='"+ oldExerciseID +"'");
+            System.out.println("Not a failure on changing the Exercise ID. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the Exercise ID:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
 
 
 
