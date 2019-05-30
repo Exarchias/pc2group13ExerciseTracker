@@ -424,6 +424,39 @@ public class DB {
             return 5000;
         }
     }
+    //sorting/assign an exercise to a user
+    public void exerciseToUser(int exerciseID, int userID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE exercise SET user_userID='" + userID +"'  WHERE exerciseID='"+ exerciseID +"'");
+            System.out.println("Not a failure on assigning an exercise to a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on editing the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+    //sorting: change the exerciseID of an exercise
+    public void exerciseChangeID(int oldExerciseID, int newExerciseID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE exercise SET exerciseID='" + newExerciseID +"'  WHERE exerciseID='"+ oldExerciseID +"'");
+            System.out.println("Not a failure on changing the Exercise ID. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the Exercise ID:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
 
 
 }
