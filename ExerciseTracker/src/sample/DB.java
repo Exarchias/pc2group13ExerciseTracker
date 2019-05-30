@@ -456,12 +456,13 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+
     //sorting: assign a recipe to a user
     public void recipeToUser(int recipeID, int userID) {
         try {
 
             statement.executeUpdate("USE xtracker");
-            statement.executeUpdate("UPDATE recipe SET user_userID='" + userID +"'  WHERE recipe_recipeId='"+ recipeID +"'");
+            statement.executeUpdate("UPDATE recipe SET user_userID='" + userID +"'  WHERE recipeId='"+ recipeID +"'");
             System.out.println("Not a failure on assigning the recipe to a user. check the database");
 
             DataHolder.isConnected = true;
@@ -472,12 +473,13 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+
     //sorting: changes the id of a recipe.
     public void recipeChangeId(int oldRecipeID, int newRecipeID) {
         try {
 
             statement.executeUpdate("USE xtracker");
-            statement.executeUpdate("UPDATE recipe SET recipe_recipeId='" + newRecipeID +"'  WHERE recipe_recipeId='"+ oldRecipeID +"'");
+            statement.executeUpdate("UPDATE recipe SET recipeId='" + newRecipeID +"'  WHERE recipe_recipeId='"+ oldRecipeID +"'");
             System.out.println("Not a failure on changing the id of a recipe. check the Database");
 
             DataHolder.isConnected = true;
@@ -485,6 +487,29 @@ public class DB {
         catch (SQLException ex)
         {
             System.out.println("error on changing the id of a recipe:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    //set the isPublic state of a recipe.
+    public void recipeIsPublic(int recipeID, boolean publish) {
+        try {
+            int isPublic = 0;
+            if(publish){
+                isPublic = 1;
+            } else {
+                isPublic = 0;
+            }
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET isPublic='" + isPublic +"'  WHERE recipeId='"+ recipeID +"'");
+            System.out.println("Not a failure on changing the public state of a recipe. check the Database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the public state of a recipe:" + ex);
             DataHolder.isConnected = false;
         }
     }
