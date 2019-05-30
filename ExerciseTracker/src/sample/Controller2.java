@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
 
 
 import java.net.URL;
@@ -75,11 +76,12 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         }
 
       testMonitor.getStylesheets().add("anchorpane-loginscene");
-        btnLogOut.getStyleClass().add("button-logout");
+
         btnAddNewUser.getStyleClass().add("button-crud");
         btnDeleteUser.getStyleClass().add("button-crud");
         btnEditUser.getStyleClass().add("button-crud");
         btnViewUser.getStyleClass().add("button-crud");
+
 
 
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());

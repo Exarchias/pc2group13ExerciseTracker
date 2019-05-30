@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller5">
    <children>
-      <Button fx:id="btnLogOut" layoutX="470.0" layoutY="175.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />
+      <Button fx:id="btnLogOut" layoutX="455.0" layoutY="132.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
       <Button fx:id="btnGoToAdminPage" layoutX="446.0" layoutY="214.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Go To Admin Page" />
       <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#createUser" styleClass="button-crud" text="Create User" />
       <Button layoutX="250.0" layoutY="258.0" mnemonicParsing="false" onAction="#cleanTheFields" text="Clean the Fields" />

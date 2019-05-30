@@ -12,7 +12,7 @@
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller10">
 
     <children>
-        <Button fx:id="btnLogOut" layoutX="530.0" layoutY="114.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />
+        <Button fx:id="btnLogOut" layoutX="507.0" layoutY="81.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
         <Button fx:id="btnGoToAdminPage" layoutX="494.0" layoutY="196.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
         <Button layoutX="44.0" layoutY="323.0" mnemonicParsing="false" onAction="#addRecipe" styleClass="button-crud" text="Add Recipe" />
         <Button layoutX="150.0" layoutY="323.0" mnemonicParsing="false" onAction="#cleanFields" text="Clean Fields" />

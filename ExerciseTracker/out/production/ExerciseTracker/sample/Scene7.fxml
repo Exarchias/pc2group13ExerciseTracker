@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller7">
     <children>
-        <Button fx:id="btnLogOut" layoutX="451.0" layoutY="166.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" styleClass="button-logout" text="LogOut" />
+        <Button fx:id="btnLogOut" layoutX="446.0" layoutY="132.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="68.0" styleClass="button-logout" />
         <Button fx:id="btnGoToAdminPage" layoutX="431.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Go To Admin Page" />
         <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#editUser" styleClass="button-crud" text="Edit User" />
         <CheckBox fx:id="isAdminCheckBox" layoutX="174.0" layoutY="209.0" mnemonicParsing="false" text="is Admin" />

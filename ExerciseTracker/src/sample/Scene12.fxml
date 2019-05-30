@@ -7,9 +7,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller12">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller12">
     <children>
-        <Button fx:id="btnLogOut" layoutX="494.0" layoutY="53.0" mnemonicParsing="false" onAction="#logOutButtonPressed" styleClass="button-logout" text="LogOut" />
+        <Button fx:id="btnLogOut" layoutX="494.0" layoutY="53.0" mnemonicParsing="false" onAction="#logOutButtonPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
         <Button fx:id="btnGoToTheAdminPage" layoutX="496.0" layoutY="119.0" mnemonicParsing="false" onAction="#goToTheAdminPageButtonPressed" text="GoToAdminPage" />
         <Button fx:id="btnGoToTheUserPage" layoutX="496.0" layoutY="182.0" mnemonicParsing="false" onAction="#goToTheUserPageButtonPressed" text="GoToUserPage" />
         <ListView fx:id="listView" layoutX="25.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView" prefHeight="200.0" prefWidth="200.0" />
