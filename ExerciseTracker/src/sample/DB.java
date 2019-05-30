@@ -456,6 +456,22 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+    //sorting: assign a recipe to a user
+    public void recipeToUser(int recipeID, int userID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET user_userID='" + userID +"'  WHERE recipe_recipeId='"+ recipeID +"'");
+            System.out.println("Not a failure on assigning the recipe to a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on assigning the recipe to a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
 
 
 
