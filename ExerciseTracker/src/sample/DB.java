@@ -472,6 +472,24 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+    //sorting: changes the id of a recipe.
+    public void recipeChangeId(int oldRecipeID, int newRecipeID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET recipe_recipeId='" + newRecipeID +"'  WHERE recipe_recipeId='"+ oldRecipeID +"'");
+            System.out.println("Not a failure on changing the id of a recipe. check the Database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the id of a recipe:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+
 
 
 
