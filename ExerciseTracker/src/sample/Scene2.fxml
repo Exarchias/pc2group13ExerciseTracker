@@ -14,7 +14,7 @@
 
 
    <children>
-      <Button fx:id="btnLogOut" layoutX="470.0" layoutY="100.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="27.0" prefWidth="57.0" styleClass="button-logout" stylesheets="@ApplicationView.css" text="LogOut" />
+      <Button fx:id="btnLogOut" layoutX="472.0" layoutY="92.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="36.0" prefWidth="70.0" styleClass="button-logout" stylesheets="@ApplicationView.css" />
       <Button fx:id="btnGoToTheUserPage" layoutX="457.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Go To The User Page" />
       <Button fx:id="btnViewUser" layoutX="57.0" layoutY="279.0" mnemonicParsing="false" onAction="#superviseUser" prefHeight="44.0" prefWidth="99.0" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Supervise the Use" />
       <Button fx:id="btnAddNewUser" layoutX="180.0" layoutY="279.0" mnemonicParsing="false" onAction="#addNewUser" prefHeight="44.0" prefWidth="81.0" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Add New User" />
