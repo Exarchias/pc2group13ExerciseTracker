@@ -30,8 +30,8 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     @FXML
     Label lblActiveName;
 
-    @FXML
-    TextField userSelector;
+    //@FXML
+    //TextField userSelector;
 
     @FXML
     TextArea userListTextArea;
@@ -86,7 +86,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
-        userSelector.setText(String.valueOf(selectedUser));
+        //userSelector.setText(String.valueOf(selectedUser));
         updateDisplay(); //TEXTAREAMETHOD
         listViewDisplay();//LISTVIEWMETHOD
 
@@ -122,7 +122,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     @FXML
     public void deleteUser(ActionEvent event){
 
-        selectedUser = Integer.parseInt(userSelector.getText());
+        //selectedUser = Integer.parseInt(userSelector.getText());
         System.out.println("Removing the user " + DataHolder.userList.get(selectedUser).getUserName()
                 + "from the system");
         int theIDtoDelete = DataHolder.userList.get(selectedUser).getUserID();
@@ -137,7 +137,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
     @FXML
     public void editUser(ActionEvent event)throws Exception{
-        selectedUser = Integer.parseInt(userSelector.getText());
+        //selectedUser = Integer.parseInt(userSelector.getText());
         System.out.println("Editing the user " +
                 DataHolder.userList.get(selectedUser).getUserName() + "from the system");
         DataHolder.supervisedUser = DataHolder.userList.get(selectedUser);
@@ -147,21 +147,21 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     @FXML
     public void somethingIsSelectedOnListView(MouseEvent event)throws Exception{
         selectedUser = listView.getSelectionModel().getSelectedIndex();
-        userSelector.setText(String.valueOf(selectedUser));
+        //userSelector.setText(String.valueOf(selectedUser));
+        updateDisplay();
     }
 
 
     public void updateDisplay() {
-        int count = 0;
-        userListDisplay = "";
-        for (User x : DataHolder.userList) {
-            userListDisplay += count + ") " + x.getUserName() + "\n";
-            count++;
-        }
-        userListTextArea.setText(userListDisplay);
-
-
+//        int count = 0;
+//        userListDisplay = "";
+//        for (User x : DataHolder.userList) {
+//            userListDisplay += count + ") " + x.getUserName() + "\n";
+//            count++;
+//        }
+        userListTextArea.setText(Methods.displayTheUser(DataHolder.userList.get(selectedUser)));
     }
+
         public void listViewDisplay(){
         listView.getItems().clear();
         for (User x : DataHolder.userList){

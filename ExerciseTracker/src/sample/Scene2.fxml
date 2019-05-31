@@ -4,25 +4,22 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="testMonitor" prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+<AnchorPane fx:id="testMonitor" prefHeight="699.0" prefWidth="1410.0" styleClass="anchorpane-loginscene" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
 
 
    <children>
-      <Button fx:id="btnLogOut" layoutX="472.0" layoutY="92.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="36.0" prefWidth="70.0" styleClass="button-logout" stylesheets="@ApplicationView.css" />
-      <Button fx:id="btnGoToTheUserPage" layoutX="457.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Go To The User Page" />
+      <Button fx:id="btnLogOut" layoutX="525.0" layoutY="92.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="36.0" prefWidth="70.0" styleClass="button-logout" stylesheets="@ApplicationView.css" />
+      <Button fx:id="btnGoToTheUserPage" layoutX="525.0" layoutY="147.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Go To The User Page" />
       <Button fx:id="btnViewUser" layoutX="57.0" layoutY="279.0" mnemonicParsing="false" onAction="#superviseUser" prefHeight="44.0" prefWidth="99.0" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Supervise the Use" />
       <Button fx:id="btnAddNewUser" layoutX="180.0" layoutY="279.0" mnemonicParsing="false" onAction="#addNewUser" prefHeight="44.0" prefWidth="81.0" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Add New User" />
       <Button fx:id="btnDeleteUser" layoutX="284.0" layoutY="280.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="44.0" prefWidth="66.0" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Delete User" />
       <Button fx:id="btnEditUser" layoutX="382.0" layoutY="280.0" mnemonicParsing="false" onAction="#editUser" prefHeight="44.0" prefWidth="81.0" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Edit User" />
-      <TextArea fx:id="userListTextArea" layoutX="88.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" text="Sup!" />
-      <TextField fx:id="userSelector" layoutX="404.0" layoutY="188.0" prefHeight="25.0" prefWidth="45.0" text="0" />
-      <Label layoutX="309.0" layoutY="192.0" text="Selected User:" />
+      <TextArea fx:id="userListTextArea" layoutX="263.0" layoutY="59.0" prefHeight="200.0" prefWidth="200.0" text="Sup!" />
       <Label layoutX="261.0" layoutY="14.0" text="Admin Page">
          <font>
             <Font size="18.0" />
@@ -34,6 +31,6 @@
          </image>
       </ImageView>
       <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="Active Name:" />
-      <ListView fx:id="listView" layoutX="43.0" layoutY="366.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listView" layoutX="35.0" layoutY="59.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
