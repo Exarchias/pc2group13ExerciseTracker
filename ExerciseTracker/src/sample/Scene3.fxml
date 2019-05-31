@@ -37,7 +37,7 @@
       <Button fx:id="useSelectedExerciseBtn" layoutX="26.0" layoutY="309.0" mnemonicParsing="false" onAction="#useSelectedExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Use selected Exercise" />
       <ListView fx:id="listView2" layoutX="268.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListViewRight" prefHeight="169.0" prefWidth="200.0" />
       <Button layoutX="521.0" layoutY="173.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" text="Browse Public Recipes" />
-      <Button fx:id="saveBtn" layoutX="536.0" layoutY="232.0" mnemonicParsing="false" onAction="#saveTheData" prefHeight="46.0" prefWidth="70.0" text="Save">
+      <Button fx:id="saveBtn" layoutX="536.0" layoutY="232.0" mnemonicParsing="false" onAction="#saveTheData" prefHeight="57.0" prefWidth="70.0" styleClass="button-save" text="Save">
          <font>
             <Font size="18.0" />
          </font>

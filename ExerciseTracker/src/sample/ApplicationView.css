@@ -89,8 +89,13 @@
 
 }
 .button-save{
-    -fx-shape: "M150 0 L75 200 L225 200 Z";
-   -fx-background-color: #4DD0E1;
+    //-fx-shape: "M150 0 L75 200 L225 200 Z";
+    //-fx-background-color: #4DD0E1;
+
+   -fx-background-radius: 150;
+
+    -fx-background-color: #ff8c00;
+    -fx-text-fill: #000000;
 
 
 }
