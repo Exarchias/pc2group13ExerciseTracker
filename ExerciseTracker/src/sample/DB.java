@@ -529,6 +529,22 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+    //sorting: change the userID of a user
+    public void userChangeID(int oldUserID, int newUserID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET user_userID='" + newUserID +"'  WHERE user_userID='"+ oldUserID +"'");
+            System.out.println("Not a failure on changing the userID of a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the userID of a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
 
 
 
