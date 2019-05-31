@@ -28,7 +28,7 @@ public class Controller3 implements Initializable {  //USER PAGE
         }
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         superviseLabel.setText("You are supervising: " + DataHolder.supervisedUser.getUserName());
-        exerciseSelector.setText(String.valueOf(selectedExercise));
+        //exerciseSelector.setText(String.valueOf(selectedExercise));
 
         listViewDisplay();
         updateDisplay();
@@ -42,11 +42,11 @@ public class Controller3 implements Initializable {  //USER PAGE
             btnGoToTheAdminPage.setVisible(false);
         }
 
-        if (DataHolder.isConnected){
-            saveBtn.setVisible(true);
-        } else {
-            saveBtn.setVisible(false);
-        }
+//        if (DataHolder.isConnected){
+//            saveBtn.setVisible(true);
+//        } else {
+//            saveBtn.setVisible(false);
+//        }
 
 
     }
@@ -59,8 +59,8 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     Label superviseLabel;
 
-    @FXML
-    TextField exerciseSelector;
+    //@FXML
+    //TextField exerciseSelector;
 
     @FXML
     TextArea exerciseListTextArea;
@@ -71,8 +71,8 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     Button useSelectedExerciseBtn;
 
-    @FXML
-    Button saveBtn;
+    //@FXML
+    //Button saveBtn;
 
     @FXML
     TextField recipeSelector;
@@ -107,10 +107,10 @@ public class Controller3 implements Initializable {  //USER PAGE
         System.out.println(exerciseDisplay);
     }
 
-    @FXML
-    public void saveTheData(ActionEvent event){
-        System.out.println("Save the data");
-    }
+//    @FXML
+//    public void saveTheData(ActionEvent event){
+//        System.out.println("Save the data");
+//    }
 
     @FXML
     public void addExercise(ActionEvent event) throws Exception{
@@ -126,7 +126,7 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     public void deleteExercise(ActionEvent event){
         if(selectedRecipe <= 0){
-            selectedExercise = Integer.parseInt(exerciseSelector.getText());
+            //selectedExercise = Integer.parseInt(exerciseSelector.getText());
             System.out.println("Deleting the exercise " +
                     DataHolder.supervisedUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
             //TESTING DELETING AN EXERCISE ON THE DATA BASE(START)
@@ -135,7 +135,7 @@ public class Controller3 implements Initializable {  //USER PAGE
             //TESTING DELETING AN EXERCISE ON THE DATA BASE(END)
             DataHolder.supervisedUser.exerciseList.remove(selectedExercise);
         } else {
-            selectedExercise = Integer.parseInt(exerciseSelector.getText());
+            //selectedExercise = Integer.parseInt(exerciseSelector.getText());
             System.out.println("Deleting the exercise " +
                     DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise).getTitle()
                     + " from the list");
@@ -152,7 +152,7 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     @FXML
     public void editExercise(ActionEvent event) throws Exception{
-        selectedExercise = Integer.parseInt(exerciseSelector.getText());
+        //selectedExercise = Integer.parseInt(exerciseSelector.getText());
         if(selectedRecipe <= 0){
             System.out.println("editing the exercise" +
                     DataHolder.supervisedUser.exerciseList.get(selectedExercise).getTitle() + " from the list");
@@ -174,7 +174,7 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     public void useSelectedExercise(ActionEvent event){
         if(selectedRecipe <= 0){
-            selectedExercise = Integer.parseInt(exerciseSelector.getText());
+            //selectedExercise = Integer.parseInt(exerciseSelector.getText());
             Exercise exer = DataHolder.supervisedUser.exerciseList.get(selectedExercise);
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
             DB db = new DB();
@@ -188,7 +188,7 @@ public class Controller3 implements Initializable {  //USER PAGE
             db.exerciseToRecipe(exeID,0);
             DataHolder.supervisedUser.exerciseList.add(exer);
         } else {
-            selectedExercise = Integer.parseInt(exerciseSelector.getText());
+            //selectedExercise = Integer.parseInt(exerciseSelector.getText());
             Exercise exer = DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise);
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
             DB db = new DB();
@@ -213,7 +213,7 @@ public class Controller3 implements Initializable {  //USER PAGE
     @FXML
     public void somethingIsSelectedOnListView(MouseEvent event){
         selectedExercise = listView.getSelectionModel().getSelectedIndex();
-        exerciseSelector.setText(String.valueOf(selectedExercise));
+        //exerciseSelector.setText(String.valueOf(selectedExercise));
         updateDisplay();
     }
 
