@@ -74,6 +74,7 @@
 
 }
 .button-settingspage{
+ -fx-background-image: url("Assets/settingsbutton.png");
 
 }
 .button-browserecipes{
