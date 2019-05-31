@@ -22,7 +22,7 @@
       <Label layoutX="97.0" layoutY="88.0" text="Username:" />
       <Label layoutX="97.0" layoutY="128.0" text="Password:" />
       <Label layoutX="97.0" layoutY="170.0" text="Email:" />
-      <Button layoutX="239.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" text="Cancel" />
+      <Button layoutX="239.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" prefHeight="35.0" prefWidth="40.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" />
       <Label layoutX="239.0" layoutY="23.0" text="Edit User">
          <font>
             <Font size="24.0" />

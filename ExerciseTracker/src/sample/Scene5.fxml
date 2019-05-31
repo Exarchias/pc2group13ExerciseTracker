@@ -13,8 +13,8 @@
    <children>
       <Button fx:id="btnLogOut" layoutX="455.0" layoutY="132.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
       <Button fx:id="btnGoToAdminPage" layoutX="446.0" layoutY="214.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Go To Admin Page" />
-      <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#createUser" styleClass="button-crud" text="Create User" />
-      <Button layoutX="250.0" layoutY="258.0" mnemonicParsing="false" onAction="#cleanTheFields" text="Clean the Fields" />
+      <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#createUser" prefHeight="55.0" prefWidth="66.0" styleClass="button-crud" text="Create User" />
+      <Button layoutX="250.0" layoutY="258.0" mnemonicParsing="false" onAction="#cleanTheFields" prefHeight="55.0" prefWidth="53.0" styleClass="button-cleanfields" />
       <CheckBox fx:id="isAdminCheckBox" layoutX="174.0" layoutY="209.0" mnemonicParsing="false" text="is Admin" />
       <TextField fx:id="userNameTextField" layoutX="174.0" layoutY="84.0" />
       <TextField fx:id="passWordTextField" layoutX="174.0" layoutY="124.0" />
@@ -22,7 +22,7 @@
       <Label layoutX="97.0" layoutY="88.0" text="Username:" />
       <Label layoutX="97.0" layoutY="128.0" text="Password:" />
       <Label layoutX="97.0" layoutY="170.0" text="Email:" />
-      <Button layoutX="371.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Cancel" />
+      <Button layoutX="373.0" layoutY="253.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" prefHeight="35.0" prefWidth="41.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" />
       <Label layoutX="239.0" layoutY="23.0" text="Create User">
          <font>
             <Font size="24.0" />

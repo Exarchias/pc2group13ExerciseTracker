@@ -22,8 +22,10 @@
 
 }
 
-.adminbuttonimage{
+.adminbutton{
 //-fx-background-image: url("Assets/adminimage.png");
+}
+.userbutton{
 }
 
 
@@ -70,4 +72,38 @@
     -fx-background-color: red;
     -fx-text-fill: #e8e8e8;
 
+}
+.button-settingspage{
+ -fx-background-image: url("Assets/settingsbutton.png");
+
+}
+.button-browserecipes{
+
+
+}
+.button-publishrecipes{
+ -fx-background-radius: 150;
+
+   -fx-background-color: #00ff00;
+   -fx-text-fill: #000000;
+
+}
+.button-save{
+    //-fx-shape: "M150 0 L75 200 L225 200 Z";
+    //-fx-background-color: #4DD0E1;
+
+   -fx-background-radius: 150;
+
+    -fx-background-color: #ff8c00;
+    -fx-text-fill: #000000;
+
+
+}
+
+.button-cancel{
+ -fx-background-image: url("Assets/cancelimage.png");
+
+}
+.button-cleanfields{
+    -fx-background-image: url("Assets/cleanimage.png");
 }
