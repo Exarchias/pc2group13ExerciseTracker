@@ -133,6 +133,10 @@ public class DB {
 
                 for (User x : DataHolder.userList){
                     if(x.getUserID() == userID){
+                        if(recipeID == 0){
+                            System.out.println("adding an exercise to the user " + x.getUserName());
+                            x.exerciseList.add(exer1);
+                        }
                         for (Recipe j : x.recipeList){
                             System.out.println("From recipe J: title=" + j.getTitle() + ", recipeID=" + j.getRecipeID()+
                                     "from the user: " + j.getOwner());
@@ -143,14 +147,13 @@ public class DB {
                                 System.out.println(exer1.getTitle() + ":" + exer1.getExerciseID() + " added to the recipe: "
                                         + j.getTitle() + ":" + exer1.getRecipeID() + " of the user: " + x.getUserName()
                                         + ":" + exer1.getOwner());
-                                //break;
+                                break;
                             } else {
-                                x.exerciseList.add(exer1);
-                                System.out.println(exer1.getTitle() + ":" + exer1.getExerciseID() + " added to the user: "
-                                        + x.getUserName() + ":" + exer1.getOwner() + " while the recipe is marked as " +
-                                        exer1.getRecipeID());
-                                //break;
+                                System.out.println("Doing nothing");
                             }
+
+
+
                         }
 
                     } else {
