@@ -100,10 +100,10 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
         selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("Deleting the exercise " +
                 DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
-        //TESTING EDITING A RECIPE ON THE DATA BASE(START)
+        //TESTING DELETING A RECIPE ON THE DATA BASE(START)
         DB db = new DB();
         db.deleteOneRecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
-        //TESTING EDITING A RECIPE ON THE DATA BASE(END)
+        //TESTING DELETING A RECIPE ON THE DATA BASE(END)
         DataHolder.supervisedUser.recipeList.remove(selectedRecipe);
         updateDisplay();
 
@@ -160,11 +160,19 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
     public void publishRecipe(ActionEvent event) throws Exception{
         if(DataHolder.supervisedUser.recipeList.get(selectedRecipe).isPublic()){
             DataHolder.supervisedUser.recipeList.get(selectedRecipe).setPublic(false);
+            //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (START)
+            DB db = new DB();
+            db.recipeIsPublic(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID(), false);
+            //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (END)
             DataHolder.unpublishRecipes();
             publishBtn.setText("Publish Recipe");
         } else {
             DataHolder.supervisedUser.recipeList.get(selectedRecipe).setPublic(true);
             DataHolder.publicRecipes.add(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
+            //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (START)
+            DB db = new DB();
+            db.recipeIsPublic(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID(), true);
+            //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (END)
             publishBtn.setText("Unublish Recipe");
         }
     }

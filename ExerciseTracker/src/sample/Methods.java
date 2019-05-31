@@ -142,12 +142,21 @@ public class Methods {
     //this method displays the contents of a User Profile:
     public static String displayTheUser(User user){
         String userContent = "";
-        userContent += "Nickname: " + user.getUserName() + "\n";
+        userContent += "Nickname: " + user.getUserName() + " " + displayIfAdmin(user) + "\n";
         userContent += "user Id: " + user.getUserID() + "\n";
         userContent += "weight: " + user.getWeight() + "\n";
         userContent += displayUsersRecipes(user) + "\n";
         userContent += displayExercisesofTheUser(user);
         return userContent;
+    }
+
+    //this method displays if the User is admin:
+    public static String displayIfAdmin(User user){
+        String adminContent = "";
+        if(user.isAnAdmin()){
+            adminContent = " (Admin)";
+        }
+        return adminContent;
     }
 }
 

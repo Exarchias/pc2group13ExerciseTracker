@@ -128,21 +128,36 @@ public class DB {
                 int recipeID = rs.getInt(7);
                 int repetitions = rs.getInt(3);
                 int caloriesPerRepetition = rs.getInt(4);
+                System.out.println("From DB for exer1: exerciseID=" + exerciseID + ", recipeID=" + recipeID + "owner" + userID);
                 Exercise exer1 = new Exercise(title, description, exerciseID, userID, recipeID, repetitions,caloriesPerRepetition);
 
                 for (User x : DataHolder.userList){
                     if(x.getUserID() == userID){
-                        for (Recipe j : x.recipeList){
-                            if(recipeID == j.getRecipeID()){
-                                j.exerciseList.add(exer1);
-                                System.out.println(exer1.getTitle() + " added to the recipe: "
-                                        + j.getTitle() + "of the user: " + x.getUserName());
-                            } else {
-                                x.exerciseList.add(exer1);
-                                System.out.println(exer1.getTitle() + " added to the user: " + x.getUserName());
-                            }
+                        if(recipeID == 0){
+                            System.out.println("adding an exercise to the user " + x.getUserName());
+                            x.exerciseList.add(exer1);
                         }
-                        break;
+                        for (Recipe j : x.recipeList){
+                            System.out.println("From recipe J: title=" + j.getTitle() + ", recipeID=" + j.getRecipeID()+
+                                    "from the user: " + j.getOwner());
+                            System.out.println(exer1.getRecipeID() + " as exer compares with " + j.getRecipeID() + " as J " +
+                                    "from the user: " + j.getOwner());
+                            if(exer1.getRecipeID() == j.getRecipeID()){
+                                j.exerciseList.add(exer1);
+                                System.out.println(exer1.getTitle() + ":" + exer1.getExerciseID() + " added to the recipe: "
+                                        + j.getTitle() + ":" + exer1.getRecipeID() + " of the user: " + x.getUserName()
+                                        + ":" + exer1.getOwner());
+                                break;
+                            } else {
+                                System.out.println("Doing nothing");
+                            }
+
+
+
+                        }
+
+                    } else {
+                        System.out.println("We dont have a much between " + x.getUserID() + " and " + userID);
                     }
                 }
 
@@ -270,13 +285,14 @@ public class DB {
 
             statement.executeUpdate("USE xtracker");
             statement.executeUpdate("UPDATE exercise SET recipe_recipeId='" + recipeID +"'  WHERE exerciseID='"+ exerciseID +"'");
-            System.out.println("Not a failure on editing the Exercise. check the database");
+            System.out.println("The exercise " + exerciseID + "is assigned to the recipe with the id " + recipeID);
+            System.out.println("Not a failure on changing the recipe of the exercise. check the database");
 
             DataHolder.isConnected = true;
         }
         catch (SQLException ex)
         {
-            System.out.println("error on editing the user:" + ex);
+            System.out.println("error on changing the recipe of the exercise:" + ex);
             DataHolder.isConnected = false;
         }
     }
@@ -456,6 +472,98 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+
+    //sorting: assign a recipe to a user
+    public void recipeToUser(int recipeID, int userID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET user_userID='" + userID +"'  WHERE recipeId='"+ recipeID +"'");
+            System.out.println("Not a failure on assigning the recipe to a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on assigning the recipe to a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    //sorting: changes the id of a recipe.
+    public void recipeChangeId(int oldRecipeID, int newRecipeID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET recipeId='" + newRecipeID +"'  WHERE recipe_recipeId='"+ oldRecipeID +"'");
+            System.out.println("Not a failure on changing the id of a recipe. check the Database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the id of a recipe:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    //set the isPublic state of a recipe.
+    public void recipeIsPublic(int recipeID, boolean publish) {
+        try {
+            int isPublic = 0;
+            if(publish){
+                isPublic = 1;
+            } else {
+                isPublic = 0;
+            }
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET isPublic='" + isPublic +"'  WHERE recipeId='"+ recipeID +"'");
+            System.out.println("Not a failure on changing the public state of a recipe. check the Database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the public state of a recipe:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+    //sorting: change the userID of a user
+    public void userChangeID(int oldUserID, int newUserID) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET user_userID='" + newUserID +"'  WHERE user_userID='"+ oldUserID +"'");
+            System.out.println("Not a failure on changing the userID of a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the userID of a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+    //sorting: edit the username of a user.
+    public void userChangeUsername(int userID, String userName) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET username='" + userName +"'  WHERE user_userID='"+ userID +"'");
+            System.out.println("Not a failure on changing the username of a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the username of a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+
 
 
 
