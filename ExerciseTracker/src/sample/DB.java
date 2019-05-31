@@ -546,6 +546,23 @@ public class DB {
         }
     }
 
+    //sorting: edit the username of a user.
+    public void userChangeUsername(int userID, String userName) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET username='" + userName +"'  WHERE user_userID='"+ userID +"'");
+            System.out.println("Not a failure on changing the username of a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the username of a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
 
 
 
