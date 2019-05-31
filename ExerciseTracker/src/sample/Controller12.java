@@ -94,6 +94,7 @@ public class Controller12 implements Initializable {
         DB db = new DB();
         db.addOneRecipe(recip2.getTitle(), recip2.getDescription(), DataHolder.supervisedUser.getUserID(), false);
         int recID = db.loadLastRecipeId();
+        System.out.println("The ID of the last used public recipe is: " + recID);
         //TESTING ADDING A RECIPE ON THE DATA BASE(END)
         recip2.setRecipeID(recID);
 

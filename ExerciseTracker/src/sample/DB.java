@@ -128,23 +128,33 @@ public class DB {
                 int recipeID = rs.getInt(7);
                 int repetitions = rs.getInt(3);
                 int caloriesPerRepetition = rs.getInt(4);
+                System.out.println("From DB for exer1: exerciseID=" + exerciseID + ", recipeID=" + recipeID + "owner" + userID);
                 Exercise exer1 = new Exercise(title, description, exerciseID, userID, recipeID, repetitions,caloriesPerRepetition);
 
                 for (User x : DataHolder.userList){
                     if(x.getUserID() == userID){
                         for (Recipe j : x.recipeList){
+                            System.out.println("From recipe J: title=" + j.getTitle() + ", recipeID=" + j.getRecipeID()+
+                                    "from the user: " + j.getOwner());
+                            System.out.println(exer1.getRecipeID() + " as exer compares with " + j.getRecipeID() + " as J " +
+                                    "from the user: " + j.getOwner());
                             if(exer1.getRecipeID() == j.getRecipeID()){
                                 j.exerciseList.add(exer1);
-                                System.out.println(exer1.getTitle() + " added to the recipe: "
-                                        + j.getTitle() + "of the user: " + x.getUserName());
-                                break;
+                                System.out.println(exer1.getTitle() + ":" + exer1.getExerciseID() + " added to the recipe: "
+                                        + j.getTitle() + ":" + exer1.getRecipeID() + " of the user: " + x.getUserName()
+                                        + ":" + exer1.getOwner());
+                                //break;
                             } else {
                                 x.exerciseList.add(exer1);
-                                System.out.println(exer1.getTitle() + " added to the user: " + x.getUserName());
-                                break;
+                                System.out.println(exer1.getTitle() + ":" + exer1.getExerciseID() + " added to the user: "
+                                        + x.getUserName() + ":" + exer1.getOwner() + " while the recipe is marked as " +
+                                        exer1.getRecipeID());
+                                //break;
                             }
                         }
-                        break;
+
+                    } else {
+                        System.out.println("We dont have a much between " + x.getUserID() + " and " + userID);
                     }
                 }
 
@@ -272,6 +282,7 @@ public class DB {
 
             statement.executeUpdate("USE xtracker");
             statement.executeUpdate("UPDATE exercise SET recipe_recipeId='" + recipeID +"'  WHERE exerciseID='"+ exerciseID +"'");
+            System.out.println("The exercise " + exerciseID + "is assigned to the recipe with the id " + recipeID);
             System.out.println("Not a failure on changing the recipe of the exercise. check the database");
 
             DataHolder.isConnected = true;
