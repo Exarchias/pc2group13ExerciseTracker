@@ -22,8 +22,10 @@
 
 }
 
-.adminbuttonimage{
+.adminbutton{
 //-fx-background-image: url("Assets/adminimage.png");
+}
+.userbutton{
 }
 
 
@@ -69,5 +71,27 @@
 
     -fx-background-color: red;
     -fx-text-fill: #e8e8e8;
+
+}
+.button-settingspage{
+
+}
+.button-browserecipes{
+
+}
+.button-publishrecipes{
+
+}
+.button-save{
+
+}
+.button-managerecipes{
+
+}
+.button-cancel{
+ -fx-background-image: url("Assets/cancelimage.png");
+
+}
+.button-cleanfields{
 
 }

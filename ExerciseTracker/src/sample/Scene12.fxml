@@ -16,7 +16,7 @@
         <ListView fx:id="listView2" layoutX="253.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView2" prefHeight="200.0" prefWidth="200.0" />
         <Button fx:id="btnUseExercise" layoutX="42.0" layoutY="300.0" mnemonicParsing="false" onAction="#useExerciseButtonPressed" styleClass="button-crud" text="Use Exercise" />
         <Button fx:id="btnUseRecipe" layoutX="166.0" layoutY="300.0" mnemonicParsing="false" onAction="#useRecipeButtonPressed" styleClass="button-crud" text="Use Recipe" />
-        <Button fx:id="btnCancel" layoutX="264.0" layoutY="300.0" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel" />
+        <Button fx:id="btnCancel" layoutX="264.0" layoutY="300.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" />
         <Button fx:id="btnManageRecipes" layoutX="374.0" layoutY="300.0" mnemonicParsing="false" onAction="#manageRecipesButtonPressed" styleClass="button-crud" text="Manage Recipes" />
         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
             <image>
