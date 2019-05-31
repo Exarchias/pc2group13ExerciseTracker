@@ -13,8 +13,8 @@
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
    <children>
       <Button fx:id="btnLogOut" layoutX="519.0" layoutY="106.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="34.0" prefWidth="70.0" styleClass="button-logout" stylesheets="@ApplicationView.css" />
-      <Button fx:id="btnGoToTheAdminPage" layoutX="320.0" layoutY="18.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" prefHeight="27.0" prefWidth="133.0" text="Go to admin page" />
-      <Button fx:id="btnGoToTheSettingPage" layoutX="315.0" layoutY="48.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" text="Go to the Settings Page" />
+      <Button fx:id="btnGoToTheAdminPage" layoutX="322.0" layoutY="18.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" prefHeight="27.0" prefWidth="133.0" text="Go to admin page" />
+      <Button fx:id="btnGoToTheSettingPage" layoutX="501.0" layoutY="33.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" prefHeight="57.0" prefWidth="58.0" styleClass="button-settingspage" />
       <Button layoutX="93.0" layoutY="345.0" mnemonicParsing="false" onAction="#testViewExercises" text="(Test) view Exercises" />
       <Button layoutX="166.0" layoutY="309.0" mnemonicParsing="false" onAction="#addExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Add new Exercise" />
       <Button layoutX="279.0" layoutY="272.0" mnemonicParsing="false" onAction="#deleteExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Delete Exercise" />
