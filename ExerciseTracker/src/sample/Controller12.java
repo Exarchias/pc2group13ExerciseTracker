@@ -102,10 +102,11 @@ public class Controller12 implements Initializable {
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
             db.addOneExercise(x.getTitle(), x.getDescription(), DataHolder.supervisedUser.getUserID());
             int exeID = db.loadLastExerciseId();
+            x.setExerciseID(exeID);
+            db.exerciseToRecipe(exeID, recID);
             System.out.println("Last Exercise ID is: " + x.getExerciseID());
             System.out.println("Last Recipe ID is: " + x.getRecipeID());
-            x.setExerciseID(exeID);
-            db.exerciseToRecipe(x.getExerciseID(), x.getRecipeID());
+
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
         }
         DataHolder.supervisedUser.recipeList.add(recip2);

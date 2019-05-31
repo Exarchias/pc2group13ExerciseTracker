@@ -133,13 +133,15 @@ public class DB {
                 for (User x : DataHolder.userList){
                     if(x.getUserID() == userID){
                         for (Recipe j : x.recipeList){
-                            if(recipeID == j.getRecipeID()){
+                            if(exer1.getRecipeID() == j.getRecipeID()){
                                 j.exerciseList.add(exer1);
                                 System.out.println(exer1.getTitle() + " added to the recipe: "
                                         + j.getTitle() + "of the user: " + x.getUserName());
+                                break;
                             } else {
                                 x.exerciseList.add(exer1);
                                 System.out.println(exer1.getTitle() + " added to the user: " + x.getUserName());
+                                break;
                             }
                         }
                         break;
@@ -270,13 +272,13 @@ public class DB {
 
             statement.executeUpdate("USE xtracker");
             statement.executeUpdate("UPDATE exercise SET recipe_recipeId='" + recipeID +"'  WHERE exerciseID='"+ exerciseID +"'");
-            System.out.println("Not a failure on editing the Exercise. check the database");
+            System.out.println("Not a failure on changing the recipe of the exercise. check the database");
 
             DataHolder.isConnected = true;
         }
         catch (SQLException ex)
         {
-            System.out.println("error on editing the user:" + ex);
+            System.out.println("error on changing the recipe of the exercise:" + ex);
             DataHolder.isConnected = false;
         }
     }

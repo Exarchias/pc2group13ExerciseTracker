@@ -176,10 +176,30 @@ public class Controller3 implements Initializable {  //USER PAGE
         if(selectedRecipe <= 0){
             selectedExercise = Integer.parseInt(exerciseSelector.getText());
             Exercise exer = DataHolder.supervisedUser.exerciseList.get(selectedExercise);
+            //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
+            DB db = new DB();
+            db.addOneExercise(exer.getTitle(), exer.getDescription(), exer.getOwner());
+            int exeID = db.loadLastExerciseId();
+            System.out.println("Last Exercise ID is: " + exeID);
+            System.out.println("Selected Recipe ID is: " + exer.getRecipeID());
+            //db.exerciseToRecipe(exeID, exer.getRecipeID());
+            //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
+            exer.setExerciseID(exeID);
+            db.exerciseToRecipe(exeID,0);
             DataHolder.supervisedUser.exerciseList.add(exer);
         } else {
             selectedExercise = Integer.parseInt(exerciseSelector.getText());
             Exercise exer = DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise);
+            //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
+            DB db = new DB();
+            db.addOneExercise(exer.getTitle(), exer.getDescription(), exer.getOwner());
+            int exeID = db.loadLastExerciseId();
+            db.exerciseToRecipe(exeID,0);
+            System.out.println("Last Exercise ID is: " + exeID);
+            System.out.println("Selected Recipe ID is: " + exer.getRecipeID());
+            //db.exerciseToRecipe(exeID, exer.getRecipeID());
+            //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
+            exer.setExerciseID(exeID);
             DataHolder.supervisedUser.exerciseList.add(exer);
         }
         updateDisplay();
