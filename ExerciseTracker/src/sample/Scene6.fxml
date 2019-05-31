@@ -14,8 +14,8 @@
    <children>
       <Button fx:id="btnLogOut" layoutX="524.0" layoutY="88.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="72.0" styleClass="button-logout" />
       <Button fx:id="btnGoToAdminPage" layoutX="494.0" layoutY="196.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
-      <Button layoutX="19.0" layoutY="299.0" mnemonicParsing="false" onAction="#addExercise" styleClass="button-crud" text="Add Exercise" />
-      <Button layoutX="122.0" layoutY="299.0" mnemonicParsing="false" onAction="#cleanFields" text="Clean Fields" />
+      <Button layoutX="19.0" layoutY="299.0" mnemonicParsing="false" onAction="#addExercise" prefWidth="72.0" styleClass="button-crud" text="Add Exercise" />
+      <Button layoutX="122.0" layoutY="299.0" mnemonicParsing="false" onAction="#cleanFields" prefHeight="55.0" prefWidth="56.0" styleClass="button-cleanfields" />
       <Button layoutX="228.0" layoutY="299.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" />
       <TextField fx:id="titleTextField" layoutX="61.0" layoutY="68.0" />
       <TextArea fx:id="descriptionTextArea" layoutX="61.0" layoutY="126.0" prefHeight="135.0" prefWidth="149.0" />
@@ -37,7 +37,7 @@
          </image>
       </ImageView>
       <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="ActiveName:" />
-      <ListView fx:id="listView" layoutX="22.0" layoutY="348.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listView" layoutX="22.0" layoutY="385.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
       <Button layoutX="533.0" layoutY="311.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" text="Browse Public Recipes" />
    </children>
 </AnchorPane>

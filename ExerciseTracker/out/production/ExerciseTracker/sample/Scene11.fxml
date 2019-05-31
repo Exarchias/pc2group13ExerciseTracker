@@ -15,7 +15,7 @@
         <Button fx:id="btnLogOut" layoutX="391.0" layoutY="43.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
         <Button fx:id="btnGoToAdminPage" layoutX="369.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
         <Button layoutX="44.0" layoutY="323.0" mnemonicParsing="false" onAction="#editExercise" styleClass="button-crud" text="Edit Exercise" />
-        <Button layoutX="144.0" layoutY="323.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" />
+        <Button layoutX="142.0" layoutY="316.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" />
         <TextField fx:id="titleTextField" layoutX="61.0" layoutY="68.0" />
         <TextArea fx:id="descriptionTextArea" layoutX="61.0" layoutY="126.0" prefHeight="135.0" prefWidth="149.0" />
         <TextArea fx:id="recipesTextArea" layoutX="224.0" layoutY="52.0" prefHeight="148.0" prefWidth="129.0" />

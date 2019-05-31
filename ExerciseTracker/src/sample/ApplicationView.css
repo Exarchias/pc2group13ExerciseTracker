@@ -105,5 +105,5 @@
 
 }
 .button-cleanfields{
-
+    -fx-background-image: url("Assets/cleanimage.png");
 }
