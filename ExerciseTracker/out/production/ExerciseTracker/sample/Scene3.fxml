@@ -12,16 +12,9 @@
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
    <children>
       <Button fx:id="btnLogOut" layoutX="519.0" layoutY="106.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="34.0" prefWidth="70.0" styleClass="button-logout" stylesheets="@ApplicationView.css" />
-<<<<<<< HEAD
-      <Button fx:id="btnGoToTheAdminPage" layoutX="322.0" layoutY="18.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" prefHeight="27.0" prefWidth="133.0" text="Go to admin page" />
-      <Button fx:id="btnGoToTheSettingPage" layoutX="501.0" layoutY="33.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" prefHeight="57.0" prefWidth="58.0" styleClass="button-settingspage" />
-      <Button layoutX="93.0" layoutY="345.0" mnemonicParsing="false" onAction="#testViewExercises" text="(Test) view Exercises" />
-      <Button layoutX="166.0" layoutY="309.0" mnemonicParsing="false" onAction="#addExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Add new Exercise" />
-=======
       <Button fx:id="btnGoToTheAdminPage" layoutX="496.0" layoutY="159.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" prefHeight="27.0" prefWidth="133.0" text="Go to admin page" />
       <Button fx:id="btnGoToTheSettingPage" layoutX="496.0" layoutY="199.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" text="Go to the Settings Page" />
       <Button layoutX="165.0" layoutY="272.0" mnemonicParsing="false" onAction="#addExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Add new Exercise" />
->>>>>>> master
       <Button layoutX="279.0" layoutY="272.0" mnemonicParsing="false" onAction="#deleteExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Delete Exercise" />
       <Button layoutX="388.0" layoutY="272.0" mnemonicParsing="false" onAction="#editExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Edit Exercise" />
       <TextArea fx:id="exerciseListTextArea" layoutX="27.0" layoutY="316.0" prefHeight="111.0" prefWidth="449.0" text="You have nothing... you are lazy." />
@@ -39,16 +32,7 @@
       <ListView fx:id="listView" layoutX="34.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="169.0" prefWidth="200.0" />
       <Button fx:id="useSelectedExerciseBtn" layoutX="27.0" layoutY="272.0" mnemonicParsing="false" onAction="#useSelectedExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Use selected Exercise" />
       <ListView fx:id="listView2" layoutX="268.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListViewRight" prefHeight="169.0" prefWidth="200.0" />
-<<<<<<< HEAD
-      <Button layoutX="521.0" layoutY="173.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" text="Browse Public Recipes" />
-      <Button fx:id="saveBtn" layoutX="536.0" layoutY="232.0" mnemonicParsing="false" onAction="#saveTheData" prefHeight="57.0" prefWidth="70.0" styleClass="button-save" text="Save">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-=======
       <Button layoutX="505.0" layoutY="350.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" text="Browse Public Recipes" />
->>>>>>> master
       <Label fx:id="superviseLabel" layoutX="44.0" layoutY="59.0" text="Label" />
       <Button layoutX="503.0" layoutY="304.0" mnemonicParsing="false" onAction="#manageRecipes" text="Manage Recipes" />
    </children>
