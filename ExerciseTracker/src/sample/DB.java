@@ -563,6 +563,24 @@ public class DB {
         }
     }
 
+    //sorting: edit the password of a user.
+    public void userChangePassword(int userID, String password) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET password='" + password +"'  WHERE user_userID='"+ userID +"'");
+            System.out.println("Not a failure on changing the password of a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the password of a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+
 
 
 
