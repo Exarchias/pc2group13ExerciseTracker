@@ -579,6 +579,22 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+    //sorting: edit the weight of a user.
+    public void userChangeUsername(int userID, int weight) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE recipe SET weight='" + weight +"'  WHERE user_userID='"+ userID +"'");
+            System.out.println("Not a failure on changing the weight of a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on changing the weight of a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
 
 
 
