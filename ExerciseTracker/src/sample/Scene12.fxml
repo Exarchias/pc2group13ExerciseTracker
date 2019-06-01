@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller12">
     <children>
         <Button fx:id="btnLogOut" layoutX="494.0" layoutY="53.0" mnemonicParsing="false" onAction="#logOutButtonPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
-        <Button fx:id="btnGoToTheAdminPage" layoutX="496.0" layoutY="119.0" mnemonicParsing="false" onAction="#goToTheAdminPageButtonPressed" text="GoToAdminPage" />
+        <Button fx:id="btnGoToTheAdminPage" layoutX="529.0" layoutY="109.0" mnemonicParsing="false" onAction="#goToTheAdminPageButtonPressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
         <Button fx:id="btnGoToTheUserPage" layoutX="496.0" layoutY="182.0" mnemonicParsing="false" onAction="#goToTheUserPageButtonPressed" text="GoToUserPage" />
         <ListView fx:id="listView" layoutX="25.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView" prefHeight="200.0" prefWidth="200.0" />
         <ListView fx:id="listView2" layoutX="253.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView2" prefHeight="200.0" prefWidth="200.0" />

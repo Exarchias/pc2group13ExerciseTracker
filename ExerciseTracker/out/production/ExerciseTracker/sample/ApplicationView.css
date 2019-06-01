@@ -23,7 +23,8 @@
 }
 
 .adminbutton{
-//-fx-background-image: url("Assets/adminimage.png");
+-fx-background-image: url("Assets/adminimage.png");
+ -fx-opacity: 0.8;
 }
 .userbutton{
 }
@@ -106,4 +107,5 @@
 }
 .button-cleanfields{
     -fx-background-image: url("Assets/cleanimage.png");
+    -fx-opacity: 1.0;
 }

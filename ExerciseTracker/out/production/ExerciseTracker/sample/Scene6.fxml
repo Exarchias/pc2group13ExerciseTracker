@@ -13,7 +13,7 @@
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
    <children>
       <Button fx:id="btnLogOut" layoutX="524.0" layoutY="88.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="72.0" styleClass="button-logout" />
-      <Button fx:id="btnGoToAdminPage" layoutX="494.0" layoutY="196.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" text="Go To Admin Page" />
+      <Button fx:id="btnGoToAdminPage" layoutX="532.0" layoutY="189.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
       <Button layoutX="19.0" layoutY="299.0" mnemonicParsing="false" onAction="#addExercise" prefWidth="72.0" styleClass="button-crud" text="Add Exercise" />
       <Button layoutX="122.0" layoutY="299.0" mnemonicParsing="false" onAction="#cleanFields" prefHeight="55.0" prefWidth="56.0" styleClass="button-cleanfields" />
       <Button layoutX="228.0" layoutY="299.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" />

@@ -13,7 +13,7 @@
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller8">
     <children>
         <Button fx:id="btnLogOut" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="36.0" prefWidth="70.0" styleClass="button-logout" />
-        <Button fx:id="btnGoToTheAdminPage" layoutX="356.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" text="Go to The Admin Page" />
+        <Button fx:id="btnGoToTheAdminPage" layoutX="356.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
         <Button fx:id="btnGoToTheSettingPage" layoutX="262.0" layoutY="80.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" prefHeight="57.0" prefWidth="58.0" styleClass="button-settingspage" />
 
 

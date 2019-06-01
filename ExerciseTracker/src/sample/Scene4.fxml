@@ -13,7 +13,7 @@
 
    <children>
       <Button layoutX="452.0" layoutY="136.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="68.0" styleClass="button-logout" />
-      <Button fx:id="btnGoToAdminPage" layoutX="429.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" text="Go To Admin Page" />
+      <Button fx:id="btnGoToAdminPage" layoutX="429.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" prefHeight="66.0" prefWidth="53.0" styleClass="adminbutton" />
       <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#editUser" styleClass="button-crud" text="Edit User" />
       <CheckBox fx:id="isAdminCheckBox" layoutX="174.0" layoutY="209.0" mnemonicParsing="false" text="is Admin" />
       <TextField fx:id="userNameTextField" layoutX="174.0" layoutY="84.0" />
