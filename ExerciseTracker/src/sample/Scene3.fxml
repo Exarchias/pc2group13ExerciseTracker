@@ -37,6 +37,6 @@
          <font>
             <Font name="Arial Black" size="14.0" />
          </font></Label>
-      <Button layoutX="503.0" layoutY="304.0" mnemonicParsing="false" onAction="#manageRecipes" text="Manage Recipes" />
+      <Button layoutX="487.0" layoutY="283.0" mnemonicParsing="false" onAction="#manageRecipes" styleClass="button-crud" text="Manage Recipes" />
    </children>
 </AnchorPane>

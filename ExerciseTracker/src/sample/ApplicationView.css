@@ -96,7 +96,7 @@
     //-fx-shape: "M150 0 L75 200 L225 200 Z";
     //-fx-background-color: #4DD0E1;
 
-   -fx-background-radius: 150;
+    -fx-background-radius: 150;
 
     -fx-background-color: #ff8c00;
     -fx-text-fill: #000000;
@@ -111,4 +111,8 @@
 .button-cleanfields{
     -fx-background-image: url("Assets/cleanimage.png");
     -fx-opacity: 1.0;
+}
+.button-managerecipes{
+  -fx-shape: "M150 0 L75 200 L225 200 Z";
+  -fx-background-color: #4DD0E1;
 }
