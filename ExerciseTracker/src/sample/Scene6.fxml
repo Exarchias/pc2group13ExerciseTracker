@@ -54,7 +54,7 @@
       </ImageView>
       <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="ActiveName:" />
       <ListView fx:id="listView" layoutX="22.0" layoutY="385.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="533.0" layoutY="311.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" text="Browse Public Recipes" />
+      <Button layoutX="533.0" layoutY="311.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" prefHeight="55.0" prefWidth="56.0" styleClass="button-browserecipes" />
       <Label layoutX="621.0" layoutY="174.0" text="USER PAGE">
          <font>
             <Font name="System Bold Italic" size="9.0" />
