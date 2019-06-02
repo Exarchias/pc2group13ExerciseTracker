@@ -32,11 +32,11 @@ send emails and print a PDF report of the desired data.
 
 ### Login Page
 
-![Login Page Diagram](https://raw.githubusercontent.com/Exarchias/pc2group13ExerciseTracker/master/login_page.jpg?token=AKZDN3KGREC2ZJ36UUNVE4246EFJU)
+![Login Page Diagram](https://raw.githubusercontent.com/Exarchias/pc2group13ExerciseTracker/master/login_page.jpg?token=AKZDN3IDAGFWER33BXFLZLC47UDUC)
 
 ### Use Case Diagram
 
-![Exercise Tracker Application Diagram](https://raw.githubusercontent.com/Exarchias/pc2group13ExerciseTracker/master/exercise_tracker_figure01.jpg?token=AKZDN3OLPRWZTKVFVKLXLL24562UU)
+![Exercise Tracker Application Diagram](https://raw.githubusercontent.com/Exarchias/pc2group13ExerciseTracker/master/exercise_tracker_figure01.jpg?token=AKZDN3OL6YKBWGAMCZ34VZK47UDWU)
 
 
 ### Development Team
