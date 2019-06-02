@@ -23,11 +23,14 @@
         <Button layoutX="274.0" layoutY="301.0" mnemonicParsing="false" onAction="#deleteRecipe" styleClass="button-crud" text="Delete Recipe" />
         <Button layoutX="387.0" layoutY="301.0" mnemonicParsing="false" onAction="#editRecipe" styleClass="button-crud" text="Edit Recipe" />
         <TextArea fx:id="recipesTextArea" layoutX="43.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" text="You have nothing... you are lazy." />
-        <TextField fx:id="recipeSelector" layoutX="358.0" layoutY="213.0" prefHeight="25.0" prefWidth="56.0" text="0" />
-        <Label layoutX="262.0" layoutY="217.0" text="Selcted Recipe" />
+        <TextField fx:id="recipeSelector" layoutX="384.0" layoutY="216.0" prefHeight="25.0" prefWidth="56.0" text="0" />
+        <Label layoutX="262.0" layoutY="217.0" text="Selcted Recipe">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
         <Label layoutX="169.0" layoutY="18.0" text="Recipes Page">
             <font>
-                <Font size="18.0" />
+                <Font name="Algerian" size="24.0" />
             </font>
         </Label>
         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">

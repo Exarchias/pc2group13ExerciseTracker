@@ -8,6 +8,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller9">
     <children>
@@ -18,8 +19,14 @@
         <Button layoutX="248.0" layoutY="323.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="36.0" prefWidth="41.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" />
         <TextField fx:id="titleTextField" layoutX="61.0" layoutY="68.0" />
         <TextArea fx:id="descriptionTextArea" layoutX="61.0" layoutY="126.0" prefHeight="135.0" prefWidth="149.0" />
-        <Label layoutX="61.0" layoutY="38.0" text="Title:" />
-        <Label layoutX="61.0" layoutY="101.0" text="Description" />
+        <Label layoutX="61.0" layoutY="38.0" text="Title:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+        <Label layoutX="61.0" layoutY="101.0" text="Description">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
         <Button layoutX="507.0" layoutY="150.0" mnemonicParsing="false" onAction="#goToUserPage" text="Go to User Page" />
         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -30,7 +37,10 @@
         <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="ActiveName:" />
 
 
-      <CheckBox fx:id="recipeIsPublic" layoutX="61.0" layoutY="274.0" mnemonicParsing="false" text="This recipe is public" textFill="#e4e0e0" />
+      <CheckBox fx:id="recipeIsPublic" layoutX="61.0" layoutY="274.0" mnemonicParsing="false" text="This recipe is public" textFill="#e4e0e0">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></CheckBox>
 
     </children>
 </AnchorPane>
