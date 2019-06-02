@@ -158,6 +158,20 @@ public class Methods {
         }
         return adminContent;
     }
+
+    //WORK_IN_PROGRESS - This method displays the ID's of the users
+    public static String displayExercisesofTheUser(User user){
+        String userContent = "";
+        int count = 0;
+        userContent += " IDs of the User \n";
+        userContent += " ===================== \n";
+        for (ID x : user.UserID ){
+            count++;
+            userContent += count + ") ID: " + x.getID() + "\n";
+        }
+        return userContent;
+    }
+
 }
 
 
