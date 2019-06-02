@@ -160,7 +160,7 @@ public class Methods {
     }
 
     //WORK_IN_PROGRESS - This method displays the ID's of the users
-    public static String displayExercisesofTheUser(User user){
+    public static String displayIDsfTheUser(User user){
         String userContent = "";
         int count = 0;
         userContent += " IDs of the User \n";
