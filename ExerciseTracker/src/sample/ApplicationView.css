@@ -23,9 +23,11 @@
 }
 
 .adminbutton{
-//-fx-background-image: url("Assets/adminimage.png");
+-fx-background-image: url("Assets/adminimage.png");
+ -fx-opacity: 0.8;
 }
 .userbutton{
+-fx-background-image: url("Assets/userimage.png");
 }
 
 
@@ -61,9 +63,10 @@
 
 
 }
+
+
 .label{
     -fx-text-fill: #e8e8e8;
-
 }
 .circle{
 
@@ -78,6 +81,7 @@
 
 }
 .button-browserecipes{
+-fx-background-image: url("Assets/browserecipes.png");
 
 
 }
@@ -92,7 +96,7 @@
     //-fx-shape: "M150 0 L75 200 L225 200 Z";
     //-fx-background-color: #4DD0E1;
 
-   -fx-background-radius: 150;
+    -fx-background-radius: 150;
 
     -fx-background-color: #ff8c00;
     -fx-text-fill: #000000;
@@ -106,4 +110,9 @@
 }
 .button-cleanfields{
     -fx-background-image: url("Assets/cleanimage.png");
+    -fx-opacity: 1.0;
+}
+.button-managerecipes{
+  -fx-shape: "M150 0 L75 200 L225 200 Z";
+  -fx-background-color: #4DD0E1;
 }

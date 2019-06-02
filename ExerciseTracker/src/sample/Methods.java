@@ -160,17 +160,17 @@ public class Methods {
     }
 
     //WORK_IN_PROGRESS - This method displays the ID's of the users
-    public static String displayIDsfTheUser(User user){
-        String userContent = "";
-        int count = 0;
-        userContent += " IDs of the User \n";
-        userContent += " ===================== \n";
-        for (ID x : user.UserID ){
-            count++;
-            userContent += count + ") ID: " + x.getID() + "\n";
-        }
-        return userContent;
-    }
+   // public static String displayIDsfTheUser(User user){
+     //   String userContent = "";
+       // int count = 0;
+       // userContent += " IDs of the User \n";
+       // userContent += " ===================== \n";
+       // for (ID x : user.UserID ){
+         //   count++;
+          //  userContent += count + ") ID: " + x.getID() + "\n";
+       // }
+       // return userContent;
+   // }
 
 }
 
