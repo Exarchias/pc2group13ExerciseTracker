@@ -1,5 +1,6 @@
 package sample;
 
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 
 public class DB {
@@ -39,11 +40,11 @@ public class DB {
     }
 
     //here we enable java to actually execute MySQL statements
-    public void loadUsers() {
+    public void loadUsers() throws NoSuchAlgorithmException {
         try {
             statement.executeQuery("USE xtracker");
             ResultSet rs = statement.executeQuery("SELECT * FROM user");
-            User firstUser = new User("superuser", "12345",
+            User firstUser = new User("superuser", Methods.encrypted("12345"),
                     "admin@exercise.trackom", true);
             DataHolder.userList.add(0,firstUser);
             System.out.println("Verification: The very first User is " + DataHolder.userList.get(0).getUserName());
