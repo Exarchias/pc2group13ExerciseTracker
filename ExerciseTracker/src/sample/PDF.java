@@ -1,7 +1,6 @@
 //JPDFWriter STARTS
 package sample;
 
-
 import java.awt.Graphics2D;
 import java.awt.print.PageFormat;
 
@@ -27,3 +26,16 @@ public class PDF
             for(int x = 0; x<10; x++){
                 g2d.drawString("Yolo " + x, 100, 150 + (x * 30));
             }
+            
+            // Add the page to the document and save it
+            pdfDoc.addPage(newPage);
+            pdfDoc.saveDocument("output.pdf");
+        }
+        catch (Throwable t)
+        {
+            t.printStackTrace();
+        }
+    }
+
+}
+//JPDFWriter ENDS
