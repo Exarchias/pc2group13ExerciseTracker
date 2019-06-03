@@ -123,7 +123,7 @@ public class Methods {
         return userRecipes;
     }
     
-    //this method displays a recipe's content
+    //this method displays a recipe's exercises
     public static String displayContentsofTherecipe(Recipe recipe) {
         String RecipeContent = "";
         int count = 0;
@@ -169,6 +169,15 @@ public class Methods {
         return adminContent;
     }
 
+    //this method displays if the User is admin:
+    public static String displayIfRecipeIsPublic(Recipe recipe){
+        String adminContent = "";
+        if(recipe.isPublic()){
+            adminContent = " (Public)";
+        }
+        return adminContent;
+    }
+
     //WORK_IN_PROGRESS - This method displays the ID's of the users
     public static String displayIDsfTheUser(User user){
         String userContent = "";
@@ -180,6 +189,16 @@ public class Methods {
             userContent += count + ")" + x.getUserName() + " ID: " + x.getUserID() + "\n";
         }
         return userContent;
+    }
+
+    //this method displays a recipe's exercises
+    public static String displayTherecipe(Recipe recipe) {
+        String recipedisplay = "";
+        recipedisplay += "Title: " + recipe.getTitle() + " " + displayIfRecipeIsPublic(recipe) + "\n";
+        recipedisplay += "Description: " + recipe.getDescription() + "\n";
+        recipedisplay += " ========= \n";
+        recipedisplay += displayContentsofTherecipe(recipe) + "\n";
+        return recipedisplay;
     }
 
 }
