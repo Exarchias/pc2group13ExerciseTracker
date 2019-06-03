@@ -28,7 +28,7 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
         selectedRecipe = DataHolder.supervisedRecipePostion;
         selectedRecipeIN = selectedRecipe;
         System.out.println("The value of the selectedRecipe is" + selectedRecipe);
-        recipeSelector.setText(String.valueOf(selectedRecipe + 1));
+        //recipeSelector.setText(String.valueOf(selectedRecipe + 1));
         //addToSelectedRecipeCheckBox.setSelected(false);
         titleTextField.setText(DataHolder.supervisedExercise.getTitle());
         descriptionTextArea.setText(DataHolder.supervisedExercise.getDescription());
@@ -38,9 +38,9 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
             btnGoToAdminPage.setVisible(true);
         else btnGoToAdminPage.setVisible(false);
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
-
-
+        updateDisplay();
     }
+
     @FXML
     Label lblActiveName;
     @FXML
@@ -55,8 +55,8 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     @FXML
     TextArea recipesTextArea;
 
-    @FXML
-    TextField recipeSelector;
+    //@FXML
+    //TextField recipeSelector;
 
     @FXML
     CheckBox addToSelectedRecipeCheckBox;
@@ -128,7 +128,7 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
 
     @FXML
     public void editTheRecipe(ActionEvent event)throws Exception{
-        selectedRecipe = Integer.parseInt(recipeSelector.getText());
+        //selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("going to edit the recipe:" + selectedRecipe);
         //Main.getInstance().setScene(Main.Scene9);
 
@@ -207,7 +207,18 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     @FXML
     public void somethingIsSelectedOnListViewRight(MouseEvent event){
         selectedRecipe = listView.getSelectionModel().getSelectedIndex();
-        recipeSelector.setText(String.valueOf(selectedRecipe));
+        //recipeSelector.setText(String.valueOf(selectedRecipe));
+        updateDisplay();
+    }
+
+    public void updateDisplay() {
+        String recipeDisplay;
+        if((selectedRecipe) <= 0){
+            recipeDisplay = Methods.displayExercisesofTheUser(DataHolder.supervisedUser);
+        } else {
+            recipeDisplay = Methods.displayTherecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe - 1));
+        }
+        recipesTextArea.setText(recipeDisplay);
     }
 
 
