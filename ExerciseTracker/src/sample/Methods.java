@@ -155,6 +155,7 @@ public class Methods {
         String userContent = "";
         userContent += "Nickname: " + user.getUserName() + " " + displayIfAdmin(user) + "\n";
         userContent += "user Id: " + user.getUserID() + "\n";
+        userContent += "user Id: " + user.getEmail() + "\n";
         userContent += "weight: " + user.getWeight() + "\n";
         userContent += displayUsersRecipes(user) + "\n";
         userContent += displayExercisesofTheUser(user);

@@ -27,7 +27,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
             btnGoToAdminPage.setVisible(true);
         else btnGoToAdminPage.setVisible(false);
 
-        recipeSelector.setText(String.valueOf(selectedRecipe));
+        //recipeSelector.setText(String.valueOf(selectedRecipe));
         addToSelectedRecipeCheckBox.setSelected(false);
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         updateDisplay();
@@ -48,8 +48,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     @FXML
     TextArea recipesTextArea;
 
-    @FXML
-    TextField recipeSelector;
+    //@FXML
+    //TextField recipeSelector;
 
     @FXML
     CheckBox addToSelectedRecipeCheckBox;
@@ -80,7 +80,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         System.out.println("The title of the exercise is: " + titleTextField.getText());
         System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
         if(addToSelectedRecipeCheckBox.isSelected()){
-            selectedRecipe = Integer.parseInt(recipeSelector.getText());
+            //selectedRecipe = Integer.parseInt(recipeSelector.getText());
             System.out.println("The exercise is added to the recipe: " + selectedRecipe);
             Exercise exer = new Exercise(titleTextField.getText(),
                     descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.supervisedUser));
@@ -134,7 +134,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     @FXML
     public void editTheRecipe(ActionEvent event)throws Exception{
-        selectedRecipe = Integer.parseInt(recipeSelector.getText());
+        //selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("going to edit the recipe:" + selectedRecipe);
         //Main.getInstance().setScene(Main.Scene9);
 
@@ -161,16 +161,12 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     @FXML
     public void somethingIsSelectedOnListView(MouseEvent event){
         selectedRecipe = listView.getSelectionModel().getSelectedIndex();
-        recipeSelector.setText(String.valueOf(selectedRecipe));
+        //recipeSelector.setText(String.valueOf(selectedRecipe));
+        updateDisplay();
     }
 
     public void updateDisplay() {
-        int count = 0;
-        recipeDisplay = "";
-        for (Recipe x : DataHolder.supervisedUser.recipeList) {
-            recipeDisplay += count + ") " + x.getTitle() + "\n";
-            count++;
-        }
+        recipeDisplay = Methods.displayTherecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
         recipesTextArea.setText(recipeDisplay);
     }
 
