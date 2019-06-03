@@ -1,5 +1,9 @@
 package sample;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class Methods {
 
 
@@ -215,6 +219,18 @@ public class Methods {
         String owner = DataHolder.userList.get(recipe.getOwner()).getUserName();
         return owner;
     }
+    //this method transforms  a byte stream to a Hex format. We use this method for our hash encryption.
+    private static String bytesToHex(byte[] hash) {
+        StringBuffer hexString = new StringBuffer();
+        for (int i = 0; i < hash.length; i++) {
+            String hex = Integer.toHexString(0xff & hash[i]);
+            if(hex.length() == 1) hexString.append('0');
+            hexString.append(hex);
+        }
+        return hexString.toString();
+    }
+
+
 
 
 }
