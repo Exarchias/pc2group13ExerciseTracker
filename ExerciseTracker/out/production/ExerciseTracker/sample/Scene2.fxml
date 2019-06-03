@@ -34,7 +34,7 @@
       <ListView fx:id="listView" layoutX="35.0" layoutY="59.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="526.0" layoutY="186.0" text="USER PAGE" textFill="#c6167d">
          <font>
-            <Font name="System Bold Italic" size="10.0" />
+            <Font name="System Bold Italic" size="9.0" />
          </font>
       </Label>
    </children>

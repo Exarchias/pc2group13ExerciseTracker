@@ -69,12 +69,22 @@ public class Methods {
         Exercise tri1 = new Exercise("triUser1", "Exercise for the trilili of the user number 1", 1);
         Exercise tri2 = new Exercise("triUser2", "Exercise for the trilili of the user number 2", 1);
         Exercise tri3 = new Exercise("triUser3", "Exercise for the trilili of the user number 3", 1);
+        Exercise tri4 = new Exercise("triUser4", "Exercise for the trilili of the user number 4", 1);
+        Exercise tri5 = new Exercise("triUser5", "Exercise for the trilili of the user number 5", 1);
+        Exercise tri6 = new Exercise("triUser6", "Exercise for the trilili of the user number 6", 1);
         System.out.println("exercises for the User's history are just initiated");
         Recipe trilili = new Recipe("Trilili", "The trilili recipe", 0);
+        Recipe triliPublic = new Recipe("Trilili Public", "The public trilili recipe", 0);
+        triliPublic.setPublic(true);
         DataHolder.userList.get(1).recipeList.add(trilili);
+        DataHolder.userList.get(1).recipeList.add(triliPublic);
+        DataHolder.publicRecipes.add(triliPublic);
         DataHolder.userList.get(1).recipeList.get(1).exerciseList.add(tri1);
         DataHolder.userList.get(1).recipeList.get(1).exerciseList.add(tri2);
         DataHolder.userList.get(1).recipeList.get(1).exerciseList.add(tri3);
+        DataHolder.userList.get(1).recipeList.get(2).exerciseList.add(tri4);
+        DataHolder.userList.get(1).recipeList.get(2).exerciseList.add(tri5);
+        DataHolder.userList.get(1).recipeList.get(2).exerciseList.add(tri5);
         System.out.println("Offline procedure just got complete");
     }
     
@@ -160,17 +170,17 @@ public class Methods {
     }
 
     //WORK_IN_PROGRESS - This method displays the ID's of the users
-   // public static String displayIDsfTheUser(User user){
-     //   String userContent = "";
-       // int count = 0;
-       // userContent += " IDs of the User \n";
-       // userContent += " ===================== \n";
-       // for (ID x : user.UserID ){
-         //   count++;
-          //  userContent += count + ") ID: " + x.getID() + "\n";
-       // }
-       // return userContent;
-   // }
+    public static String displayIDsfTheUser(User user){
+        String userContent = "";
+        int count = 0;
+        userContent += " IDs of each User \n";
+        userContent += " ===================== \n";
+        for (User x : DataHolder.userList ){
+            count++;
+            userContent += count + ")" + x.getUserName() + " ID: " + x.getUserID() + "\n";
+        }
+        return userContent;
+    }
 
 }
 

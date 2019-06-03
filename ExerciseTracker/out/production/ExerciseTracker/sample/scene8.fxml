@@ -42,10 +42,10 @@
       <ListView fx:id="listView" layoutX="28.0" layoutY="338.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
       <Button layoutX="353.0" layoutY="55.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPagePressed" prefHeight="54.0" prefWidth="54.0" styleClass="userbutton" />
       <Button fx:id="publishBtn" layoutX="528.0" layoutY="291.0" mnemonicParsing="false" onAction="#publishRecipe" prefHeight="118.0" prefWidth="123.0" styleClass="button-publishrecipes" text="publish/unpublish" textFill="#1b0101" />
-      <Button layoutX="523.0" layoutY="222.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" text="Browse Public Recipes" />
-      <Label layoutX="354.0" layoutY="93.0" text="USER PAGE">
+      <Button layoutX="518.0" layoutY="216.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" prefHeight="57.0" prefWidth="54.0" styleClass="button-browserecipes" />
+      <Label layoutX="356.0" layoutY="94.0" text="USER PAGE">
          <font>
-            <Font name="System Bold Italic" size="10.0" />
+            <Font name="System Bold Italic" size="9.0" />
          </font>
       </Label>
     </children>
