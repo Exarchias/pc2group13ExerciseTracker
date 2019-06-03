@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.security.NoSuchAlgorithmException;
+
 public class Main extends Application {
 
     public static final String sample = "sample";
@@ -50,7 +52,7 @@ public class Main extends Application {
         scene.getStylesheets().add(css);
 
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchAlgorithmException {
         if(DataHolder.dbActivated){ //CHECKS IF THE DATA BASE IS ACTIVATED
             //JDBC starts
             DB db = new DB();

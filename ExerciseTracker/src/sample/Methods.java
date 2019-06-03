@@ -12,12 +12,12 @@ public class Methods {
         System.out.println("You are logged out");
     }
 
-    public static void testOfflineScript(){
-        User firstUser = new User("admin", "12345",
+    public static void testOfflineScript() throws NoSuchAlgorithmException {
+        User firstUser = new User("admin", encrypted("12345"),
                 "admin@exercise.trackom", true);
 
         DataHolder.userList.add(0,firstUser);
-        User secondUser = new User("average", "12345",
+        User secondUser = new User("average", encrypted("12345"),
                 "LowBob@exercise.trackom", false);
         DataHolder.userList.add(1,secondUser);
         System.out.println("Verification: The very first User is " + DataHolder.userList.get(0).getUserName());

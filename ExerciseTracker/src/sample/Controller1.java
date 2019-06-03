@@ -72,7 +72,7 @@ public class Controller1 implements Initializable { //LOGIN PAGE
     public void btnLogin(ActionEvent event)throws Exception{
         for (User x: DataHolder.userList){
             if((txtUserName.getText().equalsIgnoreCase(x.getUserName())) &&
-                    (txtPassword.getText().equalsIgnoreCase(x.getPassWord()))){
+                    (Methods.encrypted(txtPassword.getText()).equalsIgnoreCase(x.getPassWord()))){
                 DataHolder.setLogin(true);
                 DataHolder.activeUser = x;
                 DataHolder.supervisedUser = x;
