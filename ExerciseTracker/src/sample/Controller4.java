@@ -43,8 +43,9 @@ public class Controller4 implements Initializable { //LOG PAGE
                 e.printStackTrace();
             }
         }
+        password = DataHolder.supervisedUser.getPassWord();
         userNameTextField.setText(DataHolder.supervisedUser.getUserName());
-        passWordTextField.setText(DataHolder.supervisedUser.getPassWord());
+        passWordTextField.setText("");
         emailTextField.setText(DataHolder.supervisedUser.getEmail());
         if(DataHolder.supervisedUser.isAnAdmin()){
             isAdminCheckBox.setSelected(true);
@@ -78,7 +79,9 @@ public class Controller4 implements Initializable { //LOG PAGE
     public void editUser(ActionEvent event)throws Exception{
         System.out.println("Creating User...");
         username = userNameTextField.getText();
-        password = passWordTextField.getText();
+        if(!passWordTextField.getText().equalsIgnoreCase("")){
+            password = Methods.encrypted(passWordTextField.getText());
+        }
         email = emailTextField.getText();
         userIsAdmin = isAdminCheckBox.isSelected();
         System.out.println("The username is: " + username);
