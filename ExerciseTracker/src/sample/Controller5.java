@@ -74,11 +74,11 @@ public class Controller5 implements Initializable { //LOG PAGE
         if(userIsAdmin){
             System.out.println("The user is an Admin");
         }
-        User userObj = new User(username, password, email, userIsAdmin);
+        User userObj = new User(username, Methods.encrypted(password), email, userIsAdmin);
         Main.getInstance().setScene(Main.Scene2);
         //TESTING ADDING A USER ON THE DATA BASE(START)
         DB db = new DB();
-        db.addOneUser(username, password, email, userIsAdmin);
+        db.addOneUser(username, Methods.encrypted(password), email, userIsAdmin);
         System.out.println("The last users ID should be " + db.loadLastUserId());
         //TESTING ADDING A USER ON THE DATA BASE(END)
         userObj.setUserID(db.loadLastUserId());
