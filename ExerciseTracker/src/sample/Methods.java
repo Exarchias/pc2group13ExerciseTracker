@@ -229,6 +229,13 @@ public class Methods {
         }
         return hexString.toString();
     }
+    //transforms a string to a hash encryption. This method uses the help of bytesToHex method.
+    public static String encrypted(String digested) throws NoSuchAlgorithmException {
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] encodedhash = digest.digest(
+                digested.getBytes(StandardCharsets.UTF_8));
+        return bytesToHex(encodedhash);
+    }
 
 
 
