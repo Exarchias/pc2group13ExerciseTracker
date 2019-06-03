@@ -268,7 +268,7 @@ public class Controller3 implements Initializable {  //USER PAGE
         listView2.getItems().clear();
         listView2.getItems().add(DataHolder.supervisedUser.getUserName() + " history.");
         for (Recipe x : DataHolder.supervisedUser.recipeList){
-            listView2.getItems().add(x.getTitle());
+            listView2.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
         }
         listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }

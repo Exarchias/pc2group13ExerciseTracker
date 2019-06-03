@@ -73,8 +73,8 @@ public class Methods {
         Exercise tri5 = new Exercise("triUser5", "Exercise for the trilili of the user number 5", 1);
         Exercise tri6 = new Exercise("triUser6", "Exercise for the trilili of the user number 6", 1);
         System.out.println("exercises for the User's history are just initiated");
-        Recipe trilili = new Recipe("Trilili", "The trilili recipe", 0);
-        Recipe triliPublic = new Recipe("Trilili Public", "The public trilili recipe", 0);
+        Recipe trilili = new Recipe("Trilili", "The trilili recipe", 1);
+        Recipe triliPublic = new Recipe("Trilili Public", "The public trilili recipe", 1);
         triliPublic.setPublic(true);
         DataHolder.userList.get(1).recipeList.add(trilili);
         DataHolder.userList.get(1).recipeList.add(triliPublic);
@@ -102,11 +102,12 @@ public class Methods {
     }
     
     //this method displays the contents of an exercise:
-    public String displayTheExercise(Exercise exercise){
+    public static String displayTheExercise(Exercise exercise){
         String exContent = "";
         exContent += "Title: " + exercise.getTitle() + "\n";
         exContent += "Description: " + exercise.getDescription() + "\n";
         exContent += "Exercise ID: " + exercise.getExerciseID() + "\n";
+        exContent += "Exercise Owner: " + returnExerciseOwner(exercise) + "\n";
         return exContent;
     }
     
@@ -196,10 +197,24 @@ public class Methods {
         String recipedisplay = "";
         recipedisplay += "Title: " + recipe.getTitle() + " " + displayIfRecipeIsPublic(recipe) + "\n";
         recipedisplay += "Description: " + recipe.getDescription() + "\n";
+        recipedisplay += "Owner: " + returnRecipeOwner(recipe) + "\n";
         recipedisplay += " ========= \n";
         recipedisplay += displayContentsofTherecipe(recipe) + "\n";
         return recipedisplay;
     }
+
+    //Returns the username of the owner of the exercise
+    public static String returnExerciseOwner(Exercise exercise){
+        String owner = DataHolder.userList.get(exercise.getOwner()).getUserName();
+        return owner;
+    }
+
+    //Returns the username of the owner of the recipe
+    public static String returnRecipeOwner(Recipe recipe){
+        String owner = DataHolder.userList.get(recipe.getOwner()).getUserName();
+        return owner;
+    }
+
 
 }
 

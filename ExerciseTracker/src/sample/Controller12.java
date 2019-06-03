@@ -3,10 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
@@ -20,6 +17,12 @@ public class Controller12 implements Initializable {
     private Label lblActiveName;
     @FXML
     private Button btnGoToTheAdminPage;
+
+    @FXML
+    private TextArea exerciseTextArea;
+
+    @FXML
+    private TextArea recipeTextArea;
 
     @FXML
     private Button btnGoToTheUserPage;
@@ -43,6 +46,7 @@ public class Controller12 implements Initializable {
 
        listView2Display();
        listViewDisplay();
+        updateDisplay();
     }
 
     public void logOutButtonPressed(ActionEvent event) throws Exception{
@@ -55,10 +59,12 @@ public class Controller12 implements Initializable {
     public void someThingIsSelecteOnListView2(MouseEvent event) throws Exception{
       selectedRecipe = listView2.getSelectionModel().getSelectedIndex();
       listViewDisplay();
+        updateDisplay();
     }
 
     public void someThingIsSelecteOnListView(MouseEvent event) throws Exception{
         selectedExercise = listView.getSelectionModel().getSelectedIndex();
+        updateDisplay();
     }
 
     public void goToTheAdminPageButtonPressed(ActionEvent event)throws Exception{
@@ -123,7 +129,7 @@ public class Controller12 implements Initializable {
     public void listView2Display(){
         listView2.getItems().clear();
         for (Recipe x : DataHolder.publicRecipes){
-            listView2.getItems().add(String.valueOf(x.getTitle()));
+            listView2.getItems().add(String.valueOf(x.getTitle()) + " / " + Methods.returnRecipeOwner(x));
 
         }
         listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -132,9 +138,15 @@ public class Controller12 implements Initializable {
     public void listViewDisplay(){
         listView.getItems().clear();
         for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList){
-            listView.getItems().add(x.getTitle());
+            listView.getItems().add(x.getTitle() + " / " + Methods.returnExerciseOwner(x));
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
+
+    public void updateDisplay(){
+        exerciseTextArea.setText(Methods.displayTheExercise(DataHolder.publicRecipes.get(selectedRecipe).exerciseList.
+                get(selectedExercise)));
+        recipeTextArea.setText(Methods.displayTherecipe(DataHolder.publicRecipes.get(selectedRecipe)));
     }
 
 
