@@ -3,6 +3,7 @@ package sample;
 
 import java.awt.Graphics2D;
 import java.awt.print.PageFormat;
+import java.io.IOException;
 
 import com.qoppa.pdfWriter.PDFDocument;
 import com.qoppa.pdfWriter.PDFGraphics;
@@ -37,5 +38,26 @@ public class PDF
         }
     }
 
-}
+    public static void pdfUserList() {
+        try {
+            PDFDocument pdfDoc = new PDFDocument();
+            PDFPage newPage = pdfDoc.createPage(new PageFormat());
+            Graphics2D g2d = newPage.createGraphics();
+            g2d.setFont(PDFGraphics.HELVETICA.deriveFont(24f));
+            g2d.drawString("User List", 100, 100);
+            g2d.drawString("===========", 100, 120);
+            int count = 0;
+            for (User x : DataHolder.userList) {
+                count++;
+                g2d.drawString(count + ")" + Methods.oneUserOneLine(x), 75, 140 + (count * 30));
+            }
+            pdfDoc.addPage(newPage);
+            pdfDoc.saveDocument("UserList.pdf");
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+
+    }
+    
+    }
 //JPDFWriter ENDS
