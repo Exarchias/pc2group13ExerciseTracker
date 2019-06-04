@@ -105,14 +105,41 @@
 }
 
 .button-cancel{
- -fx-background-image: url("Assets/cancelimage.png");
+  -fx-background-color: #fffacd;
+     -fx-background-radius: 16.4, 15;
+
+        -fx-background-insets: -1.4, 0;
+
+        -fx-border-radius: 15;
+
+        -fx-border-width: 2;
+
+        -fx-border-color: dimgrey;
+
+        -fx-padding: 0;
+
+        -fx-font-size: 0;
 
 }
 .button-cleanfields{
-    -fx-background-image: url("Assets/cleanimage.png");
-    -fx-opacity: 1.0;
+ -fx-background-color: #fffacd;
+    -fx-background-radius: 16.4, 15;
+
+       -fx-background-insets: -1.4, 0;
+
+       -fx-border-radius: 15;
+
+       -fx-border-width: 2;
+
+       -fx-border-color: dimgrey;
+
+       -fx-padding: 0;
+
+       -fx-font-size: 0;
+
 }
 .button-managerecipes{
   -fx-shape: "M150 0 L75 200 L225 200 Z";
   -fx-background-color: #4DD0E1;
 }
+

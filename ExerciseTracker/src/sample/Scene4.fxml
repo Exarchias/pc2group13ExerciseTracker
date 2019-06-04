@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller4">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller4">
 
    <children>
       <Button layoutX="481.0" layoutY="119.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="68.0" styleClass="button-logout" />
@@ -28,7 +28,7 @@
             <Font size="14.0" />
          </font></Label>
       <Label layoutX="97.0" layoutY="170.0" text="Email:" />
-      <Button layoutX="239.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" prefHeight="35.0" prefWidth="40.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" />
+      <Button layoutX="239.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" prefHeight="35.0" prefWidth="40.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" text="Cancel" />
       <Label layoutX="239.0" layoutY="23.0" text="Edit User">
          <font>
             <Font name="Algerian" size="24.0" />
