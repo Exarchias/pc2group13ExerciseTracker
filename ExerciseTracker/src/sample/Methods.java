@@ -266,6 +266,15 @@ public class Methods {
         }
         return msg;
     }
+    
+     //this method returns the list of the recipes of a User, nicely organized in a list.
+    public static String displayListOfRecipes(User user){
+        String msg = "";
+        for(Recipe x : user.recipeList){
+            msg += oneRecipeOneLine(x) + " \n";
+        }
+        return msg;
+    }
 }
 
 
