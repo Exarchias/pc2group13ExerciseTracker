@@ -665,6 +665,26 @@ public class DB {
         }
     }
 
+    //sets the calories of each repetition of the exercise.
+    public void setExerciseCaloriesPerRepetition(int exerciseID, int calories) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE exercise SET caloriesPerRepetition'" + calories +"'  WHERE exerciseId='"
+                    + exerciseID +"'");
+            System.out.println("Not a failure on setting the calories per repetition of the exercise. check the Database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on setting the calories per repetition of the exercise:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
+
+
 
 
 
