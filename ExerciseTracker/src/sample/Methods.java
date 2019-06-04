@@ -257,7 +257,15 @@ public class Methods {
                 + " / " + recipe.getDescription();
         return msg;
     }
-    
+   
+    //this method returns the list of the exercises of a User, nicely organized in a list.
+    public static String displayListOfExercises(User user){
+        String msg = "";
+        for(Exercise x : user.exerciseList){
+            msg += oneExerciseOneLine(x) + " \n";
+        }
+        return msg;
+    }
 }
 
 
