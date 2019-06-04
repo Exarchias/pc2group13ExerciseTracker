@@ -614,6 +614,22 @@ public class DB {
         }
     }
 
+    //deleting the recipes of the user.
+    public void deleteAllTheRecipesOfTheUser(int userID) {
+        try {
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("DELETE FROM recipe WHERE user_userID='"+ userID +"'");
+            System.out.println("Not a failure on deleting the recipes of the user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on deleting the recipes of the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
 
 
 
