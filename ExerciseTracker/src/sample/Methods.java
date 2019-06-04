@@ -239,21 +239,22 @@ public class Methods {
 
     //This method give details for one User in one line.
     public static String oneUserOneLine(User user){
-        String msg = user.getUserName() + " " + displayIfAdmin(user) + " / " + user.getEmail() + " / ID:" + user.getUserID() 
+        String msg = user.getUserName() + " " + displayIfAdmin(user) + " / " + user.getEmail() + " / ID: " + user.getUserID()
                 + " / weight: " + user.getWeight();
         return msg;
     }
 
     //This method gives the details of one exercise in one line.
     public static String oneExerciseOneLine(Exercise exercise){
-        String msg = exercise.getTitle() + " / ID:" + exercise.getExerciseID() + " / Owner:" + returnExerciseOwner(exercise) 
+        String msg = exercise.getTitle() + " / ID: " + exercise.getExerciseID() + " / Owner: " + returnExerciseOwner(exercise)
                 + " / " + exercise.getDescription();
         return msg;
     }
 
     //this method gives the details of one Recipe in one line.
     public static String oneRecipeOneLine(Recipe recipe){
-        String msg = recipe.getTitle() + " " + displayIfRecipeIsPublic(recipe) + " / ID:" + recipe.getRecipeID() + " / Owner:" + returnRecipeOwner(recipe)
+        String msg = recipe.getTitle() + " " + displayIfRecipeIsPublic(recipe) + " / ID: " + recipe.getRecipeID()
+                + " / Owner: " + returnRecipeOwner(recipe)
                 + " / " + recipe.getDescription();
         return msg;
     }

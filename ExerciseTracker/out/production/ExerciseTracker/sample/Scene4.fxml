@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller4">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller4">
 
    <children>
-      <Button layoutX="452.0" layoutY="136.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="68.0" styleClass="button-logout" />
-      <Button fx:id="btnGoToAdminPage" layoutX="429.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" prefHeight="66.0" prefWidth="53.0" styleClass="adminbutton" />
+      <Button layoutX="481.0" layoutY="119.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="68.0" styleClass="button-logout" />
+      <Button fx:id="btnGoToAdminPage" layoutX="412.0" layoutY="116.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" prefHeight="66.0" prefWidth="53.0" styleClass="adminbutton" />
       <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#editUser" styleClass="button-crud" text="Edit User" />
       <CheckBox fx:id="isAdminCheckBox" layoutX="174.0" layoutY="209.0" mnemonicParsing="false" text="is Admin" />
       <TextField fx:id="userNameTextField" layoutX="174.0" layoutY="84.0" />
@@ -34,11 +34,11 @@
             <Font name="Algerian" size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="449.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="ActiveName:" />
+      <Label fx:id="lblActiveName" layoutX="405.0" layoutY="88.0" text="ActiveName:" />
    </children>
 </AnchorPane>

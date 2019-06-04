@@ -9,10 +9,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller5">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller5">
    <children>
-      <Button fx:id="btnLogOut" layoutX="455.0" layoutY="132.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
-      <Button fx:id="btnGoToAdminPage" layoutX="469.0" layoutY="220.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
+      <Button fx:id="btnLogOut" layoutX="526.0" layoutY="140.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
+      <Button fx:id="btnGoToAdminPage" layoutX="442.0" layoutY="136.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
       <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#createUser" prefHeight="55.0" prefWidth="66.0" styleClass="button-crud" text="Create User" />
       <Button layoutX="250.0" layoutY="258.0" mnemonicParsing="false" onAction="#cleanTheFields" prefHeight="55.0" prefWidth="53.0" styleClass="button-cleanfields" />
       <CheckBox fx:id="isAdminCheckBox" layoutX="174.0" layoutY="209.0" mnemonicParsing="false" text="is Admin" />
@@ -37,11 +37,11 @@
             <Font name="Algerian" size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="511.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="Active Name:" />
+      <Label fx:id="lblActiveName" layoutX="442.0" layoutY="102.0" text="Active Name:" />
    </children>
 </AnchorPane>

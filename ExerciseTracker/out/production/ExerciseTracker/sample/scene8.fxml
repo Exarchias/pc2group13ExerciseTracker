@@ -11,9 +11,9 @@
 
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller8">
     <children>
-        <Button fx:id="btnLogOut" layoutX="471.0" layoutY="18.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="36.0" prefWidth="70.0" styleClass="button-logout" />
-        <Button fx:id="btnGoToTheAdminPage" layoutX="478.0" layoutY="230.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
-        <Button fx:id="btnGoToTheSettingPage" layoutX="476.0" layoutY="89.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" prefHeight="57.0" prefWidth="58.0" styleClass="button-settingspage" />
+        <Button fx:id="btnLogOut" layoutX="554.0" layoutY="101.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="36.0" prefWidth="70.0" styleClass="button-logout" />
+        <Button fx:id="btnGoToTheAdminPage" layoutX="483.0" layoutY="242.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
+        <Button fx:id="btnGoToTheSettingPage" layoutX="481.0" layoutY="101.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" prefHeight="57.0" prefWidth="58.0" styleClass="button-settingspage" />
         <Button layoutX="43.0" layoutY="329.0" mnemonicParsing="false" onAction="#addRecipe" styleClass="button-crud" text="Add Recipe" />
         <Button layoutX="131.0" layoutY="329.0" mnemonicParsing="false" onAction="#deleteRecipe" styleClass="button-crud" text="Delete Recipe" />
         <Button layoutX="243.0" layoutY="329.0" mnemonicParsing="false" onAction="#editRecipe" styleClass="button-crud" text="Edit Recipe" />
@@ -23,15 +23,15 @@
                 <Font name="Algerian" size="24.0" />
             </font>
         </Label>
-        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="539.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
             </image>
         </ImageView>
-        <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="Active Name:" />
+        <Label fx:id="lblActiveName" layoutX="484.0" layoutY="64.0" text="Active Name:" />
       <ListView fx:id="listView" layoutX="36.0" layoutY="89.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="478.0" layoutY="162.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPagePressed" prefHeight="54.0" prefWidth="54.0" styleClass="userbutton" />
+      <Button layoutX="483.0" layoutY="174.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPagePressed" prefHeight="54.0" prefWidth="54.0" styleClass="userbutton" />
       <Button fx:id="publishBtn" layoutX="344.0" layoutY="306.0" mnemonicParsing="false" onAction="#publishRecipe" prefHeight="89.0" prefWidth="91.0" styleClass="button-publishrecipes" text="publish/unpublish" textFill="#1b0101" />
-      <Button layoutX="479.0" layoutY="311.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" prefHeight="57.0" prefWidth="54.0" styleClass="button-browserecipes" />
+      <Button layoutX="484.0" layoutY="323.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" prefHeight="57.0" prefWidth="54.0" styleClass="button-browserecipes" />
     </children>
 </AnchorPane>

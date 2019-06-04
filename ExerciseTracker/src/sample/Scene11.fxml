@@ -13,7 +13,7 @@
 <AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller11">
 
     <children>
-        <Button fx:id="btnLogOut" layoutX="382.0" layoutY="63.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
+        <Button fx:id="btnLogOut" layoutX="458.0" layoutY="123.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
         <Button fx:id="btnGoToAdminPage" layoutX="382.0" layoutY="194.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
         <Button layoutX="46.0" layoutY="281.0" mnemonicParsing="false" onAction="#editExercise" styleClass="button-crud" text="Edit Exercise" />
         <Button layoutX="128.0" layoutY="274.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" />
@@ -35,13 +35,13 @@
         <Button layoutX="294.0" layoutY="281.0" mnemonicParsing="false" onAction="#manageRecipes" styleClass="button-crud" text="Manage Recipes" />
         <Button layoutX="383.0" layoutY="124.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="54.0" prefWidth="54.0" styleClass="userbutton" />
         <Button layoutX="184.0" layoutY="281.0" mnemonicParsing="false" onAction="#addaNewRecipe" styleClass="button-crud" text="Add a new Recipe" />
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1300.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="443.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
          </image>
       </ImageView>
 
-      <Label fx:id="lblActiveName" layoutX="1100.0" layoutY="50.0" text="ActiveName:" />
+      <Label fx:id="lblActiveName" layoutX="383.0" layoutY="93.0" text="ActiveName:" />
 
 
       <ListView fx:id="listView" layoutX="219.0" layoutY="67.0" onMouseClicked="#somethingIsSelectedOnListViewRight" prefHeight="193.0" prefWidth="149.0" />

@@ -184,7 +184,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     public void listViewDisplay(){
         listView.getItems().clear();
         for (Recipe x : DataHolder.supervisedUser.recipeList){
-            listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
+            //listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
+            listView.getItems().add(Methods.oneRecipeOneLine(x));
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }

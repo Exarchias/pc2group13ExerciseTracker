@@ -199,7 +199,8 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
         listView.getItems().clear();
         listView.getItems().add(DataHolder.supervisedUser.getUserName() + " history.");
         for (Recipe x : DataHolder.supervisedUser.recipeList){
-            listView.getItems().add(x.getTitle());
+            //listView.getItems().add(x.getTitle());
+            listView.getItems().add(Methods.oneRecipeOneLine(x));
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
