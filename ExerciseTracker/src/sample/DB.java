@@ -596,6 +596,23 @@ public class DB {
             DataHolder.isConnected = false;
         }
     }
+    //removing exercise
+    public void deleteAllTheExercisesOfTheUser(int userID) {
+        try {
+            int isAdmin;
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("DELETE FROM exercise WHERE user_userID='"+ userID +"'");
+            System.out.println("Not a failure on deleting the exercises of the user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on deleting the exercises of the user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
 
 
 
