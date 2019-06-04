@@ -58,6 +58,35 @@ public class PDF
         }
 
     }
-    
+
+    public static void pdfExerciselist(User user) {
+        try {
+            // Create a document and a page in default Locale format
+            PDFDocument pdfDoc = new PDFDocument();
+            PDFPage newPage = pdfDoc.createPage(new PageFormat());
+
+            // Draw to the page
+            Graphics2D g2d = newPage.createGraphics();
+            g2d.setFont(PDFGraphics.HELVETICA.deriveFont(24f));
+            g2d.drawString("User's Exercises", 100, 100);
+            g2d.drawString("================", 100, 120);
+            int count = 0;
+            for (Exercise x : user.exerciseList) {
+                count++;
+                g2d.drawString(count + ")" + Methods.oneExerciseOneLine(x), 75, 140 + (count * 30));
+            }
+            pdfDoc.addPage(newPage);
+            pdfDoc.saveDocument("ExercisesList.pdf");
+        }
+        catch (Throwable t)
+        {
+            t.printStackTrace();
+        }
     }
+
+    
+
+
+
+}
 //JPDFWriter ENDS
