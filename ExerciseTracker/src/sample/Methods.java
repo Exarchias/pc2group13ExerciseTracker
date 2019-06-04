@@ -244,6 +244,12 @@ public class Methods {
         return msg;
     }
 
+    //This method gives the details of one exercise in one line.
+    public static String oneExerciseOneLine(Exercise exercise){
+        String msg = exercise.getTitle() + " / ID:" + exercise.getExerciseID() + " / Owner:" + returnExerciseOwner(exercise) 
+                + " / " + exercise.getDescription();
+        return msg;
+    }
 }
 
 
