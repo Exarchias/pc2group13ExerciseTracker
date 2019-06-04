@@ -630,6 +630,22 @@ public class DB {
         }
     }
 
+    //changes the weight of a user
+    public void weightOfTheUser(int userID, int weight) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE user SET weight='" + weight +"'  WHERE userID='"+ userID +"'");
+            System.out.println("Not a failure on assigning the recipe to a user. check the database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on assigning the recipe to a user:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
 
 
 
