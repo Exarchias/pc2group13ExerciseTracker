@@ -237,8 +237,12 @@ public class Methods {
         return bytesToHex(encodedhash);
     }
 
-
-
+    //This method give details for one User in one line.
+    public static String oneUserOneLine(User user){
+        String msg = user.getUserName() + " " + displayIfAdmin(user) + " / " + user.getEmail() + " / ID:" + user.getUserID() 
+                + " / weight: " + user.getWeight();
+        return msg;
+    }
 
 }
 
