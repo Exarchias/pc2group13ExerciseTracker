@@ -250,6 +250,14 @@ public class Methods {
                 + " / " + exercise.getDescription();
         return msg;
     }
+
+    //this method gives the details of one Recipe in one line.
+    public static String oneRecipeOneLine(Recipe recipe){
+        String msg = recipe.getTitle() + " " + displayIfRecipeIsPublic(recipe) + " / ID:" + recipe.getRecipeID() + " / Owner:" + returnRecipeOwner(recipe)
+                + " / " + recipe.getDescription();
+        return msg;
+    }
+    
 }
 
 
