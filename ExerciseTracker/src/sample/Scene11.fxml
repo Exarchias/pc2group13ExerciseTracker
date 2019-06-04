@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller11">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller11">
 
     <children>
         <Button fx:id="btnLogOut" layoutX="458.0" layoutY="123.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
         <Button fx:id="btnGoToAdminPage" layoutX="382.0" layoutY="194.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
         <Button layoutX="46.0" layoutY="281.0" mnemonicParsing="false" onAction="#editExercise" styleClass="button-crud" text="Edit Exercise" />
-        <Button layoutX="128.0" layoutY="274.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" />
+        <Button layoutX="128.0" layoutY="274.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" text="Cancel" />
         <TextField fx:id="titleTextField" layoutX="61.0" layoutY="68.0" />
         <TextArea fx:id="descriptionTextArea" layoutX="61.0" layoutY="126.0" prefHeight="135.0" prefWidth="149.0" />
         <TextArea fx:id="recipesTextArea" layoutX="56.0" layoutY="324.0" prefHeight="135.0" prefWidth="394.0" />

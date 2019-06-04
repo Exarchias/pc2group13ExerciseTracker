@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
    <children>
       <Button fx:id="btnLogOut" layoutX="516.0" layoutY="126.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="72.0" styleClass="button-logout" />
       <Button fx:id="btnGoToAdminPage" layoutX="439.0" layoutY="194.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
       <Button layoutX="55.0" layoutY="316.0" mnemonicParsing="false" onAction="#addExercise" prefWidth="72.0" styleClass="button-crud" text="Add Exercise" />
-      <Button layoutX="190.0" layoutY="300.0" mnemonicParsing="false" onAction="#cleanFields" prefHeight="55.0" prefWidth="56.0" styleClass="button-cleanfields" />
-      <Button layoutX="136.0" layoutY="310.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="40.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" />
+      <Button layoutX="190.0" layoutY="300.0" mnemonicParsing="false" onAction="#cleanFields" prefHeight="55.0" prefWidth="56.0" styleClass="button-cleanfields" text="Clear" />
+      <Button layoutX="136.0" layoutY="310.0" mnemonicParsing="false" onAction="#goToUserPage" prefHeight="35.0" prefWidth="40.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" text="Cancel" />
       <TextField fx:id="titleTextField" layoutX="61.0" layoutY="68.0" />
       <TextArea fx:id="descriptionTextArea" layoutX="61.0" layoutY="126.0" prefHeight="135.0" prefWidth="149.0" />
       <TextArea fx:id="recipesTextArea" layoutX="55.0" layoutY="375.0" prefHeight="135.0" prefWidth="364.0" />
