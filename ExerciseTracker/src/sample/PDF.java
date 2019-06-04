@@ -84,9 +84,29 @@ public class PDF
         }
     }
 
-    
+    public static void pdfRecipelist(User user) {
+        try {
+            PDFDocument pdfDoc = new PDFDocument();
+            PDFPage newPage = pdfDoc.createPage(new PageFormat());
 
+            Graphics2D g2d = newPage.createGraphics();
+            g2d.setFont(PDFGraphics.HELVETICA.deriveFont(24f));
+            g2d.drawString("User's Recipes", 100, 100);
+            g2d.drawString("================", 100, 120);
+            int count = 0;
+            for (Recipe x : user.recipeList) {
+                count++;
+                g2d.drawString(count + ")" + Methods.oneRecipeOneLine(x), 75, 140 + (count * 30));
+            }
 
+            pdfDoc.addPage(newPage);
+            pdfDoc.saveDocument("RecipesList.pdf");
+
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+
+    }
 
 }
 //JPDFWriter ENDS
