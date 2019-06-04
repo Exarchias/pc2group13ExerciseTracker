@@ -647,6 +647,24 @@ public class DB {
         }
     }
 
+    //sets the repetitions of an exercise.
+    public void setExerciseRepetitions(int exerciseID, int repetitions) {
+        try {
+
+            statement.executeUpdate("USE xtracker");
+            statement.executeUpdate("UPDATE exercise SET repetitionsUnit'" + repetitions +"'  WHERE exerciseId='"
+                    + exerciseID +"'");
+            System.out.println("Not a failure on setting the repetitions of the exercise. check the Database");
+
+            DataHolder.isConnected = true;
+        }
+        catch (SQLException ex)
+        {
+            System.out.println("error on setting the repetitions of the exercise:" + ex);
+            DataHolder.isConnected = false;
+        }
+    }
+
 
 
 
