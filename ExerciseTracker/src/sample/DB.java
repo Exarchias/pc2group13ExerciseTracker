@@ -622,6 +622,24 @@ public class DB {
         }
     }
 
+    //removing exercise
+    public void deleteAllTheExercisesOfTheRecipe(int recipeID) {
+        if(DataHolder.dbActivated) {
+            try {
+                int isAdmin;
+
+                statement.executeUpdate("USE xtracker");
+                statement.executeUpdate("DELETE FROM exercise WHERE recipe_recipeId='" + recipeID + "'");
+                System.out.println("Not a failure on deleting the exercises of the user. check the database");
+
+                DataHolder.isConnected = true;
+            } catch (SQLException ex) {
+                System.out.println("error on deleting the exercises of the user:" + ex);
+                DataHolder.isConnected = false;
+            }
+        }
+    }
+
     //deleting the recipes of the user.
     public void deleteAllTheRecipesOfTheUser(int userID) {
         if(DataHolder.dbActivated) {

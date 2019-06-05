@@ -128,6 +128,8 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         int theIDtoDelete = DataHolder.userList.get(selectedUser).getUserID();
         //TESTING DELETING A USER ON THE DATA BASE(START)
         DB db = new DB();
+        db.deleteAllTheExercisesOfTheUser(theIDtoDelete);
+        db.deleteAllTheRecipesOfTheUser(theIDtoDelete);
         db.deleteOneUser(theIDtoDelete);
         //TESTING DELETING A USER ON THE DATA BASE(END)
         DataHolder.userList.remove(selectedUser);
