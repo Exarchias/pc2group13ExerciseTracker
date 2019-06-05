@@ -98,26 +98,29 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
     @FXML
     public void deleteRecipe(ActionEvent event){
-        //selectedRecipe = Integer.parseInt(recipeSelector.getText());
-        System.out.println("Deleting the exercise " +
-                DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
-        //TESTING DELETING A RECIPE ON THE DATA BASE(START)
-        DB db = new DB();
-        db.deleteOneRecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
-        //TESTING DELETING A RECIPE ON THE DATA BASE(END)
-        DataHolder.supervisedUser.recipeList.remove(selectedRecipe);
-        updateDisplay();
-
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            //selectedRecipe = Integer.parseInt(recipeSelector.getText());
+            System.out.println("Deleting the exercise " +
+                    DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
+            //TESTING DELETING A RECIPE ON THE DATA BASE(START)
+            DB db = new DB();
+            db.deleteOneRecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
+            //TESTING DELETING A RECIPE ON THE DATA BASE(END)
+            DataHolder.supervisedUser.recipeList.remove(selectedRecipe);
+            updateDisplay();
+        }
     }
 
     @FXML
     public void editRecipe(ActionEvent event) throws Exception{
-        //selectedRecipe = Integer.parseInt(recipeSelector.getText());
-        System.out.println("editing the exercise" +
-                DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
-        DataHolder.supervisedRecipe = DataHolder.supervisedUser.recipeList.get(selectedRecipe);
-        DataHolder.setSupervisedExercisePostion(selectedRecipe);
-        Main.getInstance().setScene(Main.Scene9);
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            //selectedRecipe = Integer.parseInt(recipeSelector.getText());
+            System.out.println("editing the exercise" +
+                    DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle() + " from the list");
+            DataHolder.supervisedRecipe = DataHolder.supervisedUser.recipeList.get(selectedRecipe);
+            DataHolder.setSupervisedExercisePostion(selectedRecipe);
+            Main.getInstance().setScene(Main.Scene9);
+        }
     }
     public void somethingIsSelectedOnListView(MouseEvent event){
         selectedRecipe = listView.getSelectionModel().getSelectedIndex();
@@ -127,52 +130,66 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
     //displays the information about the selected Recipe
     public void recipeDisplay() {
-        recipeDisplay = Methods.displayTherecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
-        recipesTextArea.setText(recipeDisplay);
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            recipeDisplay = Methods.displayTherecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
+            recipesTextArea.setText(recipeDisplay);
+        } else {
+            recipeDisplay = "";
+            recipesTextArea.setText(recipeDisplay);
+        }
     }
 
     public void listViewRecipeDisplay(){
      listView.getItems().clear();
-     for (Recipe x : DataHolder.supervisedUser.recipeList){
-         listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
-     }
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            for (Recipe x : DataHolder.supervisedUser.recipeList) {
+                listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
+            }
+        } else {
+            listView.getItems().add("");
+        }
      listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
     public void updateDisplay(){
-        if(DataHolder.supervisedUser.recipeList.get(selectedRecipe).isPublic()){
-            publishBtn.setText("Unpublish Recipe");
-        } else {
-            publishBtn.setText("Publish Recipe");
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            if (DataHolder.supervisedUser.recipeList.get(selectedRecipe).isPublic()) {
+                publishBtn.setText("Unpublish Recipe");
+            } else {
+                publishBtn.setText("Publish Recipe");
+            }
+            recipeDisplay();
+            listViewRecipeDisplay();
+            for (Recipe x : DataHolder.publicRecipes) {
+                System.out.println(x.getTitle());
+            }
+            System.out.println("End of the updatedisplay statements");
         }
-        recipeDisplay();
-        listViewRecipeDisplay();
-        for(Recipe x : DataHolder.publicRecipes){
-            System.out.println(x.getTitle());
-        }
-        System.out.println("End of the updatedisplay statements");
     }
 
     @FXML
     public void publishRecipe(ActionEvent event) throws Exception{
-        if(DataHolder.supervisedUser.recipeList.get(selectedRecipe).isPublic()){
-            DataHolder.supervisedUser.recipeList.get(selectedRecipe).setPublic(false);
-            //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (START)
-            DB db = new DB();
-            db.recipeIsPublic(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID(), false);
-            //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (END)
-            DataHolder.unpublishRecipes();
-            publishBtn.setText("Publish Recipe");
-        } else {
-            DataHolder.supervisedUser.recipeList.get(selectedRecipe).setPublic(true);
-            DataHolder.publicRecipes.add(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
-            //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (START)
-            DB db = new DB();
-            db.recipeIsPublic(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID(), true);
-            //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (END)
-            publishBtn.setText("Unublish Recipe");
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            if (DataHolder.supervisedUser.recipeList.get(selectedRecipe).isPublic()) {
+                DataHolder.supervisedUser.recipeList.get(selectedRecipe).setPublic(false);
+                //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (START)
+                DB db = new DB();
+                db.recipeIsPublic(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID(), false);
+                //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (END)
+                DataHolder.unpublishRecipes();
+                publishBtn.setText("Publish Recipe");
+            } else {
+                DataHolder.supervisedUser.recipeList.get(selectedRecipe).setPublic(true);
+                DataHolder.publicRecipes.add(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
+                //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (START)
+                DB db = new DB();
+                db.recipeIsPublic(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID(), true);
+                //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (END)
+                publishBtn.setText("Unublish Recipe");
+            }
         }
     }
+
     @FXML
     public void browseRecipesButtonPressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene12);
