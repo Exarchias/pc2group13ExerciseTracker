@@ -202,7 +202,7 @@ public class Methods {
         String recipedisplay = "";
         recipedisplay += "Title: " + recipe.getTitle() + " " + displayIfRecipeIsPublic(recipe) + "\n";
         recipedisplay += "Description: " + recipe.getDescription() + "\n";
-        recipedisplay += "Owner: " + returnRecipeOwner(recipe) + "\n";
+        //recipedisplay += "Owner: " + returnRecipeOwner(recipe) + "\n";
         recipedisplay += " ========= \n";
         recipedisplay += displayContentsofTherecipe(recipe) + "\n";
         return recipedisplay;

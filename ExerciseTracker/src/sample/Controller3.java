@@ -227,25 +227,27 @@ public class Controller3 implements Initializable {  //USER PAGE
 
     public void updateDisplay(){
         exerciseDisplay = "";
-        if(selectedRecipe <= 0){
-            if(DataHolder.supervisedUser.exerciseList.isEmpty()){
-                exerciseDisplay += "No exercises detected. \n";
+        //if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            if (selectedRecipe <= 0) {
+                if (DataHolder.supervisedUser.exerciseList.isEmpty()) {
+                    exerciseDisplay += "No exercises detected. \n";
+                } else {
+                    exerciseDisplay += DataHolder.supervisedUser.exerciseList.get(selectedExercise).getTitle() + "\n";
+                    exerciseDisplay += DataHolder.supervisedUser.exerciseList.get(selectedExercise).getDescription() + "\n";
+                }
             } else {
-                exerciseDisplay += DataHolder.supervisedUser.exerciseList.get(selectedExercise).getTitle() + "\n";
-                exerciseDisplay += DataHolder.supervisedUser.exerciseList.get(selectedExercise).getDescription() + "\n";
+                if (DataHolder.supervisedUser.recipeList.get(selectedRecipe - 1).exerciseList.isEmpty()) {
+                    exerciseDisplay += "No exercises detected. \n";
+                } else {
+                    exerciseDisplay += DataHolder.supervisedUser.recipeList.get(selectedRecipe - 1).exerciseList.
+                            get(selectedExercise).getTitle() + "\n";
+                    exerciseDisplay += DataHolder.supervisedUser.recipeList.get(selectedRecipe - 1).exerciseList.
+                            get(selectedExercise).getDescription() + "\n";
+                }
             }
-        } else {
-            if(DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.isEmpty()){
-                exerciseDisplay += "No exercises detected. \n";
-            } else {
-                exerciseDisplay += DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.
-                        get(selectedExercise).getTitle() + "\n";
-                exerciseDisplay += DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.
-                        get(selectedExercise).getDescription() + "\n";
-            }
-        }
 
-        exerciseDisplay += "You can add this exercise to your history by clicking use selected exercise.\n";
+            exerciseDisplay += "You can add this exercise to your history by clicking use selected exercise.\n";
+        //}
         exerciseListTextArea.setText(exerciseDisplay);
 
     }
@@ -255,12 +257,22 @@ public class Controller3 implements Initializable {  //USER PAGE
         if(selectedRecipe <= 0) {
             for (Exercise x : DataHolder.supervisedUser.exerciseList) {
                 //listView.getItems().add(x.getTitle());
-                listView.getItems().add(Methods.oneExerciseOneLine(x));
+                if(!DataHolder.supervisedUser.exerciseList.isEmpty()) {
+                    listView.getItems().add(x.getTitle());
+                } else {
+                    listView.getItems().add("");
+                }
             }
         } else {
-            for (Exercise x : DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList) {
-                //listView.getItems().add(x.getTitle());
-                listView.getItems().add(Methods.oneExerciseOneLine(x));
+            if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+                for (Exercise x : DataHolder.supervisedUser.recipeList.get(selectedRecipe - 1).exerciseList) {
+                    if (!DataHolder.supervisedUser.recipeList.isEmpty()) {
+                        listView.getItems().add(x.getTitle());
+                        //listView.getItems().add(Methods.oneExerciseOneLine(x));
+                    } else {
+                        listView.getItems().add("");
+                    }
+                }
             }
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -269,9 +281,11 @@ public class Controller3 implements Initializable {  //USER PAGE
     public void listViewDisplay2(){
         listView2.getItems().clear();
         listView2.getItems().add(DataHolder.supervisedUser.getUserName() + " history.");
-        for (Recipe x : DataHolder.supervisedUser.recipeList){
-            //listView2.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
-            listView2.getItems().add(Methods.oneRecipeOneLine(x));
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            for (Recipe x : DataHolder.supervisedUser.recipeList) {
+                listView2.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
+                //listView2.getItems().add(Methods.oneRecipeOneLine(x));
+            }
         }
         listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }

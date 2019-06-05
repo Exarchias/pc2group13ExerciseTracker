@@ -167,8 +167,8 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         public void listViewDisplay(){
         listView.getItems().clear();
         for (User x : DataHolder.userList){
-           //listView.getItems().add(x.getUserName() + " " + Methods.displayIfAdmin(x));
-            listView.getItems().add(Methods.oneUserOneLine(x));
+           listView.getItems().add(x.getUserName() + " " + Methods.displayIfAdmin(x));
+            //listView.getItems().add(Methods.oneUserOneLine(x));
         }
 
       listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);

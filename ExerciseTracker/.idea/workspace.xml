@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43751d38-f9c0-4ac8-b1dd-b71dd0921ff9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/sample/Controller2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Methods.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Methods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="218" column="65" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="65" />
+            <state relative-caret-position="119">
+              <caret line="204" column="10" selection-start-line="204" selection-start-column="10" selection-end-line="204" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -51,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller6.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1705">
-              <caret line="168" column="49" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="61" />
+            <state relative-caret-position="617">
+              <caret line="197" column="13" lean-forward="true" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -63,17 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3408">
-              <caret line="254" column="33" lean-forward="true" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="33" />
+            <state relative-caret-position="580">
+              <caret line="286" column="18" selection-start-line="286" selection-start-column="18" selection-end-line="286" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="131" column="55" lean-forward="true" selection-start-line="131" selection-start-column="55" selection-end-line="131" selection-end-column="55" />
+            <state relative-caret-position="308">
+              <caret line="170" column="14" selection-start-line="170" selection-start-column="14" selection-end-line="170" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -131,17 +132,17 @@
         <option value="$PROJECT_DIR$/src/sample/scene10.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Scene11.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Scene12.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controller3.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller11.java" />
-        <option value="$PROJECT_DIR$/src/sample/Methods.java" />
         <option value="$PROJECT_DIR$/src/sample/ApplicationView.css" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller12.java" />
         <option value="$PROJECT_DIR$/src/sample/DataHolder.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller6.java" />
         <option value="$PROJECT_DIR$/src/sample/DB.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller8.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller6.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller2.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller3.java" />
+        <option value="$PROJECT_DIR$/src/sample/Methods.java" />
       </list>
     </option>
   </component>
@@ -185,7 +186,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559700864300" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559706326398" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jarFiles/jPDFWriter.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -250,16 +251,15 @@
       <workItem from="1559601939379" duration="201000" />
       <workItem from="1559602231609" duration="147000" />
       <workItem from="1559681491879" duration="3281000" />
-      <workItem from="1559691665698" duration="8920000" />
+      <workItem from="1559691665698" duration="14238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26003000" />
+    <option name="totallyTimeSpent" value="31321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.290469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -401,13 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="218" column="65" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -443,24 +436,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller6.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1705">
-          <caret line="168" column="49" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="61" />
+        <state relative-caret-position="308">
+          <caret line="170" column="14" selection-start-line="170" selection-start-column="14" selection-end-line="170" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3408">
-          <caret line="254" column="33" lean-forward="true" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="33" />
+        <state relative-caret-position="580">
+          <caret line="286" column="18" selection-start-line="286" selection-start-column="18" selection-end-line="286" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller2.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Methods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="131" column="55" lean-forward="true" selection-start-line="131" selection-start-column="55" selection-end-line="131" selection-end-column="55" />
+        <state relative-caret-position="119">
+          <caret line="204" column="10" selection-start-line="204" selection-start-column="10" selection-end-line="204" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="197" column="13" lean-forward="true" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
         </state>
       </provider>
     </entry>

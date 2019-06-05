@@ -193,8 +193,8 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         listView.getItems().clear();
         if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
             for (Recipe x : DataHolder.supervisedUser.recipeList) {
-                //listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
-                listView.getItems().add(Methods.oneRecipeOneLine(x));
+                listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
+                //listView.getItems().add(Methods.oneRecipeOneLine(x));
             }
         } else {
             listView.getItems().add("");
