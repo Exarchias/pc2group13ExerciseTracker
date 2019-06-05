@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43751d38-f9c0-4ac8-b1dd-b71dd0921ff9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/sample/ApplicationView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ApplicationView.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Scene4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Scene4.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Scene5.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Scene5.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Scene6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Scene6.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Controller12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/DataHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/DataHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene11.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene11.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene12.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene12.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene5.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene5.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene6.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene6.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene7.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene7.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene9.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/Scene9.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/scene10.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExerciseTracker/sample/scene10.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DataHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DataHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,37 +27,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1474892305">
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="9" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+            <state relative-caret-position="223">
+              <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="65" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller12.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="131" column="67" lean-forward="true" selection-start-line="131" selection-start-column="67" selection-end-line="131" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -52,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/DB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="692" selection-start-line="692" selection-end-line="692" />
+            <state relative-caret-position="457">
+              <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -61,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Methods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            <state relative-caret-position="306">
+              <caret line="218" column="65" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -70,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/DataHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-489">
-              <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+            <state relative-caret-position="544">
+              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -79,17 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/PDF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
+            <state relative-caret-position="420">
               <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/ApplicationView.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="107" column="28" lean-forward="true" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -117,8 +106,6 @@
         <option value="$PROJECT_DIR$/src/sample/Controller5.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller7.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller4.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/DB.java" />
         <option value="$PROJECT_DIR$/src/sample/PDF.java" />
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Scene3.fxml" />
@@ -136,14 +123,16 @@
         <option value="$PROJECT_DIR$/src/sample/Controller2.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller6.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller11.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller12.java" />
         <option value="$PROJECT_DIR$/src/sample/Methods.java" />
-        <option value="$PROJECT_DIR$/src/sample/DataHolder.java" />
         <option value="$PROJECT_DIR$/src/sample/ApplicationView.css" />
+        <option value="$PROJECT_DIR$/src/sample/DB.java" />
+        <option value="$PROJECT_DIR$/src/sample/DataHolder.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller12.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="35" />
     <option name="y" value="-9" />
     <option name="width" value="1382" />
@@ -248,16 +237,18 @@
       <workItem from="1559601939379" duration="201000" />
       <workItem from="1559602231609" duration="147000" />
       <workItem from="1559681491879" duration="3281000" />
+      <workItem from="1559691665698" duration="2471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17083000" />
+    <option name="totallyTimeSpent" value="19554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28623718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.290469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -266,7 +257,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.178515" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.27168575" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -317,20 +308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="692" selection-start-line="692" selection-end-line="692" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -353,13 +330,6 @@
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PDF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Scene4.fxml">
       <provider editor-type-id="text-editor" />
@@ -411,13 +381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller6.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -432,31 +395,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller12.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="138" column="34" lean-forward="true" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/DataHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-489">
-          <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+        <state relative-caret-position="1241">
+          <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ApplicationView.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
-          <caret line="107" column="28" lean-forward="true" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+          <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/PDF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DataHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Methods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="218" column="65" selection-start-line="218" selection-start-column="65" selection-end-line="218" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="65" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller12.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="131" column="67" lean-forward="true" selection-start-line="131" selection-start-column="67" selection-end-line="131" selection-end-column="67" />
         </state>
       </provider>
     </entry>

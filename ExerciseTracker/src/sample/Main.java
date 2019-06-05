@@ -61,6 +61,9 @@ public class Main extends Application {
             db.loadRecipes();
             db.loadExercises();
             System.out.println("The last users ID should be " + db.loadLastUserId());
+//            for (Recipe x : DataHolder.publicRecipes){
+//                System.out.println(x.getTitle() + " " + Methods.returnRecipeOwner(x));
+//            }
             //JDBC ends
         }
 

@@ -129,8 +129,8 @@ public class Controller12 implements Initializable {
     public void listView2Display(){
         listView2.getItems().clear();
         for (Recipe x : DataHolder.publicRecipes){
-            //listView2.getItems().add(String.valueOf(x.getTitle()) + " / " + Methods.returnRecipeOwner(x));
-            listView2.getItems().add(Methods.oneRecipeOneLine(x));
+            listView2.getItems().add(String.valueOf(x.getTitle()));
+            //listView2.getItems().add(Methods.oneRecipeOneLine(x));
 
         }
         listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -139,8 +139,8 @@ public class Controller12 implements Initializable {
     public void listViewDisplay(){
         listView.getItems().clear();
         for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList){
-            //listView.getItems().add(x.getTitle() + " / " + Methods.returnExerciseOwner(x));
-            listView.getItems().add(Methods.oneExerciseOneLine(x));
+            listView.getItems().add(x.getTitle() + " / " + Methods.returnExerciseOwner(x));
+            //listView.getItems().add(Methods.oneExerciseOneLine(x));
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }

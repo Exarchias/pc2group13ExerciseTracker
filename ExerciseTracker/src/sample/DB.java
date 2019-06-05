@@ -96,7 +96,7 @@ public class DB {
                         System.out.println(recipe1.getTitle() + " added to the user: " + x.getUserName());
                     }
                 }
-                if(isPublic){
+                if(recipe1.isPublic()){
                     DataHolder.publicRecipes.add(recipe1);
                     System.out.println(recipe1.getTitle() + " is public.");
                 }
