@@ -16,7 +16,7 @@ public class DataHolder {
     public static int supervisedRecipePostion;
     public static int testCount = 0;
     public static boolean isConnected = false;
-    public static boolean dbActivated = false; //CONFIGORATIONS FOR THE DB.
+    public static boolean dbActivated = true; //CONFIGORATIONS FOR THE DB.
 
     public static boolean isAdmin() {
         return admin;

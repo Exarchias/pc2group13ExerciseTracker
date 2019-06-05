@@ -166,26 +166,38 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     }
 
     public void updateDisplay() {
-        recipeDisplay = Methods.displayTherecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
-        recipesTextArea.setText(recipeDisplay);
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            recipeDisplay = Methods.displayTherecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
+            recipesTextArea.setText(recipeDisplay);
+        }
+        else {
+            recipeDisplay = "";
+            recipesTextArea.setText(recipeDisplay);
+        }
     }
 
     public void recipeDisplay() {
-        int count = 0;
-        String inRecipeDisplay = "";
-        System.out.println(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle());
-        for (Exercise x : DataHolder.supervisedUser.recipeList.get(selectedRecipe).exerciseList) {
-            inRecipeDisplay += count + ") " + x.getTitle() + "\n";
-            count++;
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            int count = 0;
+            String inRecipeDisplay = "";
+            System.out.println(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle());
+            for (Exercise x : DataHolder.supervisedUser.recipeList.get(selectedRecipe).exerciseList) {
+                inRecipeDisplay += count + ") " + x.getTitle() + "\n";
+                count++;
+            }
+            System.out.println(inRecipeDisplay);
         }
-        System.out.println(inRecipeDisplay);
     }
 
     public void listViewDisplay(){
         listView.getItems().clear();
-        for (Recipe x : DataHolder.supervisedUser.recipeList){
-            //listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
-            listView.getItems().add(Methods.oneRecipeOneLine(x));
+        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+            for (Recipe x : DataHolder.supervisedUser.recipeList) {
+                //listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
+                listView.getItems().add(Methods.oneRecipeOneLine(x));
+            }
+        } else {
+            listView.getItems().add("");
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
