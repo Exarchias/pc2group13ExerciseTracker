@@ -301,4 +301,9 @@ public class Controller3 implements Initializable {  //USER PAGE
         Main.getInstance().setScene(Main.Scene8);
 
     }
+
+    @FXML
+    public void getPdf(ActionEvent event) throws Exception{
+        PDF.pdfExerciselist(DataHolder.supervisedUser);
+    }
 }
