@@ -16,7 +16,7 @@ public class DataHolder {
     public static int supervisedRecipePostion;
     public static int testCount = 0;
     public static boolean isConnected = false;
-    public static boolean dbActivated = true; //CONFIGORATIONS FOR THE DB.
+    public static boolean dbActivated = false; //CONFIGORATIONS FOR THE DB.
 
     public static boolean isAdmin() {
         return admin;
@@ -100,9 +100,11 @@ public class DataHolder {
 
     //removes the unpublished recipes from the publicRecipes list
     public static void unpublishRecipes(){
-        for (Recipe x : publicRecipes){
-            if(!x.isPublic()){
-                publicRecipes.remove(publicRecipes.indexOf(x));
+        if(!publicRecipes.isEmpty()) {
+            for (Recipe x : publicRecipes) {
+                if (!x.isPublic()) {
+                    publicRecipes.remove(publicRecipes.indexOf(x));
+                }
             }
         }
     }

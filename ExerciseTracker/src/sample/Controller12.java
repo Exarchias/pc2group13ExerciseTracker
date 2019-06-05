@@ -43,6 +43,9 @@ public class Controller12 implements Initializable {
             btnGoToTheAdminPage.setVisible(true);
         else btnGoToTheAdminPage.setVisible(false);
 
+//        if(DataHolder.publicRecipes.isEmpty()){
+//            //
+//        }
 
        listView2Display();
        listViewDisplay();
@@ -118,9 +121,11 @@ public class Controller12 implements Initializable {
         }
         DataHolder.supervisedUser.recipeList.add(recip2);
     }
+
     public void cancelButtonPressed(ActionEvent event)throws Exception{
         Main.getInstance().setScene(Main.Scene3);
     }
+
     public void manageRecipesButtonPressed(ActionEvent event) throws Exception{
         Main.getInstance().setScene(Main.Scene8);
 
@@ -128,27 +133,42 @@ public class Controller12 implements Initializable {
 
     public void listView2Display(){
         listView2.getItems().clear();
-        for (Recipe x : DataHolder.publicRecipes){
-            listView2.getItems().add(String.valueOf(x.getTitle()));
-            //listView2.getItems().add(Methods.oneRecipeOneLine(x));
-
+        if(DataHolder.publicRecipes.isEmpty()){
+            listView2.getItems().add("");
+        } else {
+            for (Recipe x : DataHolder.publicRecipes){
+                listView2.getItems().add(String.valueOf(x.getTitle()));
+                //listView2.getItems().add(Methods.oneRecipeOneLine(x));
+            }
         }
+
         listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
     public void listViewDisplay(){
         listView.getItems().clear();
-        for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList){
-            listView.getItems().add(x.getTitle() + " / " + Methods.returnExerciseOwner(x));
-            //listView.getItems().add(Methods.oneExerciseOneLine(x));
+        if(DataHolder.publicRecipes.isEmpty()){
+            listView.getItems().add("");
+        } else {
+            for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList){
+                listView.getItems().add(x.getTitle() + " / " + Methods.returnExerciseOwner(x));
+                //listView.getItems().add(Methods.oneExerciseOneLine(x));
+            }
         }
+
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
     public void updateDisplay(){
-        exerciseTextArea.setText(Methods.displayTheExercise(DataHolder.publicRecipes.get(selectedRecipe).exerciseList.
-                get(selectedExercise)));
-        recipeTextArea.setText(Methods.displayTherecipe(DataHolder.publicRecipes.get(selectedRecipe)));
+        if(DataHolder.publicRecipes.isEmpty()){
+            exerciseTextArea.setText("");
+            recipeTextArea.setText("");
+        } else {
+            exerciseTextArea.setText(Methods.displayTheExercise(DataHolder.publicRecipes.get(selectedRecipe).exerciseList.
+                    get(selectedExercise)));
+            recipeTextArea.setText(Methods.displayTherecipe(DataHolder.publicRecipes.get(selectedRecipe)));
+        }
+
     }
 
 
