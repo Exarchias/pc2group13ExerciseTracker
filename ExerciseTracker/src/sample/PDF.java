@@ -77,9 +77,12 @@ public class PDF
             }
             pdfDoc.addPage(newPage);
             pdfDoc.saveDocument("ExercisesList.pdf");
+            System.out.println("The document exercisesList.pdf is considered generated");
         }
         catch (Throwable t)
         {
+            System.out.println(t);
+            System.out.println("Something went wrong with the generation of the exercisesList.pdf");
             t.printStackTrace();
         }
     }

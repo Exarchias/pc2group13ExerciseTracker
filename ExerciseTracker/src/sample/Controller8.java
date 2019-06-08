@@ -197,6 +197,11 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
 
     }
 
+    @FXML
+    public void getPdf(ActionEvent event) throws Exception{
+        PDF.pdfRecipelist(DataHolder.supervisedUser);
+    }
+
 
 
 

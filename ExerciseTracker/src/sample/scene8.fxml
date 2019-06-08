@@ -33,5 +33,6 @@
       <Button layoutX="483.0" layoutY="174.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPagePressed" prefHeight="54.0" prefWidth="54.0" styleClass="userbutton" />
       <Button fx:id="publishBtn" layoutX="344.0" layoutY="306.0" mnemonicParsing="false" onAction="#publishRecipe" prefHeight="89.0" prefWidth="91.0" styleClass="button-publishrecipes" text="publish/unpublish" textFill="#1b0101" />
       <Button layoutX="484.0" layoutY="323.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" prefHeight="57.0" prefWidth="54.0" styleClass="button-browserecipes" />
+      <Button layoutX="43.0" layoutY="368.0" mnemonicParsing="false" onAction="#getPdf" text="Take the Recipes in a PDF file" />
     </children>
 </AnchorPane>

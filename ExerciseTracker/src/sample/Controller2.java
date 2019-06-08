@@ -176,6 +176,11 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
     }
 
+    @FXML
+    public void getPdf(ActionEvent event) throws Exception{
+        PDF.pdfUserList();
+    }
+
 
 
 
