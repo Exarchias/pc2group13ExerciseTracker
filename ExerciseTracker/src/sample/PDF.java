@@ -9,7 +9,7 @@ import com.qoppa.pdfWriter.PDFDocument;
 import com.qoppa.pdfWriter.PDFGraphics;
 import com.qoppa.pdfWriter.PDFPage;
 
-public class PDF
+public  abstract class PDF
 {
     public static void PdfFun()
     {

@@ -2,7 +2,7 @@ package sample;
 
 import java.util.ArrayList;
 
-public class DataHolder {
+public abstract class DataHolder {
     private static boolean admin = false;
     private static boolean login = false;
     private static String activeName; //updates automatically on the login.
