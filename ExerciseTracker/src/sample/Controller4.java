@@ -100,6 +100,7 @@ public class Controller4 implements Initializable { //LOG PAGE
         //TESTING EDITING A USER ON THE DATA BASE(START)
         DB db = new DB();
         db.editOneUser(username, password, email, userIsAdmin, DataHolder.supervisedUser.getUserID());
+        db = null; //cuts the connection
         //TESTING EDITING A USER ON THE DATA BASE(END)
         System.out.println("The User is considered edited");
         Main.getInstance().setScene(Main.Scene2);

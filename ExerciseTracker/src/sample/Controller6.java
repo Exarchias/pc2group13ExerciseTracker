@@ -94,6 +94,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
             System.out.println("Last Exercise ID is: " + exeID);
             System.out.println("Selected Recipe ID is: " + DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
             db.exerciseToRecipe(exeID, DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
+            db = null; //cuts the connection
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
             recipeDisplay();
         } else {
@@ -156,6 +157,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         DB db = new DB();
         db.addOneExercise(exer.getTitle(), exer.getDescription(), exer.getOwner());
         System.out.println("The last users ID should be " + db.loadLastUserId());
+        db = null; //cuts the connection
         //TESTING ADDING A USER ON THE DATA BASE(END)
     }
     @FXML

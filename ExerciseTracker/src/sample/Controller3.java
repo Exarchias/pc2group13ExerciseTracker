@@ -132,6 +132,7 @@ public class Controller3 implements Initializable {  //USER PAGE
             //TESTING DELETING AN EXERCISE ON THE DATA BASE(START)
             DB db = new DB();
             db.deleteOneExercise(DataHolder.supervisedUser.exerciseList.get(selectedExercise).getExerciseID());
+            db = null; //cuts the connection
             //TESTING DELETING AN EXERCISE ON THE DATA BASE(END)
             DataHolder.supervisedUser.exerciseList.remove(selectedExercise);
         } else {
@@ -141,7 +142,9 @@ public class Controller3 implements Initializable {  //USER PAGE
                     + " from the list");
             //TESTING DELETING AN EXERCISE ON THE DATA BASE(START)
             DB db = new DB();
-            db.deleteOneExercise(DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.get(selectedExercise).getExerciseID());
+            db.deleteOneExercise(DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).
+                    exerciseList.get(selectedExercise).getExerciseID());
+            db = null; //cuts the connection
             //TESTING DELETING AN EXERCISE ON THE DATA BASE(END)
             DataHolder.supervisedUser.recipeList.get(selectedRecipe -1).exerciseList.remove(selectedExercise);
         }
@@ -183,6 +186,7 @@ public class Controller3 implements Initializable {  //USER PAGE
             System.out.println("Last Exercise ID is: " + exeID);
             System.out.println("Selected Recipe ID is: " + exer.getRecipeID());
             //db.exerciseToRecipe(exeID, exer.getRecipeID());
+            db = null; //cuts the connection
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
             exer.setExerciseID(exeID);
             db.exerciseToRecipe(exeID,0);
@@ -198,6 +202,7 @@ public class Controller3 implements Initializable {  //USER PAGE
             System.out.println("Last Exercise ID is: " + exeID);
             System.out.println("Selected Recipe ID is: " + exer.getRecipeID());
             //db.exerciseToRecipe(exeID, exer.getRecipeID());
+            db = null; //cuts the connection
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
             exer.setExerciseID(exeID);
             DataHolder.supervisedUser.exerciseList.add(exer);

@@ -109,6 +109,7 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
         DB db = new DB();
         db.addOneRecipe(titleTextField.getText(),
                 descriptionTextArea.getText(), DataHolder.supervisedUser.getUserID(), recip.isPublic());
+        db = null; //cuts the connection
         //TESTING ADDING A RECIPE ON THE DATA BASE(END)
     }
 

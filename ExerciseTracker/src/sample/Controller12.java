@@ -88,6 +88,7 @@ public class Controller12 implements Initializable {
         int exeID = db.loadLastExerciseId();
         System.out.println("Last Exercise ID is: " + exeID);
         exer2.setExerciseID(exeID);
+        db = null; //cuts the connection
         //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
         DataHolder.supervisedUser.exerciseList.add(exer2);
     }
@@ -104,6 +105,7 @@ public class Controller12 implements Initializable {
         db.addOneRecipe(recip2.getTitle(), recip2.getDescription(), DataHolder.supervisedUser.getUserID(), false);
         int recID = db.loadLastRecipeId();
         System.out.println("The ID of the last used public recipe is: " + recID);
+        db = null; //cuts the connection
         //TESTING ADDING A RECIPE ON THE DATA BASE(END)
         recip2.setRecipeID(recID);
 
@@ -116,7 +118,7 @@ public class Controller12 implements Initializable {
             db.exerciseToRecipe(exeID, recID);
             System.out.println("Last Exercise ID is: " + x.getExerciseID());
             System.out.println("Last Recipe ID is: " + x.getRecipeID());
-
+            db = null; //cuts the connection
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(END)
         }
         DataHolder.supervisedUser.recipeList.add(recip2);

@@ -108,6 +108,7 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
         db.editOneRecipe(titleTextField.getText(),
                 descriptionTextArea.getText(), DataHolder.supervisedUser.getUserID(), DataHolder.supervisedRecipe.isPublic(),
                 DataHolder.supervisedRecipe.getRecipeID());
+        db = null; //cuts the connection
         //TESTING EDITING A RECIPE ON THE DATA BASE(END)
         if(recipeIsPublic.isSelected()){
             DataHolder.publicRecipes.add(DataHolder.supervisedRecipe);

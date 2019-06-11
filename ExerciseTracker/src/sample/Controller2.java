@@ -131,6 +131,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         db.deleteAllTheExercisesOfTheUser(theIDtoDelete);
         db.deleteAllTheRecipesOfTheUser(theIDtoDelete);
         db.deleteOneUser(theIDtoDelete);
+        db = null; //cuts the connection
         //TESTING DELETING A USER ON THE DATA BASE(END)
         DataHolder.userList.remove(selectedUser);
         updateDisplay();

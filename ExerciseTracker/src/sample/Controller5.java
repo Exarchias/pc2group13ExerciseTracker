@@ -80,6 +80,7 @@ public class Controller5 implements Initializable { //LOG PAGE
         DB db = new DB();
         db.addOneUser(username, Methods.encrypted(password), email, userIsAdmin);
         System.out.println("The last users ID should be " + db.loadLastUserId());
+        db = null; //cuts the connection
         //TESTING ADDING A USER ON THE DATA BASE(END)
         userObj.setUserID(db.loadLastUserId());
         DataHolder.userList.add(userObj);

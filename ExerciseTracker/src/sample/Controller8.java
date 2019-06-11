@@ -106,6 +106,7 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
             DB db = new DB();
             db.deleteAllTheExercisesOfTheRecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
             db.deleteOneRecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID());
+            db = null; //cuts the connection
             //TESTING DELETING A RECIPE ON THE DATA BASE(END)
             DataHolder.supervisedUser.recipeList.remove(selectedRecipe);
             updateDisplay();
@@ -176,6 +177,7 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
                 //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (START)
                 DB db = new DB();
                 db.recipeIsPublic(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID(), false);
+                db = null; //cuts the connection
                 //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (END)
                 DataHolder.unpublishRecipes();
                 publishBtn.setText("Publish Recipe");
@@ -185,6 +187,7 @@ public class Controller8 implements Initializable {  //MANAGE RECIPES PAGE
                 //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (START)
                 DB db = new DB();
                 db.recipeIsPublic(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getRecipeID(), true);
+                db = null; //cuts the connection
                 //TESTING MAKING A RECIPE PUBLIC IN A DATA BASE (END)
                 publishBtn.setText("Unublish Recipe");
             }
