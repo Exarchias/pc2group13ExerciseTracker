@@ -14,9 +14,10 @@ public abstract class DataHolder {
     public static Recipe supervisedRecipe;
     public static int supervisedExercisePostion;
     public static int supervisedRecipePostion;
+    public static ArrayList<Template> templateList = new ArrayList<>();
     public static int testCount = 0;
     public static boolean isConnected = false;
-    public static boolean dbActivated = true; //CONFIGORATIONS FOR THE DB.
+    public static boolean dbActivated = false; //CONFIGORATIONS FOR THE DB.
 
     public static boolean isAdmin() {
         return admin;

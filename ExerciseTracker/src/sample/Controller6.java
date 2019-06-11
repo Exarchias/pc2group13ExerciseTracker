@@ -202,6 +202,27 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
+    //adding the push ups template to the exercise.
+    @FXML
+    public void useTemplate1(ActionEvent event)throws Exception{
+        titleTextField.setText(DataHolder.templateList.get(0).getTitle());
+        descriptionTextArea.setText(DataHolder.templateList.get(0).getDescription());
+    }
+
+    //adding the sit ups template to the exercise.
+    @FXML
+    public void useTemplate2(ActionEvent event)throws Exception{
+        titleTextField.setText(DataHolder.templateList.get(1).getTitle());
+        descriptionTextArea.setText(DataHolder.templateList.get(1).getDescription());
+    }
+
+
+    //adding the squats template to the exercise.
+    @FXML
+    public void useTemplate3(ActionEvent event)throws Exception{
+        titleTextField.setText(DataHolder.templateList.get(2).getTitle());
+        descriptionTextArea.setText(DataHolder.templateList.get(2).getDescription());
+    }
 
 
 

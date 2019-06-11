@@ -91,6 +91,18 @@ public abstract class Methods {
         DataHolder.userList.get(1).recipeList.get(2).exerciseList.add(tri5);
         System.out.println("Offline procedure just got complete");
     }
+
+    public static void initiatingTemplatesScript(){
+        Template temp1 = new Template("Push Ups", "a set of push ups", 0, 1);
+        DataHolder.templateList.add(0, temp1);
+        System.out.println("Template temp1 just added to the templateList");
+        Template temp2 = new Template("Sit Ups", "a set of sit ups", 0, 2);
+        DataHolder.templateList.add(1, temp2);
+        System.out.println("Template temp2 just added to the templateList");
+        Template temp3 = new Template("Squats", "a set of Squats", 0, 3);
+        DataHolder.templateList.add(2, temp3);
+        System.out.println("Template temp3 just added to the templateList");
+    }
     
     //this method displays the user that are admins
     public String displayAdmins(){

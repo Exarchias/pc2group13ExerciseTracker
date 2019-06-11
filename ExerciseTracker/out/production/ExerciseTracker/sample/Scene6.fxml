@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
    <children>
       <Button fx:id="btnLogOut" layoutX="516.0" layoutY="126.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="72.0" styleClass="button-logout" />
       <Button fx:id="btnGoToAdminPage" layoutX="439.0" layoutY="194.0" mnemonicParsing="false" onAction="#buttonGoToAdminPagePressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
@@ -53,5 +53,8 @@
             <Font name="System Bold Italic" size="9.0" />
          </font>
       </Label>
+      <Button layoutX="441.0" layoutY="375.0" mnemonicParsing="false" onAction="#useTemplate1" text="Use Push Ups Template" />
+      <Button layoutX="441.0" layoutY="418.0" mnemonicParsing="false" onAction="#useTemplate2" text="Use Sit Ups Template" />
+      <Button layoutX="441.0" layoutY="460.0" mnemonicParsing="false" onAction="#useTemplate3" text="Use Squats Template" />
    </children>
 </AnchorPane>

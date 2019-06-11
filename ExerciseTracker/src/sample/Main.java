@@ -54,6 +54,7 @@ public class Main extends Application {
     }
     public static void main(String[] args) throws NoSuchAlgorithmException {
         //PDF.PdfFun(); //TESTING REASONS
+        Methods.initiatingTemplatesScript(); //activating a list of Templates
         if(DataHolder.dbActivated){ //CHECKS IF THE DATA BASE IS ACTIVATED
             //JDBC starts
             DB db = new DB();
