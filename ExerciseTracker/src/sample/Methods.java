@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 public abstract class Methods {
 
 
-    public static void logOut()throws Exception{
+    public static void logOut() throws Exception {
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are logged out");
     }
@@ -16,10 +16,10 @@ public abstract class Methods {
         User firstUser = new User("admin", encrypted("12345"),
                 "admin@exercise.trackom", true);
 
-        DataHolder.userList.add(0,firstUser);
+        DataHolder.userList.add(0, firstUser);
         User secondUser = new User("average", encrypted("12345"),
                 "LowBob@exercise.trackom", false);
-        DataHolder.userList.add(1,secondUser);
+        DataHolder.userList.add(1, secondUser);
         System.out.println("Verification: The very first User is " + DataHolder.userList.get(0).getUserName());
         System.out.println("Verification: The very second User is " + DataHolder.userList.get(1).getUserName());
         //content for the admin starts
@@ -92,7 +92,7 @@ public abstract class Methods {
         System.out.println("Offline procedure just got complete");
     }
 
-    public static void initiatingTemplatesScript(){
+    public static void initiatingTemplatesScript() {
         Template temp1 = new Template("Push Ups", "a set of push ups", 0, 1);
         DataHolder.templateList.add(0, temp1);
         System.out.println("Template temp1 just added to the templateList");
@@ -103,22 +103,22 @@ public abstract class Methods {
         DataHolder.templateList.add(2, temp3);
         System.out.println("Template temp3 just added to the templateList");
     }
-    
+
     //this method displays the user that are admins
-    public String displayAdmins(){
+    public String displayAdmins() {
         int count = 0;
         String adminListDisplay = "";
         for (User x : DataHolder.userList) {
-            if(x.isAnAdmin()){
+            if (x.isAnAdmin()) {
                 adminListDisplay += count + ") " + x.getUserName() + "\n";
-                count++;   
+                count++;
             }
         }
         return adminListDisplay;
     }
-    
+
     //this method displays the contents of an exercise:
-    public static String displayTheExercise(Exercise exercise){
+    public static String displayTheExercise(Exercise exercise) {
         String exContent = "";
         exContent += "Title: " + exercise.getTitle() + "\n";
         exContent += "Description: " + exercise.getDescription() + "\n";
@@ -126,20 +126,20 @@ public abstract class Methods {
         exContent += "Exercise Owner: " + returnExerciseOwner(exercise) + "\n";
         return exContent;
     }
-    
+
     //this method displays the recipes of the user.
-    public static String displayUsersRecipes(User user){
+    public static String displayUsersRecipes(User user) {
         String userRecipes = "";
         int count = 0;
         userRecipes += " Recipes \n";
         userRecipes += " ======= \n";
-        for (Recipe x : user.recipeList){
+        for (Recipe x : user.recipeList) {
             count++;
             userRecipes += count + ") Title: " + x.getTitle() + "\n";
         }
         return userRecipes;
     }
-    
+
     //this method displays a recipe's exercises
     public static String displayContentsofTherecipe(Recipe recipe) {
         String RecipeContent = "";
@@ -152,14 +152,14 @@ public abstract class Methods {
         }
         return RecipeContent;
     }
-    
+
     //this method displays a user's exercises
-    public static String displayExercisesofTheUser(User user){
+    public static String displayExercisesofTheUser(User user) {
         String userContent = "";
         int count = 0;
         userContent += " Exercises of the User \n";
         userContent += " ===================== \n";
-        for (Exercise x : user.exerciseList ){
+        for (Exercise x : user.exerciseList) {
             count++;
             userContent += count + ") Title: " + x.getTitle() + "\n";
         }
@@ -167,7 +167,7 @@ public abstract class Methods {
     }
 
     //this method displays the contents of a User Profile:
-    public static String displayTheUser(User user){
+    public static String displayTheUser(User user) {
         String userContent = "";
         userContent += "Nickname: " + user.getUserName() + " " + displayIfAdmin(user) + "\n";
         userContent += "user Id: " + user.getUserID() + "\n";
@@ -179,30 +179,30 @@ public abstract class Methods {
     }
 
     //this method displays if the User is admin:
-    public static String displayIfAdmin(User user){
+    public static String displayIfAdmin(User user) {
         String adminContent = "";
-        if(user.isAnAdmin()){
+        if (user.isAnAdmin()) {
             adminContent = " (Admin)";
         }
         return adminContent;
     }
 
     //this method displays if the User is admin:
-    public static String displayIfRecipeIsPublic(Recipe recipe){
+    public static String displayIfRecipeIsPublic(Recipe recipe) {
         String adminContent = "";
-        if(recipe.isPublic()){
+        if (recipe.isPublic()) {
             adminContent = " (Public)";
         }
         return adminContent;
     }
 
     //WORK_IN_PROGRESS - This method displays the ID's of the users
-    public static String displayIDsfTheUser(User user){
+    public static String displayIDsfTheUser(User user) {
         String userContent = "";
         int count = 0;
         userContent += " IDs of each User \n";
         userContent += " ===================== \n";
-        for (User x : DataHolder.userList ){
+        for (User x : DataHolder.userList) {
             count++;
             userContent += count + ")" + x.getUserName() + " ID: " + x.getUserID() + "\n";
         }
@@ -221,26 +221,28 @@ public abstract class Methods {
     }
 
     //Returns the username of the owner of the exercise
-    public static String returnExerciseOwner(Exercise exercise){
+    public static String returnExerciseOwner(Exercise exercise) {
         String owner = DataHolder.userList.get(exercise.getOwner()).getUserName();
         return owner;
     }
 
     //Returns the username of the owner of the recipe
-    public static String returnRecipeOwner(Recipe recipe){
+    public static String returnRecipeOwner(Recipe recipe) {
         String owner = DataHolder.userList.get(recipe.getOwner()).getUserName();
         return owner;
     }
+
     //this method transforms  a byte stream to a Hex format. We use this method for our hash encryption.
     private static String bytesToHex(byte[] hash) {
         StringBuffer hexString = new StringBuffer();
         for (int i = 0; i < hash.length; i++) {
             String hex = Integer.toHexString(0xff & hash[i]);
-            if(hex.length() == 1) hexString.append('0');
+            if (hex.length() == 1) hexString.append('0');
             hexString.append(hex);
         }
         return hexString.toString();
     }
+
     //transforms a string to a hash encryption. This method uses the help of bytesToHex method.
     public static String encrypted(String digested) throws NoSuchAlgorithmException {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -250,40 +252,40 @@ public abstract class Methods {
     }
 
     //This method give details for one User in one line.
-    public static String oneUserOneLine(User user){
+    public static String oneUserOneLine(User user) {
         String msg = user.getUserName() + " " + displayIfAdmin(user) + " / " + user.getEmail() + " / ID: " + user.getUserID()
                 + " / weight: " + user.getWeight();
         return msg;
     }
 
     //This method gives the details of one exercise in one line.
-    public static String oneExerciseOneLine(Exercise exercise){
+    public static String oneExerciseOneLine(Exercise exercise) {
         String msg = exercise.getTitle() + " / ID: " + exercise.getExerciseID() + " / Owner: " + returnExerciseOwner(exercise)
                 + " / " + exercise.getDescription();
         return msg;
     }
 
     //this method gives the details of one Recipe in one line.
-    public static String oneRecipeOneLine(Recipe recipe){
+    public static String oneRecipeOneLine(Recipe recipe) {
         String msg = recipe.getTitle() + " " + displayIfRecipeIsPublic(recipe) + " / ID: " + recipe.getRecipeID()
                 + " / Owner: " + returnRecipeOwner(recipe)
                 + " / " + recipe.getDescription();
         return msg;
     }
-   
+
     //this method returns the list of the exercises of a User, nicely organized in a list.
-    public static String displayListOfExercises(User user){
+    public static String displayListOfExercises(User user) {
         String msg = "";
-        for(Exercise x : user.exerciseList){
+        for (Exercise x : user.exerciseList) {
             msg += oneExerciseOneLine(x) + " \n";
         }
         return msg;
     }
-    
-     //this method returns the list of the recipes of a User, nicely organized in a list.
-    public static String displayListOfRecipes(User user){
+
+    //this method returns the list of the recipes of a User, nicely organized in a list.
+    public static String displayListOfRecipes(User user) {
         String msg = "";
-        for(Recipe x : user.recipeList){
+        for (Recipe x : user.recipeList) {
             msg += oneRecipeOneLine(x) + " \n";
         }
         return msg;

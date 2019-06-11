@@ -1,74 +1,73 @@
-.root{
+.root {
     -fx-background-color: #383838;
 }
-.anchorpane{
+
+.anchorpane {
 }
-.background{
-   -fx-background-color: linear-gradient(#4b0082,#00ff00);
+
+.background {
+    -fx-background-color: linear-gradient(#4b0082, #00ff00);
 }
-.anchorpane-loginscene{
-   -fx-background-color: linear-gradient(#4b0082,#00ff00);
+
+.anchorpane-loginscene {
+    -fx-background-color: linear-gradient(#4b0082, #00ff00);
 
 }
 
-.button{
+.button {
     -fx-background-color: #AB4642;
 
 
 }
-.loginbuttonimage{
- -fx-background-image: url("Assets/imageLogin.png");
+
+.loginbuttonimage {
+    -fx-background-image: url("Assets/imageLogin.png");
 
 
 }
 
-.adminbutton{
--fx-background-image: url("Assets/adminimage.png");
- -fx-opacity: 0.8;
-}
-.userbutton{
--fx-background-image: url("Assets/userimage.png");
+.adminbutton {
+    -fx-background-image: url("Assets/adminimage.png");
+    -fx-opacity: 0.8;
 }
 
+.userbutton {
+    -fx-background-image: url("Assets/userimage.png");
+}
 
 
+.button-logout {
 
-
-
-.button-logout{
-
-  -fx-background-image: url("Assets/logoutbuttonimage.png");
-
-
-
+    -fx-background-image: url("Assets/logoutbuttonimage.png");
 
 
 }
-.button-crud{
-   -fx-background-color: #ffff00;
+
+.button-crud {
+    -fx-background-color: #ffff00;
     -fx-background-radius: 16.4, 15;
 
-       -fx-background-insets: -1.4, 0;
+    -fx-background-insets: -1.4, 0;
 
-       -fx-border-radius: 15;
+    -fx-border-radius: 15;
 
-       -fx-border-width: 2;
+    -fx-border-width: 2;
 
-       -fx-border-color: dimgrey;
+    -fx-border-color: dimgrey;
 
-       -fx-padding: 0;
+    -fx-padding: 0;
 
-       -fx-font-size: 0;
-
+    -fx-font-size: 0;
 
 
 }
 
 
-.label{
+.label {
     -fx-text-fill: #e8e8e8;
 }
-.circle{
+
+.circle {
 
     -fx-background-radius: 150;
 
@@ -76,25 +75,29 @@
     -fx-text-fill: #e8e8e8;
 
 }
-.button-settingspage{
- -fx-background-image: url("Assets/settingsbutton.png");
+
+.button-settingspage {
+    -fx-background-image: url("Assets/settingsbutton.png");
 
 }
-.button-browserecipes{
--fx-background-image: url("Assets/browserecipes.png");
+
+.button-browserecipes {
+    -fx-background-image: url("Assets/browserecipes.png");
 
 
 }
-.button-publishrecipes{
- -fx-background-radius: 150;
 
-   -fx-background-color: #00ff00;
-   -fx-text-fill: #000000;
+.button-publishrecipes {
+    -fx-background-radius: 150;
+
+    -fx-background-color: #00ff00;
+    -fx-text-fill: #000000;
 
 }
-.button-save{
-    //-fx-shape: "M150 0 L75 200 L225 200 Z";
-    //-fx-background-color: #4DD0E1;
+
+.button-save {
+/ / -fx-shape: "M150 0 L75 200 L225 200 Z";
+/ / -fx-background-color: #4DD0E1;
 
     -fx-background-radius: 150;
 
@@ -104,42 +107,44 @@
 
 }
 
-.button-cancel{
-  -fx-background-color: #fffacd;
-     -fx-background-radius: 16.4, 15;
-
-        -fx-background-insets: -1.4, 0;
-
-        -fx-border-radius: 15;
-
-        -fx-border-width: 2;
-
-        -fx-border-color: dimgrey;
-
-        -fx-padding: 0;
-
-        -fx-font-size: 0;
-
-}
-.button-cleanfields{
- -fx-background-color: #fffacd;
+.button-cancel {
+    -fx-background-color: #fffacd;
     -fx-background-radius: 16.4, 15;
 
-       -fx-background-insets: -1.4, 0;
+    -fx-background-insets: -1.4, 0;
 
-       -fx-border-radius: 15;
+    -fx-border-radius: 15;
 
-       -fx-border-width: 2;
+    -fx-border-width: 2;
 
-       -fx-border-color: dimgrey;
+    -fx-border-color: dimgrey;
 
-       -fx-padding: 0;
+    -fx-padding: 0;
 
-       -fx-font-size: 0;
+    -fx-font-size: 0;
 
 }
-.button-managerecipes{
-  -fx-shape: "M150 0 L75 200 L225 200 Z";
-  -fx-background-color: #4DD0E1;
+
+.button-cleanfields {
+    -fx-background-color: #fffacd;
+    -fx-background-radius: 16.4, 15;
+
+    -fx-background-insets: -1.4, 0;
+
+    -fx-border-radius: 15;
+
+    -fx-border-width: 2;
+
+    -fx-border-color: dimgrey;
+
+    -fx-padding: 0;
+
+    -fx-font-size: 0;
+
+}
+
+.button-managerecipes {
+    -fx-shape: "M150 0 L75 200 L225 200 Z";
+    -fx-background-color: #4DD0E1;
 }
 

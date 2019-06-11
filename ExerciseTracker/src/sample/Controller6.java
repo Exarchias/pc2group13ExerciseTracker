@@ -16,7 +16,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!DataHolder.isLogin()){
+        if (!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
@@ -34,6 +34,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         listViewDisplay();
 
     }
+
     @FXML
     Button btnGoToAdminPage;
 
@@ -57,29 +58,29 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     public ListView<String> listView;
 
     @FXML
-    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+    public void buttonLogOutPressed(ActionEvent event) throws Exception {
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are logged out");
     }
 
     @FXML
-    public void buttonGoToAdminPagePressed(ActionEvent event)throws Exception{
+    public void buttonGoToAdminPagePressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene2);
 
     }
 
     @FXML
-    public void goToUserPage(ActionEvent event)throws Exception{
+    public void goToUserPage(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene3);
 
     }
 
     @FXML
-    public void addExercise(ActionEvent event)throws Exception{
+    public void addExercise(ActionEvent event) throws Exception {
         System.out.println("The title of the exercise is: " + titleTextField.getText());
         System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
-        if(addToSelectedRecipeCheckBox.isSelected()){
+        if (addToSelectedRecipeCheckBox.isSelected()) {
             //selectedRecipe = Integer.parseInt(recipeSelector.getText());
             System.out.println("The exercise is added to the recipe: " + selectedRecipe);
             Exercise exer = new Exercise(titleTextField.getText(),
@@ -104,6 +105,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         }
 
     }
+
     @FXML
     public void browseRecipesButtonPressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene12);
@@ -111,7 +113,7 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void cleanFields(ActionEvent event){
+    public void cleanFields(ActionEvent event) {
         titleTextField.setText("");
         descriptionTextArea.setText("");
         addToSelectedRecipeCheckBox.setSelected(false);
@@ -120,21 +122,21 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void testViewSelectedRecipes(ActionEvent event){
+    public void testViewSelectedRecipes(ActionEvent event) {
         System.out.println("Viewing the recipes...");
         recipeDisplay();
 
     }
 
     @FXML
-    public void manageRecipes(ActionEvent event)throws Exception{
+    public void manageRecipes(ActionEvent event) throws Exception {
         System.out.println("going to manage the Recipes on the recipe page");
         Main.getInstance().setScene(Main.Scene8);
 
     }
 
     @FXML
-    public void editTheRecipe(ActionEvent event)throws Exception{
+    public void editTheRecipe(ActionEvent event) throws Exception {
         //selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("going to edit the recipe:" + selectedRecipe);
         //Main.getInstance().setScene(Main.Scene9);
@@ -142,13 +144,13 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void addaNewRecipe(ActionEvent event)throws Exception{
+    public void addaNewRecipe(ActionEvent event) throws Exception {
         System.out.println("Adding a new recipe");
         Main.getInstance().setScene(Main.Scene10);
 
     }
 
-    public void addTheExercise(){
+    public void addTheExercise() {
         Exercise exer = new Exercise(titleTextField.getText(),
                 descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.supervisedUser));
         exer.setOwner(DataHolder.supervisedUser.getUserID());
@@ -160,26 +162,26 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         db = null; //cuts the connection
         //TESTING ADDING A USER ON THE DATA BASE(END)
     }
+
     @FXML
-    public void somethingIsSelectedOnListView(MouseEvent event){
+    public void somethingIsSelectedOnListView(MouseEvent event) {
         selectedRecipe = listView.getSelectionModel().getSelectedIndex();
         //recipeSelector.setText(String.valueOf(selectedRecipe));
         updateDisplay();
     }
 
     public void updateDisplay() {
-        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+        if (!DataHolder.supervisedUser.recipeList.isEmpty()) {
             recipeDisplay = Methods.displayTherecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe));
             recipesTextArea.setText(recipeDisplay);
-        }
-        else {
+        } else {
             recipeDisplay = "";
             recipesTextArea.setText(recipeDisplay);
         }
     }
 
     public void recipeDisplay() {
-        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+        if (!DataHolder.supervisedUser.recipeList.isEmpty()) {
             int count = 0;
             String inRecipeDisplay = "";
             System.out.println(DataHolder.supervisedUser.recipeList.get(selectedRecipe).getTitle());
@@ -191,9 +193,9 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
         }
     }
 
-    public void listViewDisplay(){
+    public void listViewDisplay() {
         listView.getItems().clear();
-        if(!DataHolder.supervisedUser.recipeList.isEmpty()) {
+        if (!DataHolder.supervisedUser.recipeList.isEmpty()) {
             for (Recipe x : DataHolder.supervisedUser.recipeList) {
                 listView.getItems().add(x.getTitle() + " " + Methods.displayIfRecipeIsPublic(x));
                 //listView.getItems().add(Methods.oneRecipeOneLine(x));
@@ -206,14 +208,14 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     //adding the push ups template to the exercise.
     @FXML
-    public void useTemplate1(ActionEvent event)throws Exception{
+    public void useTemplate1(ActionEvent event) throws Exception {
         titleTextField.setText(DataHolder.templateList.get(0).getTitle());
         descriptionTextArea.setText(DataHolder.templateList.get(0).getDescription());
     }
 
     //adding the sit ups template to the exercise.
     @FXML
-    public void useTemplate2(ActionEvent event)throws Exception{
+    public void useTemplate2(ActionEvent event) throws Exception {
         titleTextField.setText(DataHolder.templateList.get(1).getTitle());
         descriptionTextArea.setText(DataHolder.templateList.get(1).getDescription());
     }
@@ -221,11 +223,10 @@ public class Controller6 implements Initializable { //EXERCISE PAGE
 
     //adding the squats template to the exercise.
     @FXML
-    public void useTemplate3(ActionEvent event)throws Exception{
+    public void useTemplate3(ActionEvent event) throws Exception {
         titleTextField.setText(DataHolder.templateList.get(2).getTitle());
         descriptionTextArea.setText(DataHolder.templateList.get(2).getDescription());
     }
-
 
 
 }

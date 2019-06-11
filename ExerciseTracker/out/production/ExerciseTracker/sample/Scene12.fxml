@@ -9,29 +9,42 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller12">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css"
+            xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller12">
     <children>
-        <Button fx:id="btnLogOut" layoutX="570.0" layoutY="100.0" mnemonicParsing="false" onAction="#logOutButtonPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout" />
-        <Button fx:id="btnGoToTheAdminPage" layoutX="495.0" layoutY="173.0" mnemonicParsing="false" onAction="#goToTheAdminPageButtonPressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton" />
-        <Button fx:id="btnGoToTheUserPage" layoutX="496.0" layoutY="100.0" mnemonicParsing="false" onAction="#goToTheUserPageButtonPressed" prefHeight="54.0" prefWidth="54.0" styleClass="userbutton" />
-        <ListView fx:id="listView" layoutX="25.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView" prefHeight="200.0" prefWidth="200.0" />
-        <ListView fx:id="listView2" layoutX="253.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView2" prefHeight="200.0" prefWidth="200.0" />
-        <Button fx:id="btnUseExercise" layoutX="42.0" layoutY="300.0" mnemonicParsing="false" onAction="#useExerciseButtonPressed" styleClass="button-crud" text="Use Exercise" />
-        <Button fx:id="btnUseRecipe" layoutX="166.0" layoutY="300.0" mnemonicParsing="false" onAction="#useRecipeButtonPressed" styleClass="button-crud" text="Use Recipe" />
-        <Button fx:id="btnCancel" layoutX="268.0" layoutY="293.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel" text="Cancel" />
-        <Button fx:id="btnManageRecipes" layoutX="374.0" layoutY="300.0" mnemonicParsing="false" onAction="#manageRecipesButtonPressed" styleClass="button-crud" text="Manage Recipes" />
-        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="563.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+        <Button fx:id="btnLogOut" layoutX="570.0" layoutY="100.0" mnemonicParsing="false"
+                onAction="#logOutButtonPressed" prefHeight="35.0" prefWidth="70.0" styleClass="button-logout"/>
+        <Button fx:id="btnGoToTheAdminPage" layoutX="495.0" layoutY="173.0" mnemonicParsing="false"
+                onAction="#goToTheAdminPageButtonPressed" prefHeight="66.0" prefWidth="56.0" styleClass="adminbutton"/>
+        <Button fx:id="btnGoToTheUserPage" layoutX="496.0" layoutY="100.0" mnemonicParsing="false"
+                onAction="#goToTheUserPageButtonPressed" prefHeight="54.0" prefWidth="54.0" styleClass="userbutton"/>
+        <ListView fx:id="listView" layoutX="25.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView"
+                  prefHeight="200.0" prefWidth="200.0"/>
+        <ListView fx:id="listView2" layoutX="253.0" layoutY="53.0" onMouseClicked="#someThingIsSelecteOnListView2"
+                  prefHeight="200.0" prefWidth="200.0"/>
+        <Button fx:id="btnUseExercise" layoutX="42.0" layoutY="300.0" mnemonicParsing="false"
+                onAction="#useExerciseButtonPressed" styleClass="button-crud" text="Use Exercise"/>
+        <Button fx:id="btnUseRecipe" layoutX="166.0" layoutY="300.0" mnemonicParsing="false"
+                onAction="#useRecipeButtonPressed" styleClass="button-crud" text="Use Recipe"/>
+        <Button fx:id="btnCancel" layoutX="268.0" layoutY="293.0" mnemonicParsing="false"
+                onAction="#cancelButtonPressed" prefHeight="35.0" prefWidth="43.0" styleClass="button-cancel"
+                text="Cancel"/>
+        <Button fx:id="btnManageRecipes" layoutX="374.0" layoutY="300.0" mnemonicParsing="false"
+                onAction="#manageRecipesButtonPressed" styleClass="button-crud" text="Manage Recipes"/>
+        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="563.0" layoutY="-16.0" pickOnBounds="true"
+                   preserveRatio="true">
             <image>
-                <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
+                <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png"/>
             </image>
         </ImageView>
-        <Label fx:id="lblActiveName" layoutX="496.0" layoutY="67.0" text="ActiveName:" />
-      <Label layoutX="499.0" layoutY="140.0" text="USER PAGE">
-         <font>
-            <Font name="System Bold Italic" size="9.0" />
-         </font>
-      </Label>
-      <TextArea fx:id="exerciseTextArea" layoutX="29.0" layoutY="337.0" prefHeight="142.0" prefWidth="200.0" />
-      <TextArea fx:id="recipeTextArea" layoutX="253.0" layoutY="337.0" prefHeight="142.0" prefWidth="200.0" />
+        <Label fx:id="lblActiveName" layoutX="496.0" layoutY="67.0" text="ActiveName:"/>
+        <Label layoutX="499.0" layoutY="140.0" text="USER PAGE">
+            <font>
+                <Font name="System Bold Italic" size="9.0"/>
+            </font>
+        </Label>
+        <TextArea fx:id="exerciseTextArea" layoutX="29.0" layoutY="337.0" prefHeight="142.0" prefWidth="200.0"/>
+        <TextArea fx:id="recipeTextArea" layoutX="253.0" layoutY="337.0" prefHeight="142.0" prefWidth="200.0"/>
     </children>
 </AnchorPane>

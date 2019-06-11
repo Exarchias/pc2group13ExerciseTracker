@@ -1,5 +1,5 @@
 
-package  sample;
+package sample;
 
 
 public class Exercise {
@@ -11,7 +11,7 @@ public class Exercise {
     private int repetitions;
     private int caloriesPerRepetition;
 
-    public Exercise(String title, String description, int owner){
+    public Exercise(String title, String description, int owner) {
         this.title = title;
         this.description = description;
         this.owner = owner;
@@ -85,8 +85,8 @@ public class Exercise {
     }
 
     //helping method that gives fair calories per repetition according the the weight
-    public int calculateCaloriesPerWeight(Double weight){
-        weight = weight/200;
+    public int calculateCaloriesPerWeight(Double weight) {
+        weight = weight / 200;
         //ratio according the the weight
         int calories = (int) (caloriesPerRepetition * (1 + weight));
         return calories;

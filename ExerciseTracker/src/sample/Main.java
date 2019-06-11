@@ -28,11 +28,13 @@ public class Main extends Application {
     private Stage primaryStage;
     private static Main instance = null;
 
-    public static Main getInstance(){return instance;}
+    public static Main getInstance() {
+        return instance;
+    }
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         instance = this;
         this.primaryStage = primaryStage;
         primaryStage.setTitle("Exercise Tracker Application");
@@ -42,9 +44,9 @@ public class Main extends Application {
 
     }
 
-    public void setScene(String nameOfScene) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource(nameOfScene+".fxml"));
-        root.getStylesheets().add(getClass().getResource(nameOfScene+".fxml").toExternalForm());
+    public void setScene(String nameOfScene) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource(nameOfScene + ".fxml"));
+        root.getStylesheets().add(getClass().getResource(nameOfScene + ".fxml").toExternalForm());
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -52,10 +54,11 @@ public class Main extends Application {
         scene.getStylesheets().add(css);
 
     }
+
     public static void main(String[] args) throws NoSuchAlgorithmException {
         //PDF.PdfFun(); //TESTING REASONS
         Methods.initiatingTemplatesScript(); //activating a list of Templates
-        if(DataHolder.dbActivated){ //CHECKS IF THE DATA BASE IS ACTIVATED
+        if (DataHolder.dbActivated) { //CHECKS IF THE DATA BASE IS ACTIVATED
             //JDBC starts
             DB db = new DB();
             db.loadUsers();
@@ -68,7 +71,7 @@ public class Main extends Application {
             //JDBC ends
         }
 
-        if(!DataHolder.isConnected){
+        if (!DataHolder.isConnected) {
             Methods.testOfflineScript();
         }
 

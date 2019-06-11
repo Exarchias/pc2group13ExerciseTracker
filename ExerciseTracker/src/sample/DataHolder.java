@@ -100,8 +100,8 @@ public abstract class DataHolder {
     }
 
     //removes the unpublished recipes from the publicRecipes list
-    public static void unpublishRecipes(){
-        if(!publicRecipes.isEmpty()) {
+    public static void unpublishRecipes() {
+        if (!publicRecipes.isEmpty()) {
             for (Recipe x : publicRecipes) {
                 if (!x.isPublic()) {
                     publicRecipes.remove(publicRecipes.indexOf(x));

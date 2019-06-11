@@ -9,36 +9,46 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller4">
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css"
+            xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller4">
 
-   <children>
-      <Button layoutX="481.0" layoutY="119.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="35.0" prefWidth="68.0" styleClass="button-logout" />
-      <Button fx:id="btnGoToAdminPage" layoutX="412.0" layoutY="116.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPage" prefHeight="66.0" prefWidth="53.0" styleClass="adminbutton" />
-      <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#editUser" styleClass="button-crud" text="Edit User" />
-      <CheckBox fx:id="isAdminCheckBox" layoutX="174.0" layoutY="209.0" mnemonicParsing="false" text="is Admin" />
-      <TextField fx:id="userNameTextField" layoutX="174.0" layoutY="84.0" />
-      <TextField fx:id="passWordTextField" layoutX="174.0" layoutY="124.0" />
-      <TextField fx:id="emailTextField" layoutX="174.0" layoutY="166.0" />
-      <Label layoutX="97.0" layoutY="88.0" text="Username:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font></Label>
-      <Label layoutX="97.0" layoutY="128.0" text="Password:">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-      <Label layoutX="97.0" layoutY="170.0" text="Email:" />
-      <Button layoutX="239.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage" prefHeight="35.0" prefWidth="40.0" styleClass="button-cancel" stylesheets="@ApplicationView.css" text="Cancel" />
-      <Label layoutX="239.0" layoutY="23.0" text="Edit User">
-         <font>
-            <Font name="Algerian" size="24.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="449.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="lblActiveName" layoutX="405.0" layoutY="88.0" text="ActiveName:" />
-   </children>
+    <children>
+        <Button layoutX="481.0" layoutY="119.0" mnemonicParsing="false" onAction="#buttonLogOutPressed"
+                prefHeight="35.0" prefWidth="68.0" styleClass="button-logout"/>
+        <Button fx:id="btnGoToAdminPage" layoutX="412.0" layoutY="116.0" mnemonicParsing="false"
+                onAction="#buttonGoToTheAdminPage" prefHeight="66.0" prefWidth="53.0" styleClass="adminbutton"/>
+        <Button layoutX="148.0" layoutY="258.0" mnemonicParsing="false" onAction="#editUser" styleClass="button-crud"
+                text="Edit User"/>
+        <CheckBox fx:id="isAdminCheckBox" layoutX="174.0" layoutY="209.0" mnemonicParsing="false" text="is Admin"/>
+        <TextField fx:id="userNameTextField" layoutX="174.0" layoutY="84.0"/>
+        <TextField fx:id="passWordTextField" layoutX="174.0" layoutY="124.0"/>
+        <TextField fx:id="emailTextField" layoutX="174.0" layoutY="166.0"/>
+        <Label layoutX="97.0" layoutY="88.0" text="Username:">
+            <font>
+                <Font name="Arial Black" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="97.0" layoutY="128.0" text="Password:">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="97.0" layoutY="170.0" text="Email:"/>
+        <Button layoutX="239.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonGoToTheUserPage"
+                prefHeight="35.0" prefWidth="40.0" styleClass="button-cancel" stylesheets="@ApplicationView.css"
+                text="Cancel"/>
+        <Label layoutX="239.0" layoutY="23.0" text="Edit User">
+            <font>
+                <Font name="Algerian" size="24.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="449.0" layoutY="-4.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="lblActiveName" layoutX="405.0" layoutY="88.0" text="ActiveName:"/>
+    </children>
 </AnchorPane>

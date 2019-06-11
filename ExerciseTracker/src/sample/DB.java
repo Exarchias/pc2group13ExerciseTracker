@@ -11,7 +11,7 @@ public class DB {
 
     //this method establishes a connection between the application and MySQL db
     public DB() {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 Connection c = (Connection) DriverManager.getConnection(url);
                 statement = c.createStatement();
@@ -24,7 +24,7 @@ public class DB {
 
     //this method makes the handshake possible between the application and database system to pull req info
     public void doAHandshake() {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 ResultSet rs = statement.executeQuery("SHOW databases");
 
@@ -42,7 +42,7 @@ public class DB {
 
     //here we enable java to actually execute MySQL statements
     public void loadUsers() throws NoSuchAlgorithmException {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeQuery("USE xtracker");
                 ResultSet rs = statement.executeQuery("SELECT * FROM user");
@@ -75,7 +75,7 @@ public class DB {
     }
 
     public void loadRecipes() {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeQuery("USE xtracker");
                 ResultSet rs = statement.executeQuery("SELECT * FROM xtracker.recipe");
@@ -113,7 +113,7 @@ public class DB {
 
     //this method pulls exercises form the db, also exercises can be added to user's recipes
     public void loadExercises() {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeQuery("USE xtracker");
                 ResultSet rs = statement.executeQuery("SELECT * FROM xtracker.exercise");
@@ -171,10 +171,10 @@ public class DB {
             }
         }
     }
- 
+
     //adding a new user
     public void addOneUser(String username, String password, String email, boolean admin) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isAdmin;
                 if (admin) {
@@ -197,7 +197,7 @@ public class DB {
 
     //adding new exercise
     public void addOneExercise(String title, String description, int owner) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeUpdate("USE xtracker");
                 statement.executeUpdate("INSERT INTO exercise(user_userID, title, description) VALUES ('" + owner + "', '" +
@@ -214,7 +214,7 @@ public class DB {
 
     //adding new recipe
     public void addOneRecipe(String title, String description, int owner, boolean publish) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isPublic;
                 if (publish) {
@@ -237,7 +237,7 @@ public class DB {
 
     //editing user data
     public void editOneUser(String username, String password, String email, boolean admin, int userID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isAdmin;
                 if (admin) {
@@ -260,8 +260,8 @@ public class DB {
     }
 
     //editing exercise details
-    public void editOneExercise(String title, String description,int owner, int exerciseID) {
-        if(DataHolder.dbActivated) {
+    public void editOneExercise(String title, String description, int owner, int exerciseID) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -279,7 +279,7 @@ public class DB {
 
     //updating exercise to a receipe
     public void exerciseToRecipe(int exerciseID, int recipeID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -297,7 +297,7 @@ public class DB {
 
     //editing recipe
     public void editOneRecipe(String title, String description, int owner, boolean publish, int recipeID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isPublic;
                 if (publish) {
@@ -320,7 +320,7 @@ public class DB {
 
     //removing user
     public void deleteOneUser(int userID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isAdmin;
 
@@ -339,7 +339,7 @@ public class DB {
 
     //removing exercise
     public void deleteOneExercise(int exerciseID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isAdmin;
 
@@ -358,7 +358,7 @@ public class DB {
 
     //deleting recipe
     public void deleteOneRecipe(int recipeID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeUpdate("USE xtracker");
                 //username, password, email, isAdmin
@@ -375,7 +375,7 @@ public class DB {
 
     //sorting/loading last user
     public int loadLastUserId() {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeQuery("USE xtracker");
                 ResultSet rs = statement.executeQuery("SELECT userID FROM user ORDER BY userID DESC LIMIT 1");
@@ -399,7 +399,7 @@ public class DB {
 
     //sorting exercises
     public int loadLastExerciseId() {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeQuery("USE xtracker");
                 ResultSet rs = statement.executeQuery("SELECT exerciseID FROM exercise ORDER BY exerciseID DESC LIMIT 1");
@@ -416,14 +416,14 @@ public class DB {
                 DataHolder.isConnected = false;
                 return 5000;
             }
-        }else {
+        } else {
             return 5000;
         }
     }
 
     //sorting recipes
     public int loadLastRecipeId() {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeQuery("USE xtracker");
                 ResultSet rs = statement.executeQuery("SELECT recipeId FROM recipe ORDER BY recipeId DESC LIMIT 1");
@@ -444,9 +444,10 @@ public class DB {
             return 5000;
         }
     }
+
     //sorting/assign an exercise to a user
     public void exerciseToUser(int exerciseID, int userID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -463,7 +464,7 @@ public class DB {
 
     //sorting: change the exerciseID of an exercise
     public void exerciseChangeID(int oldExerciseID, int newExerciseID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -480,7 +481,7 @@ public class DB {
 
     //sorting: assign a recipe to a user
     public void recipeToUser(int recipeID, int userID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -497,7 +498,7 @@ public class DB {
 
     //sorting: changes the id of a recipe.
     public void recipeChangeId(int oldRecipeID, int newRecipeID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -514,7 +515,7 @@ public class DB {
 
     //set the isPublic state of a recipe.
     public void recipeIsPublic(int recipeID, boolean publish) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isPublic = 0;
                 if (publish) {
@@ -537,7 +538,7 @@ public class DB {
 
     //sorting: change the userID of a user
     public void userChangeID(int oldUserID, int newUserID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -554,7 +555,7 @@ public class DB {
 
     //sorting: edit the username of a user.
     public void userChangeUsername(int userID, String userName) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -571,7 +572,7 @@ public class DB {
 
     //sorting: edit the password of a user.
     public void userChangePassword(int userID, String password) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -588,7 +589,7 @@ public class DB {
 
     //sorting: edit the weight of a user.
     public void userChangeUsername(int userID, int weight) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -606,7 +607,7 @@ public class DB {
 
     //removing exercise
     public void deleteAllTheExercisesOfTheUser(int userID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isAdmin;
 
@@ -624,7 +625,7 @@ public class DB {
 
     //removing exercise
     public void deleteAllTheExercisesOfTheRecipe(int recipeID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 int isAdmin;
 
@@ -642,7 +643,7 @@ public class DB {
 
     //deleting the recipes of the user.
     public void deleteAllTheRecipesOfTheUser(int userID) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
                 statement.executeUpdate("USE xtracker");
                 statement.executeUpdate("DELETE FROM recipe WHERE user_userID='" + userID + "'");
@@ -658,7 +659,7 @@ public class DB {
 
     //changes the weight of a user
     public void weightOfTheUser(int userID, int weight) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -675,7 +676,7 @@ public class DB {
 
     //sets the repetitions of an exercise.
     public void setExerciseRepetitions(int exerciseID, int repetitions) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -693,7 +694,7 @@ public class DB {
 
     //sets the calories of each repetition of the exercise.
     public void setExerciseCaloriesPerRepetition(int exerciseID, int calories) {
-        if(DataHolder.dbActivated) {
+        if (DataHolder.dbActivated) {
             try {
 
                 statement.executeUpdate("USE xtracker");
@@ -708,13 +709,6 @@ public class DB {
             }
         }
     }
-
-
-
-
-
-
-
 
 
 }

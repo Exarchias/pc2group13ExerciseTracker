@@ -36,7 +36,7 @@ public class Controller5 implements Initializable { //LOG PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!DataHolder.isLogin()){
+        if (!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
@@ -49,20 +49,21 @@ public class Controller5 implements Initializable { //LOG PAGE
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
     }
+
     @FXML
-    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+    public void buttonLogOutPressed(ActionEvent event) throws Exception {
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are logged out");
     }
 
     @FXML
-    public void buttonGoToTheAdminPage(ActionEvent event)throws Exception{
+    public void buttonGoToTheAdminPage(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene2);
     }
 
     @FXML
-    public void createUser(ActionEvent event)throws Exception{
+    public void createUser(ActionEvent event) throws Exception {
         System.out.println("Creating User...");
         username = userNameTextField.getText();
         password = passWordTextField.getText();
@@ -71,7 +72,7 @@ public class Controller5 implements Initializable { //LOG PAGE
         System.out.println("The username is: " + username);
         System.out.println("The password is: " + password);
         System.out.println("The email is: " + email);
-        if(userIsAdmin){
+        if (userIsAdmin) {
             System.out.println("The user is an Admin");
         }
         User userObj = new User(username, Methods.encrypted(password), email, userIsAdmin);
@@ -89,14 +90,13 @@ public class Controller5 implements Initializable { //LOG PAGE
     }
 
     @FXML
-    public void cleanTheFields(ActionEvent event)throws Exception{
+    public void cleanTheFields(ActionEvent event) throws Exception {
         System.out.println("Cleaning the fields...");
         userNameTextField.setText("");
         passWordTextField.setText("");
         emailTextField.setText("");
         isAdminCheckBox.setSelected(false);
     }
-
 
 
 }

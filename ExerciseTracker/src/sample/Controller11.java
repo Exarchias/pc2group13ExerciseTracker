@@ -18,7 +18,7 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!DataHolder.isLogin()){
+        if (!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
@@ -65,26 +65,26 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     public ListView<String> listView;
 
     @FXML
-    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+    public void buttonLogOutPressed(ActionEvent event) throws Exception {
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are logged out");
     }
 
     @FXML
-    public void buttonGoToAdminPagePressed(ActionEvent event)throws Exception{
+    public void buttonGoToAdminPagePressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene2);
 
     }
 
     @FXML
-    public void goToUserPage(ActionEvent event)throws Exception{
+    public void goToUserPage(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene3);
 
     }
 
     @FXML
-    public void editExercise(ActionEvent event)throws Exception{
+    public void editExercise(ActionEvent event) throws Exception {
         System.out.println("The title of the exercise is: " + titleTextField.getText());
         System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
 //        if(addToSelectedRecipeCheckBox.isSelected()){
@@ -114,20 +114,20 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
 //    }
 
     @FXML
-    public void testViewSelectedRecipes(ActionEvent event){
+    public void testViewSelectedRecipes(ActionEvent event) {
         System.out.println("Viewing the recipes...");
 
     }
 
     @FXML
-    public void manageRecipes(ActionEvent event)throws Exception{
+    public void manageRecipes(ActionEvent event) throws Exception {
         System.out.println("going to manage the Recipes on the recipe page");
         Main.getInstance().setScene(Main.Scene8);
 
     }
 
     @FXML
-    public void editTheRecipe(ActionEvent event)throws Exception{
+    public void editTheRecipe(ActionEvent event) throws Exception {
         //selectedRecipe = Integer.parseInt(recipeSelector.getText());
         System.out.println("going to edit the recipe:" + selectedRecipe);
         //Main.getInstance().setScene(Main.Scene9);
@@ -135,17 +135,17 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void addaNewRecipe(ActionEvent event)throws Exception{
+    public void addaNewRecipe(ActionEvent event) throws Exception {
         System.out.println("Adding a new recipe");
         //Main.getInstance().setScene(Main.Scene10);
 
     }
 
-    public void editTheExercise(){
+    public void editTheExercise() {
         selectedRecipeOUT = selectedRecipe;
-        if(selectedRecipeOUT == 0){
+        if (selectedRecipeOUT == 0) {
             if (selectedRecipeIN == 0) {
-                Exercise exex1 = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
+                Exercise exex1 = new Exercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.exerciseList.remove(DataHolder.supervisedExercisePostion);
                 DataHolder.supervisedUser.exerciseList.add(DataHolder.supervisedExercisePostion, exex1);
 
@@ -156,26 +156,26 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                 db = null; //cuts the connection
                 //TESTING ADDING A USER ON THE DATA BASE(END)
             } else {
-                Exercise exex2 = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
+                Exercise exex2 = new Exercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.exerciseList.add(exex2);
 
 
                 //TESTING ADDING A USER ON THE DATA BASE(START)
                 DB db = new DB();
                 db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
-                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(),0);
+                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(), 0);
                 db = null; //cuts the connection
                 //TESTING ADDING A USER ON THE DATA BASE(END)
             }
         } else {
-            if(selectedRecipeIN == 0){
-                Exercise exex = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
+            if (selectedRecipeIN == 0) {
+                Exercise exex = new Exercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.add(exex);
 
                 //TESTING ADDING A USER ON THE DATA BASE(START)
                 DB db = new DB();
                 db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
-                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(),DataHolder.supervisedUser.recipeList.
+                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(), DataHolder.supervisedUser.recipeList.
                         get(selectedRecipeOUT - 1).getRecipeID());
                 db = null; //cuts the connection
                 //TESTING ADDING A USER ON THE DATA BASE(END)
@@ -185,13 +185,13 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
                         supervisedExercisePostion).getDescription(), DataHolder.supervisedUser.recipeList.get(selectedRecipeIN).exerciseList.get(DataHolder.
                         supervisedExercisePostion).getOwner());
                 DataHolder.supervisedUser.recipeList.get(selectedRecipeIN).exerciseList.remove(DataHolder.supervisedExercisePostion);
-                Exercise exnew = new Exercise(titleTextField.getText(), descriptionTextArea.getText(),DataHolder.supervisedExercise.getOwner());
+                Exercise exnew = new Exercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner());
                 DataHolder.supervisedUser.recipeList.get(selectedRecipeOUT - 1).exerciseList.add(exnew);
 
                 //TESTING ADDING A USER ON THE DATA BASE(START)
                 DB db = new DB();
                 db.editOneExercise(titleTextField.getText(), descriptionTextArea.getText(), DataHolder.supervisedExercise.getOwner(), DataHolder.supervisedExercise.getExerciseID());
-                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(),DataHolder.supervisedUser.
+                db.exerciseToRecipe(DataHolder.supervisedExercise.getExerciseID(), DataHolder.supervisedUser.
                         recipeList.get(selectedRecipeOUT - 1).getRecipeID());
                 db = null; //cuts the connection
                 //TESTING ADDING A USER ON THE DATA BASE(END)
@@ -202,10 +202,10 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
         //DataHolder.activeUser.exerciseList.add(exer);
     }
 
-    public void listViewDisplay(){
+    public void listViewDisplay() {
         listView.getItems().clear();
         listView.getItems().add(DataHolder.supervisedUser.getUserName() + " history.");
-        for (Recipe x : DataHolder.supervisedUser.recipeList){
+        for (Recipe x : DataHolder.supervisedUser.recipeList) {
             //listView.getItems().add(x.getTitle());
             listView.getItems().add(Methods.oneRecipeOneLine(x));
         }
@@ -213,7 +213,7 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void somethingIsSelectedOnListViewRight(MouseEvent event){
+    public void somethingIsSelectedOnListViewRight(MouseEvent event) {
         selectedRecipe = listView.getSelectionModel().getSelectedIndex();
         //recipeSelector.setText(String.valueOf(selectedRecipe));
         updateDisplay();
@@ -221,16 +221,13 @@ public class Controller11 implements Initializable { //EXERCISE PAGE
 
     public void updateDisplay() {
         String recipeDisplay;
-        if((selectedRecipe) <= 0){
+        if ((selectedRecipe) <= 0) {
             recipeDisplay = Methods.displayExercisesofTheUser(DataHolder.supervisedUser);
         } else {
             recipeDisplay = Methods.displayTherecipe(DataHolder.supervisedUser.recipeList.get(selectedRecipe - 1));
         }
         recipesTextArea.setText(recipeDisplay);
     }
-
-
-
 
 
 }

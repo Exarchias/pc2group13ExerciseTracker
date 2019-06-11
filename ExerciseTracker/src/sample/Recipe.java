@@ -27,7 +27,7 @@ public class Recipe {
         this.recipeID = recipeID;
     }
 
-    public Recipe(String title, String description, int owner){
+    public Recipe(String title, String description, int owner) {
         this.title = title;
         this.description = description;
         this.owner = owner;

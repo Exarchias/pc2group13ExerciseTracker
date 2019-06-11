@@ -14,7 +14,7 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!DataHolder.isLogin()){
+        if (!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
@@ -33,6 +33,7 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
         recipeIsPublic.setSelected(DataHolder.supervisedRecipe.isPublic());
 
     }
+
     @FXML
     Button btnGoToAdminPage;
 
@@ -54,26 +55,26 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
     CheckBox recipeIsPublic;
 
     @FXML
-    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+    public void buttonLogOutPressed(ActionEvent event) throws Exception {
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are logged out");
     }
 
     @FXML
-    public void buttonGoToAdminPagePressed(ActionEvent event)throws Exception{
+    public void buttonGoToAdminPagePressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene2);
 
     }
 
     @FXML
-    public void goToUserPage(ActionEvent event)throws Exception{
+    public void goToUserPage(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene3);
 
     }
 
     @FXML
-    public void editRecipe(ActionEvent event)throws Exception{
+    public void editRecipe(ActionEvent event) throws Exception {
         System.out.println("The title of the exercise is: " + titleTextField.getText());
         System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
         editTheRecipe(); //I made it that way for simplicity.
@@ -84,7 +85,7 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void cleanFields(ActionEvent event){
+    public void cleanFields(ActionEvent event) {
         titleTextField.setText("");
         descriptionTextArea.setText("");
         recipeIsPublic.setSelected(false);
@@ -93,13 +94,13 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void testViewSelectedRecipes(ActionEvent event){
+    public void testViewSelectedRecipes(ActionEvent event) {
         System.out.println("Viewing the recipes...");
 
     }
 
 
-    public void editTheRecipe(){
+    public void editTheRecipe() {
         DataHolder.supervisedRecipe.setTitle(titleTextField.getText());
         DataHolder.supervisedRecipe.setDescription(descriptionTextArea.getText());
         DataHolder.supervisedRecipe.setPublic(recipeIsPublic.isSelected());
@@ -110,15 +111,12 @@ public class Controller9 implements Initializable { //EXERCISE PAGE
                 DataHolder.supervisedRecipe.getRecipeID());
         db = null; //cuts the connection
         //TESTING EDITING A RECIPE ON THE DATA BASE(END)
-        if(recipeIsPublic.isSelected()){
+        if (recipeIsPublic.isSelected()) {
             DataHolder.publicRecipes.add(DataHolder.supervisedRecipe);
         } else {
             DataHolder.publicRecipes.remove(DataHolder.supervisedRecipe);
         }
     }
-
-
-
 
 
 }

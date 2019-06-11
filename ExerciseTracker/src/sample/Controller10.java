@@ -14,7 +14,7 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!DataHolder.isLogin()){
+        if (!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
@@ -30,6 +30,7 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
     }
+
     @FXML
     Button btnGoToAdminPage;
 
@@ -52,26 +53,26 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
 
 
     @FXML
-    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+    public void buttonLogOutPressed(ActionEvent event) throws Exception {
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are logged out");
     }
 
     @FXML
-    public void buttonGoToAdminPagePressed(ActionEvent event)throws Exception{
+    public void buttonGoToAdminPagePressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene2);
 
     }
 
     @FXML
-    public void goToUserPage(ActionEvent event)throws Exception{
+    public void goToUserPage(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene3);
 
     }
 
     @FXML
-    public void addRecipe(ActionEvent event)throws Exception{
+    public void addRecipe(ActionEvent event) throws Exception {
         System.out.println("The title of the exercise is: " + titleTextField.getText());
         System.out.println("The description of the exercise is: " + descriptionTextArea.getText());
         addTheRecipe(); //I made it that way for simplicity.
@@ -82,7 +83,7 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void cleanFields(ActionEvent event){
+    public void cleanFields(ActionEvent event) {
         titleTextField.setText("");
         descriptionTextArea.setText("");
         recipeIsPublic.setSelected(false);
@@ -91,18 +92,18 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
     }
 
     @FXML
-    public void testViewSelectedRecipes(ActionEvent event){
+    public void testViewSelectedRecipes(ActionEvent event) {
         System.out.println("Viewing the recipes...");
 
     }
 
 
-    public void addTheRecipe(){
+    public void addTheRecipe() {
         Recipe recip = new Recipe(titleTextField.getText(),
                 descriptionTextArea.getText(), DataHolder.userList.indexOf(DataHolder.activeUser));
         recip.setPublic(recipeIsPublic.isSelected());
         DataHolder.supervisedUser.recipeList.add(recip);
-        if(recip.isPublic()){
+        if (recip.isPublic()) {
             DataHolder.publicRecipes.add(recip);
         }
         //TESTING ADDING A RECIPE ON THE DATA BASE(START)
@@ -112,9 +113,6 @@ public class Controller10 implements Initializable { //EXERCISE PAGE
         db = null; //cuts the connection
         //TESTING ADDING A RECIPE ON THE DATA BASE(END)
     }
-
-
-
 
 
 }

@@ -18,7 +18,7 @@ public class Controller7 implements Initializable { //LOG PAGE
     private String email;
     private boolean userIsAdmin;
 
-   @FXML
+    @FXML
     Button btnGoToAdminPage;
 
     @FXML
@@ -39,7 +39,7 @@ public class Controller7 implements Initializable { //LOG PAGE
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         password = DataHolder.supervisedUser.getPassWord();
-        if(!DataHolder.isLogin()){
+        if (!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
@@ -49,7 +49,7 @@ public class Controller7 implements Initializable { //LOG PAGE
         userNameTextField.setText(DataHolder.supervisedUser.getUserName());
         passWordTextField.setText("");
         emailTextField.setText(DataHolder.supervisedUser.getEmail());
-        if(DataHolder.supervisedUser.isAnAdmin()){
+        if (DataHolder.supervisedUser.isAnAdmin()) {
             isAdminCheckBox.setSelected(true);
         }
         if (DataHolder.isAdmin())
@@ -58,23 +58,24 @@ public class Controller7 implements Initializable { //LOG PAGE
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
 
     }
+
     @FXML
-    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+    public void buttonLogOutPressed(ActionEvent event) throws Exception {
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are logged out");
     }
 
     @FXML
-    public void buttonGoToTheAdminPage(ActionEvent event)throws Exception{
+    public void buttonGoToTheAdminPage(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene2);
     }
 
     @FXML
-    public void editUser(ActionEvent event)throws Exception{
+    public void editUser(ActionEvent event) throws Exception {
         System.out.println("Creating User...");
         username = userNameTextField.getText();
-        if(!passWordTextField.getText().equalsIgnoreCase("")){
+        if (!passWordTextField.getText().equalsIgnoreCase("")) {
             password = Methods.encrypted(passWordTextField.getText());
         }
         System.out.println("The current password is:" + password);
@@ -83,7 +84,7 @@ public class Controller7 implements Initializable { //LOG PAGE
         System.out.println("The username is: " + username);
         System.out.println("The password is: " + password);
         System.out.println("The email is: " + email);
-        if(userIsAdmin){
+        if (userIsAdmin) {
             System.out.println("The user is an Admin");
             DataHolder.supervisedUser.setAnAdmin(true);
         } else {
@@ -101,8 +102,6 @@ public class Controller7 implements Initializable { //LOG PAGE
         System.out.println("The User is considered edited");
         Main.getInstance().setScene(Main.Scene2);
     }
-
-
 
 
 }

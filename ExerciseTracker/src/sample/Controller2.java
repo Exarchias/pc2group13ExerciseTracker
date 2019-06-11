@@ -24,7 +24,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     @FXML
     private AnchorPane testMonitor;
 
-   @FXML
+    @FXML
     public ListView<String> listView;
 
     @FXML
@@ -52,12 +52,9 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     private Button btnEditUser;
 
 
-
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(!DataHolder.isLogin()) {
+        if (!DataHolder.isLogin()) {
             try {
                 Methods.logOut();
             } catch (Exception e) {
@@ -67,7 +64,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
         }
         DataHolder.supervisedUser = DataHolder.activeUser;
-        if(DataHolder.isAdmin()){
+        if (DataHolder.isAdmin()) {
             try {
                 Main.getInstance().setScene(Main.Scene3);
             } catch (Exception e) {
@@ -75,13 +72,12 @@ public class Controller2 implements Initializable { // ADMIN PAGE
             }
         }
 
-      testMonitor.getStylesheets().add("anchorpane-loginscene");
+        testMonitor.getStylesheets().add("anchorpane-loginscene");
 
         btnAddNewUser.getStyleClass().add("button-crud");
         btnDeleteUser.getStyleClass().add("button-crud");
         btnEditUser.getStyleClass().add("button-crud");
         btnViewUser.getStyleClass().add("button-crud");
-
 
 
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
@@ -94,33 +90,33 @@ public class Controller2 implements Initializable { // ADMIN PAGE
 
 
     @FXML
-    public void buttonLogOutPressed(ActionEvent event)throws Exception{
+    public void buttonLogOutPressed(ActionEvent event) throws Exception {
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are logged out");
     }
 
     @FXML
-    public void buttonGoToTheUserPage(ActionEvent event)throws Exception{
+    public void buttonGoToTheUserPage(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene3);
 
     }
 
     @FXML
-    public void superviseUser(ActionEvent event) throws Exception{
+    public void superviseUser(ActionEvent event) throws Exception {
         DataHolder.supervisedUser = DataHolder.userList.get(selectedUser);
         System.out.println("The supervised use now is: " + DataHolder.supervisedUser.getUserName());
         Main.getInstance().setScene(Main.Scene3);
     }
 
     @FXML
-    public void addNewUser(ActionEvent event)throws Exception{
+    public void addNewUser(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene5);
         System.out.println("Adding some user to the system");
     }
 
     @FXML
-    public void deleteUser(ActionEvent event){
+    public void deleteUser(ActionEvent event) {
 
         //selectedUser = Integer.parseInt(userSelector.getText());
         System.out.println("Removing the user " + DataHolder.userList.get(selectedUser).getUserName()
@@ -139,7 +135,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     }
 
     @FXML
-    public void editUser(ActionEvent event)throws Exception{
+    public void editUser(ActionEvent event) throws Exception {
         //selectedUser = Integer.parseInt(userSelector.getText());
         System.out.println("Editing the user " +
                 DataHolder.userList.get(selectedUser).getUserName() + "from the system");
@@ -148,7 +144,7 @@ public class Controller2 implements Initializable { // ADMIN PAGE
     }
 
     @FXML
-    public void somethingIsSelectedOnListView(MouseEvent event)throws Exception{
+    public void somethingIsSelectedOnListView(MouseEvent event) throws Exception {
         selectedUser = listView.getSelectionModel().getSelectedIndex();
         //userSelector.setText(String.valueOf(selectedUser));
         updateDisplay();
@@ -165,30 +161,22 @@ public class Controller2 implements Initializable { // ADMIN PAGE
         userListTextArea.setText(Methods.displayTheUser(DataHolder.userList.get(selectedUser)));
     }
 
-        public void listViewDisplay(){
+    public void listViewDisplay() {
         listView.getItems().clear();
-        for (User x : DataHolder.userList){
-           listView.getItems().add(x.getUserName() + " " + Methods.displayIfAdmin(x));
+        for (User x : DataHolder.userList) {
+            listView.getItems().add(x.getUserName() + " " + Methods.displayIfAdmin(x));
             //listView.getItems().add(Methods.oneUserOneLine(x));
         }
 
-      listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 
 
     }
 
     @FXML
-    public void getPdf(ActionEvent event) throws Exception{
+    public void getPdf(ActionEvent event) throws Exception {
         PDF.pdfUserList();
     }
-
-
-
-
-
-
-
-
 
 
 }

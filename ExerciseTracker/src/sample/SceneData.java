@@ -6,18 +6,18 @@ public class SceneData {
 
     private Object data = null;
 
-    private SceneData(){
+    private SceneData() {
     }
 
-    public static SceneData getInstance(){
+    public static SceneData getInstance() {
         return instance;
     }
 
-    public Object getData(){
+    public Object getData() {
         return data;
     }
 
-    public void setData(Object data){
+    public void setData(Object data) {
         this.data = data;
     }
 }

@@ -36,7 +36,6 @@ public class Controller12 implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        
 
         lblActiveName.setText("You are logged in as: " + DataHolder.activeUser.getUserName());
         if (DataHolder.isAdmin())
@@ -47,38 +46,38 @@ public class Controller12 implements Initializable {
 //            //
 //        }
 
-       listView2Display();
-       listViewDisplay();
+        listView2Display();
+        listViewDisplay();
         updateDisplay();
     }
 
-    public void logOutButtonPressed(ActionEvent event) throws Exception{
+    public void logOutButtonPressed(ActionEvent event) throws Exception {
         DataHolder.setLogin(false);
         Main.getInstance().setScene(Main.sample);
         System.out.println("You are Logged out");
 
     }
 
-    public void someThingIsSelecteOnListView2(MouseEvent event) throws Exception{
-      selectedRecipe = listView2.getSelectionModel().getSelectedIndex();
-      listViewDisplay();
+    public void someThingIsSelecteOnListView2(MouseEvent event) throws Exception {
+        selectedRecipe = listView2.getSelectionModel().getSelectedIndex();
+        listViewDisplay();
         updateDisplay();
     }
 
-    public void someThingIsSelecteOnListView(MouseEvent event) throws Exception{
+    public void someThingIsSelecteOnListView(MouseEvent event) throws Exception {
         selectedExercise = listView.getSelectionModel().getSelectedIndex();
         updateDisplay();
     }
 
-    public void goToTheAdminPageButtonPressed(ActionEvent event)throws Exception{
+    public void goToTheAdminPageButtonPressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene2);
     }
 
-    public void goToTheUserPageButtonPressed(ActionEvent event)throws Exception{
+    public void goToTheUserPageButtonPressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene3);
     }
 
-    public void useExerciseButtonPressed(ActionEvent event) throws Exception{
+    public void useExerciseButtonPressed(ActionEvent event) throws Exception {
         Exercise exer = DataHolder.publicRecipes.get(selectedRecipe).exerciseList.get(selectedExercise);
         //String title, String description, int owner
         Exercise exer2 = new Exercise(exer.getTitle(), exer.getDescription(), DataHolder.supervisedUser.getUserID());
@@ -93,11 +92,11 @@ public class Controller12 implements Initializable {
         DataHolder.supervisedUser.exerciseList.add(exer2);
     }
 
-    public void useRecipeButtonPressed(ActionEvent event)throws Exception{
+    public void useRecipeButtonPressed(ActionEvent event) throws Exception {
         Recipe recip = DataHolder.publicRecipes.get(selectedRecipe);
         //String title, String description, int owner
         Recipe recip2 = new Recipe(recip.getTitle(), recip.getDescription(), DataHolder.supervisedUser.getUserID());
-        for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList){
+        for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList) {
             recip2.exerciseList.add(x);
         }
         //TESTING ADDING A RECIPE ON THE DATA BASE(START)
@@ -109,7 +108,7 @@ public class Controller12 implements Initializable {
         //TESTING ADDING A RECIPE ON THE DATA BASE(END)
         recip2.setRecipeID(recID);
 
-        for (Exercise x : recip2.exerciseList){
+        for (Exercise x : recip2.exerciseList) {
             x.setRecipeID(recID);
             //TESTING ADDING AN EXERCISE ON THE DATA BASE(START)
             db.addOneExercise(x.getTitle(), x.getDescription(), DataHolder.supervisedUser.getUserID());
@@ -124,21 +123,21 @@ public class Controller12 implements Initializable {
         DataHolder.supervisedUser.recipeList.add(recip2);
     }
 
-    public void cancelButtonPressed(ActionEvent event)throws Exception{
+    public void cancelButtonPressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene3);
     }
 
-    public void manageRecipesButtonPressed(ActionEvent event) throws Exception{
+    public void manageRecipesButtonPressed(ActionEvent event) throws Exception {
         Main.getInstance().setScene(Main.Scene8);
 
     }
 
-    public void listView2Display(){
+    public void listView2Display() {
         listView2.getItems().clear();
-        if(DataHolder.publicRecipes.isEmpty()){
+        if (DataHolder.publicRecipes.isEmpty()) {
             listView2.getItems().add("");
         } else {
-            for (Recipe x : DataHolder.publicRecipes){
+            for (Recipe x : DataHolder.publicRecipes) {
                 listView2.getItems().add(String.valueOf(x.getTitle()));
                 //listView2.getItems().add(Methods.oneRecipeOneLine(x));
             }
@@ -147,12 +146,12 @@ public class Controller12 implements Initializable {
         listView2.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
-    public void listViewDisplay(){
+    public void listViewDisplay() {
         listView.getItems().clear();
-        if(DataHolder.publicRecipes.isEmpty()){
+        if (DataHolder.publicRecipes.isEmpty()) {
             listView.getItems().add("");
         } else {
-            for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList){
+            for (Exercise x : DataHolder.publicRecipes.get(selectedRecipe).exerciseList) {
                 listView.getItems().add(x.getTitle() + " / " + Methods.returnExerciseOwner(x));
                 //listView.getItems().add(Methods.oneExerciseOneLine(x));
             }
@@ -161,8 +160,8 @@ public class Controller12 implements Initializable {
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
-    public void updateDisplay(){
-        if(DataHolder.publicRecipes.isEmpty()){
+    public void updateDisplay() {
+        if (DataHolder.publicRecipes.isEmpty()) {
             exerciseTextArea.setText("");
             recipeTextArea.setText("");
         } else {
@@ -172,9 +171,6 @@ public class Controller12 implements Initializable {
         }
 
     }
-
-
-
 
 
 }

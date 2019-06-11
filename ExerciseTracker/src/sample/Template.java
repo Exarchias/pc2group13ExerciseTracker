@@ -1,7 +1,7 @@
 package sample;
 
 public class Template extends Exercise {
-    private  int templateID;
+    private int templateID;
     //private String title;
     //private String description;
 

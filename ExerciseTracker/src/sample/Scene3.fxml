@@ -9,35 +9,54 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
-   <children>
-      <Button fx:id="btnLogOut" layoutX="578.0" layoutY="135.0" mnemonicParsing="false" onAction="#buttonLogOutPressed" prefHeight="34.0" prefWidth="70.0" styleClass="button-logout" stylesheets="@ApplicationView.css" />
-      <Button fx:id="btnGoToTheAdminPage" layoutX="498.0" layoutY="118.0" mnemonicParsing="false" onAction="#buttonGoToTheAdminPagePressed" prefHeight="68.0" prefWidth="55.0" styleClass="adminbutton" />
-      <Button fx:id="btnGoToTheSettingPage" layoutX="496.0" layoutY="199.0" mnemonicParsing="false" onAction="#buttonGoToTheSettingPage" prefHeight="57.0" prefWidth="59.0" styleClass="button-settingspage" />
-      <Button layoutX="165.0" layoutY="272.0" mnemonicParsing="false" onAction="#addExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Add new Exercise" />
-      <Button layoutX="279.0" layoutY="272.0" mnemonicParsing="false" onAction="#deleteExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Delete Exercise" />
-      <Button layoutX="388.0" layoutY="272.0" mnemonicParsing="false" onAction="#editExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Edit Exercise" />
-      <TextArea fx:id="exerciseListTextArea" layoutX="27.0" layoutY="316.0" prefHeight="111.0" prefWidth="449.0" text="You have nothing... you are lazy." />
-      <Label layoutX="188.0" layoutY="18.0" text="User Page">
-         <font>
-            <Font name="Algerian" size="24.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="563.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="lblActiveName" layoutX="498.0" layoutY="88.0" text="Active Name:" />
-      <ListView fx:id="listView" layoutX="34.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListView" prefHeight="169.0" prefWidth="200.0" />
-      <Button fx:id="useSelectedExerciseBtn" layoutX="27.0" layoutY="272.0" mnemonicParsing="false" onAction="#useSelectedExercise" styleClass="button-crud" stylesheets="@ApplicationView.css" text="Use selected Exercise" />
-      <ListView fx:id="listView2" layoutX="268.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListViewRight" prefHeight="169.0" prefWidth="200.0" />
-      <Button layoutX="505.0" layoutY="350.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed" prefHeight="57.0" prefWidth="55.0" styleClass="button-browserecipes" />
-      <Label fx:id="superviseLabel" layoutX="44.0" layoutY="59.0" text="Label">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font></Label>
-      <Button layoutX="487.0" layoutY="283.0" mnemonicParsing="false" onAction="#manageRecipes" styleClass="button-crud" text="Manage Recipes" />
-      <Button layoutX="498.0" layoutY="427.0" mnemonicParsing="false" onAction="#getPdf" text="Get as a PDF" />
-   </children>
+<AnchorPane prefHeight="699.0" prefWidth="1410.0" styleClass="background" stylesheets="@ApplicationView.css"
+            xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller3">
+    <children>
+        <Button fx:id="btnLogOut" layoutX="578.0" layoutY="135.0" mnemonicParsing="false"
+                onAction="#buttonLogOutPressed" prefHeight="34.0" prefWidth="70.0" styleClass="button-logout"
+                stylesheets="@ApplicationView.css"/>
+        <Button fx:id="btnGoToTheAdminPage" layoutX="498.0" layoutY="118.0" mnemonicParsing="false"
+                onAction="#buttonGoToTheAdminPagePressed" prefHeight="68.0" prefWidth="55.0" styleClass="adminbutton"/>
+        <Button fx:id="btnGoToTheSettingPage" layoutX="496.0" layoutY="199.0" mnemonicParsing="false"
+                onAction="#buttonGoToTheSettingPage" prefHeight="57.0" prefWidth="59.0"
+                styleClass="button-settingspage"/>
+        <Button layoutX="165.0" layoutY="272.0" mnemonicParsing="false" onAction="#addExercise" styleClass="button-crud"
+                stylesheets="@ApplicationView.css" text="Add new Exercise"/>
+        <Button layoutX="279.0" layoutY="272.0" mnemonicParsing="false" onAction="#deleteExercise"
+                styleClass="button-crud" stylesheets="@ApplicationView.css" text="Delete Exercise"/>
+        <Button layoutX="388.0" layoutY="272.0" mnemonicParsing="false" onAction="#editExercise"
+                styleClass="button-crud" stylesheets="@ApplicationView.css" text="Edit Exercise"/>
+        <TextArea fx:id="exerciseListTextArea" layoutX="27.0" layoutY="316.0" prefHeight="111.0" prefWidth="449.0"
+                  text="You have nothing... you are lazy."/>
+        <Label layoutX="188.0" layoutY="18.0" text="User Page">
+            <font>
+                <Font name="Algerian" size="24.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="563.0" layoutY="-4.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@Assets/30807c3f-9db1-430d-86ee-62f380e8f2b1.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="lblActiveName" layoutX="498.0" layoutY="88.0" text="Active Name:"/>
+        <ListView fx:id="listView" layoutX="34.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListView"
+                  prefHeight="169.0" prefWidth="200.0"/>
+        <Button fx:id="useSelectedExerciseBtn" layoutX="27.0" layoutY="272.0" mnemonicParsing="false"
+                onAction="#useSelectedExercise" styleClass="button-crud" stylesheets="@ApplicationView.css"
+                text="Use selected Exercise"/>
+        <ListView fx:id="listView2" layoutX="268.0" layoutY="88.0" onMouseClicked="#somethingIsSelectedOnListViewRight"
+                  prefHeight="169.0" prefWidth="200.0"/>
+        <Button layoutX="505.0" layoutY="350.0" mnemonicParsing="false" onAction="#browseRecipesButtonPressed"
+                prefHeight="57.0" prefWidth="55.0" styleClass="button-browserecipes"/>
+        <Label fx:id="superviseLabel" layoutX="44.0" layoutY="59.0" text="Label">
+            <font>
+                <Font name="Arial Black" size="14.0"/>
+            </font>
+        </Label>
+        <Button layoutX="487.0" layoutY="283.0" mnemonicParsing="false" onAction="#manageRecipes"
+                styleClass="button-crud" text="Manage Recipes"/>
+        <Button layoutX="498.0" layoutY="427.0" mnemonicParsing="false" onAction="#getPdf" text="Get as a PDF"/>
+    </children>
 </AnchorPane>

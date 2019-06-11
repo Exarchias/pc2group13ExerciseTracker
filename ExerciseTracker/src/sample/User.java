@@ -10,9 +10,9 @@ public class User {
     private int weight;
     private int userID;
     public ArrayList<Exercise> exerciseList = new ArrayList<>();
-    public  ArrayList<Recipe> recipeList = new ArrayList<>();
+    public ArrayList<Recipe> recipeList = new ArrayList<>();
 
-    public User(String userName, String passWord, String email, Boolean isAdmin){
+    public User(String userName, String passWord, String email, Boolean isAdmin) {
         this.userName = userName;
         this.passWord = passWord;
         this.email = email;
